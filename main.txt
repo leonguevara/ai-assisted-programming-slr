@@ -1,0 +1,366 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\begin{document}
+
+\title{AI-Assisted Programming in Software Engineering: A Systematic Literature Review on Capabilities, Productivity, and Code Quality}
+
+\author{
+\IEEEauthorblockN{L.F. Guevara-Chávez}
+\IEEEauthorblockA{
+Tecnológico de Monterrey \\
+leon.guevara@tec.mx}
+}
+
+\maketitle
+
+\begin{abstract}
+The emergence of large language models has introduced a noticeable shift in how software development is approached in practice. Tools such as GitHub Copilot, Claude Code, and ChatGPT are increasingly embedded in development workflows. Despite this, the research landscape remains fragmented.
+
+This paper presents a systematic literature review following PRISMA and Kitchenham guidelines, analysing studies from 2020 to 2026. The review focuses on capabilities, productivity, and code quality.
+
+Findings suggest productivity gains but a mixed impact on quality, highlighting risks such as incorrect or insecure code. This work synthesises current knowledge and identifies research gaps.
+\end{abstract}
+
+\section{Introduction}
+
+The rapid advancement of large language models (LLMs) has significantly transformed software development practices, particularly through the emergence of AI-assisted code generation tools. Systems such as GitHub Copilot and ChatGPT are increasingly integrated into development workflows, enabling developers to generate, complete, and refactor code using natural language prompts.
+
+Recent empirical evidence suggests that these tools can substantially impact developer productivity. For instance, controlled experiments and large-scale observational studies report measurable improvements in coding speed and task completion efficiency when developers use AI-assisted tools \cite{peng2023productivity}. Similarly, empirical evaluations of GitHub Copilot suggest that AI-generated code can assist developers by providing correct or partially correct solutions in a significant proportion of cases, potentially accelerating development tasks, although effectiveness varies across programming languages and problem instances \cite{nguyen2022copilot}.
+
+Despite these benefits, concerns have been raised regarding the quality and security of AI-generated code. Prior work has shown that AI-assisted tools may introduce vulnerabilities or incorrect logic, particularly when used without careful human oversight \cite{pearce2022security}. In addition, comparative evaluations of multiple AI coding assistants highlight variability in correctness, maintainability, and reliability across different tools and scenarios \cite{yetistiren2023evaluation, idrisov2024codegen}.
+
+Although the number of studies in this area has grown rapidly, the literature remains fragmented. Existing research varies significantly in terms of methodologies, evaluation metrics, and tools analyzed, making it difficult to draw consistent conclusions. Furthermore, most studies focus on a limited subset of tools, primarily GitHub Copilot and ChatGPT, while emerging systems such as Gemini, Claude, and others remain underexplored.
+
+Given this context, there is a clear need for a systematic synthesis of empirical evidence that consolidates findings, identifies methodological patterns, and highlights research gaps. This study addresses this need by conducting a Systematic Literature Review (SLR) on AI-assisted code generation tools and their impact on software development.
+
+Specifically, this work aims to:
+\begin{itemize}
+    \item Analyze the impact of AI-assisted coding tools on developer productivity
+    \item Evaluate their effects on code quality and reliability
+    \item Identify commonly used evaluation metrics and methodologies
+    \item Examine reported benefits, limitations, and risks
+    \item Highlight trends and research gaps in the field
+\end{itemize}
+
+By synthesizing evidence from 100 carefully selected studies, this paper provides a comprehensive and up-to-date view of AI-assisted software development. The findings contribute to both research and practice by offering a structured understanding of the capabilities and limitations of modern AI coding tools.
+
+The remainder of this paper is organized as follows. Section II presents the methodology. Section III presents the results. Section IV discusses the findings. Finally, Section V concludes the paper.
+
+\section{Background}
+
+\subsection{AI in Software Engineering}
+
+Artificial intelligence has been increasingly applied across different areas of software engineering, including defect prediction, testing, and effort estimation \cite{chen2021code}. Recent advances in machine learning have enabled more interactive forms of assistance, allowing AI systems to directly support developers during coding activities.
+
+\subsection{AI-Assisted Programming}
+
+AI-assisted programming refers to the use of intelligent systems to support developers in writing, understanding, and maintaining code \cite{vaithilingam2022usability}. These tools can generate code snippets, suggest completions, and assist in debugging tasks, often based on natural language input.
+
+\subsection{Large Language Models for Code}
+
+Large language models trained on code corpora have significantly expanded the capabilities of AI-assisted programming tools \cite{chen2021code}. These models can capture both syntactic and semantic patterns, enabling them to perform tasks such as code generation, translation, and explanation. However, prior research has shown that such models may produce incorrect or insecure code, highlighting important limitations \cite{pearce2022security}.
+
+\subsection{Evaluation Dimensions: Productivity and Code Quality}
+
+The impact of AI-assisted programming is commonly evaluated along two primary dimensions: productivity and code quality. Productivity is typically measured in terms of development time and task completion rates, while code quality includes correctness, maintainability, and security \cite{nguyen2022copilot}. Although productivity improvements are frequently reported, their relationship with code quality remains complex and not fully understood.
+
+\section{Methodology}
+
+\subsection{Research Design}
+
+This study follows a Systematic Literature Review (SLR) methodology, structured according to established guidelines in software engineering research \cite{kitchenham2007guidelines} and the PRISMA framework \cite{page2021prisma} to ensure transparency and reproducibility. The objective is to identify, evaluate, and synthesize empirical evidence regarding the impact of AI-assisted code generation tools on software development.
+
+The review process was designed to ensure rigor, transparency, and reproducibility through a multi-stage protocol including search, screening, quality assessment, and synthesis.
+
+\subsection{Research Questions}
+
+The study addresses the following research questions:
+
+\begin{itemize}
+    \item RQ1: What is the impact of AI-assisted coding tools on developer productivity?
+    \item RQ2: How do these tools affect code quality?
+    \item RQ3: What evaluation metrics are used in empirical studies?
+    \item RQ4: What benefits are reported?
+    \item RQ5: What limitations and risks are identified?
+    \item RQ6: What research methodologies are used?
+    \item RQ7: What trends and research gaps exist?
+\end{itemize}
+
+\subsection{Search Strategy}
+
+The search process combined automated and semi-automated approaches using academic databases and AI-assisted discovery tools. Queries were constructed to target studies related to AI-assisted programming, including tools such as GitHub Copilot, ChatGPT, Codex, Gemini, and others.
+
+Sources included:
+\begin{itemize}
+    \item arXiv
+    \item ACM Digital Library
+    \item IEEE Xplore
+    \item SpringerLink
+    \item Elsevier (ScienceDirect)
+\end{itemize}
+
+The search was restricted to publications between 2020 and 2026 to reflect the emergence of modern large language model (LLM)-based tools.
+
+\subsection{Use of Artificial Intelligence in the Review Process}
+
+Artificial intelligence tools were used to support parts of the literature review process, particularly for:
+\begin{itemize}
+    \item Initial literature discovery and retrieval
+    \item Relevance-based screening suggestions
+    \item Extraction and structuring of metadata (e.g., study type, metrics, tools evaluated)
+\end{itemize}
+
+However, all critical decisions regarding inclusion, exclusion, and final selection of studies were performed and validated by the authors. AI outputs were treated as assistive recommendations rather than authoritative decisions.
+
+This hybrid approach improves efficiency while maintaining methodological rigor and human oversight.
+
+\subsection{Inclusion and Exclusion Criteria}
+
+Studies were included if they met all of the following criteria:
+\begin{itemize}
+    \item Empirical evaluation (quantitative, qualitative, or mixed-methods)
+    \item Focus on AI-assisted programming or code generation
+    \item Evaluation of tools such as Copilot, ChatGPT, Codex, Gemini, or similar
+    \item Availability of measurable outcomes (e.g., productivity, quality, accuracy)
+    \item Published between 2020 and 2026
+    \item Written in English
+\end{itemize}
+
+Studies were excluded if they:
+\begin{itemize}
+    \item Were opinion papers, editorials, or non-scientific content
+    \item Lacked empirical validation
+    \item Focused on NLP tasks unrelated to programming
+    \item Lacked verifiable metadata (e.g., missing DOI or source)
+    \item Represented duplicate or incomplete versions of other studies
+\end{itemize}
+
+\subsection{Study Selection Process}
+
+The selection process followed a PRISMA-inspired workflow \cite{page2021prisma} consisting of four phases:
+
+\begin{enumerate}
+    \item Identification: Collection of an initial dataset of 863 studies
+    \item Screening: Title and abstract screening reduced the dataset to 349 studies
+    \item Eligibility: Full-text assessment and validation reduced the dataset to 324 studies
+    \item Inclusion: Final selection of 100 studies after quality assessment and balancing
+\end{enumerate}
+
+\subsection{Quality Assessment}
+
+A multi-criteria scoring model was used to evaluate study quality, including:
+\begin{itemize}
+    \item Empirical rigor (e.g., experimental design, sample size)
+    \item Venue quality (e.g., ACM, IEEE, Springer)
+    \item Completeness of metadata
+    \item Relevance to research questions
+    \item Diversity of evaluated tools
+\end{itemize}
+
+Each study was assigned a composite score combining:
+\begin{itemize}
+    \item Screening score (from automated tools)
+    \item Venue-based weighting
+    \item Methodological strength
+    \item Metadata completeness
+    \item Tool diversity
+\end{itemize}
+
+Final selection was not purely score-based; it also incorporated balancing across publication venues and tool coverage.
+
+\subsection{Data Extraction and Synthesis}
+
+For each study, the following data were extracted:
+\begin{itemize}
+    \item Study type
+    \item Tools evaluated
+    \item Evaluation metrics
+    \item Key findings
+    \item Research questions addressed
+\end{itemize}
+
+The extracted data were analyzed using both quantitative aggregation (e.g., frequency and percentage analysis) and qualitative synthesis to identify patterns, trends, and research gaps.
+
+\subsection{PRISMA Flow Diagram}
+
+Figure~\ref{fig:prisma} presents the study selection process.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/prisma_diagram.png}
+    \caption{PRISMA flow diagram of the study selection process}
+    \label{fig:prisma}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\caption{PRISMA Study Selection Summary}
+\begin{tabular}{l c}
+\hline
+Stage & Number of Studies \\
+\hline
+Initial records identified & 863 \\
+After screening (title/abstract) & 349 \\
+After eligibility (full-text) & 324 \\
+Final included studies & 100 \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Threats to Validity}
+
+This study is subject to several potential threats to validity, which are addressed through mitigation strategies aligned with established SLR guidelines \cite{kitchenham2007guidelines}.
+
+\textbf{Selection Bias.}  
+The study selection process may introduce bias due to the reliance on search queries and automated discovery tools. Relevant studies may have been omitted if they were not indexed in the selected sources or did not match the query terms. To mitigate this risk, multiple academic databases were used, and the selection process followed a structured PRISMA-based workflow.
+
+\textbf{Publication Bias.}  
+The dataset includes a significant proportion of preprints (e.g., arXiv), which may not have undergone peer review. While this reflects the rapid evolution of the field, it may also introduce bias toward preliminary findings. To address this, publication venues were considered during the quality assessment and selection process.
+
+\textbf{Data Extraction Bias.}  
+The extraction and classification of study attributes (e.g., metrics, tools, study types) may be subject to interpretation bias. To reduce this risk, structured extraction criteria were used, and ambiguous cases were reviewed carefully.
+
+\textbf{AI-Assisted Processing Bias.}  
+Artificial intelligence tools were used to support literature discovery, screening, and data structuring. While these tools improve efficiency, they may introduce systematic biases or inconsistencies. To mitigate this threat, all critical decisions regarding inclusion, exclusion, and final selection were validated by the authors, ensuring human oversight.
+
+\textbf{Heterogeneity of Studies.}  
+The included studies vary widely in terms of methodologies, datasets, evaluation metrics, and experimental settings. This heterogeneity limits direct comparability and reduces the possibility of quantitative meta-analysis.
+
+\textbf{Temporal Bias.}  
+Given the rapid evolution of AI-assisted coding tools, the findings may become outdated as new tools and models emerge. The study mitigates this risk by focusing on recent publications (2021–2026), but this also limits historical perspective.
+
+\textbf{Reporting Bias.}  
+Some studies may selectively report positive outcomes, particularly regarding productivity improvements. This may lead to an overestimation of benefits.
+
+Overall, while these threats cannot be fully eliminated, the use of a structured methodology, transparent criteria, and human validation helps ensure the robustness and reliability of the findings.
+
+\subsection{Ethical Considerations}
+
+The use of AI-assisted tools in this study complies with current ethical guidelines for research transparency. AI systems were used exclusively as support tools and did not replace human judgment in any stage of the review process.
+
+\section{Results}
+
+\subsection{Overview of the Selected Studies}
+
+A total of 100 primary studies were included in the final synthesis after a multi-stage screening and validation process. The temporal distribution of the studies shows a strong concentration in recent years, with the majority published between 2024 (approximately 45\%) and 2025 (approximately 42\%), reflecting the rapid evolution of AI-assisted programming tools.
+
+Regarding publication sources, the dataset includes a balanced mix of arXiv preprints (49\%), ACM venues (29\%), IEEE venues (13\%), and other verified publishers (approximately 9\%). This distribution indicates that, while the field is highly active, it is still partially consolidating in top-tier archival venues. These observations are derived from the selected studies included in this review..
+
+\subsection{Research Methodologies (RQ6)}
+
+The most common research methodologies identified were controlled experiments (34\%), observational studies (26\%), and mixed-methods approaches (10\%). Case studies and surveys together account for approximately 7\% of the selected studies.
+
+These results suggest that the field is increasingly grounded in empirical evaluation, with a strong emphasis on experimental validation, consistent with prior empirical software engineering research \cite{nguyen2022copilot}.
+
+\subsection{Tool Coverage and Ecosystem (RQ1, RQ4)}
+
+The literature is dominated by a small set of widely adopted tools, particularly GitHub Copilot (44\%) and ChatGPT (32\%). However, the dataset also includes emerging tools such as Gemini (7\%), Claude and Claude Code (7\%), OpenAI Codex (7\%), Amazon CodeWhisperer (6\%), and Tabnine (6\%), as well as additional tools including Cursor, Codeium, and DeepSeek-Coder.
+
+This distribution highlights a transition from single-tool evaluations toward a more diverse ecosystem of AI-assisted development tools, as also observed in prior comparative studies \cite{yetistiren2023evaluation}.
+
+\subsection{Evaluation Metrics (RQ3)}
+
+The most frequently used evaluation metrics include code quality (50\%), developer productivity or time savings (38\%), security and vulnerability analysis (30\%), accuracy and pass rates (20\%), and usability or developer experience (14\%).
+
+These findings indicate that research has moved beyond productivity-centric evaluation to include multidimensional quality and risk considerations \cite{yetistiren2023evaluation, pearce2022security}.
+
+\subsection{Impact on Productivity (RQ1)}
+
+A substantial portion of the literature reports significant productivity improvements, particularly in tasks such as code completion, boilerplate generation, documentation, unit test generation, debugging, and other repetitive activities.
+
+Reported gains commonly range between 30\% and 50\% time reduction, although results vary depending on task complexity and developer expertise, in line with prior empirical findings \cite{peng2023productivity, nguyen2022copilot}.
+
+\subsection{Code Quality and Reliability (RQ2)}
+
+Despite productivity gains, the literature consistently identifies mixed effects on code quality. Positive outcomes are typically observed for small and well-defined tasks, particularly in terms of syntactic correctness. However, challenges arise in complex logic, multi-file contexts, and long-term maintainability.
+
+These findings are consistent with prior evaluations showing variability in correctness and maintainability across AI-generated code \cite{yetistiren2023evaluation}.
+
+\subsection{Risks and Limitations (RQ5)}
+
+The most frequently reported risks include security vulnerabilities in generated code, hallucinated or incorrect logic, over-reliance by developers, reduced understanding of underlying code, and inconsistent performance across programming languages and domains.
+
+Security-related concerns, in particular, have been widely documented in the literature \cite{pearce2022security}.
+
+Notably, RQ5 is the most represented research question (approximately 73\%), indicating strong concern in the research community regarding safe and responsible adoption.
+
+\subsection{Research Gaps and Trends (RQ7)}
+
+The analysis reveals several key gaps in the literature, including the lack of standardized evaluation frameworks, limited longitudinal studies, underrepresentation of emerging tools such as Claude and Gemini, insufficient research on team-level and organizational impact, and scarcity of studies on long-term maintainability.
+
+These gaps suggest important opportunities for future research in AI-assisted software development.
+
+\section{Discussion}
+
+\subsection{Productivity Gains Are Real but Context-Dependent}
+
+The results indicate that AI-assisted coding tools provide measurable productivity improvements, particularly in repetitive and well-defined tasks such as code completion, documentation, and testing \cite{peng2023productivity, nguyen2022copilot}. However, these gains are not uniform across all development activities. The effectiveness of such tools decreases as task complexity increases, especially in scenarios involving large codebases, multi-file dependencies, or domain-specific logic.
+
+This suggests that AI tools should be conceptualized not as replacements for developers, but as productivity amplifiers whose impact depends heavily on task structure and context.
+
+\subsection{Beyond Productivity: A Multi-Dimensional Evaluation Landscape}
+
+While early discourse around AI coding assistants emphasized speed and efficiency, the current body of literature reflects a broader evaluation perspective. Code quality, security, maintainability, and developer experience are now central dimensions of analysis \cite{yetistiren2023evaluation}.
+
+This shift is significant, as it reframes the evaluation of AI tools from purely performance-driven metrics toward a more holistic understanding of software engineering outcomes. In particular, the consistent presence of security-related concerns highlights the need for cautious adoption in production environments \cite{pearce2022security}.
+
+\subsection{Dominance of Leading Tools and Emergence of New Ecosystems}
+
+The literature remains dominated by GitHub Copilot and ChatGPT, which together account for the majority of empirical studies. However, the inclusion of tools such as Claude, Gemini, OpenAI Codex, CodeWhisperer, and others indicates the emergence of a more diverse ecosystem.
+
+Despite their lower representation, these emerging tools are critical for understanding the evolution of AI-assisted development. Their inclusion helps mitigate bias toward a small number of widely studied platforms and provides a more comprehensive view of the technological landscape.
+
+\subsection{Maturity of the Research Field}
+
+Although the number of studies has grown rapidly, the field remains in a relatively early stage of consolidation. The high proportion of preprints suggests that research dissemination is still driven by speed rather than archival rigor.
+
+This does not invalidate the findings, but it does imply that conclusions should be interpreted with caution. More rigorous empirical studies in top-tier venues are emerging, but further validation is still needed \cite{nguyen2022copilot}.
+
+\subsection{Methodological Concentration and Its Implications}
+
+The predominance of controlled experiments and observational studies indicates a strong empirical orientation. However, the lack of standardized evaluation frameworks limits comparability across studies.
+
+This fragmentation creates challenges for meta-analysis and synthesis, as different studies employ heterogeneous metrics, datasets, and evaluation protocols. Addressing this issue represents a key opportunity for advancing the field.
+
+\subsection{Implications for Practice}
+
+From a practical perspective, organizations adopting AI-assisted coding tools should consider both the benefits and limitations identified in the literature. While these tools can significantly reduce development time, they also introduce risks related to code quality and security.
+
+Therefore, best practices should include:
+\begin{itemize}
+    \item Mandatory code review for AI-generated outputs
+    \item Integration of security analysis tools
+    \item Training developers to critically evaluate AI suggestions
+\end{itemize}
+
+\subsection{Implications for Research}
+
+The findings highlight several directions for future research. These include the development of standardized evaluation methodologies, increased focus on longitudinal and real-world studies, deeper exploration of team-level impacts, and expanded investigation of emerging tools.
+
+Additionally, there is a need to better understand how AI-assisted development affects software maintainability and developer cognition over time.
+
+\subsection{Threats to Validity}
+
+This study is subject to several limitations. First, the dataset includes a significant proportion of preprints, which may not have undergone rigorous peer review. Second, the reliance on automated screening tools introduces potential biases in study selection and scoring. Third, the diversity of evaluation metrics across studies limits direct comparability.
+
+Despite these limitations, the systematic filtering, validation, and balancing procedures applied in this study provide a robust foundation for synthesizing current evidence in AI-assisted software development.
+
+\section{Conclusion}
+
+This paper presented a systematic literature review of AI-assisted programming in software engineering, focusing on the capabilities of current tools, their impact on developer productivity, and their influence on code quality. By analysing studies published between 2020 and 2026, this work provides a consolidated view of a rapidly evolving research area.
+
+The findings indicate that AI-assisted programming tools offer substantial benefits in terms of productivity, particularly in tasks that are repetitive or well-defined. However, their impact on code quality remains less consistent. While efficiency improvements are frequently reported, they are sometimes accompanied by issues related to correctness, maintainability, and security. These results highlight the importance of balancing productivity gains with careful validation of AI-generated outputs.
+
+Beyond summarising existing evidence, this study contributes by organising the literature into a structured framework and identifying key trends, limitations, and research gaps. In particular, the analysis underscores the need for more rigorous empirical studies, especially in real-world industrial contexts, as well as the development of standardised evaluation metrics.
+
+Looking forward, AI-assisted programming is likely to play an increasingly central role in software development. Understanding how to effectively integrate these tools into development workflows, while mitigating their limitations, remains an important challenge for both researchers and practitioners. Continued investigation in this area will be essential to fully realise the potential of AI in software engineering.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

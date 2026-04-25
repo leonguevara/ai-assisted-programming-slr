@@ -1,0 +1,51 @@
+=================
+Ya revisados:
+=================
+
+Recent empirical studies conducted in real-world development environments further confirm that AI-generated code frequently contains security vulnerabilities. For instance, large-scale analyses of code snippets from GitHub projects report that approximately 25–30\% of AI-generated code exhibits security weaknesses across multiple CWE categories \cite{fu2025security}.
+---
+Security weaknesses in AI-generated code are not limited to controlled experimental settings but are also prevalent in production environments, where such code is integrated into real-world projects \cite{fu2025security}.
+---
+The diversity and severity of identified vulnerabilities, including those listed in the CWE Top 25, highlight the critical need for rigorous validation of AI-generated code before deployment \cite{fu2025security}.
+---
+Similarly, controlled studies of natural language to code assistants integrated within development environments report no statistically significant improvements in task completion time or correctness, despite positive user perceptions of the tools \cite{xu2022nl2code}.
+---
+Additionally, empirical evaluations of in-IDE code generation and retrieval systems indicate that program correctness does not significantly improve with the use of such tools, further highlighting limitations in current AI-assisted development approaches \cite{xu2022nl2code}.
+---
+Empirical studies also report that developers perceive AI-assisted tools as helpful and enjoyable to use, even in cases where objective performance improvements are not observed \cite{xu2022nl2code}.
+---
+In particular, empirical studies of in-IDE natural language programming assistants suggest that improvements in developer productivity are not consistently observed, even when users report positive experiences with such tools \cite{xu2022nl2code}. This reinforces the notion that perceived usefulness does not necessarily translate into measurable efficiency gains.
+---
+This distinction between subjective user satisfaction and objective performance outcomes is also evident in studies of natural language to code systems, where developers express positive perceptions of the tools despite the absence of measurable improvements in productivity or correctness \cite{xu2022nl2code}.
+---
+Recent large-scale empirical studies demonstrate that bias is prevalent in AI-generated code across multiple sensitive attributes such as age, gender, and region, with some models exhibiting biased behavior in over 50\% of generated outputs \cite{huang2025bias}.
+---
+Recent work has also introduced specialized metrics for evaluating bias in generated code, such as the Code Bias Score (CBS) and its multi-run variants, which capture both the prevalence and consistency of biased behaviors across model executions \cite{huang2025bias}.
+---
+In addition to traditional dimensions such as productivity and code quality, recent research highlights fairness as a critical evaluation dimension in AI-assisted programming. Empirical evidence shows that generated code may embed social biases, raising ethical concerns about the deployment of such systems in real-world applications \cite{huang2025bias}.
+---
+Furthermore, studies indicate that simple prompt engineering techniques are often insufficient to mitigate bias, while feedback-driven approaches that incorporate test-based analysis can significantly reduce biased behaviors in generated code \cite{huang2025bias}.
+
+=================
+Sin revisar:
+=================
+
+Recent large-scale empirical studies reveal that AI-generated code is highly non-deterministic, with identical prompts often producing semantically different outputs across multiple executions \cite{ouyang2025nondeterminism}.
+---
+Empirical evidence shows that the correctness of generated code can vary significantly across repeated executions, even under identical conditions, highlighting instability in current code generation systems \cite{ouyang2025nondeterminism}.
+---
+Non-determinism also raises important concerns regarding the reproducibility of empirical findings in AI-assisted programming research. Recent studies indicate that only a small fraction of existing work explicitly accounts for this variability, suggesting a potential threat to the validity of reported results \cite{ouyang2025nondeterminism}.
+---
+These findings highlight the importance of evaluating AI-generated code across multiple executions, rather than relying on single-run performance metrics.
+---
+Recent survey-based research highlights that many of the observed limitations in AI-assisted code generation stem from structural challenges, including data scarcity, lack of standardized benchmarks, and variability in evaluation methodologies across studies \cite{joel2025survey}.
+---
+In particular, the performance gap between high-resource and low-resource programming languages suggests that current LLM capabilities are heavily dependent on training data availability, limiting their effectiveness in specialized or underrepresented domains \cite{joel2025survey}.
+---
+The diversity of evaluation metrics observed in the literature further indicates the absence of a unified evaluation framework, complicating cross-study comparisons and synthesis of results \cite{joel2025survey}.
+---
+Recent systematic literature reviews indicate a rapid expansion in the application of large language models across a wide range of software engineering tasks, particularly since 2022 \cite{hou2024llm4se}.
+---
+Prior research highlights a strong dependence on open-source datasets, with limited use of industrial data, potentially limiting the generalizability of current findings \cite{hou2024llm4se}.
+---
+The dominance of decoder-only architectures further reflects a shift toward generative approaches in software engineering applications \cite{hou2024llm4se}.

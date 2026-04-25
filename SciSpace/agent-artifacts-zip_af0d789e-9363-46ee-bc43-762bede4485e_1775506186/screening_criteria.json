@@ -1,0 +1,49 @@
+{
+  "criteria": [
+    {
+      "name": "AI Code Generation Tools Focus",
+      "description": "The study must specifically investigate Large Language Model (LLM)-based tools or AI assistants designed for code generation, completion, or refactoring (e.g., GitHub Copilot, ChatGPT, Amazon CodeWhisperer) as the primary intervention.",
+      "type": "inclusion"
+    },
+    {
+      "name": "Developer Productivity or Performance Outcomes",
+      "description": "The paper must provide empirical data or measurable metrics regarding the tool's impact on software developer productivity, such as task completion time, effort reduction, or development speed.",
+      "type": "inclusion"
+    },
+    {
+      "name": "Code Quality and Artifact Evaluation",
+      "description": "The research must evaluate the output of AI tools in terms of correctness, maintainability, readability, or structural integrity through automated testing or manual expert review.",
+      "type": "inclusion"
+    },
+    {
+      "name": "Methodological and Metric Identification",
+      "description": "The study must explicitly detail the evaluation methodology (e.g., controlled experiment, case study) and the metrics used to assess AI-assisted programming to contribute to the classification of research standards.",
+      "type": "inclusion"
+    },
+    {
+      "name": "Risks, Vulnerabilities, and Limitations",
+      "description": "The study must analyze specific challenges, security vulnerabilities (e.g., CWEs), hallucinations, or negative behavioral impacts (e.g., over-reliance) associated with the use of AI tools in development.",
+      "type": "inclusion"
+    },
+    {
+      "name": "Lack of Empirical Validation",
+      "description": "Exclude papers that are purely conceptual, theoretical, or anecdotal, such as opinion pieces, editorials, or essays that do not present systematic data collection or evidence-based results.",
+      "type": "exclusion"
+    },
+    {
+      "name": "Non-Programming NLP Tasks",
+      "description": "Exclude studies focused on general natural language processing (NLP) tasks (e.g., translation, general sentiment analysis) that are not applied to software engineering, source code, or programming tasks.",
+      "type": "exclusion"
+    },
+    {
+      "name": "Inaccessible Research Context",
+      "description": "Exclude papers that lack sufficient detail regarding the study design, tool configuration, or measurement framework, preventing a reliable assessment of the impact on developers or code.",
+      "type": "exclusion"
+    }
+  ],
+  "metadata": {
+    "total_criteria": 8,
+    "inclusion_count": 5,
+    "exclusion_count": 3
+  }
+}

@@ -1,0 +1,20 @@
+# LaTeX build files
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.snm
+
+# PDF (opcional: ignora si quieres versionar solo fuente)
+# *.pdf
+
+# MacOS
+.DS_Store

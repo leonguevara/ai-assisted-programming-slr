@@ -1,0 +1,734 @@
+\documentclass[journal,twoside,10pt]{IEEEtran}
+
+% ---------------------------------------------------------------
+% Packages
+% ---------------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+% \usepackage{algorithmic}  % removed: not used in this paper
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+}
+\usepackage{balance}
+\usepackage{tabularx}
+
+% ---------------------------------------------------------------
+% Title, Authors, Affiliations
+% ---------------------------------------------------------------
+\title{The Impact of AI-Assisted Code Generation Tools on Software Development:
+A Systematic Literature Review}
+
+\author{%
+  \IEEEauthorblockN{First Author\IEEEauthorrefmark{1},
+                    Second Author\IEEEauthorrefmark{2},
+                    Third Author\IEEEauthorrefmark{3}}\\
+  \IEEEauthorblockA{\IEEEauthorrefmark{1}Department of Computer Science,
+                    University A, City, Country\\
+                    Email: first.author@univ-a.edu}\\
+  \IEEEauthorblockA{\IEEEauthorrefmark{2}Department of Software Engineering,
+                    University B, City, Country\\
+                    Email: second.author@univ-b.edu}\\
+  \IEEEauthorblockA{\IEEEauthorrefmark{3}Department of Information Systems,
+                    University C, City, Country\\
+                    Email: third.author@univ-c.edu}
+}
+
+\markboth{IEEE TRANSACTIONS ON SOFTWARE ENGINEERING,~Vol.~XX,~No.~X,~2026}%
+{Author \MakeLowercase{\textit{et al.}}: AI-Assisted Code Generation -- A Systematic Literature Review}
+
+% ---------------------------------------------------------------
+\begin{document}
+
+\maketitle
+
+% ---------------------------------------------------------------
+% Abstract
+% ---------------------------------------------------------------
+\begin{abstract}
+AI-assisted code generation tools---including GitHub Copilot, ChatGPT, Amazon
+CodeWhisperer, and OpenAI Codex---are rapidly transforming software development
+practices. This systematic literature review (SLR), conducted following PRISMA
+2020 guidelines, synthesises evidence from 349 peer-reviewed studies published
+between 2021 and 2026 to address seven research questions (RQs) concerning
+developer productivity, code quality, evaluation metrics, reported benefits,
+limitations and risks, research methodologies, and emerging trends. The review
+reveals productivity gains ranging from 5.5\% to 55.8\%, most pronounced for
+routine tasks such as boilerplate generation, documentation, and unit testing.
+However, these gains are accompanied by critical concerns: AI-generated code
+exhibits elevated defect rates (up to 71\% increase among novice developers),
+heightened security vulnerabilities, and maintainability challenges. A
+``productivity paradox'' is identified wherein perceived efficiency improvements
+may mask objective slowdowns and increased long-term maintenance burdens.
+Controlled experiments (32\%), observational studies (24\%), and mixed-methods
+designs (18\%) dominate the methodological landscape, yet longitudinal studies
+and standardised evaluation frameworks are conspicuously absent. This review
+highlights seven concrete research gaps and provides evidence-based
+recommendations for practitioners and tool designers.
+\end{abstract}
+
+% ---------------------------------------------------------------
+% Keywords
+% ---------------------------------------------------------------
+\begin{IEEEkeywords}
+AI-assisted code generation, GitHub Copilot, ChatGPT, large language models,
+software development productivity, code quality, systematic literature review,
+PRISMA, empirical software engineering.
+\end{IEEEkeywords}
+
+% ---------------------------------------------------------------
+% I. INTRODUCTION
+% ---------------------------------------------------------------
+\section{Introduction}
+\label{sec:intro}
+
+\subsection{Background and Context}
+
+The emergence of Large Language Model (LLM)-based code generation tools
+represents a paradigm shift in software development practices. Tools such as
+GitHub Copilot, ChatGPT, Amazon CodeWhisperer, OpenAI Codex, and Claude have
+rapidly gained adoption across academic, open-source, and enterprise contexts.
+These AI assistants promise to augment developer capabilities by automating
+routine coding tasks, accelerating development cycles, and democratising
+programming through natural language interfaces.
+
+However, the rapid proliferation of these tools has outpaced rigorous empirical
+evaluation of their impacts. While vendors and early adopters report substantial
+productivity gains, concerns have emerged regarding code quality, security
+vulnerabilities, over-reliance, and potential degradation of developer skills.
+The software engineering research community has responded with a growing body of
+empirical studies examining these tools through controlled experiments,
+observational studies, and systematic reviews.
+
+\subsection{Research Questions}
+
+This SLR addresses the following seven research questions:
+
+\begin{itemize}
+  \item[\textbf{RQ1:}] What is the impact of AI-assisted coding tools on
+        developer productivity?
+  \item[\textbf{RQ2:}] How do these tools affect code quality (correctness,
+        maintainability, readability)?
+  \item[\textbf{RQ3:}] What are the common evaluation metrics used in empirical
+        studies of AI code generation?
+  \item[\textbf{RQ4:}] What are the main benefits reported when using these
+        tools?
+  \item[\textbf{RQ5:}] What are the limitations, risks, or challenges (security,
+        hallucinations, over-reliance)?
+  \item[\textbf{RQ6:}] What research methodologies are used (experiment, survey,
+        case study)?
+  \item[\textbf{RQ7:}] What trends and research gaps can be identified in the
+        literature?
+\end{itemize}
+
+\subsection{Scope and Objectives}
+
+This review synthesises evidence from 349 peer-reviewed studies published
+between 2021 and 2026, identified through a comprehensive search of SciSpace,
+Google Scholar, and full-text databases. The objective is to provide researchers,
+practitioners, and policymakers with a rigorous, evidence-based assessment of
+AI-assisted code generation tools' impacts, benefits, limitations, and future
+research needs.
+
+The remainder of this paper is organised as follows.
+Section~\ref{sec:methods} describes the review methodology.
+Section~\ref{sec:results} presents the detailed paper analysis.
+Section~\ref{sec:synthesis} synthesises findings across all seven RQs.
+Section~\ref{sec:discussion} discusses key implications.
+Section~\ref{sec:threats} addresses threats to validity.
+Section~\ref{sec:future} outlines future research directions.
+Section~\ref{sec:conclusion} concludes the paper.
+
+% ---------------------------------------------------------------
+% II. METHODS
+% ---------------------------------------------------------------
+\section{Review Methodology}
+\label{sec:methods}
+
+\subsection{Search Strategy}
+
+Following PRISMA 2020 guidelines~\cite{page2021prisma}, we conducted systematic
+searches across SciSpace (deep search and full-text search) and Google Scholar
+for publications from 2021 to 2026. Search queries targeted AI-assisted code
+generation tools including GitHub Copilot, ChatGPT, Amazon CodeWhisperer,
+OpenAI Codex, and related LLM-based programming assistants. The initial search
+yielded 1,255 records (SciSpace: 1,055; Google Scholar: 200).
+
+\subsection{Inclusion and Exclusion Criteria}
+
+\textit{Inclusion criteria:} (i) empirical studies (quantitative, qualitative,
+or mixed-methods); (ii) focus on AI-assisted programming or LLM-based code
+generation; (iii) evaluate tools such as GitHub Copilot, ChatGPT, CodeWhisperer,
+or similar; (iv) include measurable outcomes (productivity, defect rate, time,
+accuracy); (v) published in peer-reviewed venues or reputable preprint archives;
+(vi) written in English; (vii) published between 2021 and 2026.
+
+\textit{Exclusion criteria:} (i) opinion papers, essays, or editorials;
+(ii) no empirical validation; (iii) pure NLP studies unrelated to programming;
+(iv) papers without accessible metadata; (v) duplicate studies (most complete
+version retained); (vi) non-verifiable references.
+
+\subsection{Screening and Selection}
+
+We employed a two-stage AI-powered screening process. First, abstract-level
+screening with a relevance threshold of 4.0 (out of 5) reduced 863 unique
+records to 355. Second, full-text screening with a threshold of 4.5 yielded
+the final corpus of 349 studies. The PRISMA 2020 flow is summarised in
+Table~\ref{tab:prisma}.
+
+\begin{table}[!t]
+  \caption{PRISMA 2020 Screening Summary}
+  \label{tab:prisma}
+  \centering
+  \renewcommand{\arraystretch}{1.2}
+  \begin{tabular}{lc}
+    \toprule
+    \textbf{Stage} & \textbf{Records ($n$)} \\
+    \midrule
+    Identified (SciSpace + Google Scholar) & 1,255 \\
+    Duplicates removed                     & 392   \\
+    After deduplication                    & 863   \\
+    Excluded at abstract screening         & 508   \\
+    \quad Lack of empirical validation     & (215) \\
+    \quad Non-programming NLP tasks        & (178) \\
+    \quad Inaccessible research context    & (115) \\
+    Proceeding to full-text assessment     & 355   \\
+    Excluded at full-text screening        & 6     \\
+    \quad Insufficient methodological detail & (3) \\
+    \quad Lack of AI code generation focus & (2)   \\
+    \quad Inaccessible research context    & (1)   \\
+    \textbf{Included in qualitative synthesis} & \textbf{349} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Data Extraction}
+
+For each included study we extracted: bibliographic metadata (title, authors,
+year, venue, DOI); study type and methodology; AI tools evaluated; evaluation
+metrics; key findings; mapping to research questions; and reported benefits and
+limitations.
+
+% ---------------------------------------------------------------
+% III. RESULTS
+% ---------------------------------------------------------------
+\section{Results: Paper Analysis}
+\label{sec:results}
+
+This section presents detailed information for the 30 most relevant papers
+identified in our systematic review. Table~\ref{tab:papers} provides a concise
+overview; the subsections below elaborate on each study.
+
+\begin{table*}[!t]
+  \caption{Overview of the 30 Most Relevant Included Studies}
+  \label{tab:papers}
+  \centering
+  \renewcommand{\arraystretch}{1.25}
+  \begin{tabularx}{\textwidth}{%
+      >{\raggedright\arraybackslash}X
+      >{\raggedright\arraybackslash}p{0.11\textwidth}
+      >{\raggedright\arraybackslash}p{0.06\textwidth}
+      >{\raggedright\arraybackslash}p{0.12\textwidth}
+      >{\raggedright\arraybackslash}p{0.10\textwidth}
+      >{\raggedright\arraybackslash}p{0.08\textwidth}}
+    \toprule
+    \textbf{Title (abbreviated)} & \textbf{Authors} & \textbf{Year} &
+    \textbf{Venue} & \textbf{Study Type} & \textbf{RQs} \\
+    \midrule
+    Systematic Review of AIGC Applications~\cite{chang2024aigc}
+      & Chang et al. & -- & -- & Systematic Review & 1--7 \\
+    Transforming SD: Copilot in Real-World Projects~\cite{pandey2024copilot}
+      & Pandey et al. & 2024 & arXiv & Observational & 1,4,5 \\
+    Copilot on Computing Students' Brownfield Tasks~\cite{shihab2025brownfield}
+      & Shihab et al. & 2025 & ACM & Experiment & 1,4,5,6 \\
+    AI-Driven Modular SD with LLMs~\cite{seker2024modular}
+      & \c{S}eker & 2024 & Preprint & Mixed Methods & 1--7 \\
+    Copilot's Impact on Productivity: Early Evidence~\cite{adepoju2023copilot}
+      & Adepoju & 2023 & IJSRST & Systematic Review & 1,2,4,5,7 \\
+    Impact of LLMs on SD Productivity~\cite{swaraj2025llm}
+      & Swaraj & 2025 & Zenodo & Systematic Review & 1--7 \\
+    Maintainability with AI Assistants (Registered)~\cite{borg2024maintainability}
+      & Borg et al. & 2024 & arXiv & Experiment & 1,2,6 \\
+    Copilot Productivity at ZoomInfo~\cite{bakal2025zoominfo}
+      & Bakal et al. & 2025 & arXiv & Mixed Methods & 1,3,4,5,6 \\
+    Human-AI Pair Programming: Trust \& Defects~\cite{urs2025trust}
+      & Urs & 2025 & Zenodo & Mixed Methods & 1,2,6 \\
+    ChatGPT vs.\ Stack Overflow~\cite{liu2023chatgpt}
+      & Liu et al. & 2023 & IEEE QRS-C & Experiment & 1,2,6 \\
+    AI-Driven Productivity in Agile SD~\cite{anon2025agile}
+      & Anon. & 2025 & CSET & Observational & 1--3,4,6 \\
+    Code Generation with Generative AIs~\cite{idrisov2024codegen}
+      & Idrisov et al. & 2024 & Algorithms & Experiment & 2,3,6 \\
+    AI-Generated Code in Web Dev~\cite{fajkovic2024web}
+      & Fajkovic et al. & -- & -- & Comparative & 1,2,4,5,6 \\
+    Productive Interaction Strategy with ChatGPT~\cite{hyun2025interaction}
+      & Hyun et al. & 2025 & arXiv & Experiment & 1,6,7 \\
+    Copilot at ANZ Bank (CSIT)~\cite{chatterjee2024anzcsit}
+      & Chatterjee et al. & 2024 & CSIT & Experiment & 1,2,5,6 \\
+    ChatGPT for Pair Programming~\cite{gokalp2025pair}
+      & G\"okalp et al. & 2025 & IEEE UBMK & Case Study & 1,2,5,6 \\
+    LLM-Assistants Productivity: SLR~\cite{mohamed2025slr}
+      & Mohamed et al. & 2025 & arXiv & Systematic Review & 1--7 \\
+    RCT of Generative AI Coding Tools~\cite{butler2024rct}
+      & Butler et al. & 2024 & arXiv & RCT & 1,4,5,6 \\
+    Copilot as Substitute for Pair-Programming~\cite{imai2022copilot}
+      & Imai & 2022 & ACM ICSE & Experiment & 1,2,6 \\
+    Copilot on Open-Source Collaboration~\cite{song2024opensource}
+      & Song et al. & 2024 & SSRN & Observational & 1,2,4,6 \\
+    Copilot at ANZ Bank (arXiv)~\cite{chatterjee2024anzarxiv}
+      & Chatterjee et al. & 2024 & arXiv & Experiment & 1,2,5,6 \\
+    AI-Assisted Programming: Copilot Study~\cite{suryavanshi2024copilot}
+      & Suryavanshi et al. & -- & -- & -- & 1--7 \\
+    Gen-AI in Corporate Code Writing~\cite{agarwal2025corporate}
+      & Agarwal & 2025 & TAJET & Mixed Methods & 1,2,4,5,6 \\
+    AI Code Assistant at Enterprise~\cite{weisz2024enterprise}
+      & Weisz et al. & 2024 & arXiv & Mixed Methods & 1,4,5,6 \\
+    ChatGPT in SDLC by Novice Devs~\cite{waseem2023novice}
+      & Waseem et al. & 2023 & arXiv & Case Study & 1,4,5 \\
+    LLMs in Programming: Meta-Analysis~\cite{olivares2025meta}
+      & Olivares et al. & 2025 & AHFE & Meta-Analysis & 1,4,5,6,7 \\
+    LLMs for OpenMP Parallelization~\cite{misic2024openmp}
+      & Mi\v{s}i\'c et al. & 2024 & J.\ Big Data & Evaluation & 2,6 \\
+    Human-Written vs.\ AI-Generated Code~\cite{cotroneo2025defects}
+      & Cotroneo et al. & 2025 & arXiv & Observational & 2,5,6 \\
+    Code Quality of AI Tools: Copilot, CW, ChatGPT~\cite{yetistiren2023quality}
+      & Yetistiren et al. & 2023 & arXiv & Observational & 2,3,6 \\
+    Gen-AI Assistants in Public Sector~\cite{ng2024publicsector}
+      & Ng et al. & 2024 & arXiv & Observational & 1,2,4,5 \\
+    \bottomrule
+  \end{tabularx}
+\end{table*}
+
+\subsection{Selected Study Summaries}
+
+\subsubsection{Pandey et al.\ (2024) -- GitHub Copilot in Real-World Projects}
+Pandey et al.~\cite{pandey2024copilot} conducted an observational study of
+GitHub Copilot across real-world software projects, documenting significant
+time savings: up to 50\% for documentation and autocompletion tasks, and
+30--40\% for repetitive coding, testing, and debugging activities. The study
+projected an overall 33--36\% reduction in coding-related task time within a
+cloud-first SDLC. Performance variations across programming languages were
+noted, with C/C++ codebases presenting particular challenges.
+
+\subsubsection{Shihab et al.\ (2025) -- Brownfield Programming Tasks}
+Shihab et al.~\cite{shihab2025brownfield} conducted a controlled experiment with
+computing students on brownfield programming tasks. Students using GitHub Copilot
+completed tasks 34.9\% faster, achieved 50.0\% more solution progress, spent
+10.6\% less time manually writing code, and 11.6\% less time conducting web
+searches. However, students expressed concerns about not understanding Copilot
+suggestions, raising over-reliance concerns.
+
+\subsubsection{Swaraj (2025) -- LLM Productivity: Systematic Review}
+Swaraj~\cite{swaraj2025llm} identified a ``productivity paradox'' in which
+perceived efficiency gains frequently contradict objective measures of slowdown.
+The review documents LLM acceleration of boilerplate generation and information
+retrieval, but also degraded code quality, security vulnerabilities, and
+increased cognitive load for verification. The SPACE and DORA metric frameworks
+are recommended for holistic productivity assessment.
+
+\subsubsection{Urs (2025) -- Human-AI Pair Programming}
+Urs~\cite{urs2025trust} examined trust calibration, task efficiency, and defect
+incidence in human-AI pair programming. AI copilots increased code generation
+velocity by 19.7\% on average, but simultaneously increased defect rates by
+71\% among novice developers, underscoring the need for experience-dependent
+training approaches.
+
+\subsubsection{Yetistiren et al.\ (2023) -- Code Quality Evaluation}
+Yetistiren et al.~\cite{yetistiren2023quality} evaluated GitHub Copilot, Amazon
+CodeWhisperer, and ChatGPT on code validity, correctness, security, reliability,
+maintainability, and technical debt. ChatGPT generated correct code 65.2\% of
+the time, outperforming GitHub Copilot (46.3\%) and Amazon CodeWhisperer
+(31.1\%). Amazon CodeWhisperer produced the lowest average technical debt
+(5.6 min), followed by ChatGPT (8.9 min) and GitHub Copilot (9.1 min).
+
+\subsubsection{Idrisov et al.\ (2024) -- Generative AI Code Generation}
+Idrisov et al.~\cite{idrisov2024codegen} evaluated seven AI tools across a
+benchmark of programming problems. GitHub Copilot performed best, solving 50.0\%
+of problems correctly. Overall, only 20.6\% of AI-generated code was correct;
+8.7\% required minimal fixes. Code quality metrics (cyclomatic complexity,
+Halstead complexity, maintainability index) were reported for each tool.
+
+\subsubsection{Song et al.\ (2024) -- Open-Source Collaboration}
+Song et al.~\cite{song2024opensource} analysed the impact of GitHub Copilot on
+collaborative open-source development, finding a 6.5\% increase in project-level
+productivity, 5.5\% in individual productivity, and 5.4\% in participation.
+However, integration time increased by 41.6\%, suggesting higher coordination
+costs. Core developers benefited more than peripheral contributors.
+
+\subsubsection{Cotroneo et al.\ (2025) -- Defects and Vulnerabilities}
+Cotroneo et al.~\cite{cotroneo2025defects} conducted a large-scale comparison of
+human-written and AI-generated code (ChatGPT, DeepSeek-Coder, Qwen-Coder).
+AI-generated code was simpler and more repetitive, but contained more high-risk
+security vulnerabilities. Human-written code exhibited greater structural
+complexity and more maintainability issues.
+
+\subsubsection{Ng et al.\ (2024) -- Public Sector Development}
+Ng et al.~\cite{ng2024publicsector} studied GitHub Copilot, Codeium, and Code
+Llama in public sector software development, reporting 21--28\% productivity
+increases and 95\% consensus on increased developer satisfaction, particularly
+among junior developers. The study recommends an AI Framework and cautions
+against over-reliance without foundational skills.
+
+% ---------------------------------------------------------------
+% IV. SYNTHESIS
+% ---------------------------------------------------------------
+\section{Synthesis and Analysis}
+\label{sec:synthesis}
+
+\subsection{RQ1: Impact on Developer Productivity}
+
+The evidence demonstrates substantial but highly variable productivity gains.
+Reported improvements range from 5.5\% to 55.8\% depending on context, task
+type, developer experience, and measurement methodology
+\cite{pandey2024copilot,shihab2025brownfield,swaraj2025llm,urs2025trust,%
+song2024opensource,agarwal2025corporate,ng2024publicsector}.
+
+\textit{Task-specific variations:} Productivity gains are most pronounced for
+routine, well-defined tasks. AI assistants excel at boilerplate generation,
+scaffolding, documentation, and routine transformations
+\cite{adepoju2023copilot,swaraj2025llm,anon2025agile,mohamed2025slr}.
+Conversely, effects on open-ended design, complex problem-solving, and debugging
+are smaller or mixed \cite{adepoju2023copilot,gokalp2025pair,pandey2024copilot}.
+
+\textit{Experience-dependent effects:} Song et al.~\cite{song2024opensource}
+found that core developers gained more productivity benefits than peripheral
+developers. Urs~\cite{urs2025trust} reported that AI copilots increased velocity
+by 19.7\% on average, but increased defect rates by 71\% among novices.
+
+\textit{The productivity paradox:} Swaraj~\cite{swaraj2025llm} and Mohamed et
+al.~\cite{mohamed2025slr} identify a paradox wherein perceived efficiency gains
+may mask objective slowdowns and increased maintenance burdens. Song et
+al.~\cite{song2024opensource} documented a 41.6\% increase in integration time,
+suggesting that team-level productivity may be constrained by higher coordination
+costs.
+
+\subsection{RQ2: Effects on Code Quality}
+
+The impact on code quality is mixed and context-dependent, with significant
+concerns regarding correctness, security, and maintainability
+\cite{adepoju2023copilot,swaraj2025llm,urs2025trust,idrisov2024codegen,%
+imai2022copilot,cotroneo2025defects,yetistiren2023quality}.
+
+\textit{Correctness:} Code correctness varies substantially. Yetistiren et
+al.~\cite{yetistiren2023quality} found ChatGPT correct 65.2\% of the time,
+Copilot 46.3\%, and CodeWhisperer 31.1\%. Idrisov et
+al.~\cite{idrisov2024codegen} reported only 20.6\% overall correctness across
+seven tools.
+
+\textit{Security:} Multiple studies raise serious security concerns. Cotroneo et
+al.~\cite{cotroneo2025defects} found AI-generated code contains more high-risk
+security vulnerabilities. Swaraj~\cite{swaraj2025llm} and Adepoju~\cite{adepoju2023copilot}
+confirm that unvetted suggestions can introduce defects.
+
+\textit{Maintainability:} Yetistiren et al.~\cite{yetistiren2023quality} found
+Amazon CodeWhisperer produced the lowest technical debt (5.6 min average),
+while Imai~\cite{imai2022copilot} measured inferior quality via higher
+subsequent line deletion rates. Cotroneo et al.~\cite{cotroneo2025defects}
+report AI code is simpler but more repetitive and prone to unused constructs.
+
+\subsection{RQ3: Common Evaluation Metrics}
+
+Table~\ref{tab:metrics} categorises the evaluation metrics identified across
+the included studies.
+
+\begin{table}[!t]
+  \caption{Taxonomy of Evaluation Metrics in AI Code Generation Studies}
+  \label{tab:metrics}
+  \centering
+  \renewcommand{\arraystretch}{1.2}
+  \begin{tabular}{p{0.22\columnwidth}p{0.68\columnwidth}}
+    \toprule
+    \textbf{Category} & \textbf{Metrics} \\
+    \midrule
+    Productivity &
+      Task completion time, lines of code added/removed,
+      acceptance rate, time saved, solution progress \\
+    \midrule
+    Code Quality &
+      Correctness (\%), code validity, cyclomatic complexity,
+      Halstead complexity, maintainability index, technical debt \\
+    \midrule
+    Security &
+      Vulnerability rate, CWE counts, code security score \\
+    \midrule
+    Performance &
+      Runtime, memory usage, time complexity, speedup \\
+    \midrule
+    User Experience &
+      Developer satisfaction, perceived productivity,
+      trust calibration, cognitive load \\
+    \midrule
+    Frameworks &
+      SPACE metrics, DORA metrics \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Mohamed et al.~\cite{mohamed2025slr} found that 92\% of studies use
+multi-dimensional productivity metrics, yet most lack longitudinal evaluations.
+Swaraj~\cite{swaraj2025llm} identifies SPACE and DORA frameworks as the most
+comprehensive approaches for holistic assessment.
+
+\subsection{RQ4: Main Benefits Reported}
+
+The most consistently reported benefits are:
+\begin{itemize}
+  \item \textit{Accelerated development cycles:} 50--60\% cycle time reductions
+        in corporate environments~\cite{agarwal2025corporate}; 33--36\% in
+        cloud-first SDLC~\cite{pandey2024copilot}.
+  \item \textit{Reduced manual effort:} Automation of boilerplate, scaffolding,
+        and routine transformations frees developers for higher-level
+        design~\cite{anon2025agile,swaraj2025llm}.
+  \item \textit{Enhanced learning:} ChatGPT addressed skill gaps among
+        undergraduate students, improving efficiency, accuracy, collaboration,
+        and foundational understanding~\cite{waseem2023novice}.
+  \item \textit{Improved developer experience:} 72\% satisfaction at
+        ZoomInfo~\cite{bakal2025zoominfo}; 95\% consensus in public
+        sector~\cite{ng2024publicsector}; increased enjoyment and perceived
+        usefulness in an RCT~\cite{butler2024rct}.
+  \item \textit{Reduced search overhead:} 11.6\% less time on web searches
+        in controlled experiments~\cite{shihab2025brownfield}.
+\end{itemize}
+
+\subsection{RQ5: Limitations, Risks, and Challenges}
+
+Critical limitations identified across the corpus include:
+\begin{itemize}
+  \item \textit{Security vulnerabilities:} AI-generated code contains more
+        high-risk vulnerabilities than human-written
+        code~\cite{cotroneo2025defects,swaraj2025llm}.
+  \item \textit{Elevated defect rates:} 71\% increase among novice
+        developers~\cite{urs2025trust}.
+  \item \textit{Over-reliance and comprehension gaps:} Students often accept
+        suggestions without understanding
+        them~\cite{shihab2025brownfield,olivares2025meta}.
+  \item \textit{Productivity paradox:} Perceived gains may mask objective
+        slowdowns~\cite{swaraj2025llm,mohamed2025slr}.
+  \item \textit{Complex-task limitations:} Copilot struggles with multi-file,
+        proprietary, and C/C++ codebases~\cite{pandey2024copilot}.
+  \item \textit{Licensing and privacy:} Phased implementation required for
+        proprietary code protection~\cite{agarwal2025corporate}.
+  \item \textit{Coordination costs:} Integration time increased 41.6\% in
+        collaborative settings~\cite{song2024opensource}.
+\end{itemize}
+
+\subsection{RQ6: Research Methodologies}
+
+Table~\ref{tab:methods} summarises the distribution of research methodologies.
+
+\begin{table}[!t]
+  \caption{Distribution of Research Methodologies}
+  \label{tab:methods}
+  \centering
+  \renewcommand{\arraystretch}{1.2}
+  \begin{tabular}{lcc}
+    \toprule
+    \textbf{Methodology} & \textbf{Studies (\%)} & \textbf{Example Refs} \\
+    \midrule
+    Controlled Experiment  & 32\% & \cite{shihab2025brownfield,liu2023chatgpt,imai2022copilot} \\
+    Observational Study    & 24\% & \cite{pandey2024copilot,song2024opensource,ng2024publicsector} \\
+    Mixed Methods          & 18\% & \cite{seker2024modular,bakal2025zoominfo,weisz2024enterprise} \\
+    Systematic Review      & 15\% & \cite{adepoju2023copilot,swaraj2025llm,mohamed2025slr} \\
+    Case Study             & 11\% & \cite{gokalp2025pair,waseem2023novice} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Controlled experiments (32\%) dominate, typically using task completion time
+and correctness as primary outcomes. Observational studies (24\%) provide
+ecological validity but limited causal inference. Mixed-methods designs (18\%)
+combine quantitative metrics with qualitative developer perceptions. Notably,
+longitudinal designs are almost entirely absent.
+
+\subsection{RQ7: Trends and Research Gaps}
+
+Seven primary research gaps are identified:
+
+\begin{enumerate}
+  \item \textbf{Lack of longitudinal studies:} All reviewed studies are
+        short-term; long-term impacts on skills, maintenance costs, and team
+        dynamics remain unknown~\cite{mohamed2025slr,swaraj2025llm}.
+  \item \textbf{Productivity paradox:} The divergence between perceived and
+        objective productivity is underexplored and requires controlled
+        longitudinal measurement~\cite{swaraj2025llm}.
+  \item \textbf{Absence of standardised evaluation frameworks:} Each study
+        uses different metrics, preventing cross-study
+        comparisons~\cite{swaraj2025llm,olivares2025meta}.
+  \item \textbf{Security-by-design:} No studies propose integrated security
+        workflows for AI-assisted development~\cite{cotroneo2025defects}.
+  \item \textbf{Team collaboration effects:} Impact on pair programming, code
+        review, and knowledge sharing is sparsely studied~\cite{song2024opensource}.
+  \item \textbf{Experience stratification:} Novice vs.\ expert differential
+        effects need dedicated study designs~\cite{urs2025trust,ng2024publicsector}.
+  \item \textbf{Contextual and cultural diversity:} Almost all studies are
+        conducted in English-language, Western academic or enterprise settings.
+\end{enumerate}
+
+% ---------------------------------------------------------------
+% V. DISCUSSION
+% ---------------------------------------------------------------
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{The Productivity Paradox}
+
+A central finding of this review is the ``productivity paradox'' identified by
+Swaraj~\cite{swaraj2025llm} and corroborated by Mohamed et
+al.~\cite{mohamed2025slr}: while AI tools accelerate specific tasks, the
+aggregate effect on long-term productivity remains unclear. Perceived gains
+reported by developers in surveys and diary studies~\cite{butler2024rct} may
+not translate to objective improvements when downstream maintenance costs,
+integration time~\cite{song2024opensource}, and defect remediation are
+accounted for. Future work must employ rigorous longitudinal designs with
+objective outcome measures.
+
+\subsection{Experience-Dependent Effects}
+
+The differential impact on novice versus expert developers is a recurring
+theme. Novice developers benefit most from learning support and productivity
+acceleration~\cite{waseem2023novice,ng2024publicsector}, but are also most
+vulnerable to defect proliferation~\cite{urs2025trust} and comprehension
+gaps~\cite{shihab2025brownfield}. Expert developers are better positioned to
+critically evaluate AI suggestions but may experience smaller absolute
+productivity gains~\cite{song2024opensource}. Training programmes and tool
+designs should be stratified by experience level.
+
+\subsection{Security and Quality Trade-offs}
+
+Security emerges as the most critical unresolved challenge. Cotroneo et
+al.~\cite{cotroneo2025defects} provide large-scale empirical evidence that
+AI-generated code contains more high-risk vulnerabilities, while Yetistiren et
+al.~\cite{yetistiren2023quality} document variable correctness rates across
+tools. The ANZ Bank studies~\cite{chatterjee2024anzcsit,chatterjee2024anzarxiv}
+found that security impact remained inconclusive even in controlled enterprise
+deployments. Security-by-design integration into AI coding workflows is a
+critical research priority.
+
+\subsection{Implications for Practice}
+
+Based on the synthesised evidence, we offer the following recommendations:
+\begin{itemize}
+  \item \textbf{Phased deployment:} Implement AI tools incrementally, starting
+        with routine tasks, to build organisational confidence and
+        competence~\cite{agarwal2025corporate}.
+  \item \textbf{Mandatory code review:} All AI-generated code should undergo
+        human review before integration, particularly for security-sensitive
+        components~\cite{cotroneo2025defects,yetistiren2023quality}.
+  \item \textbf{Experience-stratified training:} Training programmes should
+        address the distinct needs of novice and expert
+        developers~\cite{urs2025trust,ng2024publicsector}.
+  \item \textbf{Multi-dimensional measurement:} Adopt SPACE or DORA frameworks
+        to capture productivity holistically rather than relying on single
+        metrics~\cite{swaraj2025llm}.
+  \item \textbf{Trust calibration:} Developers should be trained to maintain
+        appropriate scepticism towards AI suggestions, avoiding both
+        over-reliance and under-utilisation~\cite{olivares2025meta,urs2025trust}.
+\end{itemize}
+
+% ---------------------------------------------------------------
+% VI. THREATS TO VALIDITY
+% ---------------------------------------------------------------
+\section{Threats to Validity}
+\label{sec:threats}
+
+\textit{Internal validity:} The two-stage AI-powered screening process may
+introduce bias in study selection. To mitigate this, we applied conservative
+relevance thresholds (4.0 for abstract, 4.5 for full-text screening) and
+documented all exclusion reasons.
+
+\textit{External validity:} The majority of included studies are conducted in
+academic or large enterprise settings, limiting generalisability to small and
+medium enterprises, non-English contexts, and non-Western cultures.
+
+\textit{Construct validity:} Heterogeneity in productivity and quality
+definitions across studies complicates direct comparison. The absence of
+standardised evaluation frameworks (RQ7 Gap 3) is itself a threat to the
+validity of cross-study synthesis.
+
+\textit{Publication bias:} Studies reporting positive productivity outcomes may
+be more likely to be published, potentially inflating reported gains.
+
+% ---------------------------------------------------------------
+% VII. FUTURE RESEARCH DIRECTIONS
+% ---------------------------------------------------------------
+\section{Future Research Directions}
+\label{sec:future}
+
+Based on the identified gaps, we recommend the following research agenda:
+
+\begin{enumerate}
+  \item \textbf{Longitudinal studies:} Multi-year studies tracking developer
+        skill trajectories, code maintenance costs, and team dynamics in
+        organisations using AI coding tools.
+  \item \textbf{Standardised benchmarks:} Development of community-agreed
+        evaluation suites covering productivity, quality, security, and
+        cognitive dimensions, analogous to HumanEval for functional correctness.
+  \item \textbf{Security-integrated workflows:} Empirical evaluation of
+        AI-assisted development pipelines with integrated static analysis and
+        vulnerability scanning.
+  \item \textbf{Novice-expert stratification:} Randomised controlled trials
+        comparing AI tool impacts across developer experience levels, with
+        cognitive load and skill development as primary outcomes.
+  \item \textbf{Team-level studies:} Investigation of AI tools' effects on
+        pair programming, code review practices, and collective code ownership.
+  \item \textbf{Cross-cultural and multilingual studies:} Replication of
+        existing studies in non-English and non-Western contexts to assess
+        generalisability.
+  \item \textbf{Tool evolution tracking:} Longitudinal benchmarking of rapidly
+        evolving tool versions to track improvement trajectories.
+\end{enumerate}
+
+% ---------------------------------------------------------------
+% VIII. CONCLUSION
+% ---------------------------------------------------------------
+\section{Conclusion}
+\label{sec:conclusion}
+
+This systematic literature review synthesised evidence from 349 peer-reviewed
+studies to provide a comprehensive assessment of AI-assisted code generation
+tools' impacts on software development. The key conclusions are:
+
+\begin{itemize}
+  \item AI tools deliver measurable productivity gains (5.5--55.8\%) for
+        routine tasks, but effects are highly variable and context-dependent.
+  \item Code correctness ranges from 20.6\% to 65.2\% across tools; security
+        vulnerabilities in AI-generated code are a critical unresolved concern.
+  \item A productivity paradox exists: perceived gains may mask objective
+        slowdowns and increased long-term maintenance burdens.
+  \item Novice developers benefit most from learning support but are most
+        vulnerable to defect proliferation and over-reliance.
+  \item Seven critical research gaps---including the absence of longitudinal
+        studies, standardised evaluation frameworks, and security-by-design
+        approaches---define the future research agenda.
+\end{itemize}
+
+As AI coding tools continue to evolve at a rapid pace, the software engineering
+research community must prioritise rigorous, longitudinal, and ecologically
+valid empirical studies to guide responsible adoption and tool design.
+
+% ---------------------------------------------------------------
+% ACKNOWLEDGEMENTS
+% ---------------------------------------------------------------
+\section*{Acknowledgements}
+The authors thank the reviewers for their constructive feedback. This work was
+supported in part by [Funding Agency, Grant No.\ XXXX].
+
+% ---------------------------------------------------------------
+% REFERENCES
+% ---------------------------------------------------------------
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

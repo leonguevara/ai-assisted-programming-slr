@@ -1,0 +1,77 @@
+Tool,Count,Pct
+GitHub Copilot,44,44.0
+ChatGPT,32,32.0
+Gemini,7,7.0
+Claude,7,7.0
+OpenAI Codex,7,7.0
+Amazon CodeWhisperer,6,6.0
+GPT-4,6,6.0
+Tabnine,6,6.0
+GPT-3.5,5,5.0
+Code Llama,5,5.0
+Codeium,4,4.0
+DeepSeek-Coder,3,3.0
+Cursor,3,3.0
+GPT-4o,2,2.0
+Google Bard,2,2.0
+DeepSeek,2,2.0
+OpenHands,2,2.0
+CigaR,1,1.0
+watsonx Code Assistant (WCA),1,1.0
+Llama-3.1,1,1.0
+StarCoder-2,1,1.0
+ChatRepair,1,1.0
+Google Palm2,1,1.0
+InstructGPT,1,1.0
+CodeQwen1.5,1,1.0
+Bard,1,1.0
+Qwen-Coder,1,1.0
+Qodo PR Agent,1,1.0
+Cohere,1,1.0
+AgentOrchestra,1,1.0
+StarCoder,1,1.0
+InstructCodeT5+,1,1.0
+BingAI Chat,1,1.0
+Vercel's v0,1,1.0
+Meta AI,1,1.0
+GPTswarm,1,1.0
+Large language models (LLMs),1,1.0
+LLMs from OpenAI,1,1.0
+Transform Code,1,1.0
+AutoPrompter,1,1.0
+CodeGen,1,1.0
+Qodo,1,1.0
+Coderabbit,1,1.0
+Meta,1,1.0
+GPT-3.5 series models,1,1.0
+OpenCoder 8B,1,1.0
+Qwen2,1,1.0
+Mistral,1,1.0
+GPT-4-turbo,1,1.0
+PALM-2-CodeChat-bison,1,1.0
+3.7 Sonnet,1,1.0
+CodeLLama- 13B,1,1.0
+CodeLLama-7B,1,1.0
+GPT-3.5- Turbo,1,1.0
+GPT-4 Turbo,1,1.0
+Perplexity Labs (Llama-3.1-70b-instruct),1,1.0
+Applitools,1,1.0
+Eraser.io,1,1.0
+Lucidchart,1,1.0
+Mabl,1,1.0
+Mermaid.js,1,1.0
+Postman,1,1.0
+Replit,1,1.0
+Supermaven,1,1.0
+Testim,1,1.0
+UIzard,1,1.0
+Visily,1,1.0
+CoSEFA,1,1.0
+Llama,1,1.0
+CodeGeeX2,1,1.0
+Llama 3.2 90B,1,1.0
+GPT4o,1,1.0
+GPT assistant,1,1.0
+Grok,1,1.0
+Gemma,1,1.0
+CodeCompose,1,1.0
