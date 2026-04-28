@@ -297,13 +297,13 @@ The effectiveness of AI-generated code also declines significantly when external
 
 This discrepancy is further reflected in the difference between controlled and real-world scenarios. While programming, ``puzzle'' tasks can be completed up to 55.8\% faster with AI assistance, these gains are substantially reduced or absent in realistic software development tasks that require deeper conceptual understanding of the system \cite{xu_ai-assisted_2026, wang_rocks_2024}.
 
+Taken together, these results show a clear pattern: performance gains decrease systematically as task complexity increases.
+
 The impact of AI-assisted programming varies significantly with developer experience. Less experienced developers tend to exhibit larger relative productivity gains, with some large-scale deployments reporting increases of up to 77\% in code contributions for junior developers, compared to approximately 45\% for mid-level and senior developers \cite{kumar_intuition_2025}.
 
 AI-assisted programming reduces barriers to contribution, enabling peripheral contributors to increase their activity by up to 43.5\% in mature codebases. However, these gains come with important caveats. Some studies report a decrease of up to 28\% in algorithmic problem-solving ability among less experienced developers after prolonged reliance on AI tools, suggesting potential negative effects on skill development \cite{xu_ai-assisted_2026, koripalli_copilot_2025}.
 
 Taken together, these results indicate that productivity gains are inherently conditional, varying systematically with task complexity, developer expertise, and interaction dynamics.
-
-These findings indicate that development effort is redistributed across activities, with reduced time in code generation and increased time in evaluation and correction tasks. As a result, the primary impact of AI-assisted programming is not the elimination of effort, but its reallocation toward validation and decision-making \cite{cotroneo_automating_2024, li_showing_2024}.
 
 Manual review of AI-generated code is often time-consuming and cognitively demanding, partially offsetting initial productivity gains. In team settings, this effect is amplified: while less experienced developers produce more code, experienced developers may experience a decrease in their own coding productivity (up to 19\%) due to increased time spent reviewing and reworking AI-generated contributions \cite{xu_ai-assisted_2026}.
 
@@ -321,7 +321,7 @@ In many cases, AI-generated code is syntactically correct but semantically shall
 
 Empirical analyses show that a large proportion of detected issues correspond to maintainability concerns rather than functional failures. In some studies, between 90\% and 93\% of identified issues in AI-generated code are classified as code smells, indicating degraded maintainability and increased long-term costs \cite{sabra_assessing_2025}.
 
-Evidence indicates that AI-generated code can introduce subtle logical errors and inconsistencies, particularly in security-sensitive contexts where incorrect assumptions or incomplete implementations may lead to exploitable vulnerabilities \cite{sandoval_lost_2022}.
+Evidence indicates that AI-generated code can introduce subtle logical errors and inconsistencies, particularly in security-sensitive contexts where incorrect assumptions or incomplete implementations may lead to exploitable vulnerabilities \cite{sandoval_lost_2022}. Overall, these findings consistently indicate that reliability issues are not isolated, but systemic across models and contexts.
 
 Beyond general defects, multiple studies report the systematic introduction of security vulnerabilities in AI-generated code. Common issues include command injection (CWE-78), hardcoded credentials (CWE-259), and SQL injection (CWE-89), which appear consistently across multiple models and programming languages \cite{schreiber_security_2026}.
 
@@ -337,7 +337,7 @@ In practice, AI-generated code is rarely integrated without modification. Develo
 
 This effect is compounded by overconfidence, particularly among less-experienced developers, who may incorrectly assess insecure or incomplete code as correct because of its apparent plausibility. As a result, AI-assisted programming can increase the risk of latent defects being introduced into production systems \cite{perry_users_2023}.
 
-Within the socio-technical structure, these issues reflect a systematic tension between generation efficiency and long-term code reliability.
+Taken together, these findings highlight a structural trade-off between generation efficiency and long-term code reliability.
 
 \subsection{Human--AI Interaction and Prompting Dynamics}
 
@@ -349,6 +349,8 @@ Empirical studies further characterise this interaction as an iterative cycle of
 
 Developers frequently adapt their prompting strategies by adding contextual information, error descriptions, or documentation fragments to guide the model toward more accurate solutions \cite{mendes_youre_2024}. Interaction patterns can also be categorised into distinct intents, such as solving, fixing, and explaining, indicating that AI tools are used not only for code generation but also for understanding and debugging \cite{rahe_how_2025}.
 
+Taken together, these interaction patterns highlight the central role of interaction quality in shaping system performance.
+
 This iterative process reflects the role of AI systems as incomplete collaborators rather than autonomous agents. Developers rarely accept generated code without modification; instead, they refine, adapt, and contextualise outputs before integration \cite{pinto_developer_2024}.
 
 Empirical evidence shows that a substantial proportion of AI-generated code requires significant modification, with developers adjusting outputs to align with project requirements and best practices \cite{borg_echoes_2026}. This behaviour highlights the absence of reliable autonomous judgement in current AI systems, reinforcing the need for continuous human supervision \cite{bento_leveraging_2025}.
@@ -359,7 +361,7 @@ This sensitivity is particularly evident in ambiguous or underspecified tasks, w
 
 This reinforces the central role of prompt formulation as a determinant of output variability and reliability \cite{zhong_developer-llm_2025}. Clear, structured, and context-rich prompts lead to more reliable results, while ambiguous or underspecified prompts increase variability and error rates.
 
-Context-aware approaches, such as retrieval-augmented generation, improve performance by incorporating additional information, but do not eliminate uncertainty \cite{pinto_developer_2024}. Variability across repeated interactions remains a fundamental characteristic of these systems.
+Context-aware approaches, such as retrieval-augmented generation, improve performance by incorporating additional information, but do not eliminate uncertainty \cite{pinto_developer_2024}. Variability across repeated interactions remains a fundamental characteristic of these systems. This reinforces the view that interaction quality acts as a primary determinant of performance variability.
 
 These findings suggest that the effectiveness of AI-assisted programming depends not only on model capabilities, but also on the user's ability to structure interactions and manage iterative workflows. As a result, interaction quality becomes a mediating variable between tool usage and performance outcomes.
 
@@ -427,9 +429,11 @@ Reported productivity gains in industrial contexts range from approximately 30\%
 
 However, these benefits are offset by significantly high hidden costs. A substantial proportion of indirect costs is associated with supervision and validation, particularly by more experienced developers. In some cases, supervision alone accounts for the majority of indirect costs associated with AI adoption \cite{rodriguez_comparative_nodate}.
 
-In addition, empirical studies report increased coordination effort in team settings. While AI-assisted programming may increase individual output, they can also lead to higher integration overhead, including more discussions, reviews, and alignment activities required to incorporate generated code into shared codebases \cite{song_impact_2024}.
+In addition, empirical studies report increased coordination effort in team settings. While AI-assisted programming may increase individual output, it can also lead to higher integration overhead, including more discussions, reviews, and alignment activities required to incorporate generated code into shared codebases \cite{song_impact_2024}.
 
 Another emerging cost dimension is the effort associated with prompt formulation and interaction management. Developers must invest time in crafting, refining, and evaluating prompts, raising the question of whether the cognitive and temporal cost of prompting is justified by the quality of the resulting output.
+
+Taken together, these cost factors indicate that economic outcomes depend on a balance between increased output and accumulated overhead.
 
 This phenomenon, sometimes referred to as the "economy of prompting", suggests that the efficiency of AI-assisted programming depends not only on generation speed, but also on the cost of interaction required to obtain usable results \cite{nam_understanding_2025}.
 
