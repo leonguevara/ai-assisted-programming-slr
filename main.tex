@@ -399,7 +399,9 @@ From a socio-technical perspective, cognitive effort is not reduced but redistri
 
 Organisational impact accounts for 5.5\% of the analysed studies, indicating relatively limited empirical attention to team-level effects. Nevertheless, available evidence reveals significant changes in workflow and task distribution.
 
-This redistribution of effort is accompanied by a reconfiguration of developer roles. As AI-assisted programming takes over routine implementation tasks, developers increasingly shift toward supervisory and orchestration roles \cite{chen_code_2025}.
+Although organisational impact is represented by a relatively small subset of studies, the convergence of findings within this subset suggests an emerging but consistent pattern. This limited coverage should be interpreted not as a lack of relevance, but as a critical research gap, reflecting that organisational transformation is progressing faster in practice than it is being captured empirically.
+
+A reconfiguration of developer roles accompanies this redistribution of effort. As AI-assisted programming takes over routine implementation tasks, developers increasingly shift toward supervisory and orchestration roles \cite{chen_code_2025}.
 
 Empirical studies describe this transition as a movement from execution to management, where developers guide, monitor, and correct AI-generated outputs rather than producing all code directly. In this context, AI systems are often perceived as junior collaborators or assistants that require continuous oversight, enabling more experienced developers to focus on higher-level design and decision-making tasks \cite{weisz_examining_2025}.
 
@@ -431,11 +433,11 @@ However, these benefits are offset by significantly high hidden costs. A substan
 
 In addition, empirical studies report increased coordination effort in team settings. While AI-assisted programming may increase individual output, it can also lead to higher integration overhead, including more discussions, reviews, and alignment activities required to incorporate generated code into shared codebases \cite{song_impact_2024}.
 
-Another emerging cost dimension is the effort associated with prompt formulation and interaction management. Developers must invest time in crafting, refining, and evaluating prompts, raising the question of whether the cognitive and temporal cost of prompting is justified by the quality of the resulting output.
+Another emerging cost dimension is the effort associated with prompt formulation and interaction management. Developers must invest time in crafting, refining, and evaluating prompts, raising the question of whether the cognitive and temporal cost of prompting is justified by the quality of the resulting output.  It is important to note that these observations are primarily qualitative, reflecting the current lack of standardised metrics for evaluating prompting effort and interaction overhead in AI-assisted development.
 
 Taken together, these cost factors indicate that economic outcomes depend on a balance between increased output and accumulated overhead.
 
-This phenomenon, sometimes referred to as the "economy of prompting", suggests that the efficiency of AI-assisted programming depends not only on generation speed, but also on the cost of interaction required to obtain usable results \cite{nam_understanding_2025}.
+This phenomenon, sometimes referred to as the "economy of prompting" \cite{nam_understanding_2025}, suggests that the efficiency of AI-assisted programming depends not only on generation speed, but also on the cost of interaction required to obtain usable results.
 
 At the system level, AI-assisted programming also introduces direct computational costs. These include expenses associated with token usage, inference, and orchestration in more complex systems such as multi-agent frameworks, where repeated reasoning cycles can significantly increase operational costs \cite{yin_comprehensive_2025}.
 
@@ -493,11 +495,11 @@ Rather than eliminating developer involvement, these systems shift the locus of 
 
 Overall, these findings indicate that the transition from assistants to agents is not a linear progression toward automation, but a restructuring of complexity, where increased system autonomy leads to higher demands on coordination, validation, and control.
 
-Although the findings are presented across distinct analytical dimensions, consistent patterns emerge regarding the redistribution of effort, the role of validation, and the interaction between human and AI capabilities. These recurring patterns suggest the presence of an underlying structure that governs the behaviour of AI-assisted programming across contexts.
+Although the findings are presented across distinct analytical dimensions, consistent patterns emerge regarding the redistribution of effort, the role of validation, and the interaction between human and AI capabilities. These recurring patterns suggest an underlying structure that governs the behaviour of AI-assisted programming across contexts.
 
 \subsection{Synthesis of Findings}
 
-To integrate these findings, we formalise the observed patterns into a socio-technical model that captures the underlying structure of AI-assisted programming across contexts.
+To integrate these findings, we formalise the observed patterns into a socio-technical model that captures the underlying structure of AI-assisted programming across contexts.  This socio-technical model was derived through an inductive synthesis of recurring patterns identified across the analysed studies, following a structured thematic aggregation process.
 
 Across all dimensions, the results consistently indicate that AI-assisted programming does not eliminate development effort, but fundamentally restructures it.
 
@@ -520,6 +522,8 @@ This synthesis suggests that AI-assisted programming is best understood not as a
 
 Taken together, these patterns suggest the emergence of a coherent socio-technical structure underlying AI-assisted programming. These findings are synthesised into a conceptual socio-technical model (Fig.~\ref{fig:socio-technical-blueprint}), which integrates key empirically grounded dynamics identified across the analysis, including effort redistribution, verification overhead, interaction modes, perception–reality gaps, trust calibration mechanisms, and security-related trust gaps. The model captures how these interrelated factors collectively drive a shift in developer roles toward supervision and orchestration, rather than direct code production.
 
+This model should be interpreted as an analytical abstraction derived from observed empirical regularities, rather than as a prescriptive framework, providing a structured lens for understanding the interaction between technical capabilities and socio-technical dynamics.
+
 \section{Discussion}
 
 The socio-technical model presented in Fig.~\ref{fig:socio-technical-blueprint} serves as the central analytical lens and theoretical backbone through which the findings of this study are interpreted.
@@ -533,6 +537,8 @@ However, these gains are often accompanied by increased verification effort, hig
 Rather than reducing effort, AI-assisted programming redistributes it, shifting developer activity from code generation to validation, debugging, and integration. This finding challenges simplistic narratives of automation and highlights the need to evaluate productivity in terms of total development effort rather than initial output speed.
 
 This shift in effort helps explain the productivity paradox observed across the studies. Empirical evidence shows that time savings in code generation are frequently offset by increased effort in validation and correction \cite{cotroneo_automating_2024, fakhoury_llm-based_2024, eibl_exploring_2025}.
+
+These findings reveal a fundamental distinction between nominal productivity (measured as output volume) and effective productivity (measured as validated, maintainable code). While AI-assisted programming consistently increases the former, it introduces trade-offs that may limit or even reduce the latter.
 
 This shift is particularly evident in team environments, where gains in output from less experienced developers create additional review burdens for more experienced contributors \cite{xu_ai-assisted_2026, koripalli_copilot_2025, kumar_intuition_2025}. As a result, productivity improvements at the individual level do not necessarily translate into net gains at the team level \cite{xu_ai-assisted_2026}.
 
@@ -554,7 +560,7 @@ This equilibrium is further shaped by interaction quality and trust calibration,
 
 A key finding across the corpus is that the effectiveness of AI-assisted programming is not determined solely by model capabilities but by human and contextual factors. Interaction quality, prompting strategies, and developer expertise significantly influence outcomes \cite{zhong_developer-llm_2025, pinto_developer_2024}.
 
-In particular, experienced developers appear better equipped to leverage AI tools effectively, while less experienced users may benefit from increased output but struggle with validation and error detection \cite{koripalli_copilot_2025}. This suggests that AI tools amplify existing skill differences rather than eliminating them.
+In particular, experienced developers appear better equipped to leverage AI tools effectively, while less experienced users may benefit from increased output but struggle with validation and error detection \cite{koripalli_copilot_2025}. This suggests that AI tools amplify existing skill differences rather than eliminating them. An additional emerging concern is the potential impact on long-term skill development. In particular, sustained reliance on AI-assisted tools may reduce engagement with first-principles problem solving among less experienced developers, raising questions about the evolution of human capital in software engineering.
 
 Furthermore, contextual factors such as task complexity, domain specificity, and organisational practices play a critical role. The same tool may produce markedly different outcomes depending on how and where it is used, reinforcing the importance of situational awareness in evaluating AI-assisted development.
 
