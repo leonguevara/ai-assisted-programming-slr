@@ -1,7 +1,7 @@
 %% This BibTeX bibliography file was created using BibDesk.
 %% https://bibdesk.sourceforge.io/
 
-%% Created for León Felipe Guevara Chávez at 2026-06-17 14:25:27 -0600 
+%% Created for León Felipe Guevara Chávez at 2026-06-17 16:05:36 -0600 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
@@ -2035,4 +2035,56 @@ Based on this framework, we design two specific methods (i.e., low-probability e
 	year = {2025},
 	bdsk-url-1 = {http://arxiv.org/abs/2511.00872},
 	bdsk-url-2 = {https://doi.org/10.48550/arXiv.2511.00872}}
+
+@article{fakhoury_llm-based_2024,
+	abstract = {Large language models (LLMs) have shown great potential in automating significant aspects of coding by producing natural code from informal natural language (NL) intent. However, given NL is informal, it does n ot lend easily to checking that the generated code correctly satisfies the user intent. In this paper, we propose a novel interactive workfl ow TiCoder for guided intent clarification (i.e., partial formalizatio n) through tests to support the generation of more accurate code sugge stions. Through a mixed methods user study with 15 programmers, we pre sent an empirical evaluation of the effectiveness of the workflow to i mprove code generation accuracy. We find that participants using the p roposed workflow are significantly more likely to correctly evaluate A I generated code, and report significantly less task-induced cognitive load. Furthermore, we test the potential of the workflow at scale wit h four different state-of-the-art LLMs on two python datasets, using a n idealized proxy for a user feedback. We observe an average absolute improvement of 38.43\% in the pass@1 code generation accuracy for both datasets and across all LLMs within 5 user interactions, in addition t o the automatic generation of accompanying unit tests.},
+	author = {Fakhoury, Sarah and Naik, Aaditya and Sakkas, Georgios and Chakraborty, Saikat and Lahiri, Shuvendu K.},
+	doi = {10.48550/arxiv.2404.10100},
+	journal = {arXiv.org},
+	month = apr,
+	title = {{LLM}-based test-driven interactive code generation: {User} study and empirical evaluation},
+	url = {https://ieeexplore.ieee.org/abstract/document/10606356/},
+	year = {2024},
+	bdsk-url-1 = {https://ieeexplore.ieee.org/abstract/document/10606356/},
+	bdsk-url-2 = {https://doi.org/10.48550/arxiv.2404.10100}}
+
+@misc{mozannar_realhumaneval_2024,
+	abstract = {Evaluation of large language models for code has primarily relied on static benchmarks, including HumanEval [Chen et al., 2021], or more recently using human preferences of LLM responses. As LLMs are increasingly used as programmer assistants, we study whether gains on existing benchmarks or more preferred LLM responses translate to programmer productivity when coding with LLMs, including time spent coding. We introduce RealHumanEval, a web interface to measure the ability of LLMs to assist programmers, through either autocomplete or chat support. We conducted a user study (N=243) using RealHumanEval in which users interacted with seven LLMs of varying base model performance. Despite static benchmarks not incorporating humans-in-the-loop, we find that improvements in benchmark performance lead to increased programmer productivity; however gaps in benchmark versus human performance are not proportional{\textemdash}a trend that holds across both forms of LLM support. In contrast, we find that programmer preferences do not correlate with their actual performance, motivating the need for better proxy signals. We open-source RealHumanEval to enable human-centric evaluation of new models and the study data to facilitate efforts to improve code models.},
+	author = {Mozannar, Hussein and Chen, Valerie and Alsobay, Mohammed and Das, Subhro and Zhao, Sebastian and Wei, Dennis and Nagireddy, Manish and Sattigeri, Prasanna and Talwalkar, Ameet and Sontag, David},
+	doi = {10.48550/arXiv.2404.02806},
+	keywords = {Computer Science - Artificial Intelligence, Computer Science - Human-Computer Interaction, Computer Science - Software Engineering},
+	language = {en},
+	month = oct,
+	note = {arXiv:2404.02806 [cs]},
+	publisher = {arXiv},
+	shorttitle = {The {RealHumanEval}},
+	title = {The {RealHumanEval}: {Evaluating} {Large} {Language} {Models}' {Abilities} to {Support} {Programmers}},
+	url = {http://arxiv.org/abs/2404.02806},
+	year = {2024},
+	bdsk-url-1 = {http://arxiv.org/abs/2404.02806},
+	bdsk-url-2 = {https://doi.org/10.48550/arXiv.2404.02806}}
+
+@misc{xu_ai-assisted_2026,
+	abstract = {GenAI solutions like GitHub Copilot have been shown to increase the productivity of software developers. Yet prior work remains unclear on the quality of code produced and the challenges of maintaining it in software projects. If quality declines as volume grows, technical debt accumulates as experienced developers face increased workloads reviewing and reworking code from less-experienced contributors. We analyze developer activity in Open Source Software (OSS) projects following the introduction of GitHub Copilot. We find that productivity indeed increases. However, the increase in productivity is primarily driven by less-experienced (peripheral) developers. We also find that code written after the adoption of AI requires more rework to satisfy repository standards, indicating a potential increase in technical debt. Importantly, the added rework burden falls on the more experienced (core) developers, who review 6.5\% more code after Copilot{\textquoteright}s introduction, but show a 19\% drop in their original code productivity. More broadly, this finding raises caution that productivity gains of AI may mask the growing burden of maintenance on a shrinking pool of experts, together with increased technical debt for the projects. The results highlight a fundamental tension in AI-assisted software development between short-term productivity gains and long-term system sustainability.},
+	author = {Xu, Feiyang and Medappa, Poonacha K. and Tunc, Murat M. and Vroegindeweij, Martijn and Fransoo, Jan C.},
+	doi = {10.48550/arXiv.2510.10165},
+	keywords = {Computer Science - Computers and Society, Economics - General Economics},
+	language = {en},
+	month = jan,
+	note = {arXiv:2510.10165 [econ]},
+	publisher = {arXiv},
+	title = {{AI}-{Assisted} {Programming} {Decreases} the {Productivity} of {Experienced} {Developers} by {Increasing} the {Technical} {Debt} and {Maintenance} {Burden}},
+	url = {http://arxiv.org/abs/2510.10165},
+	year = {2026},
+	bdsk-url-1 = {http://arxiv.org/abs/2510.10165},
+	bdsk-url-2 = {https://doi.org/10.48550/arXiv.2510.10165}}
+
+@article{sandoval_lost_2022,
+	abstract = {Large Language Models (LLMs) such as OpenAI Codex are increasingly being used as AI-based coding assistants. Understanding the impact of these tools on developers' code is paramount, especially as recent work showed that LLMs may suggest cybersecurity vulnerabilities. We conduct a security-driven user study (N=58) to assess code written by student programmers when assisted by LLMs. Given the potential severity of low-level bugs as well as their relative frequency in real-world projects, we tasked participants with implementing a singly-linked 'shopping list' structure in C. Our results indicate that the security impact in this setting (low-level C with pointer and array manipulations) is small: AI-assisted users produce critical security bugs at a rate no greater than 10\% more than the control, indicating the use of LLMs does not introduce new security risks.},
+	author = {Sandoval, Gustavo and Pearce, Hammond and Nys, Teo and Karri, Ramesh and Garg, Siddharth and Dolan-Gavitt, Brendan},
+	month = aug,
+	title = {Lost at {C}: {A} {User} {Study} on the {Security} {Implications} of {Large} {Language} {Model} {Code} {Assistants}},
+	url = {https://www.usenix.org/conference/usenixsecurity23/presentation/sandoval},
+	year = {2022},
+	bdsk-url-1 = {https://www.usenix.org/conference/usenixsecurity23/presentation/sandoval}}
 
