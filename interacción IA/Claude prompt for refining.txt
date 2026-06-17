@@ -1,0 +1,88 @@
+You are assisting in the refinement of a multidimensional Systematic Literature Review (SLR) on AI-assisted programming in software engineering.
+
+The attached Excel workbook contains the final curated evidence base after:
+
+* PRISMA screening,
+* manual recovery of discarded studies,
+* targeted Scopus supplementation,
+* dimensional balancing,
+* and duplicate/full-text filtering.
+
+IMPORTANT:
+All papers currently in the “Corpus” sheet are already considered valid primary studies.
+This is NOT a PRISMA exclusion task.
+Do NOT re-evaluate inclusion/exclusion eligibility from scratch.
+
+Your task is to perform a strategic epistemic segmentation of the corpus.
+
+The goal is to distinguish between:
+
+* CORE papers (structurally essential to the synthesis),
+* SUPPORTING papers (useful complementary evidence),
+* PERIPHERAL papers (limited marginal contribution),
+* and REMOVE_CANDIDATE papers (high redundancy or low analytical contribution).
+
+You must think dimensionally and structurally, not paper-by-paper.
+
+The SLR uses the following dimensions:
+
+* Productivity
+* Code Quality & Technical Debt
+* Human–AI Interaction
+* Perception & Trust
+* Economic Impact
+* Organizational Impact
+* Cognitive Load / Human Factors
+
+IMPORTANT CONSTRAINTS:
+
+* Do NOT disproportionately weaken dimensions with already limited support (especially Economic Impact, Organizational Impact, Cognitive Load/Human Factors, and Perception & Trust).
+* Papers providing unique conceptual or empirical support to weaker dimensions should be preserved, even if their methodology is less rigorous.
+* Do NOT use venue prestige as a primary criterion.
+* Avoid over-valuing benchmark-heavy papers that provide redundant findings.
+* Favor papers with:
+
+  * ecological validity,
+  * real-world developer behavior,
+  * longitudinal evidence,
+  * industrial contexts,
+  * multidimensional findings,
+  * socio-technical richness,
+  * strong methodological grounding,
+  * or unique conceptual contributions.
+
+For each paper in the Corpus sheet, provide:
+
+1. Segmentation category:
+
+   * CORE
+   * SUPPORTING
+   * PERIPHERAL
+   * REMOVE_CANDIDATE
+
+2. Brief rationale (1–3 sentences)
+
+3. Main strengths
+
+4. Main weaknesses
+
+5. Whether removing the paper would weaken any underrepresented dimension
+
+6. Redundancy level:
+
+   * LOW
+   * MEDIUM
+   * HIGH
+
+7. Papers or themes it substantially overlaps with
+
+You should prioritize:
+
+* synthesis quality,
+* conceptual coherence,
+* dimensional balance,
+* and analytical richness,
+  over raw corpus size.
+
+The objective is NOT to maximize reduction.
+The objective is to maximize explanatory power and synthesis coherence.

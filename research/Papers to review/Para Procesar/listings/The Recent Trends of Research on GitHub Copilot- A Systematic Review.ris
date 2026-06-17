@@ -1,0 +1,20 @@
+TY  - CONF
+AU  - Ani, Zhamri Che
+AU  - Hamid, Zauridah Abdul
+AU  - Zhamri, Nur Nazifa
+ED  - Zakaria, Nur Haryani
+ED  - Mansor, Nur Suhaili
+ED  - Husni, Husniza
+ED  - Mohammed, Fathey
+PY  - 2024
+DA  - 2024//
+TI  - The Recent Trends of Research on GitHub Copilot: A Systematic Review
+BT  - Computing and Informatics
+SP  - 355
+EP  - 366
+PB  - Springer Nature Singapore
+CY  - Singapore
+AB  - GitHub Copilot is an AI-powered code generation tool developed by OpenAI and GitHub that has gained significant attention from the software engineering community. Despite the significant attention received from the software engineering community, there is a lack of comprehensive examination of its effectiveness, reliability, and ethical implications on GitHub Copilot. The absence of a systematic review of GitHub Copilot's recent research trends hinders a thorough understanding of its current state of development and potential impact on software development practices. Therefore, this systematic review aims to analyze the recent trends of research on GitHub Copilot to assess its current state of development, identify gaps in existing knowledge, and provide insights into potential future research directions. This study used PRISMA for searching the relevant databases, screening and selecting eligible studies based on inclusion and exclusion criteria, data extraction and synthesis, and critical appraisal of the quality and relevance of the studies included. The results show that the trend of the studies is focusing on four main areas: developer productivity, code quality, code security and education.
+SN  - 978-981-99-9589-9
+ID  - 10.1007/978-981-99-9589-9_27
+ER  - 

@@ -1,0 +1,22 @@
+%0 Conference Proceedings
+%T Why Stop at One Error? Benchmarking LLMs as Data Science Code Debuggers for Multi-Hop and Multi-Bug Errors
+%A Yang, Zhiyu
+%A Wang, Shuo
+%A Yan, Yukun
+%A Deng, Yang
+%Y Christodoulopoulos, Christos
+%Y Chakraborty, Tanmoy
+%Y Rose, Carolyn
+%Y Peng, Violet
+%S Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing
+%D 2025
+%8 November
+%I Association for Computational Linguistics
+%C Suzhou, China
+%@ 979-8-89176-332-6
+%F yang-etal-2025-stop
+%X LLMs are transforming software development, yet current code generation and code repair benchmarks mainly assess syntactic and functional correctness in simple, single-error cases. LLMs’ capabilities to autonomously find and fix runtime logical errors in complex data science code remain largely unexplored. To address this gap, we introduce DSDBench: the Data Science Debugging Benchmark, the first benchmark for systematic evaluation of LLMs on multi-hop error tracing and multi-bug detection in data science code debugging. DSDBench adapts datasets from existing data science task benchmarks, such as DABench and MatPlotBench, featuring realistic data science debugging tasks with automatically synthesized multi-hop, multi-bug code snippets. DSDBench includes 1,117 annotated samples with 741 cause-effect error pairs and runtime error messages. Evaluations of state-of-the-art LLMs on DSDBench show significant performance gaps, highlighting challenges in debugging logical runtime errors in data science code. DSDBench offers a crucial resource to evaluate and improve LLMs’ debugging and reasoning capabilities, enabling more reliable AI-assisted data science in the future.
+%R 10.18653/v1/2025.emnlp-main.878
+%U https://aclanthology.org/2025.emnlp-main.878/
+%U https://doi.org/10.18653/v1/2025.emnlp-main.878
+%P 17366-17381

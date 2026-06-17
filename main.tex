@@ -46,7 +46,7 @@ Recent research has also highlighted the role of human factors in mediating the 
 
 From an organisational perspective, the adoption of AI-assisted programming tools has been associated with changes in team dynamics and workflows. Evidence suggests a redistribution of effort, where less experienced developers increase their output while more experienced developers spend more time reviewing and validating code \cite{koripalli_copilot_2025}. This redistribution raises important questions about long-term sustainability and skill development.
 
-In addition, economic analyses indicate that AI-assisted programming can be financially viable, offering a positive return on investment under appropriate conditions. However, these benefits must be weighed against additional costs related to training, supervision, and integration into existing workflows \cite{rodriguez_comparative_nodate}.
+In addition, economic analyses indicate that AI-assisted programming can be financially viable, offering a positive return on investment under appropriate conditions. However, these benefits must be weighed against additional costs related to training, supervision, and integration into existing workflows \cite{rodriguez_comparative_2025}.
 
 Finally, studies based on user perception reveal a gap between perceived and actual productivity gains. While developers often report positive experiences with AI tools, a significant portion of their time may still be spent verifying and correcting AI-generated outputs \cite{lyu_my_2025}. This discrepancy underscores the importance of distinguishing between subjective experience and objective performance.
 
@@ -102,6 +102,8 @@ To address this question, the analysis was structured across seven analytical di
 The search process combined AI-assisted literature discovery with manual screening and validation, using both academic databases and complementary discovery tools. An initial broad search was conducted using SciSpace as an academic discovery assistant, supported by complementary searches in major academic databases.
 
 A structured search instruction was provided to SciSpace to retrieve studies related to AI-assisted programming and LLM-based code generation tools, including GitHub Copilot, ChatGPT, Amazon CodeWhisperer, Claude Code, Gemini, and OpenAI Codex. The instruction incorporated the review topic, research questions, time window, inclusion and exclusion criteria, output requirements, and quality control constraints.
+
+In addition to the initial AI-assisted retrieval process conducted through SciSpace, complementary searches were performed iteratively using traditional academic databases (e.g., Scopus, ProQuest, IEEE Xplore) to ensure broader coverage and reduce the risk of missing relevant studies. This hybrid approach reflects a pragmatic combination of AI-assisted discovery and conventional systematic search practices.
 
 The literature search was conducted using the following academic databases:
 \begin{itemize}
@@ -166,6 +168,8 @@ The review process followed PRISMA 2020 guidelines \cite{page2021prisma} to ensu
 The initial AI-assisted retrieval stage produced 1,255 records. After removal of duplicates, 863 records remained for screening. Title and abstract evaluation excluded 508 records, and 355 studies proceeded to full-text assessment. After full-text screening, 349 studies were retained in the broader qualitative synthesis set.
 
 The screening process was conducted manually by the author using a structured and consistently applied evaluation protocol. To improve dataset consistency, weak, redundant, or analytically peripheral studies were excluded during the refinement stages.
+
+During the screening process, a subset of studies initially excluded at the abstract stage was re-evaluated through full-text analysis. This was necessary to mitigate limitations of abstract-level filtering, particularly for studies that addressed code quality, benchmarking, or system-level evaluation without explicitly reporting productivity-related outcomes in their abstracts. As a result, selected studies were reintegrated into the analysis following consistent inclusion criteria.
 
 From this broader set, a final dataset of 128 empirical studies was selected for the core analytical synthesis reported in this paper. In addition, a smaller number of foundational and related works were retained to support conceptual framing and interpretation, but were not counted as part of the main empirical evidence base.
 
@@ -287,7 +291,7 @@ This classification enables a weighted synthesis, where conclusions are primaril
 
 Productivity is the most extensively studied dimension, accounting for approximately 29.7\% of the analysed literature. Across the corpus, there is consistent evidence that AI-assisted programming improves developer productivity, particularly in terms of task completion speed and code generation. This pattern is further supported by quantitative evidence: productivity gains in routine and well-defined tasks typically range between 30\% and 55\%, while improvements in more complex and realistic development scenarios tend to fall between 27\% and 47\%. In some cases, task completion time reductions of up to 46.4\% have been reported in repetitive workflows. High-rigour studies report measurable gains in routine and well-defined tasks, such as boilerplate code generation, API integration, and initial debugging \cite{cui_productivity_2024, xu_ai-assisted_2026, kumar_intuition_2025}. These improvements are especially pronounced for less experienced developers and in early-stage development activities.
 
-These productivity gains are not uniform across task types. Evidence shows that AI-assisted programming is particularly effective in routine and repetitive activities, such as code documentation, boilerplate generation, and unit testing. In industrial settings, time savings of up to 50\% have been reported for documentation and autocompletion tasks, and between 30\% and 40\% for repetitive development activities \cite{pandey_transforming_nodate}. Correcting almost correct AI-generated code can save from 8.9\% to 71.3\% of time when compared to programming from scratch \cite{idrisov_program_2024}.
+These productivity gains are not uniform across task types. Evidence shows that AI-assisted programming is particularly effective in routine and repetitive activities, such as code documentation, boilerplate generation, and unit testing. In industrial settings, time savings of up to 50\% have been reported for documentation and autocompletion tasks, and between 30\% and 40\% for repetitive development activities \cite{pandey_transforming_2024}. Correcting almost correct AI-generated code can save from 8.9\% to 71.3\% of time when compared to programming from scratch \cite{idrisov_program_2024}.
 
 Similarly, enterprise studies report productivity improvements of up to 55\% in routine implementation tasks, while gains in complex activities such as architectural design and algorithm development are substantially lower, typically ranging between 8\% and 12\%. This gap highlights a fundamental limitation: AI-assisted programming performs well in localised, well-defined contexts but struggles to maintain effectiveness in tasks requiring system-level reasoning \cite{koripalli_copilot_2025}.
 
@@ -421,15 +425,15 @@ These findings indicate that the redistribution of effort extends beyond individ
 
 \subsection{Economic Impact}
 
-Economic impact represents 9.4\% of the corpus and remains comparatively underexplored. Most available studies rely on model-based analyses or limited case studies, with relatively scarce large-scale empirical evaluations \cite{rodriguez_comparative_nodate}.
+Economic impact represents 9.4\% of the corpus and remains comparatively underexplored. Most available studies rely on model-based analyses or limited case studies, with relatively scarce large-scale empirical evaluations \cite{rodriguez_comparative_2025}.
 
 This lack of robust empirical evidence makes it difficult to conclusively determine whether AI-assisted programming can substitute human effort or consistently generate net economic gains \cite{nascimento_comparing_2023}.
 
 Despite limited coverage, some studies provide concrete estimates of economic performance. Case-based analyses suggest that AI-assisted programming can yield positive returns on investment under appropriate conditions.
 
-Reported productivity gains in industrial contexts range from approximately 30\% to 55\%, accompanied by cost reductions of up to 34\%. In specific case studies, return on investment (ROI) has been estimated at around 61\% or higher, with payback periods of less than one year. These gains are primarily driven by increased throughput and reduced effort per unit of work \cite{rodriguez_comparative_nodate}.
+Reported productivity gains in industrial contexts range from approximately 30\% to 55\%, accompanied by cost reductions of up to 34\%. In specific case studies, return on investment (ROI) has been estimated at around 61\% or higher, with payback periods of less than one year. These gains are primarily driven by increased throughput and reduced effort per unit of work \cite{rodriguez_comparative_2025}.
 
-However, these benefits are offset by significantly high hidden costs. A substantial proportion of indirect costs is associated with supervision and validation, particularly by more experienced developers. In some cases, supervision alone accounts for the majority of indirect costs associated with AI adoption \cite{rodriguez_comparative_nodate}.
+However, these benefits are offset by significantly high hidden costs. A substantial proportion of indirect costs is associated with supervision and validation, particularly by more experienced developers. In some cases, supervision alone accounts for the majority of indirect costs associated with AI adoption \cite{rodriguez_comparative_2025}.
 
 In addition, empirical studies report increased coordination effort in team settings. While AI-assisted programming may increase individual output, it can also lead to higher integration overhead, including more discussions, reviews, and alignment activities required to incorporate generated code into shared codebases \cite{song_impact_2024}.
 
@@ -443,7 +447,7 @@ At the system level, AI-assisted programming also introduces direct computationa
 
 Economic outcomes are highly context-dependent. Evidence suggests that the benefits of AI-assisted programming vary with developer experience, team structure, and workload intensity \cite{nascimento_comparing_2023, song_impact_2024}.
 
-For instance, productivity gains are more pronounced among less experienced developers, while experienced developers may incur additional costs related to supervision and quality assurance. Moreover, some studies identify threshold effects, indicating that AI adoption becomes economically viable only beyond certain levels of workload or development intensity \cite{rodriguez_comparative_nodate}.
+For instance, productivity gains are more pronounced among less experienced developers, while experienced developers may incur additional costs related to supervision and quality assurance. Moreover, some studies identify threshold effects, indicating that AI adoption becomes economically viable only beyond certain levels of workload or development intensity \cite{rodriguez_comparative_2025}.
 
 Overall, the results indicate that the economic impact of AI-assisted programming is governed by a trade-off between increased output and the accumulation of hidden costs, rather than by productivity gains alone. Consequently, economic viability depends on the alignment between tool capabilities, team practices, and workload characteristics.
 
@@ -542,7 +546,7 @@ These findings reveal a fundamental distinction between nominal productivity (me
 
 This shift is particularly evident in team environments, where gains in output from less experienced developers create additional review burdens for more experienced contributors \cite{xu_ai-assisted_2026, koripalli_copilot_2025, kumar_intuition_2025}. As a result, productivity improvements at the individual level do not necessarily translate into net gains at the team level \cite{xu_ai-assisted_2026}.
 
-Moreover, the discrepancy between performance in controlled tasks and real-world development highlights the importance of contextual complexity. While AI tools excel in isolated problem-solving scenarios, their effectiveness declines when tasks require integration, system-level reasoning, or deep domain knowledge \cite{corso_generating_2024, pandey_transforming_nodate, wang_rocks_2024, eibl_exploring_2025}.
+Moreover, the discrepancy between performance in controlled tasks and real-world development highlights the importance of contextual complexity. While AI tools excel in isolated problem-solving scenarios, their effectiveness declines when tasks require integration, system-level reasoning, or deep domain knowledge \cite{corso_generating_2024, pandey_transforming_2024, wang_rocks_2024, eibl_exploring_2025}.
 
 These findings suggest that productivity gains should be understood not as absolute improvements but as context-dependent transformations in how development effort is distributed \cite{koripalli_copilot_2025, xu_ai-assisted_2026}.
 
@@ -660,11 +664,11 @@ Within the socio-technical equilibrium model, organisations act as higher-level 
 
 \subsection{Economic Implications and Evidence Gaps}
 
-The analysis reveals that the economic impact of AI-assisted programming cannot be reduced to simple productivity gains. While some studies report positive return on investment under specific conditions, these benefits are counterbalanced by high hidden costs, including supervision, coordination, and interaction overhead \cite{rodriguez_comparative_nodate, song_impact_2024, yin_comprehensive_2025}.
+The analysis reveals that the economic impact of AI-assisted programming cannot be reduced to simple productivity gains. While some studies report positive return on investment under specific conditions, these benefits are counterbalanced by high hidden costs, including supervision, coordination, and interaction overhead \cite{rodriguez_comparative_2025, song_impact_2024, yin_comprehensive_2025}.
 
 This suggests that economic outcomes should be evaluated in terms of total system cost rather than isolated efficiency improvements. In particular, the emergence of additional cost dimensions—such as prompt formulation effort, validation activities, and computational expenses—highlights the complexity of economic assessment in AI-assisted development environments \cite{nam_understanding_2025, nascimento_comparing_2023}.
 
-Moreover, economic impact appears to be highly context-dependent. Factors such as team structure, developer experience, and workload intensity play a critical role in determining whether AI adoption results in net gains or increased costs \cite{rodriguez_comparative_nodate, song_impact_2024}.
+Moreover, economic impact appears to be highly context-dependent. Factors such as team structure, developer experience, and workload intensity play a critical role in determining whether AI adoption results in net gains or increased costs \cite{rodriguez_comparative_2025, song_impact_2024}.
 
 Despite these insights, robust empirical evidence remains limited. This lack of large-scale and longitudinal studies restricts the generalisability of current findings and underscores the need for more comprehensive economic evaluations.
 

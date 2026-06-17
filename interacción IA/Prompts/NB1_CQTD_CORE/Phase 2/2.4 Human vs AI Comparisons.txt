@@ -1,0 +1,124 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1ywIisQOCRL3dPVOSdJrIh7BJVtINiVbk?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto
+
+IMPORTANT CONSTRAINTS:
+
+1. Use ONLY the 77 PDFs uploaded to the files folder's subfolders. Do NOT use your general knowledge of the LLM-for-code field.
+2. Aim for breadth across ALL 77 papers. Every paper in the notebook is a valid source, including Bayram, Belozerov, and Siroš, but no paper has privileged status. When multiple papers in the corpus support a claim, cite the broader set rather than defaulting to the same few.
+3. For every claim, cite the exact paper by title and first author or its citation key, that you can find in the NB1_CQTD_CORE.bib file. If a paper is not in the uploaded sources, do NOT mention it.
+4. If you cannot find evidence in the uploaded PDFs, say "No evidence found in uploaded sources" rather than inventing one. In other words, no hallucinations.
+5. Use ONE citation per claim per paper. Do NOT cite the same paper twice (once to its abstract section and once to its body) for the same finding.
+6. If the output includes a final References section, list ONLY the papers actually cited inline in the text above. Do NOT list every paper available in the notebook.
+7. Use a SINGLE numbering system across the entire output. The number [N] used inline in the text must point to the same paper as entry N in the final References list. Do NOT use one numbering for inline citations (e.g., order of first appearance) and a different numbering for the References list (e.g., alphabetical). After producing the output, verify by spot-checking 3 inline citations against the References list: if [N] inline does not match entry N in the list, regenerate with explicit alignment.
+
+Extract every reported quantitative finding that directly compares AI-generated code against human-written code, or AI-assisted developers against unassisted developers, across the 77 papers.
+
+INCLUSION CRITERION (broad and explicit). Extract every quantitative original finding by the paper that measures any of:
+- Defect rate comparison (AI-generated defect rate vs human-written defect rate)
+- Vulnerability rate comparison (AI-generated CWE rate vs human-written CWE rate)
+- Code quality comparison (code smells, complexity, LOC per function — AI vs human)
+- Productivity comparison (AI-assisted developer task completion vs unassisted)
+- Time-to-completion comparison (AI-assisted vs control group, with statistical significance if reported)
+- Acceptance rate comparison (developers accepting AI suggestions vs creating manually)
+- Validation effort comparison (time spent verifying AI code vs reviewing human code)
+- Pull-request quality comparison (AI-generated PRs vs human PRs)
+- Onboarding speed comparison (new developers with AI vs without)
+- Error-induction comparison (AI-suggested errors vs human-introduced errors)
+- Cognitive load comparison (NASA-TLX or similar, AI-assisted vs unassisted)
+- Survey-based perception comparison when paired with objective measurement
+- Pair-programming comparison (human-AI vs human-human)
+- Specific per-task comparisons (e.g., "developers with AI: 55.8% faster on puzzle tasks; -19% on real-world tasks")
+- Per-experience-level comparisons (junior with AI vs senior with AI vs junior without)
+- Per-task-type comparisons (boilerplate vs algorithmic vs architectural — AI vs human)
+
+EXCLUSION CRITERION (strict):
+- AI-only metrics with no human baseline (those belong to Phases 2.1-2.3)
+- Survey-only perception data with no objective comparison
+- Citation-from-citation
+- Productivity figures without a control group
+
+CALIBRATION ANCHORS:
+Papers expected to yield rich human-vs-AI comparisons:
+- Cui et al. 2024 (Productivity Effects of Generative AI) — field experiment with control group, multiple per-developer-tier comparisons.
+- Xu et al. 2026 (AI-Assisted Programming Decreases Productivity of Experienced Developers) — quasi-experimental, multiple comparisons by experience level, technical debt rates, maintenance burden.
+- Peng et al. 2023 (Impact of AI on Developer Productivity, Copilot) — RCT with timing comparisons.
+- Imai 2022 (Is GitHub Copilot a Substitute for Human Pair-programming) — comparison of human-AI vs human-human pair-programming outcomes.
+- Sandoval et al. 2022 (Lost at C) — control vs LLM-assisted user study with security comparison.
+- Asare et al. 2024 (User-centered Security Evaluation of Copilot) — security task comparison.
+- Wang et al. 2024 (Rocks Coding, Not Development) — human-centric experimental comparison.
+- Khojah et al. 2024 (Beyond Code Generation) — observational comparison.
+- Butler et al. 2024 (Dear Diary) — randomised controlled trial in workplace.
+- Cotroneo et al. 2025 (Human-Written vs AI-Generated Code) — large-scale comparative study.
+- Chen et al. 2024 (Impact of AI-Pair Programmers on TiMi Studio) — quasi-experimental.
+- Vaillant et al. 2024 (Developers Perceptions on ChatGPT) — perception paired with measurement.
+- Mendes et al. 2024 (Bicycle with a little motor) — qualitative + quantitative comparison.
+- Rasnayaka et al. 2024 (Empirical Study on LLMs in Software Engineering Project) — student project comparison.
+- Bakal et al. 2025 (GitHub Copilot at Zoominfo) — enterprise productivity comparison.
+- Weisz et al. 2025 (AI Code Assistant in Enterprise) — enterprise productivity comparison.
+- Koripalli 2025 (Copilot Impact Studies) — productivity, trust, skill evolution comparison.
+- Song et al. 2024 (Impact of Generative AI on Collaborative OSS Development) — repository-scale comparison.
+- Hicks et al. 2024 (The New Developer) — identity/skill comparison.
+- Kuhail et al. 2024 (Will I Be Replaced) — perception + comparison.
+- Kumar et al. 2025 (Intuition to Evidence) — measured productivity comparison.
+
+Aim for 600-1,500 atomic findings across the comparative subset of the corpus. Many papers in the 77-paper corpus will NOT have human-vs-AI comparisons (they evaluate AI alone) — those go to Sheet 3 with appropriate status.
+
+WORKBOOK STRUCTURE (XLSX with 5 sheets):
+
+Sheet 1: "Human-vs-AI comparisons" — one row per atomic comparison. Columns:
+- Paper title, First author, Year, Bibkey
+- Exact figure or range (e.g., "55.8% faster", "-19% productivity", "+6.4% more CWEs")
+- Comparison category (productivity / time-to-completion / defect rate / vulnerability rate / code quality / acceptance / validation effort / cognitive load / pair-programming outcome / onboarding speed / per-experience-level / per-task-type / other)
+- Direction of comparison (AI better / AI worse / no significant difference / context-dependent)
+- AI side metric (the AI-assisted or AI-generated value)
+- Human side metric (the human-only or unassisted value)
+- Statistical significance if reported (p-value, confidence interval)
+- Model or tool used (specific or "generic LLM")
+- Experience level of participants (when reported: junior / mid / senior / mixed / students / professional)
+- Task type (when reported: boilerplate / algorithmic / architectural / debugging / security / refactoring / other)
+- Sample size (developers, tasks, codebases)
+- Source location
+- Citation status ("own empirical finding")
+
+Sheet 2: "Per-paper comparison summary" — one row per bibkey that contributed at least one comparison.
+
+Sheet 3: "Screened papers" — statuses:
+- "comparisons extracted"
+- "no human-vs-AI comparison (AI-only study)"
+- "qualitative comparison only"
+- "only citation-of-citation comparisons"
+
+Sheet 4: "References" — ordered by first appearance.
+- Ref #
+- Bibkey
+- First author
+- Year
+- Paper title
+
+Sheet 5: "Coverage check"
+— Total papers screened
+- Papers with comparisons
+- Papers without comparisons
+- Total atomic findings
+- Mean per extracted paper
+- Maximum (which paper)
+- Direction distribution (% AI better / worse / mixed / no diff)
+- Heibel & Lowd present
+- All 77 present.
+
+NON-NEGOTIABLE CONSTRAINTS:
+1. Citation-from-citation safeguard rigorously applied.
+2. No per-paper cap.
+3. British English, only papers in uploaded sources, single numbering in References.
+
+Read the papers, not just the abstracts or the memory you have of them. I don't care that you take more time, just do it. If you ask me to do it, I can upload again the zip with the 77 PDF files.
+-- Fin de Prompt 1 --
+
+-- Inicio del Prompt 2 --
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+-- Fin del Prompt 4 --

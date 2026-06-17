@@ -1,0 +1,85 @@
+-- Inicio de Prompt 1 --
+Continuing Phase 4 of the SLR section on Code Quality and Technical Debt in AI-Assisted Programming. Same NB1_CQTD_CORE corpus (77 PDFs), same Phase 2 extractive workbooks (11,628 atomic findings), same Phase 3 synthesis artefacts (Consensus Map, Contradiction Map, Methodological Pattern Atlas, Anchors Compendium).
+
+CONSOLIDATED CONSTRAINTS — apply ALL from the first draft, not retroactively.
+
+Citation discipline (12 points):
+1. Breadth across all 77 papers. Every paper in the corpus is a valid source. No paper has privileged status. When multiple papers support a claim, cite the broader set rather than defaulting to the same few.
+2. Use only papers in the 77-PDF corpus. Every bibkey cited must exist literally in NB1_CQTD_CORE.bib. Do not infer bibkeys from titles, folder names, examples, or model memory. If a bibkey cannot be verified, do not cite the paper.
+3. Cite by exact bibkey from NB1_CQTD_CORE.bib. The References section must use the official title from the .bib file, not paraphrased.
+4. One citation per claim per paper.
+5. Single numbering system. Inline [N] equals References entry N. Ordered by first appearance.
+6. References section lists ONLY papers cited inline.
+7. Citation-from-citation safeguard.
+8. Reference-number-extraction safeguard.
+9. Subject-propagation safeguard.
+10. No paper anchoring more than 5 claims/items unless the artefact explicitly allows it.
+11. "No evidence found in uploaded sources" rather than fabricate.
+12. British English throughout.
+
+Workflow discipline:
+Apply "evidence matrix first, prose second, references third, validation last":
+
+Step 1: Construct a source-control table of every construct-paper-finding relationship before drafting prose. Verify all bibkeys.
+Step 2: Draft each item using only papers from that table.
+Step 3: Generate References AFTER prose is stable, ordered by first appearance.
+Step 4: Run self-validation: zero ghosts, no orphan commas, sub-points numbered, no paper in >5 items, spot-check 3 citations, no fabricated bibkeys.
+
+- Regeneration over modification: If draft has substantive issues, regenerate from scratch rather than patch.
+- Validity over breadth: 6 verified papers beats 12 papers if 6 are weak.
+
+Task: Phase 4.2 — Cross-Dimensional Patterns Synthesis
+
+Produce a DOCX document that integrates the 7 analytical dimensions of the SLR (Productivity, Code Quality & Technical Debt, Human-AI Interaction, Cognitive Load, Organizational Impact, Economic Impact, Perception & Trust) into a unified analytical model, identifying patterns that appear across dimensions rather than within.
+
+WHAT TO PRODUCE:
+
+1. Overview — 2 paragraphs framing the analytical purpose: the SLR is structured across 7 dimensions, but the deepest insights are not within any single dimension; they emerge from patterns that recur across dimensions. This artefact identifies those cross-dimensional patterns.
+
+2. Cross-dimensional patterns — 8-12 patterns, each grouped by theme. For each pattern, exactly 7 numbered sub-points:
+- 2.X.1 Pattern statement (one sentence, declarative).
+- 2.X.2 Dimensions involved: name which of the 7 dimensions intersect to produce this pattern (minimum 2, ideal 3-4).
+- 2.X.3 Mechanism: explain in 2-3 sentences how the pattern arises. What is the causal or correlational story that links the dimensions?
+- 2.X.4 Supporting evidence per dimension: for each dimension involved, cite 2-4 papers and 1-2 quantitative anchors specific to that dimension's contribution to the pattern.
+- 2.X.5 Pattern strength: declare whether the cross-dimensional convergence is strong (8+ papers across 3+ dimensions), moderate (4-7 papers, 2 dimensions), or emerging (3-5 recent papers).
+- 2.X.6 Theoretical implication: link the pattern to the socio-technical equilibrium framework constructs (generation efficiency, verification overhead, interaction quality, trust calibration, cognitive redistribution). Which constructs does this pattern instantiate?
+- 2.X.7 Manuscript placement: name where in the manuscript this pattern should be argued, with cross-references to Sections 4 (Results) and 5 (Discussion).
+Suggested patterns to explore (adjust based on what the corpus actually supports):
+- P1: The productivity-quality paradox (Productivity ∩ CQTD ∩ Modification effort)
+- P2: Skill amplification vs deskilling tension (Productivity ∩ HAI ∩ Cognitive Load)
+- P3: Trust-validation gap (Perception & Trust ∩ HAI ∩ CQTD)
+- P4: Verification effort redistribution (Productivity ∩ Cognitive Load ∩ Organizational Impact)
+- P5: Cost-benefit asymmetry (Economic Impact ∩ Productivity ∩ Organizational Impact)
+- P6: Context-dependent effectiveness (HAI ∩ Productivity ∩ CQTD)
+- P7: Multi-turn fragility (HAI ∩ CQTD ∩ Cognitive Load)
+- P8: Adoption-intensity moderation (Organizational Impact ∩ Productivity ∩ Perception & Trust)
+Drop any pattern if corpus does not genuinely support cross-dimensional integration. Add patterns the corpus reveals.
+
+3. Meta-pattern analysis — 2-3 paragraphs identifying which dimensions appear most frequently in cross-dimensional patterns (these are the "hub" dimensions in the framework) versus which appear least (the "peripheral" dimensions). Comment on what this means for the framework's centre of gravity.
+
+4. Synthesis: the integrated model — A short section (3-4 paragraphs) that articulates how the cross-dimensional patterns collectively support (or refine) the socio-technical equilibrium framework. This is the conceptual core of the manuscript's contribution.
+
+5. Headline patterns table — Closing table with 8-12 rows. Columns: # | Pattern | Dimensions involved | Strength | Strongest empirical anchor | Manuscript placement.
+
+6. References — Ordered by first appearance.
+
+7. Reference-alignment spot-check.
+
+Additional constraints:
+- Each pattern must genuinely cross at least 2 dimensions. Single-dimension findings belong in Phase 3.1 Consensus Map, not here.
+- The framework constructs (Phase 4.1) and the cross-dimensional patterns (Phase 4.2) must be consistent: each pattern in 2.X.6 should link to one or more constructs.
+
+Save with filename: Phase_4_2_CQTD_Cross_Dimensional_Patterns_v1.docx
+-- Fin de Prompt 1 --
+
+-- Inicio del Prompt 2 --
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+-- Fin del Prompt 4 --
+
+-- Inicio del Prompt 5 --
+-- Fin del Prompt 5 --

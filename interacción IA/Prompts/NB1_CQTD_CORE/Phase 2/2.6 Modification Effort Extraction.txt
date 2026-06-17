@@ -1,0 +1,172 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1ywIisQOCRL3dPVOSdJrIh7BJVtINiVbk?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto
+
+IMPORTANT CONSTRAINTS:
+
+1. Use ONLY the 77 PDFs uploaded to the files folder's subfolders. Do NOT use your general knowledge of the LLM-for-code field.
+2. Aim for breadth across ALL 77 papers. Every paper in the notebook is a valid source, including Bayram, Belozerov, and Siroš, but no paper has privileged status. When multiple papers in the corpus support a claim, cite the broader set rather than defaulting to the same few.
+3. For every claim, cite the exact paper by title and first author or its citation key, that you can find in the NB1_CQTD_CORE.bib file. If a paper is not in the uploaded sources, do NOT mention it.
+4. If you cannot find evidence in the uploaded PDFs, say "No evidence found in uploaded sources" rather than inventing one. In other words, no hallucinations.
+5. Use ONE citation per claim per paper. Do NOT cite the same paper twice (once to its abstract section and once to its body) for the same finding.
+6. If the output includes a final References section, list ONLY the papers actually cited inline in the text above. Do NOT list every paper available in the notebook.
+7. Use a SINGLE numbering system across the entire output. The number [N] used inline in the text must point to the same paper as entry N in the final References list. Do NOT use one numbering for inline citations (e.g., order of first appearance) and a different numbering for the References list (e.g., alphabetical). After producing the output, verify by spot-checking 3 inline citations against the References list: if [N] inline does not match entry N in the list, regenerate with explicit alignment.
+
+
+Extract every reported quantitative finding on how much modification or rework AI-generated code requires before being integrated, accepted, or considered correct, across the 77 papers.
+
+INCLUSION CRITERION (broad and explicit). Extract every quantitative original finding by the paper that measures any of:
+- Acceptance rates of AI-generated code without modification (e.g., 16% accepted as-is)
+- Rejection rates (e.g., 38% of suggestions rejected)
+- Modification rates (% of AI-generated code that is edited before merging)
+- Rework rates (e.g., 56% of AI-generated patches required follow-up commits)
+- Lines added/deleted/modified to AI-generated code before integration
+- Time spent modifying AI-generated outputs (e.g., 38% of total task time)
+- Edit distance between AI suggestion and final accepted code
+- Validation/inspection time (e.g., gaze duration, cursor activity, time-in-editor)
+- Patch revision counts before acceptance
+- Pull-request comment volumes on AI-generated code
+- Code review cycle length when AI-generated code is involved
+- Refactoring counts applied to AI-generated code
+- Fix rates needed to make compilable code compile, executable code run, passing tests
+- Per-developer rework variance (e.g., junior 50% rework, senior 25%)
+- Per-task-type rework variance (e.g., security-sensitive tasks 71% modified, UI tasks 38% modified)
+
+EXCLUSION CRITERION (strict):
+- Defect rates without modification context (those belong to Phase 2.1)
+- Security vulnerability rates without modification context (Phase 2.2)
+- Citation-from-citation
+- Generic productivity time figures
+
+CALIBRATION ANCHORS:
+Papers expected to yield modification-effort data:
+- Tang et al. 2024 (Developer Behaviors in Validating and Repairing) — eye-tracking and IDE actions, time-in-editor, validation effort. Should yield many atomic findings.
+- Mozannar et al. 2024 (or similar — gaze and edit behaviour) if present in corpus.
+- Borg et al. 2026 (Echoes of AI) — downstream maintenance/modification rates.
+- Murali et al. 2024 (if present) — developer modification behaviour.
+- Chen and Jiang 2024 (Evaluating Software Development Agents) — 170 of 500 issues unresolved, patch modification patterns.
+- Sajadi et al. 2025 — patch acceptance and modification across 195 patches.
+- Cihan et al. 2024 (Automated Code Review In Practice) — review effort and revision rates.
+- Cihan et al. 2025 (Evaluating LLMs for Code Review) — review cycle metrics.
+- Pinto et al. 2024 (Developer Experiences with Contextualized AI Coding Assistant) — usability, expectations, modification patterns.
+- Liu et al. 2026 (Debt Behind the AI Boom) — 24.2% long-term survival implies 75.8% modified/removed; survival figures imply modification rates.
+- Khojah et al. 2024 (Beyond Code Generation) — observational modification behaviour.
+- Pandey et al. (Transforming Software Development) — modification patterns in real-world projects.
+- Vaillant et al. 2024 (Developers Perceptions on ChatGPT) — perception of modification effort.
+- Madampe et al. 2025 (AI-Based Programming Assistants for Privacy Code Generation) — validation effort by developer experience.
+- Lyu et al. 2025 (My productivity is boosted, but) — perceived modification overhead.
+- Mendes et al. 2024 (Bicycle with a little motor) — qualitative + quantitative modification observations.
+- Rasnayaka et al. 2024 (LLMs in Software Engineering Project) — student project modification rates.
+- Weisz et al. 2025 (AI Code Assistant in Enterprise) — enterprise modification rates.
+- Bakal et al. 2025 (Copilot at Zoominfo) — enterprise acceptance/modification rates.
+- Chen et al. 2025 (Code with Me or for Me) — modification patterns under varying autonomy.
+
+Aim for 600-1,500 atomic findings. Papers without modification-effort data go to Sheet 3.
+
+WORKBOOK STRUCTURE (XLSX with 5 sheets):
+
+Sheet 1: "Modification-effort findings" — one row per atomic finding. Columns:
+- Paper title, First author, Year, Bibkey
+- Exact figure or range
+- Modification-effort category (acceptance rate / rejection rate / modification rate / rework rate / edit distance / validation time / inspection time / patch revision count / review-cycle length / PR comment volume / refactoring count / fix rate / per-developer variance / per-task variance / other)
+- Specific metric used (e.g., NASA-TLX, gaze duration, IDE actions, lines edited)
+- Measurement instrument (e.g., eye-tracker, IDE telemetry, manual review, survey)
+- Model or tool evaluated
+- Sample size (developers, sessions, suggestions, patches, PRs)
+- Source location
+- Citation status ("own empirical finding")
+
+Sheet 2: "Per-paper modification summary"
+
+Sheet 3: "Screened papers" — statuses:
+- "modification-effort figures extracted"
+- "no modification-effort findings (purely-benchmark or AI-output-only study)"
+- "qualitative modification-effort discussion only"
+- "only citation-of-citation modification-effort figures"
+
+Sheet 4: "References" — as done before, ordered by first appearance.
+
+Sheet 5: "Coverage check" — standard format used before, also with:
+- Most frequent measurement instruments (top 5)
+- Most frequent modification-effort categories (top 5)
+- Mean modification rate where comparable
+- Heibel & Lowd present
+-  All 77 present.
+
+NON-NEGOTIABLE CONSTRAINTS:
+1. Citation-from-citation safeguard rigorously applied.
+2. No per-paper cap.
+3. British English, only papers in uploaded sources, single numbering in References.
+
+Read the papers, not just the abstracts or the memory you have of them. I don't care that you take more time, just do it. If you ask me to do it, I can upload again the zip with the 77 PDF files.
+-- Fin de Prompt 1 --
+
+-- Inicio del Prompt 2 --
+The Phase 2.6 Modification-effort extraction returned zero findings across all 77 papers. This is incorrect — multiple papers in the corpus contain extractable modification-effort data that the conservative extraction missed.
+
+Concrete evidence of available modification-effort findings in the corpus:
+1. Tang et al. 2024 (tang_developer_2024) "Developer Behaviors in Validating and Repairing LLM-Generated Code Using IDE and Eye Tracking" — reports gaze duration, fixation counts, IDE action sequences, time-in-editor, validation effort percentages (e.g., 38% of total task time on inspection). Should yield 15-30 atomic findings.
+2. Chen and Jiang 2024 (chen_evaluating_2024) — 170 of 500 SWE-Bench Verified issues unresolved after agent attempt, 4,892 patches across 10 agents; modification patterns measurable. Should yield 10-15 atomic findings.
+3. Sajadi et al. 2025 (sajadi_how_2025) — 44 of 195 patches confirmed insecure (requiring modification), per-agent patch acceptance and modification rates.
+4. Khojah et al. 2024 (khojah_beyond_2024) "Beyond Code Generation" — observational study of real-world ChatGPT use, including modification behaviour and integration patterns.
+5. Cihan et al. 2024 (cihan_automated_2024) — review effort, revision rates, and code-review cycle metrics on AI-generated PRs.
+6. Cihan et al. 2025 (cihan_evaluating_2025) — multi-stage review evaluation with revision counts.
+7. Pinto et al. 2024 (pinto_developer_2024) — developer experiences including modification patterns and integration effort.
+8. Liu et al. 2026 (liu_debt_2026) — 24.2% long-term survival implies 75.8% of AI-authored issues were eventually modified or removed; survival rates ARE modification-effort findings.
+9. Vaillant et al. 2024 (vaillant_developers_2024) — survey of developer perceptions on ChatGPT, including modification effort estimates.
+10. Mendes et al. 2024 (mendes_youre_2024) "Bicycle with a little motor" — modification and integration observations.
+11. Rasnayaka et al. 2024 — student-project modification rates over a semester.
+12. Weisz et al. 2025 (weisz_examining_2025) — enterprise AI code assistant modification rates.
+13. Bakal et al. 2025 (bakal_experience_2025) — Zoominfo enterprise acceptance and modification figures.
+14. Madampe et al. 2025 — validation effort for privacy-related AI code, by developer experience level.
+15. Lyu et al. 2025 "My productivity is boosted, but" — perceived modification overhead with quantitative figures.
+16. Chen et al. 2025 (chen_code_2025) "Code with Me or for Me" — modification patterns under varying autonomy levels.
+
+Regenerate the complete XLSX workbook applying the original inclusion criterion. Modification-effort findings include:
+- Acceptance rates (% of AI suggestions accepted as-is)
+- Rejection rates
+- Modification rates (% of AI-generated code edited before merging)
+- Rework rates
+- Edit distance, lines changed, lines deleted
+- Validation/inspection time (gaze, fixation, time-in-editor, NASA-TLX)
+- Patch revision counts
+- PR comment volumes on AI code
+- Review-cycle length when AI is involved
+- Refactoring counts on AI-generated code
+- Fix rates needed for compilation, execution, test passing
+- Per-developer rework variance
+- Per-task-type rework variance
+- Code-survival rates that imply modification (Liu's 24.2% survival = 75.8% modification)
+
+- Aim for at least 400-1,000 atomic findings across 25-45 papers. Many papers in the corpus will legitimately have no modification-effort data (purely benchmark studies), but the current zero across all 77 is not correct.
+- Maintain Heibel & Lowd presence.
+- No per-paper cap. Citation-from-citation safeguard active.
+
+Deliver the complete XLSX workbook with all 5 sheets, replacing the previous version.
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+The Phase 2.6 Modification-effort EXPANDED workbook has 1,200 findings, which is a major improvement, but it has a critical coverage gap. The most important calibration anchor papers for modification-effort — those that contain user-study, behavioural, and observational modification-effort data — appear with ZERO atomic findings:
+
+- tang_developer_2024 (Tang et al. "Developer Behaviors in Validating and Repairing LLM-Generated Code Using IDE and Eye Tracking"): 0 — should be 15-30 (gaze duration, fixation counts, IDE actions, 38% inspection time, validation effort per task type)
+- khojah_beyond_2024: 0 — should be 5-15 (real-world modification behaviour observations)
+- cihan_automated_2024 (Automated Code Review In Practice): 0 — should be 10-20 (review effort, revision rates, PR comment metrics)
+- cihan_evaluating_2025 (Evaluating LLMs for Code Review): 0 — should be 5-15
+- pinto_developer_2024 (Developer Experiences with Contextualized AI Coding Assistant): 0 — should be 5-15
+- vaillant_developers_2024 (Developers Perceptions on ChatGPT): 0 — should be 5-15
+- mendes_youre_2024 (Bicycle with a little motor): 0 — should be 5-15
+- rasnayaka_empirical_2024 (Empirical Study on LLMs in Software Engineering Project): 0 — should be 5-10 (student project modification rates over semester)
+- weisz_examining_2025 (AI Code Assistant in Enterprise): 0 — should be 10-20 (enterprise modification rates)
+- bakal_experience_2025 (Copilot at Zoominfo): 0 — should be 10-20 (enterprise acceptance and modification figures)
+- madampe_how_2025: 0 — should be 5-10 (validation effort for privacy AI code)
+- lyu_my_2025 (My productivity is boosted, but): 0 — should be 5-15 (perceived modification overhead with quantitative figures)
+- chen_code_2025 (Code with Me or for Me): 0 — should be 5-15 (modification patterns under varying autonomy)
+
+These papers contain behavioural and observational modification-effort data (gaze tracking, IDE telemetry, user study results, survey-based modification estimates, enterprise acceptance rates, semester-long project modification rates) that were not captured in the previous extraction. The current 1,200 atomic findings concentrate on security-repair and patch-acceptance data; the user-study evidence is missing.
+
+Without re-extracting the 52 papers that already have findings, add the missing user-study and observational modification-effort findings from the 13 papers listed above. Append the new rows to Sheet 1 and update Sheet 2 / Sheet 3 / Sheet 5 accordingly.
+
+Deliver the complete XLSX workbook with all 5 sheets, replacing the previous version. Maintain Heibel & Lowd, no per-paper cap, citation-from-citation safeguard active.
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+-- Fin del Prompt 4 --

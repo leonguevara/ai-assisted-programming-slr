@@ -1,0 +1,17 @@
+TY  - CONF
+AU  - Kapitsaki, Georgia M.
+ED  - Achilleos, Achilleas
+ED  - Fuentes, Lidia
+ED  - Papadopoulos, George Angelos
+PY  - 2024
+DA  - 2024//
+TI  - Generative AI for Code Generation: Software Reuse Implications
+BT  - Reuse and Software Quality
+SP  - 37
+EP  - 47
+PB  - Springer Nature Switzerland
+CY  - Cham
+AB  - Generative AI has lately started being used in the software engineering process. Developers are relying on ChatGPT, GitHub Copilot or other tools to accelerate the development process. Previous works have provided an overview of the tools and have compared their capabilities. Nevertheless, the relation with software reuse in the framework of Generative AI has not been examined extensively. In this work, we are studying how generative AI techniques respond to and affect software reuse, with an emphasis on software licensing issues and end-users’ data privacy. We are using the following five tools: OpenAI ChatGPT, Google Gemini, GitHub Copilot, TabNine and Amazon CodeWhisperer. We provide an overview of the tools and previous works that have used them when examining code generation, discuss the implications on software reuse, and use a simple front-end use case to showcase how they respond on licensing and end-users’ data privacy issues. This work introduces also a conceptual model that can help in improvements in the discussed reuse aspects.
+SN  - 978-3-031-66459-5
+ID  - 10.1007/978-3-031-66459-5_3
+ER  - 

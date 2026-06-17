@@ -1,0 +1,11 @@
+TY  - JOUR
+AU  - Veeramreddygari, Udaya
+PY  - 2023/11/30
+SP  - 569
+EP  - 582
+N2  - This paper explores how large language models (LLMs) can streamline microservice development using Spring Boot by automating boilerplate code, enhancing API documentation, and suggesting design patterns. The methodology integrates GPT-3.5 and Codex models with Spring Boot development workflows through custom IDE plugins and CI/CD pipeline integration. A comprehensive case study involving enterprise application development demonstrates significant productivity gains, with 40% reduction in development time and 25% improvement in code quality metrics. The study includes evaluation of generated code quality, documentation accuracy, and developer productivity across multiple microservice development scenarios. Results show that LLM-assisted development maintains high code quality while substantially reducing repetitive programming tasks, establishing a foundation for AI-augmented software engineering practices in enterprise environments.
+T1  - Generative AI for Software Engineering: Large Language Model-Driven Code Generation with Safety and Trust Assessment in Enterprise Development
+VL  - 
+DO  - 10.32628/CSEIT23906195
+JO  - International Journal of Scientific Research in Computer Science, Engineering and Information Technology
+ER  - 

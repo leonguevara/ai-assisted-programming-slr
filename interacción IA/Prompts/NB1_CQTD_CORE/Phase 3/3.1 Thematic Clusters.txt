@@ -1,0 +1,168 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1ywIisQOCRL3dPVOSdJrIh7BJVtINiVbk?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto
+
+IMPORTANT CONSTRAINTS:
+
+1. Use ONLY the 77 PDFs uploaded to the files folder's subfolders. Do NOT use your general knowledge of the LLM-for-code field.
+2. Aim for breadth across ALL 77 papers. Every paper in the notebook is a valid source, including Bayram, Belozerov, and Siroš, but no paper has privileged status. When multiple papers in the corpus support a claim, cite the broader set rather than defaulting to the same few.
+3. For every claim, cite the exact paper by title and first author or its citation key, that you can find in the NB1_CQTD_CORE.bib file. If a paper is not in the uploaded sources, do NOT mention it.
+4. If you cannot find evidence in the uploaded PDFs, say "No evidence found in uploaded sources" rather than inventing one. In other words, no hallucinations.
+5. Use ONE citation per claim per paper. Do NOT cite the same paper twice (once to its abstract section and once to its body) for the same finding.
+6. If the output includes a final References section, list ONLY the papers actually cited inline in the text above. Do NOT list every paper available in the notebook.
+7. Use a SINGLE numbering system across the entire output. The number [N] used inline in the text must point to the same paper as entry N in the final References list. Do NOT use one numbering for inline citations (e.g., order of first appearance) and a different numbering for the References list (e.g., alphabetical). After producing the output, verify by spot-checking 3 inline citations against the References list: if [N] inline does not match entry N in the list, regenerate with explicit alignment.
+
+
+This prompt is the beginning of Phase 3 (thematic synthesis) of the SLR section on Code Quality and Technical Debt in AI-Assisted Programming. Continuing with the same NB1_CQTD_CORE corpus (77 PDFs in the Google Drive folder) and the same anti-bias header conventions.
+
+For Phase 3.1, produce a corpus-wide consensus map: a structured DOCX document that identifies the empirical claims that the 77 papers collectively support, with multi-source evidence per claim.
+
+SOURCE MATERIAL:
+
+You have already produced extractive workbooks in Phase 2:
+- 2.1 Defect rates (3,645 atomic findings across 75 papers)
+- 2.2 Security vulnerabilities (1,766 findings across 51 papers)
+- 2.3 Maintainability metrics (2,642 findings across 77 papers)
+- 2.4 Human-vs-AI comparisons (1,310 findings across 74 papers)
+- 2.5 Multi-turn interaction effects (1,017 findings across 62 papers)
+- 2.6 Modification effort (1,248 findings across 54 papers)
+Total: 11,628 atomic findings. Use these as primary evidentiary input, supplemented by re-reading the original PDFs where useful.
+
+WHAT TO PRODUCE:
+A DOCX document with the following structure:
+1. Overview — a 2-paragraph framing of what "consensus" means in this corpus. Distinguish strong consensus (claim supported by 8+ independent papers using diverse methodologies) from moderate consensus (claim supported by 4-7 papers, mostly converging) from emerging consensus (claim supported by 3-5 papers, recently published, signalling a trend).
+
+2. Consensus claims — 12-18 claims grouped by theme. For each claim:
+- 2.X.1 The claim itself (one sentence, declarative)
+- 2.X.2 Strength of consensus: strong / moderate / emerging
+- 2.X.3 Why this is consensus: 1 sentence on what makes it converge across the corpus
+- 2.X.4 Supporting papers: 6-12 supporting papers with bibkeys, distributed across years (2022 to 2026) and methodologies (controlled experiments, observational studies, repository mining, benchmark evaluations, user studies, agentic evaluations)
+- 2.X.5 Quantitative anchors: 3-5 specific numbers from the Phase 2 workbooks, each attributed to its source paper. Examples: "Pearce: 40%; Liu: 89.1%; Fu: 27.3% of 733 snippets"
+- 2.X.6 Methodological diversity: note whether the consensus holds across at least 3 different study designs (controlled experiment, repository study, user study, benchmark, etc.)
+- 2.X.7 Counter-evidence weight: 1 sentence on whether any paper meaningfully challenges the claim, and how that disagreement should be read (context dependency vs genuine contradiction)
+
+Suggested themes (use these as a starting frame but adjust based on what the corpus actually supports):
+- Theme A: Benchmark performance does not predict real-world performance
+- Theme B: AI-generated code introduces persistent technical debt at the repository scale
+- Theme C: Security vulnerabilities are systematically introduced and undertreated
+- Theme D: Productivity gains are conditional on task type and developer experience
+- Theme E: Verification effort partially offsets generation efficiency gains
+- Theme F: Trust calibration is fragile and context-dependent
+- Theme G: Multi-turn interactions can amplify rather than correct errors
+- Theme H: Dependency and reproducibility issues are systematic
+- Theme I: Tool autonomy increases risk surface
+- Theme J: Less experienced developers benefit more in volume but less in quality
+
+3. Methodological note — A short section reflecting how the consensus was constructed: what counts as agreement, how methodological diversity was weighted, how dissenting papers were handled.
+
+4. Headline consensus anchors — A closing table of the 10 strongest consensus claims, with their quantitative anchors and supporting paper count.
+
+5. References — Ordered by first appearance, with bibkeys.
+
+6. Reference-alignment spot-check — Verify 3 inline citations.
+Important constraints:
+- Each claim must cite 6-12 papers, distributed across years and methodologies.
+- Do not repeat the same 3-5 papers across claims; aim for breadth.
+- Every quantitative anchor must be attributed to the paper that produced it (citation-from-citation safeguard active).
+- Where the corpus actually does NOT support a proposed theme, drop it and say so. Do not force consensus where it does not exist.
+- British English, single numbering system, ordered references.
+
+NON-NEGOTIABLE CONSTRAINTS:
+1. Citation-from-citation safeguard rigorously applied.
+2. No per-paper cap.
+3. British English, only papers in uploaded sources, single numbering in References.
+
+Read the papers, not just the abstracts or the memory you have of them. I don't care that you take more time, just do it. If you ask me to do it, I can upload again the zip with the 77 PDF files.
+-- Fin de Prompt 1 --
+
+-- Inicio del Prompt 2 --
+Two issues to correct in Phase 3.1 Consensus Map:
+
+1. Sub-points 2.X.6 (Methodological diversity) and 2.X.7 (Counter-evidence weight) currently contain the same boilerplate text across all 14 claims. Please regenerate each one claim-specifically: for 2.X.6, name which specific study designs support that specific claim (e.g., for claim 2.3 on security vulnerabilities, name benchmark-based assessment + repository-mining + user-study evidence); for 2.X.7, name the specific paper(s) that present counter-evidence and explain whether the disagreement is genuine contradiction or context dependency.
+
+2. The current consensus map cites only 18 papers across 14 claims, while the corpus has 77. Many papers in the corpus contribute relevant evidence to these claims but were not cited. Without removing the existing citations, expand each claim to cite 3-5 additional papers from the unused 59 papers in the corpus. Aim for breadth: papers like tang_developer_2024 (user-study evidence on validation behaviour), zhong_developer-llm_2025 (multi-turn interaction empirical evidence), borg_echoes_2026 (downstream maintainability), cotroneo_human-written_2025 (human-vs-AI comparison at scale), rabbi_ai_2024 (Pylint quality metrics), schreiber_security_2026 (per-language CWE), bose_prompts_2025 (property-based testing), mendes_youre_2024 (qualitative + quantitative modification observations), honarvar_turbulence_2025 (multi-perturbation robustness), latendresse_robust_2025 (library imports), twist_library_2025 (library hallucinations), tony_prompting_2025 (prompt-based security), sajadi_how_2025 (patch safety), lyu_my_2025 (perceived modification overhead), tian_codehalu_2024 (code hallucination), heibel_mapping_2024 (adversarial robustness), nascimento_comparing_2023 (human-vs-AI baseline), fakhoury_llm-based_2024 (iterative refinement), wang_rocks_2024 (human-centric experimental), kuhail_will_2024 (perception), bakal_experience_2025 (enterprise), weisz_examining_2025 (enterprise productivity), khojah_beyond_2024 (observational), perry_users_2023 (security with assistants), among others.
+
+After expansion, each claim should cite 8-15 distinct papers, with no single paper appearing in more than 5 claims.
+
+Section 4 "Headline consensus anchors" — please add a 2-sentence introductory paragraph before the table explaining the curation criteria.
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+Critical issue with the regenerated Phase 3.1 Consensus Map: several reference entries cite bibkeys that do not exist in NB1_CQTD_CORE.bib. The corpus contains exactly 77 specific bibkeys; any new entries must match one of those bibkeys precisely.
+
+Suspected fabrications in the References section that need verification:
+- [45] nguyen_empirical_2024 — please verify this is in NB1_CQTD_CORE.bib
+- [46] yang_evaluating_2024 — please verify this is in NB1_CQTD_CORE.bib
+- [47] xu_impact_2025 — please verify; the corpus contains xu_ai-assisted_2026 but not xu_impact_2025
+- [48] moradi_quality_2024 — please verify this is in NB1_CQTD_CORE.bib
+- [49] nguyen_security_2025 — please verify this is in NB1_CQTD_CORE.bib
+- [50] lee_copilot_2024 — please verify this is in NB1_CQTD_CORE.bib
+- [51] patel_dependency_2025 — please verify this is in NB1_CQTD_CORE.bib
+- [52] garcia_reproducibility_2026 — please verify this is in NB1_CQTD_CORE.bib
+- [44] belozerov_code_2025 — please verify; the corpus contains belozerov_secure_2026 but not belozerov_code_2025
+- [20] zhong_developer-llm_2025 — verify the title; the corpus paper is "Developer-LLM Conversations: An Empirical Study of Interactions and Generated Code Quality", not "Developer-LLM Multi-turn Interaction Evidence in Code Generation"
+- [35] nascimento_comparing_2023 — verify the title; the corpus paper is "Comparing Software Developers with ChatGPT", not "Comparing Human and AI Code Generation Baselines"
+- [19] tang_developer_2024 — verify the title; the corpus paper is "A Study on Developer Behaviors for Validating and Repairing LLM-Generated Code Using Eye Tracking and IDE Actions", not "Developer Behaviour and Validation Practices in AI-Assisted Programming"
+
+Please regenerate the document with the following rules:
+1. EVERY bibkey cited must exist in NB1_CQTD_CORE.bib. If you cannot verify a bibkey is in the corpus, REMOVE it from the document — do not invent papers, even plausible-sounding ones, to fill quotas.
+2. EVERY title in the References section must match the actual title of the paper as it appears in NB1_CQTD_CORE.bib. Do not paraphrase titles.
+3. Re-verify that no single paper appears in more than 5 claims. Currently chen_evaluating_2024 appears in 11 claims, abbassi_recatcher_2025 in 8, liu_debt_2026 in 8, and siddiq_quality_2024 in 8. Reduce these to 5 or fewer claims each by removing them from the least-strongly-justified claim contexts.
+4. If after removing fabricated entries the total reference count drops below ~35, that is acceptable — quality over volume. Do not refill with new fabrications.
+5. If you cannot find enough additional real papers in the corpus to expand a claim beyond its original 6-8 citations, leave it at 6-8. The breadth requirement does NOT override the no-fabrication rule.
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+The validated Phase 3.1 has serious internal consistency problems caused by the removal of fabricated references. Please fix the following:
+
+1. The inline citations in section 2 (Consensus claims) still reference numbers that no longer exist in section 5 (References). Specifically, claims 2.X.1 list inline citations including [4], [7], [29], [31], [32], [33], [34], [35], [36], [37], [38], [39], [40], [41], [42], [43], [44], [45], [47], [48], [49], [50], [51], [52], but the new References section only contains entries [1], [2], [3], [5], [6], [8] through [28], and [30]. These inline citations are now "ghost citations" that resolve to nothing.
+
+Please RENUMBER all inline citations in section 2 so they match the actual References section numbering. The principle is: section 5 References is now the authoritative numbering (entries 1-30, ordered by first appearance); section 2 inline citations must use only those numbers. Where a claim previously cited a now-deleted fabricated reference, simply remove that inline citation from the bracketed list — do not add a new fabricated entry to fill the gap.
+
+2. The sub-points 2.X.6 (Methodological diversity) and 2.X.7 (Counter-evidence weight) have lost their numbered prefixes. Restore them: each claim should have 2.X.1 Claim, 2.X.2 Strength, 2.X.3 Why this is consensus, 2.X.4 Supporting papers, 2.X.5 Quantitative anchors, 2.X.6 Methodological diversity, 2.X.7 Counter-evidence weight.
+
+3. The "Reference-alignment spot-check" at the end of the document contains stale entries from the previous version. For example, it says "Inline citation [12] resolves to reference entry [12], bibkey alrashedy_can_2024", but the new References section has [12] = siddiq_quality_2024, not alrashedy_can_2024 (which is now [16]). Please regenerate the spot-check using the new References numbering.
+
+4. The "Headline consensus anchors" table in section 4 may also reference paper numbers that have shifted. Please verify the table entries against the new References numbering.
+
+Do NOT add or remove any references in section 5. Do NOT modify the Supporting papers fields in 2.X.4. The only changes should be: (a) renumber inline citations to match the new references list; (b) restore the 2.X.6 and 2.X.7 numbering; (c) regenerate the spot-check; (d) verify the headline anchors table.
+-- Fin del Prompt 4 --
+
+-- Inicio del Prompt 5 --
+Phase 3.1 has gone through 4 iterations and each iteration introduces new internal inconsistencies. The current numbering_fixed version has:
+
+- Ghost citations [4], [7], [29] (inline numbers without matching References entries);
+- empty-bracket gaps at end of 2.10.1, 2.11.1, 2.12.1, 2.13.1, 2.14.1 (where deleted citations left commas like ", , .");
+- broken Supporting papers fields (e.g., 2.11.4 has only 1 paper but 2.11.6 mentions 8 different ones);
+- semantic inconsistency between 2.X.4 (lists actual supporting papers) and 2.X.6 (mentions papers like Latendresse, Patel, Garcia that were correctly removed from References as fabrications but were not removed from the 2.X.6 narrative).
+
+Please REGENERATE Phase 3.1 FROM SCRATCH (do not modify the existing file). Save with filename Phase_3_1_CQTD_Consensus_Map_v5_final.docx.
+
+Apply all of these constraints simultaneously, from the first draft:
+
+1. STRICT CITATION DISCIPLINE. Every bibkey cited must exist in NB1_CQTD_CORE.bib. If you cannot verify a bibkey is in the corpus, do not cite it. No fabricated entries even if they sound plausible.
+
+2. INTERNAL CONSISTENCY. For each claim 2.X, the inline citations in 2.X.1, the Supporting papers list in 2.X.4, the papers mentioned narratively in 2.X.6 (Methodological diversity), and the papers mentioned narratively in 2.X.7 (Counter-evidence weight) must all refer to the same set of papers. Do not name a paper in 2.X.6 narratively that does not also appear in 2.X.4.
+
+3. NUMBERING DISCIPLINE. Use a single numbering system across the document. Inline [N] must equal References entry N. After regeneration, perform an internal check: extract all [N] used in section 2 and verify each has a corresponding entry in section 5. Do not deliver the file if any ghost citations remain.
+
+4. FORMATTING DISCIPLINE. No empty brackets, no orphan commas, no ", , ." gaps. If you remove a citation during regeneration, also remove its comma and the surrounding whitespace.
+
+5. SUB-POINT NUMBERING. Each claim has exactly 7 sub-points: 2.X.1 Claim, 2.X.2 Strength of consensus, 2.X.3 Why this is consensus, 2.X.4 Supporting papers, 2.X.5 Quantitative anchors, 2.X.6 Methodological diversity, 2.X.7 Counter-evidence weight. Every sub-point must have its numbered prefix.
+
+6. BREADTH WITH CONSTRAINT. Each claim should cite 8-15 papers if real evidence supports them, but never invent. If only 6-7 real papers support a claim, cite 6-7. Quality over volume.
+
+7. NO SINGLE PAPER IN >5 CLAIMS. Distribute citations across the corpus. If a paper would naturally appear in 7 claims based on the evidence, choose the 5 strongest contexts and omit it from the other 2.
+
+8. CLAIM-SPECIFIC NARRATIVE. Sub-points 2.X.6 (Methodological diversity) and 2.X.7 (Counter-evidence weight) must be claim-specific — not boilerplate text shared across claims. Each must name the actual papers in 2.X.4 and explain claim-specific tensions.
+
+9. HEADLINE ANCHORS TABLE in section 4 must use the same numbering as the References section.
+
+10. SPOT-CHECK in section 6 must verify 3 inline citations against the final numbered References, using the new numbering — not stale entries from previous versions.
+
+Before delivering the file, run the following internal checks:
+- Count inline [N] in section 2. Compare against References numbers. Zero ghosts allowed.
+- Read each 2.X.6 and verify every author name mentioned is in 2.X.4.
+- Read each 2.X.7 and verify every author name mentioned is in 2.X.4.
+- Verify no claim 2.X.1 ends with ", ," or ", ." or empty brackets.
+- Verify the spot-check entries match the regenerated References.
+-- Fin del Prompt 5 --

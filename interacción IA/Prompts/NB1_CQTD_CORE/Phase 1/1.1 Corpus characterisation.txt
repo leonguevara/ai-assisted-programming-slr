@@ -1,0 +1,50 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1ywIisQOCRL3dPVOSdJrIh7BJVtINiVbk?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto
+
+IMPORTANT CONSTRAINTS:
+
+1. Use ONLY the 77 PDFs uploaded to the files folder's subfolders. Do NOT use your general knowledge of the LLM-for-code field.
+2. Aim for breadth across ALL 77 papers. Every paper in the notebook is a valid source, including Bayram, Belozerov, and Siroš, but no paper has privileged status. When multiple papers in the corpus support a claim, cite the broader set rather than defaulting to the same few.
+3. For every claim, cite the exact paper by title and first author or its citation key, that you can find in the NB1_CQTD_CORE.bib file. If a paper is not in the uploaded sources, do NOT mention it.
+4. If you cannot find evidence in the uploaded PDFs, say "No evidence found in uploaded sources" rather than inventing one. In other words, no hallucinations.
+5. Use ONE citation per claim per paper. Do NOT cite the same paper twice (once to its abstract section and once to its body) for the same finding.
+6. If the output includes a final References section, list ONLY the papers actually cited inline in the text above. Do NOT list every paper available in the notebook.
+7. Use a SINGLE numbering system across the entire output. The number [N] used inline in the text must point to the same paper as entry N in the final References list. Do NOT use one numbering for inline citations (e.g., order of first appearance) and a different numbering for the References list (e.g., alphabetical). After producing the output, verify by spot-checking 3 inline citations against the References list: if [N] inline does not match entry N in the list, regenerate with explicit alignment.
+
+Generate a comprehensive characterisation of the 77 papers in this notebook. Provide a structured summary covering:
+
+(1) distribution by year of publication;
+(2) distribution by methodology type (controlled experiment, observational study, mining study, case study, survey, quasi-experiment, other);
+(3) the AI tools or LLMs evaluated across the corpus;
+(4) the programming languages or technical contexts studied;
+(5) the geographic and industry distribution of the studies.
+
+For every claim, cite the title and first author of the supporting papers. Format as a structured report with headings.
+
+Apply the same conventions used before:
+- Numbered sections (1.1, 1.2...)
+- British English
+- Surface specific empirical figures with paper attribution
+- One citation per claim per paper, not clustered at end of paragraphs
+- Keep the same citation discipline: every number must be attributed to the paper that produced it, not to a paper that cites it. If a paper cites another paper's number, do not extract it as belonging to the citing paper.
+- Each answer should cite at least 3-5 different papers
+- Avoid the same paper anchoring more than 3 answers
+- Final References section ordered by first appearance, with bibkeys
+- A closing "Headline empirical anchors" table similar to Part 4 of the Study Guide, but focused on Q&A-relevant anchors.
+
+Read the papers, not just the abstracts or the memory you have of them. I don't care that you take more time, just do it. If you ask me to do it, I can upload again the zip with the 77 PDF files.
+
+I'm attaching, as an example, what NotebookLM produced as a Corpus Characterization. However, just as it happened with the briefing report, the references here are misplaced and misnumbered.
+
+Just as you did with the briefing report, add a References section, where you can list the references to the papers used within the Timeline, in order of appearence.
+
+As an output, I expext a DOCX document with the resulting Corpus characterization report. Remember to produce the output in British English and to number the sections and subsections (if any) of your report.
+
+Remember also that it is important to use figures obtained empirically by the papers in this study and to not use vague references.  Remove repetead boilerplates.
+-- Fin de Prompt 1 --
+
+-- Inicio del Prompt 2 --
+In Table 2 (methodology footprint), the approximate counts sum to ≈87, exceeding the 77-paper corpus. This is because methodological categories overlap (a benchmark study can also be a security assessment, etc.). Please add a one-sentence footnote to Table 2 explicitly stating that categories overlap and that the total is therefore expected to exceed 77.
+
+As an output, I expect the corrected DOCX document.
+-- Fin del Prompt 2 --

@@ -1,0 +1,26 @@
+Retro de Claude:
+
+Es un esqueleto sólido y bien razonado. La lógica narrativa de las nueve subsecciones tiene sentido, el ordenamiento por "cadena causal" (productividad → calidad → interacción → carga cognitiva → organización → economía → percepción → síntesis) es coherente, y la decisión de no agrupar las cinco dimensiones pequeñas es correcta — mantiene la simetría metodológica con las 7 dimensiones declaradas.
+
+Dicho esto, hay algunas cosas que ajustaría:
+
+**1. El orden Productivity → CQTD invierte la lógica de nuestro propio framework.**
+
+Nuestro marco de equilibrio sociotécnico dice explícitamente que *generation efficiency* se acompaña *estructuralmente* de *verification overhead* — no que primero ocurre uno y después el otro como fases separadas. Poner Productivity primero y CQTD segundo sugiere una secuencia temporal ("primero aceleras, luego revisas la calidad") cuando el argumento real es que son simultáneos y co-determinantes. Esto es menor, pero como CQTD es nuestra dimensión más fuerte y mejor desarrollada (Phase 0-4 completo, mayor corpus, el Theoretical Contribution más maduro), hay un caso para que **CQTD abra** la sección de Results — establece el terreno empírico (qué pasa con el artefacto generado) antes de hablar de velocidad.
+
+No es un cambio crítico, pero vale la pena decidirlo conscientemente en lugar de por inercia.
+
+**2. HAI y Cognitive Load tienen riesgo real de solapamiento que el esqueleto no resuelve del todo.**
+
+ChatGPT lo reconoce ("Cognitive Load... se relaciona fuertemente con HAI") pero la resolución propuesta — HAI explica la interacción, Cognitive Load explica el costo humano de esa interacción — es una distinción fina que puede no sostenerse en la prosa real sin contaminación. Dado que **ya tenemos** los Phase 3.4/4.4 de HAI completos y el Phase 1.3 de NB5 de Cognitive Load completo, antes de comprometernos al esqueleto deberíamos hacer un pase rápido de "qué bibkeys/anchors aparecen en ambos" para verificar que el solapamiento es manejable y no requiere reescritura.
+
+**3. Perception & Trust al final es defendible pero crea una tensión con HAI 4.4.3 (Trust, verification and reliance behaviour).**
+
+ChatGPT lo nota — "evitar duplicación: HAI cubre trust as interaction behaviour; Perception and Trust cubre attitudes, perceived usefulness, adoption and calibration" — pero esta es exactamente la misma distinción fina del punto 2, aplicada a un par de dimensiones diferente. Dos pares de dimensiones con la misma tensión sin resolver es una señal de que el corpus real puede no separarse tan limpiamente como el esqueleto conceptual sugiere.
+
+---
+
+**Mi sugerencia concreta:** antes de aceptar el esqueleto completo, hagamos un ejercicio corto — para cada uno de los dos pares problemáticos (HAI↔Cognitive Load, HAI↔Perception&Trust), listar los bibkeys que aparecen en ambos lados (ya tenemos esos audit logs de HAI Phase 2.3 y NB5 Phase 1.2/1.3) y decidir, paper por paper, en qué sección "vive" cada hallazgo. Esto evitaría descubrir la duplicación a mitad de la redacción.
+
+---
+

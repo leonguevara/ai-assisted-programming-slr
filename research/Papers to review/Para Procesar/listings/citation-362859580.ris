@@ -1,0 +1,14 @@
+TY  - BOOK
+AU  - Sandoval, Gustavo
+AU  - Pearce, Hammond
+AU  - Nys, Teo
+AU  - Karri, Ramesh
+AU  - Dolan-Gavitt, Brendan
+AU  - Garg, Siddharth
+PY  - 2022/08/20
+SP  - 
+N2  - Advances in Deep Learning have led to the emergence of Large Language Models (LLMs) such as OpenAI Codex which powers GitHub Copilot. LLMs have been fine tuned and packaged so that programmers can use them in an Integrated Development Environment (IDE) to write code. An emerging line of work is assessing the code quality of code written with the help of these LLMs, with security studies warning that LLMs do not fundamentally have any understanding of the code they are writing, so they are more likely to make mistakes that may be exploitable. We thus conducted a user study (N=58) to assess the security of code written by student programmers when guided by LLMs. Half of the students in our study had the help of the LLM and the other half did not. The students were asked to write code in C that performed operations over a singly linked list, including node operations such as inserting, updating, removing, combining, and others. While the results of our study showed that the students who had the help of an LLM were more likely to write functional code, no generalizable impact on security was observed -- the security impacts were localized to individual functions. We also investigate systematic stylistic differences between unaided and LLM-assisted code, finding that LLM code is more repetitive, which may have an amplifying effect if vulnerable code is repeated in addition to the impact on source code attribution.
+T1  - Security Implications of Large Language Model Code Assistants: A User Study
+VL  - 
+DO  - 10.48550/arXiv.2208.09727
+ER  - 

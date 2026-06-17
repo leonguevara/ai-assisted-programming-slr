@@ -1,0 +1,21 @@
+TY  - CONF
+AU  - Rydén, Anton
+AU  - Näslund, Erik
+AU  - Schiller, Elad Michael
+AU  - Almgren, Magnus
+ED  - Dolev, Shlomi
+ED  - Elhadad, Michael
+ED  - Kutyłowski, Mirosław
+ED  - Persiano, Giuseppe
+PY  - 2025
+DA  - 2025//
+TI  - LLMSecCode: Evaluating Large Language Models for Secure Coding
+BT  - Cyber Security, Cryptology, and Machine Learning
+SP  - 100
+EP  - 118
+PB  - Springer Nature Switzerland
+CY  - Cham
+AB  - The rapid deployment of Large Language Models (LLMs) requires careful consideration of their effect on cybersecurity. Our work aims to improve the selection process of LLMs that are suitable for facilitating secure coding (SC). This raises challenging research questions, such as (RQ1) Which functionality can streamline the LLM evaluation? (RQ2) What should the evaluation measure? (RQ3) How to attest that the evaluation process is impartial? To address these questions, we introduce LLMSecCode, an open-source evaluation framework designed to assess LLM SC capabilities objectively. We validate the LLMSecCode implementation through experiments. We find a 10% and 9% difference in performance when varying parameters and prompts, respectively. We also compare some results to reliable external actors, where our results show a 5% difference. We strive to ensure the ease of use of our open-source framework and encourage further development by external actors. With LLMSecCode, we hope to encourage the standardization and benchmarking of LLMs’ capabilities in security-oriented code and tasks.
+SN  - 978-3-031-76934-4
+ID  - 10.1007/978-3-031-76934-4_7
+ER  - 

@@ -1,0 +1,102 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1ywIisQOCRL3dPVOSdJrIh7BJVtINiVbk?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto
+
+IMPORTANT CONSTRAINTS:
+
+1. Use ONLY the 77 PDFs uploaded to the files folder's subfolders. Do NOT use your general knowledge of the LLM-for-code field.
+2. Aim for breadth across ALL 77 papers. Every paper in the notebook is a valid source, including Bayram, Belozerov, and Siroš, but no paper has privileged status. When multiple papers in the corpus support a claim, cite the broader set rather than defaulting to the same few.
+3. For every claim, cite the exact paper by title and first author or its citation key, that you can find in the NB1_CQTD_CORE.bib file. If a paper is not in the uploaded sources, do NOT mention it.
+4. If you cannot find evidence in the uploaded PDFs, say "No evidence found in uploaded sources" rather than inventing one. In other words, no hallucinations.
+5. Use ONE citation per claim per paper. Do NOT cite the same paper twice (once to its abstract section and once to its body) for the same finding.
+6. If the output includes a final References section, list ONLY the papers actually cited inline in the text above. Do NOT list every paper available in the notebook.
+7. Use a SINGLE numbering system across the entire output. The number [N] used inline in the text must point to the same paper as entry N in the final References list. Do NOT use one numbering for inline citations (e.g., order of first appearance) and a different numbering for the References list (e.g., alphabetical). After producing the output, verify by spot-checking 3 inline citations against the References list: if [N] inline does not match entry N in the list, regenerate with explicit alignment.
+
+Extract every reported quantitative finding on how AI-assisted code quality changes across multi-turn or iterative interactions across the 77 papers.
+
+INCLUSION CRITERION (broad and explicit). Extract every quantitative original finding by the paper that measures any of:
+- Quality change across iterations (e.g., "errors increased 12% after refinement", "defect rate fell from 34% to 21% over 3 turns")
+- Repair success rate over multiple turns (e.g., 75% success after iterative repair vs 32% single-shot)
+- Error persistence across turns (e.g., 67% of initial errors survive 2 turns of refinement)
+- Error amplification or propagation rates (e.g., 23% of multi-turn dialogues introduce new errors)
+- Prompt-induced defect rates (e.g., poisoned prompts produce X% more defects than clean prompts)
+- Per-turn quality measurements (e.g., turn 1: 56%, turn 2: 72%, turn 3: 81% pass rate)
+- Iterative correction overhead (number of turns to convergence, time per iteration)
+- Self-repair success rates (LLM repairing its own output)
+- Cross-turn instability (e.g., quality varies +/- X% across re-runs of the same prompt)
+- Agent trajectory length and success correlation
+- Multi-turn dialogue quality measurements (e.g., from Zhong's developer-LLM conversations study)
+- Iterative refinement comparisons (single-shot vs multi-turn outcomes)
+
+EXCLUSION CRITERION (strict):
+- Single-shot generation results only (those belong to Phases 2.1-2.3)
+- Citation-from-citation
+- Generic productivity figures
+
+CALIBRATION ANCHORS:
+Papers expected to yield multi-turn evidence:
+- Zhong et al. 2025 (Developer-LLM Conversations) — empirical study of interactions, multiple per-turn quality metrics. Should yield 30+ atomic findings.
+- Fakhoury et al. 2024 (LLM-Based Test-Driven Interactive Code Generation) — iterative user study.
+- Nam et al. 2025 (Understanding and supporting how developers prompt) — iterative prompting analysis.
+- Chen et al. 2024 "Evaluating Software Development Agents" — trajectory analysis with 4,892 patches, 170 unresolved issues, multi-step agentic workflows.
+- Sajadi et al. 2025 (How Safe Are AI-Generated Patches) — multi-step agent repair, 75 patches across 195 trajectories.
+- Yin et al. 2025 (Agent Frameworks on Code-centric SE Tasks) — multi-step agent evaluation.
+- Liu et al. 2026 (E2EDev benchmark) — end-to-end multi-step evaluation.
+- Liu et al. 2025 (When LLMs Meet Code Generation, etc.) — iterative repair studies.
+- Honarvar et al. 2025 (Turbulence) — robustness across perturbations and re-runs.
+- Wang et al. 2026 (Is Your Prompt Poisoning Code) — multi-prompt defect induction.
+- Tony et al. 2025 (Prompting Techniques for Secure Code Generation) — comparative prompting effects.
+- Bose et al. 2025 (From Prompts to Properties) — iterative prompt-based testing.
+- Zhang et al. 2025 (LLM Hallucinations in Practical Code Generation) — error propagation.
+- Ma et al. 2025 (Rethinking Verification for LLM Code Generation) — multi-turn verification.
+- Belozerov et al. 2026 — detect-to-repair multi-stage workflow.
+- Costa et al. 2026 — vulnerability fixing across iterations.
+- Borg et al. 2026 (Echoes of AI) — downstream effects across multiple updates.
+- Cihan et al. 2024 (Automated Code Review In Practice) — review-cycle quality changes.
+- Cihan et al. 2025 (Evaluating LLMs for Code Review) — multi-stage review evaluation.
+- Ji et al. 2025 — iterative repair patterns (if present in corpus).
+- Lyu et al. 2025 (My productivity is boosted, but) — perception over time.
+
+Aim for 600-1,500 atomic findings across the multi-turn-relevant subset. Many papers will NOT have multi-turn evidence (they evaluate single-shot generation) — those go to Sheet 3 with appropriate status.
+
+WORKBOOK STRUCTURE (XLSX with 5 sheets):
+
+Sheet 1: "Multi-turn findings" — one row per atomic finding. Columns:
+- Paper title, First author, Year, Bibkey
+- Exact figure or range
+- Interaction-effect category (per-turn quality change / repair success rate / error persistence / error amplification / prompt-induced defects / convergence turns / cross-turn instability / trajectory length / self-repair / agent multi-step / dialogue quality / iterative refinement comparison / other)
+- Number of turns or iterations (when reported)
+- Direction of change (improvement / degradation / oscillation / no change / context-dependent)
+- Model or tool evaluated
+- Prompt or interaction type (when characterised: clean prompt / poisoned prompt / chain-of-thought / agentic / property-based / etc.)
+- Sample size (dialogues, trajectories, patches, sessions)
+- Source location
+- Citation status ("own empirical finding")
+
+Sheet 2: "Per-paper interaction summary"
+
+Sheet 3: "Screened papers" — statuses:
+- "multi-turn figures extracted"
+- "no multi-turn evidence (single-shot study)"
+- "qualitative multi-turn discussion only"
+- "only citation-of-citation multi-turn figures"
+
+Sheet 4: "References" — as done in the previous artifcats, ordered by first appearance.
+
+Sheet 5: "Coverage check" — standard format.
+
+NON-NEGOTIABLE CONSTRAINTS:
+1. Citation-from-citation safeguard rigorously applied.
+2. No per-paper cap.
+3. British English, only papers in uploaded sources, single numbering in References.
+
+Read the papers, not just the abstracts or the memory you have of them. I don't care that you take more time, just do it. If you ask me to do it, I can upload again the zip with the 77 PDF files.
+-- Fin de Prompt 1 --
+
+-- Inicio del Prompt 2 --
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+-- Fin del Prompt 4 --

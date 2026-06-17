@@ -1,0 +1,98 @@
+-- Inicio de Prompt 1 --
+Continuing Phase 4 of the SLR section on Code Quality and Technical Debt in AI-Assisted Programming. Same NB1_CQTD_CORE corpus (77 PDFs), same Phase 2 extractive workbooks (11,628 atomic findings), same Phase 3 synthesis artefacts (Consensus Map, Contradiction Map, Methodological Pattern Atlas, Anchors Compendium).
+
+CONSOLIDATED CONSTRAINTS — apply ALL from the first draft, not retroactively.
+
+Citation discipline (12 points):
+1. Breadth across all 77 papers. Every paper in the corpus is a valid source. No paper has privileged status. When multiple papers support a claim, cite the broader set rather than defaulting to the same few.
+2. Use only papers in the 77-PDF corpus. Every bibkey cited must exist literally in NB1_CQTD_CORE.bib. Do not infer bibkeys from titles, folder names, examples, or model memory. If a bibkey cannot be verified, do not cite the paper.
+3. Cite by exact bibkey from NB1_CQTD_CORE.bib. The References section must use the official title from the .bib file, not paraphrased.
+4. One citation per claim per paper.
+5. Single numbering system. Inline [N] equals References entry N. Ordered by first appearance.
+6. References section lists ONLY papers cited inline.
+7. Citation-from-citation safeguard.
+8. Reference-number-extraction safeguard.
+9. Subject-propagation safeguard.
+10. No paper anchoring more than 5 claims/items unless the artefact explicitly allows it.
+11. "No evidence found in uploaded sources" rather than fabricate.
+12. British English throughout.
+
+Workflow discipline:
+Apply "evidence matrix first, prose second, references third, validation last":
+
+Step 1: Construct a source-control table of every construct-paper-finding relationship before drafting prose. Verify all bibkeys.
+Step 2: Draft each item using only papers from that table.
+Step 3: Generate References AFTER prose is stable, ordered by first appearance.
+Step 4: Run self-validation: zero ghosts, no orphan commas, sub-points numbered, no paper in >5 items, spot-check 3 citations, no fabricated bibkeys.
+
+- Regeneration over modification: If draft has substantive issues, regenerate from scratch rather than patch.
+- Validity over breadth: 6 verified papers beats 12 papers if 6 are weak.
+
+Task: Phase 4.3 — Temporal Evolution Analysis
+
+Produce a DOCX document that traces how the research field of AI-assisted programming has evolved across the corpus's time window (2021-2026), identifying shifts in research focus, methodological maturity, and findings.
+
+This artefact is intended as PROSE READY FOR THE MANUSCRIPT, suitable as background or context section. Use clear academic prose with smooth transitions. Apply British English throughout.
+
+WHAT TO PRODUCE:
+
+1. Overview — 2 paragraphs framing the temporal scope (2021-2026) and the analytical lens: how has the field's understanding of AI-assisted programming evolved as tools have moved from Codex/early Copilot through GPT-3.5/GPT-4 to frontier models, agentic systems, and enterprise deployments?
+
+2. Era-based analysis — Divide the 2021-2026 window into 4 eras and characterise each in a dedicated subsection:
+2.1 Early experimentation era (2021-2022) — 1-2 substantive paragraphs.
+- Dominant research questions of the era
+- Typical methodologies used
+- Tools studied (Codex, early Copilot, etc.)
+- Representative papers (4-6 with bibkeys) and 2-3 quantitative anchors
+- Limitations of evidence from this era
+2.2 Generalisation era (2023) — 1-2 paragraphs same structure.
+- ChatGPT public release shifts attention
+- Comparative studies between tools begin
+- Representative papers (4-6) and anchors
+2.3 Empirical depth era (2024) — 1-2 paragraphs same structure.
+- Repository-scale studies emerge
+- User studies become more sophisticated
+- Security and quality concerns become central
+- Representative papers (5-8) and anchors
+2.4 Industrial deployment and agentic systems era (2025-2026) — 1-2 paragraphs same structure.
+- Enterprise studies emerge
+- Agentic frameworks become primary research target
+- Long-term technical debt empirical work begins
+- Representative papers (5-8) and anchors
+
+3. Cross-era trends — 3-4 paragraphs identifying:
+- What questions have become more sophisticated (e.g., from "can it generate code" to "what is the long-term debt of generated code")
+- What methodological maturity has developed (e.g., from snippet-level to repository-level evaluation)
+- What findings have remained stable across eras (consistent risks: security weaknesses, validation effort, context-dependent productivity)
+- What findings have shifted (e.g., earlier productivity claims now qualified by experience-level moderators)
+Use specific cross-era citations: for each trend, cite at least one paper from each of 2-3 different eras.
+
+4. The trajectory toward complexity — 2-3 paragraphs articulating the meta-pattern: as the field has matured, the questions have become more socio-technical and less purely technical. Connect this to the manuscript's framing of AI-assisted programming as a socio-technical equilibrium rather than a productivity tool.
+
+5. Implications for the manuscript narrative — A short section (2 paragraphs) on how this temporal analysis should inform the manuscript's Introduction and Background sections. Specifically: which era-defining findings are most useful for the Introduction, and how does the trajectory motivate the SLR's contribution.
+
+6. References — Ordered by first appearance.
+
+7. Reference-alignment spot-check.
+
+Additional constraints:
+- Write in flowing academic prose, not bullet points. This artefact is intended for direct adaptation into the manuscript.
+- Each era subsection must cite the actual papers from that era's publication year, verified against bibkeys.
+- Do not overstate trends. If the corpus does not support a claim about era differences, do not assert one.
+
+Save with filename: Phase_4_3_CQTD_Temporal_Evolution_v1.docx-- Fin de Prompt 1 --
+
+Remember that I just uploaded again the zip with the 77 papers, the zip with the artifacts from phases 0 to 3, and the BIB ans CSV files with the bibliographic informtion of the 77 papers.
+-- Fin del Prompt 1 --
+
+-- Inicio del Prompt 2 --
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+-- Fin del Prompt 4 --
+
+-- Inicio del Prompt 5 --
+-- Fin del Prompt 5 --

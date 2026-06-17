@@ -1,0 +1,86 @@
+-- Inicio de Prompt 1 --
+Continuing Phase 4 of the SLR section on Code Quality and Technical Debt in AI-Assisted Programming. Same NB1_CQTD_CORE corpus (77 PDFs), same Phase 2 extractive workbooks (11,628 atomic findings), same Phase 3 synthesis artefacts (Consensus Map, Contradiction Map, Methodological Pattern Atlas, Anchors Compendium).
+
+CONSOLIDATED CONSTRAINTS — apply ALL from the first draft, not retroactively.
+
+Citation discipline (13 points):
+1. Breadth across all 77 papers. Every paper in the corpus is a valid source. No paper has privileged status. When multiple papers support a claim, cite the broader set rather than defaulting to the same few.
+2. Use only papers in the 77-PDF corpus. Every bibkey cited must exist literally in NB1_CQTD_CORE.bib. Do not infer bibkeys from titles, folder names, examples, or model memory. If a bibkey cannot be verified, do not cite the paper.
+3. Cite by exact bibkey from NB1_CQTD_CORE.bib. The References section must use the official title from the .bib file, not paraphrased.
+4. One citation per claim per paper.
+5. Single numbering system. Inline [N] equals References entry N. Ordered by first appearance.
+6. References section lists ONLY papers cited inline.
+7. Citation-from-citation safeguard.
+8. Reference-number-extraction safeguard.
+9. Subject-propagation safeguard.
+10. No paper anchoring more than 5 claims/items unless the artefact explicitly allows it.
+11. "No evidence found in uploaded sources" rather than fabricate.
+12. When listing papers in the References section, use the title format from the NB1_CQTD_CORE.csv file (clean text, no curly brackets around capitalised words). The .bib file's title field surrounds capitalised words with curly brackets (e.g., "Program {Code} {Generation} with {Generative} {AIs}") because BibTeX requires those for case preservation, but the curly brackets are formatting instructions for LaTeX compilation, not part of the actual title. Strip them. The expected format is: "Program Code Generation with Generative AIs", not "Program {Code} {Generation} with {Generative} {AIs}
+13. British English throughout.
+
+Workflow discipline:
+Apply "evidence matrix first, prose second, references third, validation last":
+
+Step 1: Construct a source-control table of every construct-paper-finding relationship before drafting prose. Verify all bibkeys.
+Step 2: Draft each item using only papers from that table.
+Step 3: Generate References AFTER prose is stable, ordered by first appearance.
+Step 4: Run self-validation: zero ghosts, no orphan commas, sub-points numbered, no paper in >5 items, spot-check 3 citations, no fabricated bibkeys.
+
+- Regeneration over modification: If draft has substantive issues, regenerate from scratch rather than patch.
+- Validity over breadth: 6 verified papers beats 12 papers if 6 are weak.
+
+Task: Phase 4.6 — Counter-Narrative Analysis
+
+Produce a DOCX document that examines how the manuscript's socio-technical equilibrium framework holds up against alternative interpretations of the corpus evidence. This is an adversarial-reading exercise: what would a critic argue, and how does the framework respond?
+
+WHAT TO PRODUCE:
+
+1. Overview — 2 paragraphs framing the analytical purpose: a strong theoretical framework must be testable against alternatives. This artefact identifies the most plausible counter-narratives and assesses whether the corpus evidence privileges the socio-technical equilibrium framework or whether alternatives have equal explanatory power.
+
+2. Counter-narratives examined — 4-6 alternative interpretations, each as a substantive subsection. For each, exactly 7 numbered sub-points:
+- 2.X.1 Counter-narrative statement (one sentence, the alternative interpretation).
+- 2.X.2 Who would make this argument: brief profile of the kind of reader, reviewer, or theorist who would advance this view.
+- 2.X.3 Strongest evidence for the counter-narrative: cite 3-6 papers from the corpus that, read selectively, support it. Include 2-3 quantitative anchors.
+- 2.X.4 Where the counter-narrative falls short: cite 3-6 papers that complicate or contradict it. Include 2-3 quantitative anchors.
+- 2.X.5 Why the equilibrium framework better accounts for the evidence: 2-3 sentence argument linking back to the framework constructs from Phase 4.1.
+- 2.X.6 What the counter-narrative correctly identifies: acknowledge what the counter-narrative captures that the equilibrium framework should incorporate or refine.
+- 2.X.7 Defensive framing in the manuscript: 1-2 sentences on how the Discussion section should pre-empt this counter-narrative without weakening the central argument.
+Counter-narratives to consider (adjust based on what the corpus genuinely permits):
+- CN1: "AI-assisted programming is primarily a productivity tool; socio-technical framing overstates complexity." (Pure technocratic interpretation)
+- CN2: "AI-assisted programming is primarily a deskilling threat; the equilibrium framing understates harm." (Critical-pessimistic interpretation)
+- CN3: "Effects are too context-dependent for any unifying framework; the corpus shows fragmentation, not equilibrium." (Anti-theoretical interpretation)
+- CN4: "Differences across studies are primarily methodological artefacts; once controlled for design, effects are smaller than claimed." (Methodological-deflationary interpretation)
+- CN5: "The corpus is dominated by short-term studies; long-term effects may invert observed patterns." (Temporal-uncertainty interpretation)
+- CN6: "Frontier model capabilities are evolving fast enough that the corpus's findings will be obsolete within 2 years." (Capability-trajectory interpretation)
+Drop any counter-narrative that the corpus does not genuinely support enough to merit serious treatment.
+
+3. Framework resilience assessment — 3-4 paragraphs evaluating the overall standing of the socio-technical equilibrium framework against the counter-narratives. Where does it hold strongly? Where does it require qualification? Where would refinement strengthen it?
+
+4. Adversarial reviewer pre-emption — A short section (2-3 paragraphs) translating the counter-narrative analysis into practical guidance: which sections of the manuscript should explicitly address which counter-narratives, and what citations should anchor those defences.
+
+5. Headline counter-narratives table — Closing table. Columns: # | Counter-narrative | Strongest supporting evidence | Framework's response | Manuscript pre-emption strategy.
+
+6. References — Ordered by first appearance.
+
+7. Reference-alignment spot-check.
+
+Additional constraints:
+- Take each counter-narrative seriously. The exercise is not to dismiss alternatives but to test the framework against them.
+- If the framework genuinely loses against a counter-narrative on some point, acknowledge it. Honest concessions strengthen the manuscript.
+
+Save with filename: Phase_4_6_CQTD_Counter_Narrative_Analysis_v1.docx
+
+Remember that I just uploaded again the zip with the 77 papers, the zip with the artifacts from phases 0 to 3, and the BIB ans CSV files with the bibliographic informtion of the 77 papers.
+-- Fin del Promt 1 --
+
+-- Inicio del Prompt 2 --
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+-- Fin del Prompt 4 --
+
+-- Inicio del Prompt 5 --
+-- Fin del Prompt 5 --

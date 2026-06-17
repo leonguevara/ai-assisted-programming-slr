@@ -1,0 +1,50 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1ywIisQOCRL3dPVOSdJrIh7BJVtINiVbk?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto
+
+IMPORTANT CONSTRAINTS:
+
+1. Use ONLY the 77 PDFs uploaded to the files folder's subfolders. Do NOT use your general knowledge of the LLM-for-code field.
+2. Aim for breadth across ALL 77 papers. Every paper in the notebook is a valid source, including Bayram, Belozerov, and Siroš, but no paper has privileged status. When multiple papers in the corpus support a claim, cite the broader set rather than defaulting to the same few.
+3. For every claim, cite the exact paper by title and first author or its citation key, that you can find in the NB1_CQTD_CORE.bib file. If a paper is not in the uploaded sources, do NOT mention it.
+4. If you cannot find evidence in the uploaded PDFs, say "No evidence found in uploaded sources" rather than inventing one. In other words, no hallucinations.
+5. Use ONE citation per claim per paper. Do NOT cite the same paper twice (once to its abstract section and once to its body) for the same finding.
+6. If the output includes a final References section, list ONLY the papers actually cited inline in the text above. Do NOT list every paper available in the notebook.
+7. Use a SINGLE numbering system across the entire output. The number [N] used inline in the text must point to the same paper as entry N in the final References list. Do NOT use one numbering for inline citations (e.g., order of first appearance) and a different numbering for the References list (e.g., alphabetical). After producing the output, verify by spot-checking 3 inline citations against the References list: if [N] inline does not match entry N in the list, regenerate with explicit alignment.
+
+Build a Technical FAQ on Code Quality and Technical Debt in AI-assisted programming, drawn from the 77 papers. The FAQ should have 10-14 questions of the form "Q: ...". For each entry:
+
+(a) Provide a 1-2 paragraph answer citing the title and first author of at least 3-5 supporting papers.
+(b) Vary the papers cited across questions; do NOT rely on the same 3-5 papers across the FAQ.
+(c) If a question has no clear answer in the corpus, say so explicitly.  
+(d) Avoid editorial framing (e.g., "Anthropic models lead the industry"). Stick to descriptive synthesis.
+
+Apply the same conventions used before:
+- Numbered sections (1.1, 1.2...)
+- British English
+- Surface specific empirical figures with paper attribution
+- One citation per claim per paper, not clustered at end of paragraphs
+- Each answer should cite at least 3-5 different papers
+- Avoid the same paper anchoring more than 3 answers
+- Final References section ordered by first appearance, with bibkeys
+- A closing "Headline empirical anchors" table similar to Part 4 of the Study Guide, but focused on Q&A-relevant anchors (developer experience, productivity, quality trade-offs)
+
+The FAQ is intended for a reader who wants quick answers to specific technical questions about CQTD in AI-assisted programming, not narrative synthesis. Each Q should be a question someone might ask a senior engineer, and each A should be a specific, citable answer.
+
+Read the papers, not just the abstracts or the memory you have of them. I don't care that you take more time, just do it. If you ask me to do it, I can upload again the zip with the 77 PDF files.
+
+I'm attaching, as an example, what NotebookLM produced as a FAQ. However, just as it happened with the briefing report, the references here are misplaced and misnumbered.
+
+Just as you did with the briefing report, add a References section, where you can list the references to the papers used within the FAQ, in order of appearence.
+
+As an output, I expext a DOCX document with the resulting FAQ report. Remember to produce the output in British English and to number the sections and subsections (if any) of your FAQ.
+
+Remember also that it is important to use figures obtained empirically by the papers in this study and to not use vague references.  Remove repetead boilerplates.
+-- Fin de Prompt 1 --
+
+-- Inicio del Prompt 2 --
+Two small corrections to the FAQ:
+
+1. In Q1.11, the citation [36] describes Chen and Jiang's evaluation of software-development agents on 4,892 patches across 500 SWE-Bench Verified issues — that is Chen and Jiang (2024), not Chen et al. SecureVibeBench. Please add Chen and Jiang as a new reference entry (likely [43]) and update the inline citation in Q1.11 to point to it. Keep [36] for SecureVibeBench in its existing context. Chen and Jiang (2024) is "Evaluating Software Development Agents: Patch Patterns, Code Quality, and Issue Complexity in Real-World GitHub Scenarios".
+
+2. In reference [14], the bibkey is written as 'kozac_when_2025' but should be 'kozak_when_2025'. Please correct this typo.
+-- Fin del Prompt 2 --

@@ -1,0 +1,90 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1ywIisQOCRL3dPVOSdJrIh7BJVtINiVbk?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto
+
+IMPORTANT CONSTRAINTS:
+
+1. Use ONLY the 77 PDFs uploaded to the files folder's subfolders. Do NOT use your general knowledge of the LLM-for-code field.
+2. Aim for breadth across ALL 77 papers. Every paper in the notebook is a valid source, including Bayram, Belozerov, and Siroš, but no paper has privileged status. When multiple papers in the corpus support a claim, cite the broader set rather than defaulting to the same few.
+3. For every claim, cite the exact paper by title and first author or its citation key, that you can find in the NB1_CQTD_CORE.bib file. If a paper is not in the uploaded sources, do NOT mention it.
+4. If you cannot find evidence in the uploaded PDFs, say "No evidence found in uploaded sources" rather than inventing one. In other words, no hallucinations.
+5. Use ONE citation per claim per paper. Do NOT cite the same paper twice (once to its abstract section and once to its body) for the same finding.
+6. If the output includes a final References section, list ONLY the papers actually cited inline in the text above. Do NOT list every paper available in the notebook.
+7. Use a SINGLE numbering system across the entire output. The number [N] used inline in the text must point to the same paper as entry N in the final References list. Do NOT use one numbering for inline citations (e.g., order of first appearance) and a different numbering for the References list (e.g., alphabetical). After producing the output, verify by spot-checking 3 inline citations against the References list: if [N] inline does not match entry N in the list, regenerate with explicit alignment.
+
+Generate a comprehensive inventory of the AI tools, models, and systems evaluated across the 77 papers. Format as an XLSX workbook with the following sheets:
+
+Sheet 1: "Tools by paper" — one row per (paper, tool) combination. Columns:
+- Paper title
+- First author
+- Year
+- Bibkey
+- AI tool/model name
+- Tool category (proprietary LLM / open-weight LLM / coding assistant / agent / benchmark suite / static analyser / other)
+- Tool version if reported, Evaluation type (correctness / security / maintainability / hallucination / agentic / multi-metric).
+
+Sheet 2: "Tool inventory aggregated" — one row per distinct tool/model. Columns:
+- Tool name
+- Tool category
+- Number of papers evaluating it
+- Bibkeys of those papers (comma-separated)
+- Years range
+- Primary evaluation contexts.
+
+Sheet 3: "References". Columns:
+— Ref #
+- Bibkey
+- First author
+- Year
+- Paper title.
+Ordered by first appearance in Sheet 1.
+
+Apply the same conventions used before:
+- British English
+- Surface empirical figures with paper attribution where relevant
+- One citation per claim per paper (no abstract+body double-citation)
+- Use only papers in the uploaded sources; do NOT invent tool evaluations (no hallucinations)
+- If a paper does not evaluate any specific tool by name (e.g., a survey of LLM behaviours in general), mark the AI tool as "not specified" rather than guessing.
+- Avoid the same paper appearing in more than 8-10 rows of Sheet 1 unless it genuinely evaluates that many tools
+
+Critical: Phase 1.3 in NotebookLM omitted Heibel & Lowd (2024) from the inventory without notification. Make sure your output includes all 77 papers' tool evaluations.
+
+As output, I expect an XLSX workbook with the three sheets as described."
+
+Read the papers, not just the abstracts or the memory you have of them. I don't care that you take more time, just do it. If you ask me to do it, I can upload again the zip with the 77 PDF files.
+
+I'm attaching, as an example, what NotebookLM produced as a Tools inventory table. As you can see, it has some inconsistencies, like saying that ChatGPT Copilot is evaluated in 40 papers and then, at the end of that row, it says that papers that evaluate it go from 1 to 38 (missing 2 papers).  
+-- Fin de Prompt 1 --
+
+-- Inicio del Prompt 2 --
+Three normalisation issues in the Tools Inventory XLSX need correction:
+
+1. Sheet 2 ("Tool inventory aggregated") has duplicate entries due to inconsistent capitalisation and spelling:
+- "Large language models" and "large language models" should be consolidated into one entry (combined count: 16 papers).
+- "Code Llama" and "CodeLlama" should be consolidated into one entry (combined count: 3 papers).
+
+Update the Tool name in Sheet 1 to use a consistent canonical form ("Large language models", "Code Llama"), and re-aggregate Sheet 2.
+
+2. The "Tool category" assignments in Sheet 1 mix "tool being evaluated" with "object of study". Please reclassify:
+- "AI-based smart contract generators" (Karanjai), "LLM-based programming assistants" (Heibel), "LLM-based secure coding assistants" (Belozerov), and "LLM-based code generation" (Zhang are) are not benchmark suites — they are generic LLM categories. Reclassify these as "other / generic LLM category".
+- True benchmark suites (SWE-bench, HumanEval, NoFunEval, VulnLLMEval, CyberSecEval, TREAT, Turbulence, etc.) keep "benchmark suite" category.
+
+3. There are ~22 entries in Sheet 1 with very generic tool names like "Large language models", "AI-generated code", "LLM code generation", "Code LMs", "AI assistants", "Code generation models", etc. These are functionally equivalent to "not specified". Please:
+- Keep these rows as they are (they reflect real paper behaviour: studying LLMs generically without naming a specific one).
+- Add a column to Sheet 1 called "Tool specificity" with values: "specific model" (e.g., GPT-4, Claude Opus 4, StarCoder) | "generic LLM category" (e.g., Large language models, AI-generated code) | "benchmark suite" | "static analyser" | "not specified".
+- Re-aggregate Sheet 2 grouped by this Tool specificity column.
+- Update Coverage check sheet with: number of specific-model entries, number of generic-LLM-category entries, number of benchmark-suite entries.
+Keep Heibel & Lowd present. Keep all 77 paper bibkeys present. Maintain ordering of References sheet by first appearance.
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+The Tool specificity column has classification inconsistencies between Sheet 1 and Sheet 2, and many entries in 'specific model' are not specific models. Please re-classify Tool specificity in Sheet 1 using this strict definition:
+
+- "specific model" = a named model with version, vendor, or unique product identifier (e.g., GPT-4, Claude Opus 4, StarCoder, Llama 2, GitHub Copilot, ChatGPT, MagiCoder, DeepSeek-R1, Gemini 2.5 Pro, Codeium, CodeWhisperer, BingAI Chat, Code Llama)
+- "generic LLM category" = a category descriptor without a specific model (e.g., AI assistants, AI coding assistants, AI-pair programmers, LLM code generators, LLM-based coding agents, instruction-tuned LLMs, Language models, code agents, GPTs, AI-generated code, Large language models, Code LMs, etc.)
+- "concept/method" = a technique or workflow that is not a tool (e.g., Chain-of-Thought prompting, Framework-constrained program generation, AI coding proficiency framework, Agentic automated program repair, LLM automated program repair, LLM hallucination mitigation, Developer-LLM conversations, Stack Overflow comparison, AI-generated projects, LLM-generated libraries, LLM-generated library imports, LLM-based code generation)
+- "benchmark suite" = named benchmark or evaluation framework (e.g., SWE-bench, HumanEval, NoFunEval, VulnLLMEval, CyberSecEval, TREAT, Turbulence, ReCatcher, DeVAIC, etc.)
+- "static analyser" = e.g., Bandit, Pylint
+- "not specified" = no tool/model identifiable in the paper
+
+After re-classifying Sheet 1, re-aggregate Sheet 2 with the corrected specificity (one row per (Tool name, specificity) combination). Update Coverage check with the new counts. Maintain all other corrections from the previous version. Maintain Heibel & Lowd presence.
+-- Fin del Prompt 3 --

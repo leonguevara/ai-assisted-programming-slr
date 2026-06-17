@@ -1,0 +1,164 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1btkfM0ybzsOyKeeppWVSzlQNjfB2fpOO, and with whatever files I've uploaded to this chat.
+
+Starting Phase 2 of the SLR section on Human-AI Interaction for the manuscript "AI-Assisted Programming in Software Engineering: A Systematic Literature Review and Socio-Technical Perspective". This artefact concerns the Human-AI Interaction (HAI) dimension, which is one of seven analytical dimensions in the paper. The other six dimensions (Code Quality and Technical Debt, Productivity, Cognitive Load, Organisational Impact, Economic Impact, and Perception and Trust) are analysed in companion notebooks.
+
+This notebook is NB4_HAI_Support, containing 55 papers that provide complementary triangulation evidence for the HAI dimension. These papers are not the structural backbone of the SLR (that role is played by the 60 papers in NB3_HAI_CORE, whose analysis has been completed in companion artefacts). Instead, NB4_HAI_SUPPORT papers either:
+
+(a) provide additional quantitative evidence on HAI constructs already established by CORE,
+(b) extend the dimension's scope to topics where CORE coverage is thin, or
+(c) offer methodological triangulation through alternative study designs.
+
+The 55 papers in this notebook are classified into three epistemological segments in column EA (Segment) of Relación de Estudios.xlsx:
+- SUPPORTING: primary triangulation papers — the analytical backbone of NB4.
+- PERIPHERAL: papers with limited or indirect relevance — may provide contextual background but should not anchor primary claims.
+- REMOVE_CANDIDATE: papers flagged for potential exclusion — must not be cited as evidence in any analytical artefact.
+
+This artefact is Phase 2 of NB4_HAI_SUPPORT. Phase 2 produces cross-cutting thematic syntheses within the SUPPORT corpus only. Do not cite papers from NB3 HAI CORE. Cross-integration between NB3 and NB4 will occur in Phase 3.
+
+CONSOLIDATED CONSTRAINTS — apply ALL from the first draft, not retroactively.
+
+Citation discipline (13 points):
+1. Breadth across SUPPORTING papers only. Every SUPPORTING paper in the NB4_HAI_SUPPORT corpus is a valid source. PERIPHERAL papers may be referenced for context only. REMOVE_CANDIDATE papers must not be cited under any circumstances.
+2. Use only papers present in the 65-paper NB4_HAI_CORE corpus. Every bibkey cited must exist literally in NB4_HAI_Support.bib. Do not infer bibkeys from titles, folder names, examples, or model memory. If a bibkey cannot be verified, do not cite the paper. Do not cite papers from any other notebook in this Phase 0 artefact.
+3. Cite by exact bibkey from NB4_HAI_Support.bib. The References section must use the official title and author data from NB4_HAI_Support.csv (not from the BIB file — the CSV is the authoritative source for titles and author names). Strip curly braces from titles.
+4. One citation per claim per paper.
+5. Single numbering system. Inline [N] equals References entry N. Ordered by first appearance.
+6. References section lists ONLY papers cited inline.
+7. Citation-from-citation safeguard: only report what the paper itself empirically produced. Do not attribute findings from cited papers within a paper to the citing paper.
+8. Reference-number-extraction safeguard: do not treat bracketed reference markers (e.g. "[21, 41, 49]"), arXiv identifiers, or bibliography indices as quantitative findings.
+9. Subject-propagation safeguard: when a sentence contains multiple figures governed by a single subject, propagate the subject to every derived figure or row.
+10. No paper anchoring more than 5 claims/items unless the artefact explicitly allows it.
+11. "No evidence found in uploaded sources" rather than fabricate.
+12. When listing papers in the References section, only use the BIB file to obtain the bibkeys. All other bibliographical data (title, author names, year, venue) must be taken from the CSV file. The expected format is: [N] Title. Author(s), Year. Bibkey: bibkey_format. — Author and Year are required; do not omit them. Zero tolerance for ", ." empty author/year fields. Zero tolerance for LaTeX-escaped characters in author names or titles.
+   12.1. Use the BIB file to obtain te bibkeys.
+   12.2. Search that bibkey in the "Relación de Estudios.xlsx" file to get the Key Field (Column B), that represents the Zotero Key for that paper.
+   12.3. Search that key in the CSV file to obtain the rest of the bibliographical data of such paper.
+13. British English throughout.
+
+SEGMENT CONSTRAINT: SUPPORTING papers as primary evidence sources only. PERIPHERAL papers for context only, explicitly labelled. REMOVE_CANDIDATE papers (ahmad_towards_2023, fajkovic_impact_2023, seker_experiences_2024) must not be cited.
+
+CRITICAL PREREQUISITE — BIBKEY VERIFICATION:
+Before extracting a single anchor, load NB4_HAI_Support.bib and confirm that every bibkey you intend to use exists literally in that file. The CSV file contains Zotero item keys which are NOT bibkeys. Bibkeys follow the format author_keyword_year. If a bibkey cannot be found in the .bib file, do not cite that paper.
+
+CRITICAL PREREQUISITE - QUALITY TIERS:
+Quality tiers must be taken exclusively from column S (Clasificación) of "Relación de Estudios.xlsx" file. Do not use any other column, file, or internal heuristic to assign tiers. Do not reassign tiers. The only valid values are A1, A2, and B.
+
+INPUTS: All six Phase 1 artefacts (1.1–1.6) and both Phase 2 syntheses (2.1 and 2.2). This document must be self-contained and readable without reference to individual Phase 1 artefacts.
+
+WORKFLOW:
+Step 1: Load all six Phase 1 artefacts and both Phase 2 syntheses. Do not introduce new empirical claims not present in these eight documents.
+Step 2: Draft the corpus evidence summary table from Phase 1 findings, restricting to SUPPORTING papers as primary sources.
+Step 3: Draft the consolidated narrative.
+Step 4: Draft the Phase 3 integration notes.
+Step 5: Compile the cross-sub-topic papers list using the confirmed audit log below as the starting point.
+Step 6: Compile the segment summary.
+Step 7: Generate References after all prose is stable.
+Step 8: Self-validation pass.
+
+Regeneration over modification: if the draft has substantive issues, regenerate from scratch.
+
+Validity over breadth: quality outweighs volume.
+
+CONFIRMED CROSS-SUB-TOPIC PAPERS LIST (starting point — 
+add any additional cases found in Phase 1 artefacts):
+- mastropaolo_robustness_2023: 1.1, 1.6
+- shirafuji_exploring_2023: 1.1, 1.5, 1.6
+- min_beyond_2024: 1.2, 1.3, 1.5, 1.6
+- vaithilingam_expectation_2022: 1.1, 1.3, 1.4
+- xu_-ide_2022: 1.1, 1.2, 1.4
+- imai_is_2022: 1.1, 1.2, 1.4, 1.5
+- dakhel_github_2023: 1.1, 1.2, 1.3, 1.5
+- liang_large-scale_2024: 1.2, 1.3, 1.4, 1.5
+- tan_how_2024: 1.2, 1.3, 1.4, 1.5
+- mendes_youre_2024: 1.1, 1.2, 1.3, 1.4
+- rasnayaka_empirical_2024: 1.2, 1.3, 1.4
+- eibl_exploring_2025: 1.1, 1.2, 1.4
+- ceran_security_2025: 1.1, 1.3, 1.6
+- gong_how_2025: 1.3, 1.6
+- kim_codexity_2024: 1.3, 1.6
+- qiu_locobench_2025: 1.2, 1.3, 1.6
+- erhabor_measuring_2024: 1.2, 1.3, 1.6
+- nascimento_how_2025: 1.3, 1.5, 1.6
+- sagodi_methodology_2024: 1.1, 1.3, 1.6
+- zhong_impossiblebench_2025: 1.1, 1.3, 1.6
+- waseem_chatgpt_2024: 1.1, 1.2
+- jiang_simcopilot_2025: 1.1, 1.6
+- chen_featbench_2026: 1.1, 1.6
+- jin_can_2024: 1.1, 1.2
+- fayed_prompt-driven_2026: 1.1, 1.2
+- li_prompting_2024: 1.1, 1.6
+- hellas_exploring_2023: 1.4, 1.5
+- bento_leveraging_2025: 1.4, 1.5
+- corso_generating_2024: 1.3, 1.6
+- haeggstrom_hands-use_2024: 1.3, 1.4
+- suryavanshi_effects_2025: 1.2, 1.3
+- madampe_how_2025: 1.3, 1.4
+- takerngsaksiri_students_2024: 1.4 (via 1.5 overlap)
+- rahe_how_2025: 1.1 (via student prompting), 1.5
+- yang_codeclash_2026: 1.6 (agentic)
+- fang_evalooop_2025: 1.6
+- chen_code_2025: 1.2, 1.4
+
+Starting Phase 2.3 — NB4 HAI SUPPORT: Consolidated HAI SUPPORT evidence profile.
+
+WHAT TO PRODUCE — a DOCX with:
+
+1. Corpus evidence summary table — one row per sub-topic. Columns:
+   Sub-topic | SUPPORTING papers contributing | Strongest anchor(s) | Confidence level | Key caveat for Phase 3 use
+
+2. Consolidated analytical narrative — 1,000–1,400 words covering:
+   (a) What the NB4 HAI SUPPORT corpus adds to HAI evidence: breadth, triangulation, and scope extension — based on SUPPORTING papers only. Emphasise what is genuinely new relative to CORE rather than reiterating what CORE already established.
+   (b) The three strongest empirical claims the NB4 SUPPORT corpus supports independently, with bibkeys and confidence levels
+   (c) The three most important limitations or gaps, including what PERIPHERAL exclusion and REMOVE_CANDIDATE exclusion mean for the evidentiary coverage of NB4
+   (d) How NB4 SUPPORT evidence qualifies or nuances the HAI argument: which claims become more conditional, which become stronger, and which remain unresolved
+
+3. Phase 3 integration notes — 8–12 specific, actionable recommendations for how NB4 HAI SUPPORT findings should be used in Phase 3 synthesis with NB3_HAI_CORE. Format:
+   Note ID | Recommendation | Relevant SUPPORT bibkeys | Integration risk (low / medium / high)
+   
+   Notes must be specific and actionable, not generic.
+   Examples of the required specificity:
+   - "Use mastropaolo_robustness_2023 and shirafuji_exploring_2023 to triangulate the CORE prompt-sensitivity claim with a specific paraphrase-equivalence failure rate" — acceptable
+   - "Use robustness papers to extend the prompting section" — not acceptable, too generic
+
+4. Cross-sub-topic papers list — list every SUPPORTING paper used in multiple Phase 1 sub-topics, with a note explaining how its findings differ across sub-topics to avoid double-counting in Phase 3. Use the confirmed audit log above as the starting point.
+
+5. Segment summary — a brief table listing all PERIPHERAL and REMOVE_CANDIDATE papers with a one-sentence note on why they were excluded from the analytical artefacts:
+   Bibkey | Segment | Reason for exclusion
+
+6. References — all SUPPORTING papers cited in this document, ordered by first appearance. Bibkeys from BIB; all other data from CSV. Zero empty fields. Zero LaTeX-escaped characters.
+
+ADDITIONAL CONSTRAINTS:
+- Be honest about thin coverage and limitations.
+- Do not assume knowledge of NB3 CORE for this artefact.
+
+CRITICAL NON-NEGOTIABLE CONSTRAINTS:
+- Do not use boilerplates.
+- No hallucinations.
+- Zero tolerance for ", ." empty author/year fields in the reference list.
+- Zero tolerance for LaTeX-escaped characters in author names or titles.
+- Zero tolerance for Zotero IDs used as bibkeys.
+- Zero tolerance for citations to REMOVE_CANDIDATE papers.
+- Every claim traceable to a specific Phase 1 finding.
+- Do not introduce new empirical claims not present in Phase 1 or Phase 2 artefacts.
+- Phase 3 integration notes must be actionable and specific.
+- Confidence levels must be consistent with Phase 2.1 and 2.2.
+- Read the PDF papers, if needed. You have complete access to them. Do not read just the abstract, or relay on memory.  Read the papers.  I do not care if you take more time to accomplish the task, just do it.
+- Never apply the same boilerplate to all papers.
+
+Save as: Phase_2_3_NB4_HAI_SUPPORT_Consolidated_v1.docx
+
+Remember that I just uploaded the zips with the HAI_Support (55) papers, the BIB and CSV files of HAI_Support with the bibliographic information of the 55 papers, the file "Relación de Estudios.xlsx", and all Phase 1 and Phase 2 artefacts.
+-- Fin del Promt 1 --
+
+-- Inicio del Prompt 2 --
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+-- Fin del Prompt 4 --
+
+-- Inicio del Prompt 5 --
+-- Fin del Prompt 5 --

@@ -1,0 +1,87 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1ywIisQOCRL3dPVOSdJrIh7BJVtINiVbk?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto
+
+IMPORTANT CONSTRAINTS:
+
+1. Use ONLY the 77 PDFs uploaded to the files folder's subfolders. Do NOT use your general knowledge of the LLM-for-code field.
+2. Aim for breadth across ALL 77 papers. Every paper in the notebook is a valid source, including Bayram, Belozerov, and Siroš, but no paper has privileged status. When multiple papers in the corpus support a claim, cite the broader set rather than defaulting to the same few.
+3. For every claim, cite the exact paper by title and first author or its citation key, that you can find in the NB1_CQTD_CORE.bib file. If a paper is not in the uploaded sources, do NOT mention it.
+4. If you cannot find evidence in the uploaded PDFs, say "No evidence found in uploaded sources" rather than inventing one. In other words, no hallucinations.
+5. Use ONE citation per claim per paper. Do NOT cite the same paper twice (once to its abstract section and once to its body) for the same finding.
+6. If the output includes a final References section, list ONLY the papers actually cited inline in the text above. Do NOT list every paper available in the notebook.
+7. Use a SINGLE numbering system across the entire output. The number [N] used inline in the text must point to the same paper as entry N in the final References list. Do NOT use one numbering for inline citations (e.g., order of first appearance) and a different numbering for the References list (e.g., alphabetical). After producing the output, verify by spot-checking 3 inline citations against the References list: if [N] inline does not match entry N in the list, regenerate with explicit alignment.
+
+Generate a comprehensive taxonomy of technical debt as discussed across the 77 papers. Format as an XLSX workbook with these sheets:
+
+Sheet 1: "Technical debt by paper" — one row per (paper, debt type) combination. Columns:
+- Paper title
+- First author
+- Year
+- Bibkey
+- Debt type (explicit metric — e.g., SonarQube debt ratio, code smells count, dependency expansion; OR broader maintainability concern — e.g., readability, cyclomatic complexity, duplication; OR other emergent forms — e.g., security debt, reproducibility debt, prompt-debt, test-debt, cognitive-debt)
+- Debt sub-type (specific phrase used by the paper, if any)
+- Quantitative anchor (exact figure or range, if the paper reports one — e.g., "89.1% of issues are code smells", "13.5x dependency expansion", "24.2% long-term survival"). Use "not reported" if no figure is given.
+- Measurement instrument or method
+- Persistence horizon (within-session / within-PR / long-term repository-level / not measured)
+
+Sheet 2: "Technical debt taxonomy" — one row per distinct debt type. Columns:
+- Debt type
+- Debt sub-type group (if applicable)
+- Number of papers addressing it
+- Bibkeys (comma-separated)
+- Years range
+- Most representative quantitative anchors (1-3 figures from the strongest studies)
+- One-sentence operational definition from the corpus
+
+Sheet 3: "References" — same format as previous: 
+- Ref #
+- Bibkey
+- First author
+- Year
+- Paper title
+ordered by first appearance in Sheet 1.
+
+Sheet 4: "Coverage check" — with: 
+- Unique paper bibkeys represented
+- Total rows in Sheet 1
+- Distinct debt types
+- Distinct sub-types
+- Number of papers measuring more than one debt type
+- Heibel & Lowd present (Yes/No)
+- All 77 paper bibkeys present (Yes/No).
+
+
+Critical instructions:
+- A paper can address multiple debt types (e.g., Liu 2026 covers code smells + security flaws + survival rates; Vangala covers dependency expansion + reproducibility debt). Sheet 1 should have 1-4 rows per paper as needed.
+- Distinguish "narrow" technical debt (explicit metrics like SonarQube debt ratio, code smells count) from "broad" technical debt (any maintainability concern that creates future remediation cost).
+- Where the paper does NOT use the term "technical debt" explicitly but reports something that operationally is debt (e.g., persistent bugs, low reproducibility, lingering vulnerabilities), include it but note in the sub-type column "implicit / operational".
+- Apply the citation-from-citation safeguard: only count what a paper reports as its own empirical finding, not what it cites from another paper.
+
+Apply the same conventions used before:
+- British English
+- Only papers in the uploaded sources
+- One citation per claim per paper
+- Maintain Heibel & Lowd presence
+- Surface empirical figures with paper attribution where relevant
+
+Also generate a companion DOCX narrative report that:
+- Has numbered sections (1, 2, 2.1, 2.2, ..., 5, 6) corresponding to:
+(1) Overview of technical debt operationalisation;
+(2) Technical debts categories
+	(2.X) Each debt category with representative papers and empirical anchors;
+(3) Persistence and survival evidence;
+(4) Headline empirical anchors table for technical debt (10 entries);
+(5) References;
+(6) Reference-alignment spot-check.
+- British English, same citation discipline as before, single numbering system inline/references.
+
+Read the papers, not just the abstracts or the memory you have of them. I don't care that you take more time, just do it. If you ask me to do it, I can upload again the zip with the 77 PDF files.
+
+I'm not attaching any NotebookLM example, as its results were so poor and I don't want to bias you.
+-- Fin de Prompt 1 --
+
+-- Inicio del Prompt 2 --
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+-- Fin del Prompt 3 --

@@ -1,0 +1,3310 @@
+TY  - JOUR
+AB  - Large Language Models (LLMs) have shown remarkable capabilities in cod
+e generation for popular programming languages. However, their perform
+ance in Low-Resource Programming Languages (LRPLs) and Domain-Specific
+ Languages (DSLs) remains a critical challenge. This gap affects milli
+ons of developers - with Rust alone having 3.5 million users - who are
+ currently unable to fully leverage LLM capabilities. LRPLs and DSLs f
+ace unique challenges, including severe data scarcity and, for DSLs, h
+ighly specialized syntax and semantics that are poorly represented in 
+general-purpose datasets. Addressing these challenges is crucial as LR
+PLs and DSLs significantly enhance development efficiency in specializ
+ed domains and applications, including financial and scientific works.
+ While several surveys on LLMs for software engineering and code exist
+, none comprehensively address the challenges and opportunities specif
+ic to LRPLs and DSLs. Our survey fills this gap by providing a systema
+tic review of the current state, methodologies, and challenges in leve
+raging LLMs for code generation in LRPL and DSL. We filtered 111 paper
+s from over 27,000 published studies from 2020 – 2024 to understand th
+e capabilities and limitations of LLMs in these specialized domains. W
+e also expanded our literature search to include 5 recent papers from 
+2024 – 2025. We report LLMs used, benchmarks, and metrics to evaluate 
+code generation in LRPLs and DSLs, as well as strategies used to enhan
+ce LLM performance, and the collected datasets and curation methods in
+ this context. We identified four main evaluation techniques used in t
+he literature, along with several metrics to assess code generation in
+ LRPL and DSL. We categorized the methods used for LLM improvement int
+o six main groups and summarized the novel methods and architectures p
+roposed by the researchers. We also classified different approaches us
+ed for data collection and preparation. While different techniques, me
+trics, and datasets are used, there is a lack of a standard approach a
+nd a benchmark dataset to evaluate code generation in several LRPLs an
+d DSLs. We discuss several distinctions of the studied approaches with
+ the ones used in high-resource programming languages (HRPLs), as well
+ as several challenges unique to these languages, especially DSLs. The
+ challenges stem from the scarcity of data, the unique requirements, a
+nd specialized domains, which often need expertise guidelines or domai
+n-specific tools. Accordingly, we provide insights into different rese
+arch opportunities for the studied aspects. This survey serves as a co
+mprehensive resource for researchers and practitioners working at the 
+intersection of LLMs, software engineering, and specialized programmin
+g languages, providing a foundation for future advancements in LRPL an
+d DSL code generation. A GitHub repository was created to organize the
+ papers of this survey at https://github.com/jie-jw-wu/Survey-CodeLLM4
+LowResource-DSL . 
+AU  - Wu, Jie
+AU  - Fard, Fatemeh
+DA  - 2025/10/7/
+PY  - 2025
+DO  - 10.1145/3770084
+ID  - a-survey-on-llm-base
+N1  - Snippet: … strategies, metrics, and benchmarks for enhancing and testi
+ng the LLM performance in these … is a need for standard benchmark dat
+asets and evaluation metrics, curating LRPL and DSL …
+T2  - ACM Transactions on Software Engineering and Methodology
+TI  - A survey on llm-based code generation for low-resource and domain-spec
+ific programming languages
+UR  - https://dl.acm.org/doi/abs/10.1145/3770084
+ER  - 
+TY  - JOUR
+AB  - With the rise of large language models (LLMs), researchers are increas
+ingly exploring their applications in var ious vertical domains, such 
+as software engineering. LLMs have achieved remarkable success in area
+s including code generation and vulnerability detection. However, they
+ also exhibit numerous limitations and shortcomings. LLM-based agents,
+ a novel tech nology with the potential for Artificial General Intelli
+gence (AGI), combine LLMs as the core for decision-making and action-t
+aking, addressing some of the inherent limitations of LLMs such as lac
+k of autonomy and self-improvement. Despite numerous studies and surve
+ys exploring the possibility of using LLMs in software engineering, it
+ lacks a clear distinction between LLMs and LLM based agents. It is st
+ill in its early stage for a unified standard and benchmarking to qual
+ify an LLM solution as an LLM-based agent in its domain. In this surve
+y, we broadly investigate the current practice and solutions for LLMs 
+and LLM-based agents for software engineering. In particular we summar
+ise six key topics: requirement engineering, code generation, autonomo
+us decision-making, software design, test generation, and software mai
+ntenance. We review and differentiate the work of LLMs and LLM-based a
+gents from these six topics, examining their differences and similarit
+ies in tasks, benchmarks, and evaluation metrics. Finally, we discuss 
+the models and benchmarks used, providing a comprehensive analysis of 
+their applications and effectiveness in software engineering. We antic
+ipate this work will shed some lights on pushing the boundaries of LLM
+-based agents in software engineering for future research. 
+AU  - Jin, Haolin
+AU  - Huang, Li
+AU  - Cai, Haipeng
+AU  - Yan, Jun
+AU  - Li, Bo
+AU  - Chen, Huaming
+DA  - 2024/8/5/
+PY  - 2024
+DO  - 10.48550/arxiv.2408.02479
+ID  - from-llms-to-llm-bas
+N1  - Snippet: … tasks, benchmarks, and evaluation metrics. Finally, we … so
+ftware engineering. We anticipate this work will shed some lights on p
+ushing the boundaries of LLM-based agents in software …
+TI  - From llms to llm-based agents for software engineering: A survey of cu
+rrent, challenges and future
+UR  - https://arxiv.org/abs/2408.02479
+ER  - 
+TY  - JOUR
+AB  - Large language models (LLMs) have shown great potential in automating 
+significant aspects of coding by producing natural code from informal 
+natural language (NL) intent. However, given NL is informal, it does n
+ot lend easily to checking that the generated code correctly satisfies
+ the user intent. In this paper, we propose a novel interactive workfl
+ow TiCoder for guided intent clarification (i.e., partial formalizatio
+n) through tests to support the generation of more accurate code sugge
+stions. Through a mixed methods user study with 15 programmers, we pre
+sent an empirical evaluation of the effectiveness of the workflow to i
+mprove code generation accuracy. We find that participants using the p
+roposed workflow are significantly more likely to correctly evaluate A
+I generated code, and report significantly less task-induced cognitive
+ load. Furthermore, we test the potential of the workflow at scale wit
+h four different state-of-the-art LLMs on two python datasets, using a
+n idealized proxy for a user feedback. We observe an average absolute 
+improvement of 38.43% in the pass@1 code generation accuracy for both 
+datasets and across all LLMs within 5 user interactions, in addition t
+o the automatic generation of accompanying unit tests.
+AU  - Fakhoury, Sarah
+AU  - Naik, Aaditya
+AU  - Sakkas, Georgios
+AU  - Chakraborty, Saikat
+AU  - Lahiri, Shuvendu K.
+DA  - 2024/4/15/
+PY  - 2024
+DO  - 10.48550/arxiv.2404.10100
+ID  - llm-based-test-drive
+N1  - Snippet: … -feedback through LLM-generated tests to improve the trust 
+and correctness of LLMgenerated code. … , where a user prompts an hypo
+thetical LLM to generate code satisfying their natural …
+T2  - arXiv.org
+TI  - Llm-based test-driven interactive code generation: User study and empi
+rical evaluation
+UR  - https://ieeexplore.ieee.org/abstract/document/10606356/
+ER  - 
+TY  - JOUR
+AB  - The recent emergence of LLM-based code generation models can potential
+ly transform programming education. To pinpoint the current state of r
+esearch on using LLM-based code generators to support the teaching and
+ learning of programming, we conducted a systematic literature review 
+of 21 papers published since 2018. The review focuses on (1) the teach
+ing and learning practices in programming education that utilized LLM-
+based code generation models, (2) characteristics and (3) performance 
+indicators of the models, and (4) aspects to consider when utilizing t
+he models in programming education, including the risks and challenges
+. We found that the most commonly reported uses of LLM-based code gene
+ration models for teachers are generating assignments and evaluating s
+tudent work, while for students, the models function as virtual tutors
+. We identified that the models exhibit accuracy limitations; generate
+d content often contains minor errors that are manageable by instructo
+rs but pose risks for novice learners. Moreover, risks such as academi
+c misconduct and over-reliance on the models are critical when conside
+ring integrating these models into education. Overall, LLM-based code 
+generation models can be an assistive tool for both learners and instr
+uctors if the risks are mitigated.
+AU  - Cambaz, Doga
+AU  - Zhang, Xiaoling
+DA  - 2024/3/7/
+PY  - 2024
+DO  - 10.1145/3626252.3630958
+ID  - use-of-ai-driven-cod
+N1  - Snippet: … the use of LLMbased code generation models in programming e
+ducation and its potential advantages as a teacher’s assistant in the 
+creation and evaluation of assessments and as a …
+TI  - Use of ai-driven code generation models in teaching and learning progr
+amming: a systematic literature review
+UR  - https://dl.acm.org/doi/abs/10.1145/3626252.3630958
+ER  - 
+TY  - JOUR
+AB  - Timely, personalized feedback is essential for students learning progr
+amming, especially as class sizes expand. LLM-based tools like ChatGPT
+ offer instant support, but reveal direct answers with code, which may
+ hinder deep conceptual engagement. We developed CodeAid, an LLM-based
+ programming assistant delivering helpful, technically correct respons
+es, without revealing code solutions. For example, CodeAid can answer 
+conceptual questions, generate pseudo-code with line-by-line explanati
+ons, and annotate student's incorrect code with fix suggestions. We de
+ployed CodeAid in a programming class of 700 students for a 12-week se
+mester. A thematic analysis of 8,000 usages of CodeAid was performed, 
+further enriched by weekly surveys, and 22 student interviews. We then
+ interviewed eight programming educators to gain further insights on C
+odeAid. Findings revealed students primarily used CodeAid for conceptu
+al understanding and debugging, although a minority tried to obtain di
+rect code. Educators appreciated CodeAid's educational approach, and e
+xpressed concerns about occasional incorrect feedback and students def
+aulting to ChatGPT.
+AU  - Kazemitabaar, Majeed
+AU  - Ye, Runlong
+AU  - Wang, Xiaoning
+AU  - Henley, Austin Z.
+AU  - Denny, Paul
+AU  - Craig, Michelle
+AU  - Grossman, Tovi
+DA  - 2024/1/20/
+PY  - 2024
+DO  - 10.48550/arxiv.2401.11314
+ID  - codeaid-evaluating-a
+N1  - Snippet: … survey to determine whether and why students used ChatGPT. 
+Our goal was to gain a holistic view of students’ perceptions of AI as
+sistants in large classes (RQ3). The survey further …
+T2  - arXiv.org
+TI  - Codeaid: Evaluating a classroom deployment of an llm-based programming
+ assistant that balances student and educator needs
+UR  - https://dl.acm.org/doi/abs/10.1145/3613904.3642773
+ER  - 
+TY  - JOUR
+AB  - Large Language Models (LLMs) have garnered remarkable advancements acr
+oss diverse code-related tasks, known as Code LLMs, particularly in co
+de generation that generates source code with LLM from natural languag
+e descriptions. This burgeoning field has captured significant interes
+t from both academic researchers and industry professionals due to its
+ practical significance in software development, e.g., GitHub Copilot.
+ Despite the active exploration of LLMs for a variety of code tasks, e
+ither from the perspective of natural language processing (NLP) or sof
+tware engineering (SE) or both, there is a noticeable absence of a com
+prehensive and up-to-date literature review dedicated to LLM for code 
+generation. In this survey, we aim to bridge this gap by providing a s
+ystematic literature review that serves as a valuable reference for re
+searchers investigating the cutting-edge progress in LLMs for code gen
+eration. We introduce a taxonomy to categorize and discuss the recent 
+developments in LLMs for code generation, covering aspects such as dat
+a curation, latest advances, performance evaluation, and real-world ap
+plications. In addition, we present a historical overview of the evolu
+tion of LLMs for code generation and offer an empirical comparison usi
+ng the widely recognized HumanEval and MBPP benchmarks to highlight th
+e progressive enhancements in LLM capabilities for code generation. We
+ identify critical challenges and promising opportunities regarding th
+e gap between academia and practical development. Furthermore, we have
+ established a dedicated resource website (https://codellm.github.io) 
+to continuously document and disseminate the most recent advances in t
+he field. 
+AU  - Jiang, J.-H.R.
+AU  - Wang, Fan
+AU  - Shen, Jiasi
+AU  - Kim, Seong-Ju
+AU  - Kim, Sunghun
+DA  - 2024/6/1/
+PY  - 2024
+DO  - 10.48550/arxiv.2406.00515
+ID  - a-survey-on-large-la
+N1  - Snippet: … -to-date literature review dedicated to LLM for code genera
+tion. In this survey, we aim to bridge this … In Section 2, we introdu
+ce the preliminaries of LLM with Transformer architecture and …
+TI  - A survey on large language models for code generation
+UR  - https://dl.acm.org/doi/abs/10.1145/3747588
+ER  - 
+TY  - JOUR
+AB  - This study evaluates the efficiency of code generation by Large Langua
+ge Models (LLMs) and measures their performance against human-crafted 
+solutions using a dataset from Leetcode. We compare 18 LLMs, consideri
+ng factors such as model temperature and success rate, and their impac
+t on code performance. This research introduces a novel method for mea
+suring and comparing the speed of LLM-generated code, revealing that L
+LMs produce code with comparable performance, irrespective of the adop
+ted LLM. We also find that LLMs are capable of generating code that is
+, on average, more efficient than the code written by humans. The pape
+r further discusses the use of Leetcode as a benchmarking dataset, the
+ limitations imposed by potential data contamination, and the platform
+’s measurement reliability. We believe that our findings contribute to
+ a better understanding of LLM capabilities in code generation and set
+ the stage for future optimizations in the field.
+AU  - Coignion, Tristan
+AU  - Quinton, Clément
+AU  - Rouvoy, Romain
+DA  - 2024/6/18/
+PY  - 2024
+DO  - 10.1145/3661167.3661221
+ID  - a-performance-study-
+N1  - Snippet: … and the temperature of the LLM on the code’s performance? H
+aving a higher temperature … applies to the performance of the code. I
+n the same way, we also study if an LLM that is very …
+TI  - A performance study of llm-generated code on leetcode
+UR  - https://dl.acm.org/doi/abs/10.1145/3661167.3661221
+ER  - 
+TY  - CONF
+AB  - Large language models (LLMs) have recently been applied in software en
+gineering to perform tasks such as translating code between programmin
+g languages, generating code from natural language, and autocompleting
+ code as it is being written. When used within development tools, thes
+e systems typically treat each model invocation independently from all
+ previous invocations, and only a specific limited functionality is ex
+posed within the user interface. This approach to user interaction mis
+ses an opportunity for users to more deeply engage with the model by h
+aving the context of their previous interactions, as well as the conte
+xt of their code, inform the model’s responses. We developed a prototy
+pe system – the Programmer’s Assistant – in order to explore the utili
+ty of conversational interactions grounded in code, as well as softwar
+e engineers’ receptiveness to the idea of conversing with, rather than
+ invoking, a code-fluent LLM. Through an evaluation with 42 participan
+ts with varied levels of programming experience, we found that our sys
+tem was capable of conducting extended, multi-turn discussions, and th
+at it enabled additional knowledge and capabilities beyond code genera
+tion to emerge from the LLM. Despite skeptical initial expectations fo
+r conversational programming assistance, participants were impressed b
+y the breadth of the assistant’s capabilities, the quality of its resp
+onses, and its potential for improving their productivity. Our work de
+monstrates the unique potential of conversational interactions with LL
+Ms for co-creative processes like software development.
+AU  - Ross, Steven I.
+AU  - Martinez, Fernando
+AU  - Houde, Stephanie
+AU  - Muller, Michael
+AU  - Weisz, Justin D.
+C3  - International Conference on Intelligent User Interfaces
+DA  - 2023/2/14/
+C2  - 2023
+DO  - 10.1145/3581641.3584037
+ID  - the-programmers-assi
+N1  - Snippet: … We describe these survey questions in the relevant context 
+of our results, and we provide a complete listing of all survey instru
+ments in Appendix A. (2) Event logs. The Programmer’s …
+TI  - The programmer's assistant: Conversational interaction with a large la
+nguage model for software development
+UR  - https://dl.acm.org/doi/abs/10.1145/3581641.3584037
+ER  - 
+TY  - JOUR
+AB  - AI assistants are being created to help software engineers conduct a v
+ariety of coding-related tasks, such as writing, documenting, and test
+ing code. We describe the use of the watsonx Code Assistant (WCA), an 
+LLM-powered coding assistant deployed internally within IBM. Through s
+urveys of two user cohorts (N=669) and unmoderated usability testing (
+N=15), we examined developers' experiences with WCA and its impact on 
+their productivity. We learned about their motivations for using (or n
+ot using) WCA, we examined their expectations of its speed and quality
+, and we identified new considerations regarding ownership of and resp
+onsibility for generated code. Our case study characterizes the impact
+ of an LLM-powered assistant on developers' perceptions of productivit
+y and it shows that although such tools do often provide net productiv
+ity increases, these benefits may not always be experienced by all use
+rs. 
+AU  - Weisz, Justin D.
+AU  - Kumar, Santhi
+AU  - Müller, Michael
+AU  - Browne, Karen-Ellen
+AU  - Goldberg, Arielle
+AU  - Heintze, Ellice
+AU  - Bajpai, S. P.
+DA  - 2024/12/9/
+PY  - 2024
+DO  - 10.48550/arxiv.2412.06603
+ID  - examining-the-use-an
+N1  - Snippet: … to help software engineers conduct a variety of coding-… (W
+CA), an LLM-powered coding assistant deployed internally within … Our 
+case study characterizes the impact of an LLM-powered …
+TI  - Examining the use and impact of an ai code assistant on developer prod
+uctivity and experience in the enterprise
+UR  - https://dl.acm.org/doi/abs/10.1145/3706599.3706670
+ER  - 
+TY  - JOUR
+AB  - In this paper, we present a novel approach to improving software quali
+ty and efficiency through a Large Language Model (LLM)-based model des
+igned to review code and identify potential issues. Our proposed LLM-b
+ased AI agent model is trained on large code repositories. This traini
+ng includes code reviews, bug reports, and documentation of best pract
+ices. It aims to detect code smells, identify potential bugs, provide 
+suggestions for improvement, and optimize the code. Unlike traditional
+ static code analysis tools, our LLM-based AI agent has the ability to
+ predict future potential risks in the code. This supports a dual goal
+ of improving code quality and enhancing developer education by encour
+aging a deeper understanding of best practices and efficient coding te
+chniques. Furthermore, we explore the model's effectiveness in suggest
+ing improvements that significantly reduce post-release bugs and enhan
+ce code review processes, as evidenced by an analysis of developer sen
+timent toward LLM feedback. For future work, we aim to assess the accu
+racy and efficiency of LLM-generated documentation updates in comparis
+on to manual methods. This will involve an empirical study focusing on
+ manually conducted code reviews to identify code smells and bugs, alo
+ngside an evaluation of best practice documentation, augmented by insi
+ghts from developer discussions and code reviews. Our goal is to not o
+nly refine the accuracy of our LLM-based tool but also to underscore i
+ts potential in streamlining the software development lifecycle throug
+h proactive code improvement and education. 
+AU  - Rasheed, Zeeshan
+AU  - Sami, Mariagiovanna
+AU  - Waseem, Muhammad
+AU  - Kemell, Kai‐Kristian
+AU  - Wang, Xiaofeng
+AU  - Nguyen, Anh Tuan
+AU  - Systä, Kari
+AU  - Abrahamsson, Pekka
+DA  - 2024/4/29/
+PY  - 2024
+DO  - 10.48550/arxiv.2404.18496
+ID  - ai-powered-code-revi
+N1  - Snippet: … LLM-based AI agent within the software development, particu
+larly focusing on the code review process. Our approach encompasses th
+e design, development, and evaluation of an LLM-…
+TI  - Ai-powered code review with llms: Early results
+UR  - https://arxiv.org/abs/2404.18496
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Tian, H
+AU  - Lu, W
+AU  - Li, TO
+AU  - Tang, X
+AU  - Cheung, SC
+ID  - yTX3TfSSdXUJ
+N1  - Snippet: … LLM, we conducted an extensive experiment to investigate Ch
+atGPT’s capability in performing various software … , we explore LLM i
+n generating code functions through the programming …
+TI  - Is ChatGPT the ultimate programming assistant--how far is it?
+UR  - https://arxiv.org/abs/2304.11938
+ER  - 
+TY  - JOUR
+AB  - Large Language Models (LLMs) are widely adopted for assisting in softw
+are development tasks, yet their performance evaluations have narrowly
+ focused on the functional correctness of generated code. Human progra
+mmers, however, require LLM-generated code to be not only correct but 
+also optimally efficient. We propose PerfCodeGen, a training-free fram
+ework that enhances the performance of LLM-generated code by incorpora
+ting feedback based on runtime during test case execution into the sel
+f-refinement iterations. With PerfCodeGen, we achieve speedups for a s
+ignificantly higher proportion of problems compared to using the base 
+LLM with sophisticated prompting techniques. Applied to open language 
+models like Phi-3-mini, PerfCodeGen achieves runtime efficiency compar
+able to prompting powerful closed models like GPT-4. We achieve state-
+of-the-art runtime efficiency on benchmarks such as HumanEval, MBPP, a
+nd APPS, frequently surpassing the ground truth reference solutions wi
+th PerfCodeGen using GPT-3.5 and GPT-4. Additionally, we demonstrate t
+he effectiveness of our approach in enhancing code quality across a ra
+nge of open LLMs of varying sizes including Phi-3-mini, Llama 3 8B, Mi
+xtral 8x7B, Command R, and Llama 3 70B. 
+AU  - Peng, Yün
+AU  - Gotmare, Akhilesh
+AU  - Lyu, Michael R.
+AU  - Xiong, Caiming
+AU  - Savarese, Silvio
+AU  - Sahoo, Doyen
+DA  - 2024/11/18/
+PY  - 2024
+DO  - 10.48550/arxiv.2412.03578
+ID  - perfcodegen-improvin
+N1  - Snippet: … from the base LLM for … performance refinement, we first as
+sess the runtime required by correct solutions for each unit test. We 
+then provide verbalised performance feedback to the LLM …
+TI  - Perfcodegen: Improving performance of llm generated code with executio
+n feedback
+UR  - https://ieeexplore.ieee.org/abstract/document/11052794/
+ER  - 
+TY  - JOUR
+AB  - Large language models such as OpenAI's GPT and Google's Bard offer new
+ opportunities for supporting software engineering processes. Large la
+nguage model assisted software engineering promises to support develop
+ers in a conversational way with expert knowledge over the whole softw
+are lifecycle. Current applications range from requirements extraction
+, ambiguity resolution, code and test case generation, code review and
+ translation to verification and repair of software vulnerabilities. I
+n this paper we present our position on the potential benefits and cha
+llenges associated with the adoption of language models in software en
+gineering. In particular, we focus on the possible applications of lar
+ge language models for requirements engineering, system design, code a
+nd test generation, code quality reviews, and software process managem
+ent. We also give a short review of the state-of-the-art of large lang
+uage model support for software construction and illustrate our positi
+on by a case study on the object-oriented development of a simple "sea
+rch and rescue" scenario. 
+AU  - Belzner, Lenz
+AU  - Gabor, Thomas
+AU  - Wirsing, Martin
+DO  - 10.1007/978-3-031-46002-9_23
+ID  - large-language-model
+N1  - Snippet: … a case study with illustrative examples of LLM application 
+in selected phases of the software development … By setting the scope 
+that comprises the early development phases, code and …
+TI  - Large language model assisted software engineering: prospects, challen
+ges, and a case study
+UR  - https://link.springer.com/chapter/10.1007/978-3-031-46002-9_23
+ER  - 
+TY  - JOUR
+AB  - As Large Language Models (LLMs) gain in popularity, it is important to
+ understand how novice programmers use them and the effect they have o
+n learning to code. We present the results of a thematic analysis on a
+ data set from 33 learners, aged 10-17, as they independently learned 
+Python by working on 45 code-authoring tasks with access to an AI Code
+ Generator based on OpenAI Codex. We explore several important questio
+ns related to how learners used LLM-based AI code generators, and prov
+ide an analysis of the properties of the written prompts and the resul
+ting AI generated code. Specifically, we explore (A) the context in wh
+ich learners use Codex, (B) what learners are asking from Codex in ter
+ms of syntax and logic, (C) properties of prompts written by learners 
+in terms of relation to task description, language, clarity, and promp
+t crafting patterns, (D) properties of the AI-generated code in terms 
+of correctness, complexity, and accuracy, and (E) how learners utilize
+ AI-generated code in terms of placement, verification, and manual mod
+ifications. Furthermore, our analysis reveals four distinct coding app
+roaches when writing code with an AI code generator: AI Single Prompt,
+ where learners prompted Codex once to generate the entire solution to
+ a task; AI Step-by-Step, where learners divided the problem into part
+s and used Codex to generate each part; Hybrid, where learners wrote s
+ome of the code themselves and used Codex to generate others; and Manu
+al coding, where learners wrote the code themselves. Our findings reve
+al consistently positive trends between learners’ utilization of the H
+ybrid coding approach and their post-test evaluation scores, while sho
+wing consistent negative trends between the AI Single Prompt and the p
+ost-test evaluation scores. Furthermore, we offer insights into novice
+ learners’ use of AI code generators in a self-paced learning environm
+ent, highlighting signs of over-reliance, self-regulation, and opportu
+nities for enhancing AI-assisted learning tools.
+AU  - Kazemitabaar, Majeed
+AU  - Hou, Xinying
+AU  - Henley, A.
+AU  - Ericson, Barb
+AU  - Weintrop, David
+AU  - Grossman, Tovi
+DA  - 2023/9/25/
+PY  - 2023
+DO  - 10.48550/arxiv.2309.14049
+ID  - how-novices-use-llm-
+N1  - Snippet: … of the Hybrid coding approach and their post-test evaluatio
+n scores, while showing consistent negative trends between the AI Sing
+le Prompt and the post-test evaluation scores. …
+T2  - arXiv.org
+TI  - How novices use LLM-based code generators to solve CS1 coding tasks in
+ a self-paced learning environment
+UR  - https://dl.acm.org/doi/abs/10.1145/3631802.3631806
+ER  - 
+TY  - JOUR
+AB  - The recent advance in Large Language Models (LLMs) has shaped a new pa
+radigm of AI agents, i.e., LLM-based agents. Compared to standalone LL
+Ms, LLM-based agents substantially extend the versatility and expertis
+e of LLMs by enhancing LLMs with the capabilities of perceiving and ut
+ilizing external resources and tools. To date, LLM-based agents have b
+een applied and shown remarkable effectiveness in Software Engineering
+ (SE). The synergy between multiple agents and human interaction bring
+s further promise in tackling complex real-world SE problems. In this 
+work, we present a comprehensive and systematic survey on LLM-based ag
+ents for SE. We collect 106 papers and categorize them from two perspe
+ctives, i.e., the SE and agent perspectives. In addition, we discuss o
+pen challenges and future directions in this critical domain. The repo
+sitory of this survey is at https://github.com/FudanSELab/Agent4SE-Pap
+er-List. 
+AU  - Liu, Junwei
+AU  - Wang, Kaixin
+AU  - Chen, Yixuan
+AU  - Peng, Xin
+AU  - Chen, Zhenpeng
+AU  - Zhang, Lingming
+AU  - Lou, Yiling
+DA  - 2024/9/4/
+PY  - 2024
+DO  - 10.48550/arxiv.2409.02977
+ID  - large-language-model
+N1  - Snippet: … In this work, we present a comprehensive and systematic sur
+vey on LLM-based agents for … , we analyze how LLM-based agents are ap
+plied across different software development and …
+TI  - Large language model-based agents for software engineering: A survey
+UR  - https://dl.acm.org/doi/abs/10.1145/3796507
+ER  - 
+TY  - JOUR
+AB  - This paper provides a comprehensive review of the current methods and 
+metrics used to evaluate the performance of Large Language Models (LLM
+s) in code generation tasks. With the rapid growth in demand for autom
+ated software development, LLMs have demonstrated significant potentia
+l in the field of code generation. The paper begins by reviewing the h
+istorical development of LLMs and their applications in code generatio
+n. Next, it details various methods and metrics for assessing the code
+ generation capabilities of LLMs, including code correctness, efficien
+cy, readability, and evaluation methods based on expert review and use
+r experience. The paper also evaluates the widely used benchmark datas
+ets, identifying their limitations and proposing directions for future
+ improvements. Specifically, the paper analyzes the performance of cod
+e generation models across different tasks by combining multiple evalu
+ation metrics, such as code compilation/interpretation success rates, 
+unit test pass rates, and performance and efficiency metrics, to compr
+ehensively assess the practical application of LLMs in code generation
+. Finally, the paper discusses the challenges faced in evaluating LLMs
+ in code generation, particularly how to ensure the comprehensiveness 
+and accuracy of evaluation methods and how to adapt to the evolving pr
+actices of software development. These analyses and discussions provid
+e valuable insights for further optimizing and improving the applicati
+on of LLMs in code generation tasks. 
+AU  - Chen, Liguo
+AU  - Guo, Qi
+AU  - Jia, Hongrui
+AU  - Zeng, Zhengran
+AU  - Wang, Li
+AU  - Xu, Yijiang
+AU  - Wu, Jian
+AU  - Wang, Yidong
+AU  - Gao, Qing
+AU  - Wang, Jindong
+AU  - Ye, Wei
+AU  - Zhang, Shikun
+DA  - 2024/8/29/
+PY  - 2024
+DO  - 10.48550/arxiv.2408.16498
+ID  - a-survey-on-evaluati
+N1  - Snippet: … and metrics for evaluating the performance of LLM … perform
+ance of models across different tasks, emphasizing the need for meticu
+lous strategies to enhance LLM capabilities in software …
+TI  - A survey on evaluating large language models in code generation tasks
+UR  - https://arxiv.org/abs/2408.16498
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Vangala, BP
+AU  - Adibifar, A
+AU  - Gehani, A
+AU  - Malik, T
+ID  - OKwzF6C3cekJ
+N1  - Snippet: … We evaluate three state-of-the-art LLM coding agents (Claud
+e Code, OpenAI Codex, and … evaluation process mimicked exactly what a
+ real developer would do when trying to run LLM…
+TI  - Ai-generated code is not reproducible (yet): An empirical study of dep
+endency gaps in llm-based coding agents
+UR  - https://arxiv.org/abs/2512.22387
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Rasheed, Zeeshan
+AU  - Malik, Sami
+AU  - Kemell, Kai‐Kristian
+AU  - Waseem, Muhammad
+AU  - Saari, Mika
+AU  - Systä, Kari
+AU  - Abrahamsson, Pekka
+DA  - 2024/1/1/
+PY  - 2024
+DO  - 10.2139/ssrn.4979510
+ID  - codepori-large-scale
+N1  - Snippet: … Objective: This paper aims to investigate the potential of 
+LLM-based agents in the software … To assess the proposed system perfo
+rmance, we utilized the HumanEval benchmark and …
+TI  - Codepori: Large-scale system for autonomous software development using
+ multi-agent technology
+UR  - https://arxiv.org/abs/2402.01411
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Park, Eunil
+AU  - Park, Eunil
+AU  - Park, Eunil
+DA  - 2025/10/20/
+PY  - 2025
+DO  - 10.1007/s10664-025-10730-1
+ID  - continuance-use-of-a
+N1  - Snippet: … ’ continual intention to use LLM-oriented programming tools
+ within software engineering environments. By analyzing LLM adoption i
+n practical programming tasks, we extend prior …
+T2  - Empirical Software Engineering
+TI  - Continuance use of AI coding assistants among South Korean Industry De
+velopers: A survey case study with large language models
+UR  - https://link.springer.com/article/10.1007/s10664-025-10730-1
+ER  - 
+TY  - JOUR
+AB  - Evaluating the alignment of large language models (LLMs) with user-def
+ined coding preferences is a challenging endeavour that requires asses
+sing intricate textual LLMs' outputs. By relying on automated metrics 
+and static analysis tools, existing benchmarks fail to assess nuances 
+in user instructions and LLM outputs, highlighting the need for large-
+scale datasets and benchmarks for LLM preference alignment. In this pa
+per, we introduce CodeUltraFeedback, a preference dataset of 10,000 co
+mplex instructions to tune and align LLMs to coding preferences throug
+h AI feedback. We generate responses to the instructions using a pool 
+of 14 diverse LLMs, which we then annotate according to their alignmen
+t with five coding preferences using the LLM-as-a-Judge approach with 
+GPT-3.5, producing both numerical and textual feedback. We also presen
+t CODAL-Bench, a benchmark for assessing LLM alignment with these codi
+ng preferences. Our results show that CodeLlama-7B-Instruct, aligned t
+hrough reinforcement learning from AI feedback (RLAIF) with direct pre
+ference optimization (DPO) using CodeUltraFeedback's AI feedback data,
+ outperforms 34B LLMs on CODAL-Bench, validating the utility of CodeUl
+traFeedback for preference tuning. Furthermore, we show our DPO-aligne
+d CodeLlama model improves functional correctness on HumanEval+ compar
+ed to the unaligned base model. Therefore, our contributions bridge th
+e gap in preference tuning of LLMs for code and set the stage for furt
+her advancements in model alignment and RLAIF for code intelligence. O
+ur code and data are available at https://github.com/martin-wey/CodeUl
+traFeedback.
+AU  - Weyssow, Martin
+AU  - Kamanda, Aton
+AU  - Sahraoui, Houari
+DA  - 2024/3/14/
+PY  - 2024
+DO  - 10.48550/arxiv.2403.09032
+ID  - codeultrafeedback-an
+N1  - Snippet: … To address this gap, we introduce the LLM-as-a-Judge evalua
+tion framework and present … LLM alignment with coding preferences. Co
+deUltraFeedback consists of 10,000 coding …
+T2  - arXiv.org
+TI  - Codeultrafeedback: An llm-as-a-judge dataset for aligning large langua
+ge models to coding preferences
+UR  - https://dl.acm.org/doi/abs/10.1145/3736407
+ER  - 
+TY  - JOUR
+AB  - Code reviews are a critical yet time-consuming aspect of modern softwa
+re development, increasingly challenged by growing system complexity a
+nd the demand for faster delivery. This paper presents a study conduct
+ed at WirelessCar Sweden AB, combining an exploratory field study of c
+urrent code review practices with a field experiment involving two var
+iations of an LLM-assisted code review tool. The field study identifie
+s key challenges in traditional code reviews, including frequent conte
+xt switching, insufficient contextual information, and highlights both
+ opportunities (e.g., automatic summarization of complex pull requests
+) and concerns (e.g., false positives and trust issues) in using LLMs.
+ In the field experiment, we developed two prototype variations: one o
+ffering LLM-generated reviews upfront and the other enabling on-demand
+ interaction. Both utilize a semantic search pipeline based on retriev
+al-augmented generation to assemble relevant contextual information fo
+r the review, thereby tackling the uncovered challenges. Developers ev
+aluated both variations in real-world settings: AI-led reviews are ove
+rall more preferred, while still being conditional on the reviewers' f
+amiliarity with the code base, as well as on the severity of the pull 
+request. 
+AU  - Chih-Hong, Cheng,
+DA  - 2025/5/23/
+PY  - 2025
+DO  - 10.48550/arxiv.2505.16339
+ID  - rethinking-code-revi
+N1  - Snippet: … aspect of modern software development, increasingly … , fol
+lowed by a field experiment with two LLM-assisted review prototypes: …
+ Conclusions: LLM-assisted reviews can reduce cognitive …
+TI  - Rethinking code review workflows with llm assistance: An empirical stu
+dy
+UR  - https://ieeexplore.ieee.org/abstract/document/11323409/
+ER  - 
+TY  - JOUR
+AB  - Abstract The emergence of Large Language Models (LLMs) has marked a si
+gnificant change in education. The appearance of these LLMs and their 
+associated chatbots has yielded several advantages for both students a
+nd educators, including their use as teaching assistants for content c
+reation or summarisation. This paper aims to evaluate the capacity of 
+LLMs chatbots to provide feedback on student exercises in a university
+ programming course. The complexity of the programming topic in this s
+tudy (concurrency) makes the need for feedback to students even more i
+mportant. The authors conducted an assessment of exercises submitted b
+y students. Then, ChatGPT (from OpenAI) and Bard (from Google) were em
+ployed to evaluate each exercise, looking for typical concurrency erro
+rs, such as starvation, deadlocks, or race conditions. Compared to the
+ ground-truth evaluations performed by expert teachers, it is possible
+ to conclude that none of these two tools can accurately assess the ex
+ercises despite the generally positive reception of LLMs within the ed
+ucational sector. All attempts result in an accuracy rate of 50%, mean
+ing that both tools have limitations in their ability to evaluate thes
+e particular exercises effectively, specifically finding typical concu
+rrency errors. 
+AU  - Estévez-Ayres, Iria
+AU  - Callejo, Patricia
+AU  - Hombrados-Herrera, M.Á.
+AU  - Alario-Hoyos, Carlos
+AU  - Kloos, Carlos Delgado
+DA  - 2024/5/15/
+PY  - 2024
+DO  - 10.1007/s40593-024-00406-0
+ID  - evaluation-of-llm-to
+N1  - Snippet: … exercises in a university programming course. The complexit
+y of the programming topic in this … All attempts result in an accurac
+y rate of 50%, meaning that both tools have limitations in …
+T2  - International Journal of Artificial Intelligence in Education
+TI  - Evaluation of LLM tools for feedback generation in a course on concurr
+ent programming
+UR  - https://link.springer.com/article/10.1007/s40593-024-00406-0
+ER  - 
+TY  - CONF
+AB  - Large language models, such as OpenAI's codex and Deepmind's AlphaCode
+, can generate code to solve a variety of problems expressed in natura
+l language. This technology has already been commercialised in at leas
+t one widely-used programming editor extension: GitHub Copilot. In thi
+s paper, we explore how programming with large language models (LLM-as
+sisted programming) is similar to, and differs from, prior conceptuali
+sations of programmer assistance. We draw upon publicly available expe
+rience reports of LLM-assisted programming, as well as prior usability
+ and design studies. We find that while LLM-assisted programming share
+s some properties of compilation, pair programming, and programming vi
+a search and reuse, there are fundamental differences both in the tech
+nical possibilities as well as the practical experience. Thus, LLM-ass
+isted programming ought to be viewed as a new way of programming with 
+its own distinct properties and challenges. Finally, we draw upon obse
+rvations from a user study in which non-expert end user programmers us
+e LLM-assisted tools for solving data tasks in spreadsheets. We discus
+s the issues that might arise, and open research challenges, in applyi
+ng large language models to end-user programming, particularly with us
+ers who have little or no programming expertise.
+AU  - Sarkar, Advait
+AU  - Gordon, Andrew D.
+AU  - Negreanu, Carina
+AU  - Poelitz, Christian
+AU  - Ragavan, Sruti Srinivasa
+AU  - Zorn, Benjamin G.
+C3  - Annual Workshop of the Psychology of Programming Interest Group
+DA  - 2022/8/12/
+C2  - 2022
+DO  - 10.48550/arXiv.2208.06213
+ID  - what-is-it-like-to-p
+N1  - Snippet: … LLM-assisted programming shares some properties of compilat
+ion, pair programming, and programming … While these topics each are e
+xtensive and important, due to space limitations …
+TI  - What is it like to program with artificial intelligence?
+UR  - https://arxiv.org/abs/2208.06213
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Weber, I
+ID  - BiuvytyFpNIJ
+N1  - Snippet: … -user coding is a feasible paradigm for end-user developmen
+t, which may complement or even replace the LCNC model in the future. 
+To explore this, we conducted a case study … of LLM-…
+TI  - Feasibility of AI-Assisted Programming for End-User Development
+UR  - https://arxiv.org/abs/2512.05666
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Bai, Xingyuan
+AU  - Huang, Shaobin
+AU  - Wei, Chi
+AU  - Wang, Rui
+DA  - 2025/1/1/
+PY  - 2025
+DO  - 10.1016/j.eswa.2024.126357
+ID  - collaboration-betwee
+N1  - Snippet: … , using various metrics such as pass@k, logical error rate,
+ code quality score, vulnerable@k, and secure@k to assess coding abili
+ty. To further strengthen our evaluation, we compared …
+T2  - Expert systems with applications
+TI  - Collaboration between intelligent agents and large language models: A 
+novel approach for enhancing code generation capability
+UR  - https://www.sciencedirect.com/science/article/pii/S095741742403224X
+ER  - 
+TY  - JOUR
+AB  - This paper proposes a pipeline for quantitatively evaluating interacti
+ve LLMs using publicly available datasets. We carry out an extensive t
+echnical evaluation of LLMs using Big-Vul covering four different comm
+on software vulnerability tasks. We evaluate the multitask and multili
+ngual aspects of LLMs based on this dataset. We find that the existing
+ state-of-the-art methods are generally superior to LLMs in software v
+ulnerability detection. Although LLMs improve accuracy when providing 
+context information, they still have limitations in accurately predict
+ing severity ratings for certain CWE types. In addition, LLMs demonstr
+ate some ability to locate vulnerabilities for certain CWE types, but 
+their performance varies among different CWE types. Finally, LLMs show
+ uneven performance in generating CVE descriptions for various CWE typ
+es, with limited accuracy in a few-shot setting. Overall, though LLMs 
+perform well in some aspects, they still need improvement in understan
+ding the subtle differences in code vulnerabilities and the ability to
+ describe vulnerabilities to fully realize their potential. Our evalua
+tion pipeline provides valuable insights for further enhancing LLMs' s
+oftware vulnerability handling capabilities.
+AU  - Yin, Xin
+AU  - Ni, Chao
+AU  - Wang, Shaohua
+DA  - 2024/4/2/
+PY  - 2024
+DO  - 10.48550/arxiv.2404.02056
+ID  - multitask-based-eval
+N1  - Snippet: … LLM with the vulnerable codes to explore its performance (T
+ask Description 1). Moreover, we provide LLM … code exists to investig
+ate the performance differences (Task Description 2). …
+T2  - arXiv.org
+TI  - Multitask-based evaluation of open-source llm on software vulnerabilit
+y
+UR  - https://ieeexplore.ieee.org/abstract/document/10706805/
+ER  - 
+TY  - JOUR
+AB  - Although Large Language Models (LLMs) have demonstrated remarkable cod
+e-generation ability, they still struggle with complex tasks. In real-
+world software development, humans usually tackle complex tasks throug
+h collaborative teamwork, a strategy that significantly controls devel
+opment complexity and enhances software quality. Inspired by this, we 
+present a self-collaboration framework for code generation employing L
+LMs, exemplified by ChatGPT. Specifically, through role instructions, 
+1) Multiple LLMs act as distinct ``experts'', each responsible for a s
+pecific subtask within a complex task; 2) Specify the way to collabora
+te and interact, so that different roles form a virtual team to facili
+tate each other's work, ultimately the virtual team addresses code gen
+eration tasks collaboratively without the need for human intervention.
+ To effectively organize and manage this virtual team, we incorporate 
+software-development methodology into the framework. Thus, we assemble
+ an elementary team consisting of three ChatGPT roles (i.e., analyst, 
+coder, and tester) responsible for software development's analysis, co
+ding, and testing stages. We conduct comprehensive experiments on vari
+ous code-generation benchmarks. Experimental results indicate that sel
+f-collaboration code generation relatively improves 29.9%-47.1% Pass@1
+ compared to direct code generation, achieving state-of-the-art perfor
+mance and even surpassing GPT-4. Moreover, we showcase that self-colla
+boration could potentially enable LLMs to efficiently handle complex r
+eal-world tasks that are not readily solved by direct code generation,
+ as evidenced in case study.
+AU  - Dong, Yihong
+AU  - Jiang, Xue
+AU  - Jin, Zhi
+AU  - Li, Ge
+DA  - 2023/4/15/
+PY  - 2023
+DO  - 10.48550/arXiv.2304.07590
+ID  - self-collaboration-c
+N1  - Snippet: … software-development methodology into the framework. Thus, 
+we assemble an elementary team consisting of three LLM … We find that 
+the performance of Iter-improving is usually lower …
+T2  - arXiv.org
+TI  - Self-collaboration code generation via chatgpt
+UR  - https://dl.acm.org/doi/abs/10.1145/3672459
+ER  - 
+TY  - CONF
+AB  - Recently, large language models (LLMs) have shown an extraordinary abi
+lity to understand natural language and generate programming code. It 
+has been a common practice for software engineers to consult LLMs when
+ encountering coding questions. Although efforts have been made to avo
+id syntax errors and align the code with the intended semantics, the r
+eliability, and robustness of the code generation from LLMs have not y
+et been thoroughly studied. The executable code is not equivalent to r
+eliable and robust code, especially in the context of real-world softw
+are development. For example, the misuse of APIs in the generated code
+ could lead to severe problems, such as resource leaks, program crashe
+s, etc. Existing code evaluation benchmarks and datasets focus on craf
+ting small tasks such as programming questions in coding interviews, w
+hich, however, deviates from the problem that developers would ask LLM
+ for real-world coding help. To fill the missing piece, in this work, 
+we propose a dataset RobustAPI for evaluating the reliability and robu
+stness of code generated by LLMs. We collect 1208 coding questions fro
+m Stack Overflow on 18 representative Java APIs. We summarize the comm
+on misuse patterns of these APIs and evaluate them on current popular 
+LLMs. The evaluation results show that even for GPT-4, 62% of the gene
+rated code contains API misuses, which would cause unexpected conseque
+nces if the code is introduced into real-world software. 
+AU  - Li, Zhong
+AU  - Wang, Zilong
+C3  - Proceedings of the ... AAAI Conference on Artificial Intelligence
+DA  - 2024/3/24/
+C2  - 2024
+DO  - 10.1609/aaai.v38i19.30185
+ID  - can-llm-replace-stac
+N1  - Snippet: … , we target creating an evaluation setting that is close to
+ real software development. Thus we … programming languages and is wid
+ely used in software development because of its write …
+TI  - Can llm replace stack overflow? a study on robustness and reliability 
+of large language model code generation
+UR  - https://ojs.aaai.org/index.php/AAAI/article/view/30185
+ER  - 
+TY  - JOUR
+AB  - General large language models (LLMs), represented by ChatGPT, have dem
+onstrated significant potential in tasks such as code generation in so
+ftware engineering. This has led to the development of specialized LLM
+s for software engineering, known as Code LLMs. A considerable portion
+ of Code LLMs is derived from general LLMs through model fine-tuning. 
+As a result, Code LLMs are often updated frequently and their performa
+nce can be influenced by the base LLMs. However, there is currently a 
+lack of systematic investigation into Code LLMs and their performance.
+ In this study, we conduct a comprehensive survey and analysis of the 
+types of Code LLMs and their differences in performance compared to ge
+neral LLMs. We aim to address three questions: (1) What LLMs are speci
+fically designed for software engineering tasks, and what is the relat
+ionship between these Code LLMs? (2) Do Code LLMs really outperform ge
+neral LLMs in software engineering tasks? (3) Which LLMs are more prof
+icient in different software engineering tasks? To answer these questi
+ons, we first collect relevant literature and work from five major dat
+abases and open-source communities, resulting in 134 works for analysi
+s. Next, we categorize the Code LLMs based on their publishers and exa
+mine their relationships with general LLMs and among themselves. Furth
+ermore, we investigate the performance differences between general LLM
+s and Code LLMs in various software engineering tasks to demonstrate t
+he impact of base models and Code LLMs. Finally, we comprehensively ma
+intained the performance of LLMs across multiple mainstream benchmarks
+ to identify the best-performing LLMs for each software engineering ta
+sk. Our research not only assists developers of Code LLMs in choosing 
+base models for the development of more advanced LLMs but also provide
+s insights for practitioners to better understand key improvement dire
+ctions for Code LLMs.
+AU  - Zheng, Zibin
+AU  - Ning, Kaiwen
+AU  - Wang, Yanlin
+AU  - Zhang, Jingwen
+AU  - Zheng, Dewu
+AU  - Ye, Mingxi
+AU  - Chen, Jiachi
+DA  - 2023/11/17/
+PY  - 2023
+DO  - 10.48550/arxiv.2311.10372
+ID  - a-survey-of-large-la
+N1  - Snippet: … performance of Code LLMs and General LLMs in software … and
+ evaluation of LLMs’ performance in software engineering … also observ
+e that the performance of the same LLM can vary …
+T2  - arXiv.org
+TI  - A survey of large language models for code: Evolution, benchmarking, a
+nd future trends
+UR  - https://arxiv.org/abs/2311.10372
+ER  - 
+TY  - JOUR
+AB  - Recently, large language models (LLMs) have been deployed to tackle va
+rious software engineering (SE) tasks like code generation, significan
+tly advancing the automation of SE tasks. However, assessing the quali
+ty of these LLM-generated code and text remains challenging. The commo
+nly used Pass@k metric necessitates extensive unit tests and configure
+d environments, demands a high labor cost, and is not suitable for eva
+luating LLM-generated text. Conventional metrics like BLEU, which meas
+ure only lexical rather than semantic similarity, have also come under
+ scrutiny. In response, a new trend has emerged to employ LLMs for aut
+omated evaluation, known as LLM-as-a-judge. These LLM-as-a-judge metho
+ds are claimed to better mimic human assessment than conventional metr
+ics without relying on high-quality reference answers. Nevertheless, t
+heir exact human alignment in SE tasks remains unexplored. In this pap
+er, we empirically explore LLM-as-a-judge methods for evaluating SE ta
+sks, focusing on their alignment with human judgments. We select seven
+ LLM-as-a-judge methods that utilize general-purpose LLMs, alongside t
+wo LLMs specifically fine-tuned for evaluation. After generating and m
+anually scoring LLM responses on three recent SE datasets of code tran
+slation, code generation, and code summarization, we then prompt these
+ methods to evaluate each response. Finally, we compare the scores gen
+erated by these methods with human evaluation. The results indicate th
+at output-based methods reach the highest Pearson correlation of 81.32
+ and 68.51 with human scores in code translation and generation, achie
+ving near-human evaluation, noticeably outperforming ChrF++, one of th
+e best conventional metrics, at 34.23 and 64.92. Such output-based met
+hods prompt LLMs to output judgments directly, and exhibit more balanc
+ed score distributions that resemble human score patterns. Finally, we
+ provide insights and implications, concluding that current state-of-t
+he-art LLM-as-a-judge methods can potentially replace human evaluation
+s in certain SE tasks.
+AU  - Wang, Ruiqi
+AU  - Guo, Jiyu
+AU  - Gao, Cuiyun
+AU  - Fan, Guodong
+AU  - Chong, Chun Yong
+AU  - Xia, Xin
+DA  - 2025/2/10/
+PY  - 2025
+DO  - 10.48550/arxiv.2502.06193
+ID  - can-llms-replace-hum
+N1  - Snippet: … Then we perform meta-evaluation of different types of LLM-a
+s-a-judge methods by calculating their score alignment with human scor
+es, to validate whether their judgments match …
+T2  - arXiv.org
+TI  - Can llms replace human evaluators? an empirical study of llm-as-a-judg
+e in software engineering
+UR  - https://dl.acm.org/doi/abs/10.1145/3728963
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Gasmi, Tarek
+AU  - Guesmi, Ramzi
+AU  - Belhadj, Ines
+AU  - Bennaceur, Jihene
+DA  - 2025/7/24/
+PY  - 2025
+DO  - 10.36227/techrxiv.175339471.17113065/v1
+ID  - bridging-ai-and-soft
+N1  - Snippet: … Large Language Model (LLM) agents face security vulnerabili
+ties spanning AI-specific and traditional software … for cross-domain 
+LLM agent security assessments and provides evidence…
+TI  - Bridging AI and software security: A comparative vulnerability assessm
+ent of LLM agent deployment paradigms
+UR  - https://www.sciencedirect.com/science/article/pii/S0020025526001623
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Huynh, Nam
+AU  - Lin, Beiyu
+DA  - 2025/3/3/
+PY  - 2025
+DO  - 10.48550/arxiv.2503.01245
+ID  - large-language-model
+N1  - Snippet: … LLM evaluation metrics are criteria used to quantify the pe
+rformance of LLM systems in … HumanEval and pass@k have become critica
+l factors in testing LLM coding capabilities to …
+T2  - arXiv.org
+TI  - Large language models for code generation: A comprehensive survey of c
+hallenges, techniques, evaluation, and applications
+UR  - https://arxiv.org/abs/2503.01245
+ER  - 
+TY  - JOUR
+AB  - Program synthesis has been long studied with recent approaches focused
+ on directly using the power of Large Language Models (LLMs) to genera
+te code. Programming benchmarks, with curated synthesis problems and t
+est-cases, are used to measure the performance of various LLMs on code
+ synthesis. However, these test-cases can be limited in both quantity 
+and quality for fully assessing the functional correctness of the gene
+rated code. Such limitation in the existing benchmarks begs the follow
+ing question: In the era of LLMs, is the code generated really correct
+? To answer this, we propose EvalPlus -- a code synthesis benchmarking
+ framework to rigorously evaluate the functional correctness of LLM-sy
+nthesized code. EvalPlus augments a given evaluation dataset with larg
+e amounts of test-cases newly produced by an automatic test input gene
+rator, powered by both LLM- and mutation-based strategies. While EvalP
+lus is general, we extend the test-cases of the popular HUMANEVAL benc
+hmark by 81x to build HUMANEVAL+. Our extensive evaluation across 19 p
+opular LLMs (e.g., GPT-4 and ChatGPT) demonstrates that HUMANEVAL+ is 
+able to catch significant amounts of previously undetected wrong code 
+synthesized by LLMs, reducing the pass@k by 13.6-15.3% on average. Our
+ work not only indicates that prior popular code synthesis evaluation 
+results do not accurately reflect the true performance of LLMs for cod
+e synthesis, but also opens up a new direction to improve such program
+ming benchmarks through automated testing.
+AU  - Liu, Jiawei
+AU  - Xia, Chun
+AU  - Zhang, Lingming
+DA  - 2023/5/2/
+PY  - 2023
+DO  - 10.48550/arXiv.2305.01210
+ID  - is-your-code-generat
+N1  - Snippet: … programming benchmarks are inadequate for assessing the act
+ual correctness of LLM-… EvalPlus – an evaluation framework to reveal 
+the real correctness of LLM-synthesized code. …
+T2  - arXiv.org
+TI  - Is your code generated by chatgpt really correct? rigorous evaluation 
+of large language models for code generation
+UR  - https://proceedings.neurips.cc/paper_files/paper/2023/hash/43e9d647ccd3e4b7b5baab53f0368686-Abstract-Conference.html
+ER  - 
+TY  - JOUR
+AB  - Large Language Models (LLMs) now excel at generative skills and can cr
+eate content at impeccable speeds.However, they are imperfect and stil
+l make various mistakes.In a Computer Science education context, as th
+ese models are widely recognized as "AI pair programmers," it becomes 
+increasingly important to train students on evaluating and debugging t
+he LLM-generated code.In this work, we introduce HypoCompass, a novel 
+system to facilitate deliberate practice on debugging, where human nov
+ices play the role of Teaching Assistants and help LLM-powered teachab
+le agents debug code.We enable effective task delegation between stude
+nts and LLMs in this learning-by-teaching environment: students focus 
+on hypothesizing the cause of code errors, while adjacent skills like 
+code completion are offloaded to LLM-agents.Our evaluations demonstrat
+e that HypoCompass generates high-quality training materials (e.g., bu
+gs and fixes), outperforming human counterparts fourfold in efficiency
+, and significantly improves student performance on debugging by 12% i
+n the pre-to-post test. 
+AU  - Ma, Qianou
+AU  - Shen, Hua
+AU  - Koedinger, Kenneth R.
+AU  - Wu, Sally P. W.
+DA  - 2024/1/1/
+PY  - 2024
+DO  - 10.1007/978-3-031-64302-6_19
+ID  - how-to-teach-program
+N1  - Snippet: … evaluation studies and found that HypoCompass saves instruc
+tors’ time in material generation and is beneficial to student learnin
+g. In our LLM evaluation … Our learning evaluation study …
+T2  - Lecture Notes in Computer Science
+TI  - How to teach programming in the ai era? using llms as a teachable agen
+t for debugging
+UR  - https://link.springer.com/chapter/10.1007/978-3-031-64302-6_19
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Jelodar, Hamed
+AU  - Bai, Samita
+AU  - Hamedi, Parisa
+AU  - Mohammadian, Hesamodin
+AU  - Razavi-Far, Roozbeh
+AU  - Ghorbani, Ali A.
+DA  - 2025/4/7/
+PY  - 2025
+DO  - 10.48550/arxiv.2504.07137
+ID  - large-language-model
+N1  - Snippet: … Several transformer-based architectures and LLM-driven … Th
+is study presents a comprehensive review of LLM-based … , and highligh
+t emerging innovations in LLM-driven cybersecurity. …
+T2  - arXiv.org
+TI  - Large language model (llm) for software security: Code analysis, malwa
+re analysis, reverse engineering
+UR  - https://www.sciencedirect.com/science/article/pii/S2214212626000207
+ER  - 
+TY  - JOUR
+AB  - The emergence of large-language models (LLMs) that excel at code gener
+ation and commercial products such as GitHub's Copilot has sparked int
+erest in human-AI pair programming (referred to as"pAIr programming") 
+where an AI system collaborates with a human programmer. While traditi
+onal pair programming between humans has been extensively studied, it 
+remains uncertain whether its findings can be applied to human-AI pair
+ programming. We compare human-human and human-AI pair programming, ex
+ploring their similarities and differences in interaction, measures, b
+enefits, and challenges. We find that the effectiveness of both approa
+ches is mixed in the literature (though the measures used for pAIr pro
+gramming are not as comprehensive). We summarize moderating factors on
+ the success of human-human pair programming, which provides opportuni
+ties for pAIr programming research. For example, mismatched expertise 
+makes pair programming less productive, therefore well-designed AI pro
+gramming assistants may adapt to differences in expertise levels.
+AU  - Wu, Tongshuang
+AU  - Koedinger, Kenneth R.
+DA  - 2023/6/8/
+PY  - 2023
+DO  - 10.48550/arXiv.2306.05153
+ID  - is-ai-the-better-pro
+N1  - Snippet: … context [42], it would be interesting to explore if LLM-bas
+ed AI could resolve some limitations mentioned in pedagogical and conv
+ersational agent works before. Selfreflection and …
+T2  - arXiv.org
+TI  - Is ai the better programming partner? human-human pair programming vs.
+ human-ai pair programming
+UR  - https://arxiv.org/abs/2306.05153
+ER  - 
+TY  - JOUR
+AB  - This paper provides a survey of the emerging area of Large Language Mo
+dels (LLMs) for Software Engineering (SE). It also sets out open resea
+rch challenges for the application of LLMs to technical problems faced
+ by software engineers. LLMs' emergent properties bring novelty and cr
+eativity with applications right across the spectrum of Software Engin
+eering activities including coding, design, requirements, repair, refa
+ctoring, performance improvement, documentation and analytics. However
+, these very same emergent properties also pose significant technical 
+challenges; we need techniques that can reliably weed out incorrect so
+lutions, such as hallucinations. Our survey reveals the pivotal role t
+hat hybrid techniques (traditional SE plus LLMs) have to play in the d
+evelopment and deployment of reliable, efficient and effective LLM-bas
+ed SE.
+AU  - Fan, Angela
+AU  - Gokkaya, Beliz
+AU  - Harman, Mark
+AU  - Lyubarskiy, Mitya
+AU  - Sengupta, Shubho
+AU  - Yoo, Shin
+AU  - Zhang, Jie M.
+DA  - 2023/10/5/
+PY  - 2023
+DO  - 10.48550/arxiv.2310.03533
+ID  - large-language-model
+N1  - Snippet: … (which focuses on the input to the LLM) but also the need f
+or … the scientific evaluation of LLM-based Software Engineering: If …
+ , we survey the literature on the empirical evaluation of LLM-…
+T2  - arXiv.org
+TI  - Large language models for software engineering: Survey and open proble
+ms
+UR  - https://ieeexplore.ieee.org/abstract/document/10449667/
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Yehudai, Asaf
+AU  - Eden, Lilach
+AU  - Li, Alan
+AU  - Uziel, Guy
+AU  - Zhao, Yilun
+AU  - Bar-Haim, Roy
+AU  - Cohan, Arman
+AU  - Shmueli-Scheuer, Michal
+DA  - 2025/3/20/
+PY  - 2025
+DO  - 10.48550/arxiv.2503.16416
+ID  - survey-on-evaluation
+N1  - Snippet: … We identify two primary motives exhibited in the developmen
+t of new evaluation methodologies, which we outline in the subsequent 
+discussion. Realistic and Challenging …
+T2  - arXiv.org
+TI  - Survey on evaluation of llm-based agents
+UR  - https://arxiv.org/abs/2503.16416
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Guo, D
+AU  - Zhu, Q
+AU  - Yang, D
+AU  - Xie, Z
+AU  - Dong, K
+AU  - Zhang, W
+ID  - jWACIX5YVqUJ
+N1  - Snippet: … our experiment are illustrated in Figure 3. While the model
+ demonstrates peak performance … predecessor’s high-level coding perfo
+rmance but also exhibits enhanced natural language …
+TI  - DeepSeek-Coder: when the large language model meets programming--the r
+ise of code intelligence
+UR  - https://arxiv.org/abs/2401.14196
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Kharma, Mohammed Y.
+AU  - Choi, Soohyeon
+AU  - Alkhanafseh, Mohammed
+AU  - Mohaisen, David
+DA  - 2025/2/3/
+PY  - 2025
+DO  - 10.48550/arxiv.2502.01853
+ID  - security-and-quality
+N1  - Snippet: … We evaluate the quality and security of LLM-generated code 
+… unified dataset and a consistent evaluation setup. This enables … an
+alyze LLM-generated code across multiple programming …
+T2  - arXiv.org
+TI  - Security and quality in llm-generated code: A multi-language, multi-mo
+del analysis
+UR  - https://ieeexplore.ieee.org/abstract/document/11429547/
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Sepidband, Melika
+AU  - Taherkhani, Hamed
+AU  - Wang, Song
+AU  - Hemmati, Hadi
+DA  - 2025/5/29/
+PY  - 2025
+DO  - 10.48550/arxiv.2505.23953
+ID  - enhancing-llm-based-
+N1  - Snippet: … for each dataset and used them as feedback to prompt the LL
+M to generate new code with … impactful complexity metrics, prompting 
+the LLM to regenerate and alter those metrics in the …
+T2  - arXiv.org
+TI  - Enhancing LLM-based code generation with complexity metrics: A feedbac
+k-driven approach
+UR  - https://ieeexplore.ieee.org/abstract/document/11126649/
+ER  - 
+TY  - JOUR
+AB  - &lt;p&gt;This paper presents a novel approach to simulating the Agile 
+software development process using a multi-agent system based on large
+ language models (LLMs). The system autonomously handles a complete so
+ftware development pipeline, from user story creation and task plannin
+g to code generation, review, and pull request creation. Through colla
+boration among specialized agents, each performing a distinct role in 
+the Agile lifecycle, the system demonstrates the ability to autonomous
+ly complete low to medium-complexity software tasks with minimal human
+ intervention. We evaluate the system&rsquo;s performance across vario
+us tasks and provide insights into its limitations and future potentia
+l in augmenting real-world software development teams.&lt;/p&gt; 
+AU  - sanwal, Manish
+DA  - 2024/11/18/
+PY  - 2024
+DO  - 10.5281/zenodo.14179129
+ID  - an-autonomous-multi-
+N1  - Snippet: … low to mediumcomplexity software tasks with minimal human i
+ntervention. We evaluate the system’s performance across various tasks
+ and provide insights into its limitations and future …
+TI  - An autonomous multi-agent llm framework for agile software development
+
+UR  - http://eprints.umsida.ac.id/14618/
+ER  - 
+TY  - JOUR
+AB  - Large Language Models (LLMs) have shown potential to enhance software 
+development through automated code generation and refactoring, reducin
+g development time and improving code quality. This study empirically 
+evaluates StarCoder2, an LLM optimized for code generation, in refacto
+ring code across 30 open-source Java projects. We compare StarCoder2's
+ performance against human developers, focusing on (1) code quality im
+provements, (2) types and effectiveness of refactorings, and (3) enhan
+cements through one-shot and chain-of-thought prompting. Our results i
+ndicate that StarCoder2 reduces code smells by 20.1% more than develop
+ers, excelling in systematic issues like Long Statement and Magic Numb
+er, while developers handle complex, context-dependent issues better. 
+One-shot prompting increases the unit test pass rate by 6.15% and impr
+oves code smell reduction by 3.52%. Generating five refactorings per i
+nput further increases the pass rate by 28.8%, suggesting that combini
+ng one-shot prompting with multiple refactorings optimizes performance
+. These findings provide insights into StarCoder2's potential and best
+ practices for integrating LLMs into software refactoring, supporting 
+more efficient and effective code improvement in real-world applicatio
+ns.
+AU  - Cordeiro, Jonathan
+AU  - Noei, Shayan
+AU  - Zou, Ying
+DA  - 2024/11/4/
+PY  - 2024
+DO  - 10.48550/arxiv.2411.02320
+ID  - an-empirical-study-o
+N1  - Snippet: … We also show that prompt engineering significantly affects 
+LLM performance: chain-of-… best practices for integrating LLMs into t
+he software development process, our study aims to …
+T2  - arXiv.org
+TI  - An empirical study on the code refactoring capability of large languag
+e models
+UR  - https://dl.acm.org/doi/abs/10.1145/3801158
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Solovyeva, Lola
+AU  - Weidmann, Sophie
+AU  - Filho, Fernando Castor
+DA  - 2025/2/4/
+PY  - 2025
+DO  - 10.48550/arxiv.2502.02412
+ID  - ai-powered-but-power
+N1  - Snippet: … Studying the performance of LLM-produced programs is … the 
+construction of performance- and energy-critical software, such … perf
+ormance of LLM-generated code for three programming …
+T2  - arXiv.org
+TI  - AI-powered, but power-hungry? Energy efficiency of LLM-generated code
+UR  - https://ieeexplore.ieee.org/abstract/document/11052793/
+ER  - 
+TY  - JOUR
+AB  - Software Engineering (SE) is the systematic design, development, and m
+aintenance of software applications, underpinning the digital infrastr
+ucture of our modern mainworld. Very recently, the SE community has se
+en a rapidly increasing number of techniques employing Large Language 
+Models (LLMs) to automate a broad range of SE tasks. Nevertheless, exi
+sting information of the applications, effects, and possible limitatio
+ns of LLMs within SE is still not well-studied. In this paper, we prov
+ide a systematic survey to summarize the current state-of-the-art rese
+arch in the LLM-based SE community. We summarize 30 representative LLM
+s of Source Code across three model architectures, 15 pre-training obj
+ectives across four categories, and 16 downstream tasks across five ca
+tegories. We then present a detailed summarization of the recent SE st
+udies for which LLMs are commonly utilized, including 155 studies for 
+43 specific code-related tasks across four crucial phases within the S
+E workflow. Besides, we summarize existing attempts to empirically eva
+luate LLMs in SE, such as benchmarks, empirical studies, and explorati
+on of SE education. We also discuss several critical aspects of optimi
+zation and applications of LLMs in SE, such as security attacks, model
+ tuning, and model compression. Finally, we highlight several challeng
+es and potential opportunities on applying LLMs for future SE studies,
+ such as exploring domain LLMs and constructing clean evaluation datas
+ets. Overall, our work can help researchers gain a comprehensive under
+standing about the achievements of the existing LLM-based SE studies a
+nd promote the practical application of these techniques. Our artifact
+s are publicly available and will continuously updated at the living r
+epository: \url{https://github.com/iSEngLab/AwesomeLLM4SE}.
+AU  - Zhang, Quanjun
+AU  - Fang, Chunrong
+AU  - Xie, Yang
+AU  - Zhang, Yaxin
+AU  - Yang, Yun
+AU  - Sun, Weisong
+AU  - Yu, Shengchen
+AU  - Chen, Zhenyu
+DA  - 2023/12/23/
+PY  - 2023
+DO  - 10.48550/arxiv.2312.15223
+ID  - a-survey-on-large-la
+N1  - Snippet: … , and possible limitations of LLMs within SE is still not w
+ell-studied. In this paper, we provide a systematic survey to summariz
+e the current state-of-the-art research in the LLM-based SE …
+T2  - arXiv.org
+TI  - A survey on large language models for software engineering
+UR  - https://link.springer.com/article/10.1007/s11432-025-4670-0
+ER  - 
+TY  - JOUR
+AB  - With the rapid development of Large Language Models (LLMs), a large nu
+mber of machine learning models have been developed to assist programm
+ing tasks including the generation of program code from natural langua
+ge input. However, how to evaluate such LLMs for this task is still an
+ open problem despite of the great amount of research efforts that hav
+e been made and reported to evaluate and compare them. This paper prov
+ides a critical review of the existing work on the testing and evaluat
+ion of these tools with a focus on two key aspects: the benchmarks and
+ the metrics used in the evaluations. Based on the review, further res
+earch directions are discussed. 
+AU  - Paul, Donald L.
+AU  - Zhu, Hong
+AU  - Bayley, Ian
+DA  - 2024/6/18/
+PY  - 2024
+DO  - 10.48550/arxiv.2406.12655
+ID  - benchmarks-and-metri
+N1  - Snippet: … literature on the evaluation of LLM performance, many resea
+rch … Do the results of performance evaluation truly reflect the … the
+ response of an LLM to a programming task, and according …
+TI  - Benchmarks and metrics for evaluations of code generation: A critical 
+review
+UR  - https://ieeexplore.ieee.org/abstract/document/10685214/
+ER  - 
+TY  - JOUR
+AB  - Program repair techniques offer cost-saving benefits for debugging wit
+hin software development and programming education scenarios. With the
+ proven effectiveness of Large Language Models (LLMs) in code-related 
+tasks, researchers have explored their potential for program repair. H
+owever, it is crucial to recognize that existing repair benchmarks may
+ have influenced LLM training data, potentially causing data leakage. 
+To evaluate LLMs' realistic repair capabilities, (1) we introduce an e
+xtensive, non-crawled benchmark, referred to as TutorCode, comprising 
+1,239 C++ defect codes and associated information such as tutor guidan
+ce, solution description, failing test cases, and the corrected code. 
+Our work assesses the repair performance of 12 LLMs on TutorCode, meas
+uring repair correctness (TOP-5 and AVG-5) and patch precision (RPSR).
+ (2) We then provide a comprehensive investigation into which types of
+ extra information can help LLMs improve their performance in repairin
+g defects. Among these types, tutor guidance was found to be the most 
+effective information in enhancing LLM repair capabilities. To fully h
+arness LLMs' conversational capabilities and the benefits of augmented
+ information, (3) we introduce a novel conversational semi-automatic r
+epair framework CREF assisting human tutor. It demonstrates a remarkab
+le AVG-5 improvement of 17.2%-24.6% compared to the baseline, achievin
+g an impressive AVG-5 of 76.6% when utilizing GPT-4. These results hig
+hlight the potential for enhancing LLMs' repair capabilities through i
+nteractions with tutors and historical conversations involving incorre
+ct responses. The successful application of CREF in a real-world educa
+tional setting demonstrates its effectiveness in reducing tutors' work
+load and improving students' learning experience, while also showcasin
+g its promise for facilitating other software engineering tasks, such 
+as code review. 
+AU  - Yang, Bin
+AU  - Tian, Hao
+AU  - Pian, Weiguo
+AU  - Yu, Haoran
+AU  - Wang, Haitao
+AU  - Klein, Jacques
+AU  - Bissyandé, Tegawendé F.
+AU  - Jin, Shiqi
+DA  - 2024/6/19/
+PY  - 2024
+DO  - 10.48550/arxiv.2406.13972
+ID  - cref-an-llm-based-co
+N1  - Snippet: … for realistic evaluation of LLM-based repair approaches. Tu
+torCode includes 1,239 defective C++ programs, to which human tutor gu
+idance, programming problem description, solution …
+TI  - Cref: An llm-based conversational software repair framework for progra
+mming tutors
+UR  - https://dl.acm.org/doi/abs/10.1145/3650212.3680328
+ER  - 
+TY  - JOUR
+AB  - The prominent large language models (LLMs) of today differ from past l
+anguage models not only in size, but also in the fact that they are tr
+ained on a combination of natural language and formal language (code).
+ As a medium between humans and computers, code translates high-level 
+goals into executable steps, featuring standard syntax, logical consis
+tency, abstraction, and modularity. In this survey, we present an over
+view of the various benefits of integrating code into LLMs' training d
+ata. Specifically, beyond enhancing LLMs in code generation, we observ
+e that these unique properties of code help (i) unlock the reasoning a
+bility of LLMs, enabling their applications to a range of more complex
+ natural language tasks; (ii) steer LLMs to produce structured and pre
+cise intermediate steps, which can then be connected to external execu
+tion ends through function calls; and (iii) take advantage of code com
+pilation and execution environment, which also provides diverse feedba
+ck for model improvement. In addition, we trace how these profound cap
+abilities of LLMs, brought by code, have led to their emergence as int
+elligent agents (IAs) in situations where the ability to understand in
+structions, decompose goals, plan and execute actions, and refine from
+ feedback are crucial to their success on downstream tasks. Finally, w
+e present several key challenges and future directions of empowering L
+LMs with code.
+AU  - Yang, Ke
+AU  - Liu, Jiateng
+AU  - Wu, John
+AU  - Yang, Chaoqi
+AU  - Fung, Yi Ren
+AU  - Li, Sha
+AU  - Huang, Zixuan
+AU  - Cao, Xu
+AU  - Wang, Xingyao
+AU  - Wang, Yiquan
+AU  - Ji, Heng
+AU  - Zhai, Chengxiang
+DA  - 2024/1/1/
+PY  - 2024
+DO  - 10.48550/arxiv.2401.00812
+ID  - if-llm-is-the-wizard
+N1  - Snippet: … case study in A.1), code is more structured, featuring logi
+cal, step-by-step executable processes derived from procedural program
+ming, … into LLM training i) enhances their programming …
+T2  - arXiv.org
+TI  - If llm is the wizard, then code is the wand: A survey on how code empo
+wers large language models to serve as intelligent agents
+UR  - https://arxiv.org/abs/2401.00812
+ER  - 
+TY  - JOUR
+AB  - Context: The proliferation of technologies based on Large Language Mod
+els (LLM) is reshaping various domains, also impacting on programming 
+code creation and review. Problem: The decision-making process in adop
+ting LLM in software development demands an understanding of associate
+d challenges and diverse application possibilities. Solution: This stu
+dy addresses the identified challenges linked to LLM utilization in pr
+ogramming code processes. It explores models, utilization strategies, 
+challenges, and coping mechanisms, focusing on the perspectives of res
+earchers in software development. IS Theory: Drawing on Task-Technolog
+y Fit (TTF) theory, the research examines the alignment between task c
+haracteristics in code generation and review, and LLM technology attri
+butes to discern performance impacts and utilization patterns. Method:
+ Employing the Systematic Mapping of the Literature method, the resear
+ch analyzes 19 selected studies from digital databases—IEEE Digital Li
+brary, Compendex Engineering Village, and Scopus—out of 1,257 retrieve
+d results. Summary of Results: The research reveals 23 models, 13 util
+ization strategies, 15 challenges, and 14 coping mechanisms associated
+ with LLM in programming code processes, offering a comprehensive unde
+rstanding of the application landscape. Contributions to IS: Contribut
+ing to the Information Systems (IS) field, This study provides valuabl
+e insights into the utilization of LLM in programming code generation 
+and review. The identified models, strategies, challenges, and coping 
+mechanisms offer practical guidance for decision-making processes rela
+ted to LLM technology adoption. The research aims to support the IS co
+mmunity in effectively navigating the complexities of integrating larg
+e language models into the dynamic software development lifecycle.
+AU  - Albuquerque, Beatriz Ventorini Lins de
+AU  - Cunha, Antonio Fernando Souza da
+AU  - Souza, Leonardo
+AU  - Siqueira, Sean W. M.
+AU  - Santos, Rodrigo Pereira dos
+DA  - 2024/5/20/
+PY  - 2024
+DO  - 10.1145/3658271.3658342
+ID  - generating-and-revie
+N1  - Snippet: … in adopting LLM in software development demands an … lenges
+ linked to LLM utilization in programming code processes… , and LLM te
+chnology attributes to discern performance impacts …
+TI  - Generating and reviewing programming codes with large language models:
+ A systematic mapping study
+UR  - https://dl.acm.org/doi/abs/10.1145/3658271.3658342
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Hartung, Kai
+AU  - Mallick, Sambit
+AU  - Gröttrup, Sören
+AU  - Georges, Munir
+DA  - 2024/1/1/
+PY  - 2024
+DO  - 10.1007/978-3-031-70563-2_17
+ID  - evaluation-metrics-i
+N1  - Snippet: … to reference-independent metrics. As examples of those, we 
+explore the use of static code analysis metrics like maintainability, 
+cyclomatic complexity and adherence to coding styles on …
+T2  - Lecture Notes in Computer Science
+TI  - Evaluation metrics in LLM code generation
+UR  - https://link.springer.com/chapter/10.1007/978-3-031-70563-2_17
+ER  - 
+TY  - JOUR
+AB  - Large Language Models (LLMs) such as OpenAI Codex are increasingly bei
+ng used as AI-based coding assistants. Understanding the impact of the
+se tools on developers' code is paramount, especially as recent work s
+howed that LLMs may suggest cybersecurity vulnerabilities. We conduct 
+a security-driven user study (N=58) to assess code written by student 
+programmers when assisted by LLMs. Given the potential severity of low
+-level bugs as well as their relative frequency in real-world projects
+, we tasked participants with implementing a singly-linked 'shopping l
+ist' structure in C. Our results indicate that the security impact in 
+this setting (low-level C with pointer and array manipulations) is sma
+ll: AI-assisted users produce critical security bugs at a rate no grea
+ter than 10% more than the control, indicating the use of LLMs does no
+t introduce new security risks.
+AU  - Sandoval, Gustavo
+AU  - Pearce, Hammond
+AU  - Nys, Teo
+AU  - Karri, Ramesh
+AU  - Garg, Siddharth
+AU  - Dolan-Gavitt, Brendan
+DA  - 2022/8/20/
+PY  - 2022
+ID  - lost-at-c-a-user-stu
+N1  - Snippet: … the programming patterns in both groups, we created a cloud
+based integrated development environment (IDE) that links to a Codex L
+LM in the back-end to behave like GitHub Copilot. …
+TI  - Lost at c: A user study on the security implications of large language
+ model code assistants
+UR  - https://www.usenix.org/conference/usenixsecurity23/presentation/sandoval
+ER  - 
+TY  - JOUR
+AB  - In recent years, Large Language Models (LLMs) have achieved remarkable
+ success and have been widely used in various downstream tasks, especi
+ally in the tasks of the software engineering (SE) field. We find that
+ many studies combining LLMs with SE have employed the concept of agen
+ts either explicitly or implicitly. However, there is a lack of an in-
+depth survey to sort out the development context of existing works, an
+alyze how existing works combine the LLM-based agent technologies to o
+ptimize various tasks, and clarify the framework of LLM-based agents i
+n SE. In this paper, we conduct the first survey of the studies on com
+bining LLM-based agents with SE and present a framework of LLM-based a
+gents in SE which includes three key modules: perception, memory, and 
+action. We also summarize the current challenges in combining the two 
+fields and propose future opportunities in response to existing challe
+nges. We maintain a GitHub repository of the related papers at: https:
+//github.com/DeepSoftwareAnalytics/Awesome-Agent4SE. 
+AU  - Wang, Yanlin
+AU  - Zhong, Wanjun
+AU  - Huang, Yanxian
+AU  - Shi, Ensheng
+AU  - Yang, Min
+AU  - Chen, Jiachi
+AU  - Li, Huijun
+AU  - Ma, Yuchi
+AU  - Wang, Qianxiang
+AU  - Zheng, Zibin
+DA  - 2024/9/13/
+PY  - 2024
+DO  - 10.48550/arxiv.2409.09030
+ID  - agents-in-software-e
+N1  - Snippet: … the framework of LLM-based agents in SE. In this paper, we 
+conduct the first survey of the studies on combining LLM-based agents 
+with SE and present a framework of LLM-based …
+TI  - Agents in software engineering: Survey, landscape, and vision
+UR  - https://link.springer.com/article/10.1007/s10515-025-00544-2
+ER  - 
+TY  - JOUR
+AB  - Unit testing is an essential yet frequently arduous task. Various auto
+mated unit test generation tools have been introduced to mitigate this
+ challenge. Notably, methods based on large language models (LLMs) hav
+e garnered considerable attention and exhibited promising results in r
+ecent years. Nevertheless, LLM-based tools encounter limitations in ge
+nerating accurate unit tests. This paper presents ChatUniTest, an LLM-
+based automated unit test generation framework. ChatUniTest incorporat
+es an adaptive focal context mechanism to encompass valuable context i
+n prompts and adheres to a generation-validation-repair mechanism to r
+ectify errors in generated unit tests. Subsequently, we have developed
+ ChatUniTest Core, a common library that implements core workflow, com
+plemented by the ChatUniTest Toolchain, a suite of seamlessly integrat
+ed tools enhancing the capabilities of ChatUniTest. Our effectiveness 
+evaluation reveals that ChatUniTest outperforms TestSpark and EvoSuite
+ in half of the evaluated projects, achieving the highest overall line
+ coverage. Furthermore, insights from our user study affirm that ChatU
+niTest delivers substantial value to various stakeholders in the softw
+are testing domain. ChatUniTest is available at https://github.com/ZJU
+-ACES-ISE/ChatUniTest, and the demo video is available at https://www.
+youtube.com/watch?v=GmfxQUqm2ZQ.
+AU  - Chen, Y. S.
+AU  - Hu, Zhenguo
+AU  - Zhi, Chongyang
+AU  - Han, Junxiao
+AU  - Deng, Shuiguang
+AU  - Yin, J. Q.
+DA  - 2024/7/10/
+PY  - 2024
+DO  - 10.1145/3663529.3663801
+ID  - chatunitest-a-framew
+N1  - Snippet: … TestPilot [26], a leading LLM-… LLM-based generation, and t
+he other uses EvoSuite for search-based generation. However, we have i
+dentified two primary limitations associated with llm-…
+TI  - Chatunitest: A framework for llm-based test generation
+UR  - https://dl.acm.org/doi/abs/10.1145/3663529.3663801
+ER  - 
+TY  - JOUR
+AB  - Large Language Models (LLMs) represent a leap in artificial intelligen
+ce, excelling in tasks using human language(s). Although the main focu
+s of general-purpose LLMs is not code generation, they have shown prom
+ising results in the domain. However, the usefulness of LLMs in an aca
+demic software engineering project has not been fully explored yet. In
+ this study, we explore the usefulness of LLMs for 214 students workin
+g in teams consisting of up to six members. Notably, in the academic c
+ourse through which this study is conducted, students were encouraged 
+to integrate LLMs into their development tool-chain, in contrast to mo
+st other academic courses that explicitly prohibit the use of LLMs. In
+ this paper, we analyze the AI-generated code, prompts used for code g
+eneration, and the human intervention levels to integrate the code int
+o the code base. We also conduct a perception study to gain insights i
+nto the perceived usefulness, influencing factors, and future outlook 
+of LLM from a computer science student's perspective. Our findings sug
+gest that LLMs can play a crucial role in the early stages of software
+ development, especially in generating foundational code structures, a
+nd helping with syntax and error debugging. These insights provide us 
+with a framework on how to effectively utilize LLMs as a tool to enhan
+ce the productivity of software engineering students, and highlight th
+e necessity of shifting the educational focus toward preparing student
+s for successful human-AI collaboration.
+AU  - Rasnayaka, Sanka
+AU  - Wang, Guanlin
+AU  - Shariffdeen, Ridwan
+AU  - Iyer, Ganesh Neelakanta
+DA  - 2024/1/29/
+PY  - 2024
+DO  - 10.48550/arxiv.2401.16186
+ID  - an-empirical-study-o
+N1  - Snippet: … for software development and identify valuable insights tha
+t can be helpful to further LLM usage … used by the students, and surv
+ey results for further analysis by the research community.…
+T2  - arXiv.org
+TI  - An empirical study on usage and perceptions of llms in a software engi
+neering project
+UR  - https://dl.acm.org/doi/abs/10.1145/3643795.3648379
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Xia, Chun
+AU  - Deng, Yinlin
+AU  - Dunn, Soren
+AU  - Zhang, Lingming
+DA  - 2025/6/19/
+PY  - 2025
+DO  - 10.1145/3715754
+ID  - demystifying-llm-bas
+N1  - Snippet: … limitations of LLM agents in software development. We evalu
+ate Agentless on the popular SWEbench Lite [Lite 2024] benchmark and d
+emonstrate that Agentless not only achieves the …
+TI  - Demystifying llm-based software engineering agents
+UR  - https://dl.acm.org/doi/abs/10.1145/3715754
+ER  - 
+TY  - JOUR
+AB  - Providing personalized assistance at scale is a long-standing challeng
+e for computing educators, but a new generation of tools powered by la
+rge language models (LLMs) offers immense promise. Such tools can, in 
+theory, provide on-demand help in large class settings and be configur
+ed with appropriate guardrails to prevent misuse and mitigate common c
+oncerns around learner over-reliance. However, the deployment of LLM-p
+owered tools in authentic classroom settings is still rare, and very l
+ittle is currently known about how students will use them in practice 
+and what type of help they will seek. To address this, we examine stud
+ents’ use of an innovative LLM-powered tool that provides on-demand pr
+ogramming assistance without revealing solutions directly. We deployed
+ the tool for 12 weeks in an introductory computer and data science co
+urse (n = 52), collecting more than 2,500 queries submitted by student
+s throughout the term. We manually categorized all student queries bas
+ed on the type of assistance sought, and we automatically analyzed sev
+eral additional query characteristics. We found that most queries requ
+ested immediate help with programming assignments, whereas fewer reque
+sts asked for help on related concepts or for deepening conceptual und
+erstanding. Furthermore, students often provided minimal information t
+o the tool, suggesting this is an area in which targeted instruction w
+ould be beneficial. We also found that students who achieved more succ
+ess in the course tended to have used the tool more frequently overall
+. Lessons from this research can be leveraged by programming educators
+ and institutions who plan to augment their teaching with emerging LLM
+-powered tools.
+AU  - Sheese, Brad
+AU  - Liffiton, Mark H.
+AU  - Savelka, Jaromir
+AU  - Denny, Paul
+DA  - 2023/10/25/
+PY  - 2023
+DO  - 10.48550/arxiv.2310.16984
+ID  - patterns-of-student-
+N1  - Snippet: … of an innovative LLMpowered tool that provides on-demand pr
+ogramming assistance without … always-available LLM-powered TA over a 
+semester-long course. Our evaluation is guided …
+T2  - arXiv.org
+TI  - Patterns of student help-seeking when using a large language model-pow
+ered programming assistant
+UR  - https://dl.acm.org/doi/abs/10.1145/3636243.3636249
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Zeng, Binqi
+AU  - Zhang, Quan
+AU  - Zhou, Chijin
+AU  - Go, Gwihwan
+AU  - Jiang, Yu
+AU  - Shi, Heyuan
+DA  - 2025/4/22/
+PY  - 2025
+DO  - 10.48550/arxiv.2504.15867
+ID  - inducing-vulnerable-
+N1  - Snippet: … In contrast, our dataset is tailored to security research o
+n code generated by LLMbased coding assistants, including problem desc
+riptions, code descriptions, and code in multiple …
+T2  - arXiv.org
+TI  - Inducing Vulnerable Code Generation in LLM Coding Assistants
+UR  - https://arxiv.org/abs/2504.15867
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Lin, Feng
+AU  - Kim, Dong Jae
+AU  - Chen, Tse-Hsun
+DA  - 2025/4/26/
+PY  - 2025
+DO  - 10.1109/icse55347.2025.00140
+ID  - soen-101-code-genera
+N1  - Snippet: … Although one can easily replace the LLM in our experiment, 
+the findings may be different. Future studies on how the results of Fl
+owGen change when using different LLMs. Construct …
+TI  - Soen-101: Code generation by emulating software process models using l
+arge language model agents
+UR  - https://ieeexplore.ieee.org/abstract/document/11029771/
+ER  - 
+TY  - JOUR
+AB  - We evaluate AI-assisted generative capabilities on fundamental numeric
+al kernels in high-performance computing (HPC), including AXPY, GEMV, 
+GEMM, SpMV, Jacobi Stencil, and CG. We test the generated kernel codes
+ for a variety of language-supported programming models, including (1)
+ C++ (e.g., OpenMP [including offload], OpenACC, Kokkos, SyCL, CUDA, a
+nd HIP), (2) Fortran (e.g., OpenMP [including offload] and OpenACC), (
+3) Python (e.g., numba, Numba, cuPy, and pyCUDA), and (4) Julia (e.g.,
+ Threads, CUDA.jl, AMDGPU.jl, and KernelAbstractions.jl). We use the G
+itHub Copilot capabilities powered by OpenAI Codex available in Visual
+ Studio Code as of April 2023 to generate a vast amount of implementat
+ions given simple++prompt variants. To quantify and compare the result
+s, we propose a proficiency metric around the initial 10 suggestions g
+iven for each prompt. Results suggest that the OpenAI Codex outputs fo
+r C++ correlate with the adoption and maturity of programming models. 
+For example, OpenMP and CUDA score really high, whereas HIP is still l
+acking. We found that prompts from either a targeted language such as 
+Fortran or the more general-purpose Python can benefit from adding cod
+e keywords, while Julia prompts perform acceptably well for its mature
+ programming models (e.g., Threads and CUDA.jl). We expect for these b
+enchmarks to provide a point of reference for each programming model's
+ community. Overall, understanding the convergence of large language m
+odels, AI, and HPC is crucial due to its rapidly evolving nature and h
+ow it is redefining human-computer interactions.
+AU  - Godoy, William F.
+AU  - Valero-Lara, Pedro
+AU  - Teranishi, Keita
+AU  - Balaprakash, Prasanna
+AU  - Vetter, Jeffrey S.
+DA  - 2023/6/27/
+PY  - 2023
+DO  - 10.1145/3605731.3605886
+ID  - evaluation-of-openai
+N1  - Snippet: … heterogeneity of hardware and programming models [46], AI-…
+ , and test software that targets high-performance computing (… for GP
+T-3 LLM capabilities that would help redefine software …
+T2  - arXiv.org
+TI  - Evaluation of openai codex for hpc parallel programming models kernel 
+generation
+UR  - https://dl.acm.org/doi/abs/10.1145/3605731.3605886
+ER  - 
+TY  - JOUR
+AB  - Large Language Models (LLMs) have been gaining increasing attention an
+d demonstrated promising performance across a variety of Software Engi
+neering (SE) tasks, such as Automated Program Repair (APR), code summa
+rization, and code completion. For example, ChatGPT, the latest black-
+box LLM, has been investigated by numerous recent research studies and
+ has shown impressive performance in various tasks. However, there exi
+sts a potential risk of data leakage since these LLMs are usually clos
+e-sourced with unknown specific training details, e.g., pre-training d
+atasets. In this paper, we seek to review the bug-fixing capabilities 
+of ChatGPT on a clean APR benchmark with different research objectives
+. We first introduce {\benchmark}, a new benchmark with buggy and the 
+corresponding fixed programs from competitive programming problems sta
+rting from 2023, after the training cutoff point of ChatGPT. The resul
+ts on {\benchmark} show that ChatGPT is able to fix 109 out of 151 bug
+gy programs using the basic prompt within 35 independent rounds, outpe
+rforming state-of-the-art LLMs CodeT5 and PLBART by 27.5\% and 62.4\% 
+prediction accuracy. We also investigate the impact of three types of 
+prompts, i.e., problem description, error feedback, and bug localizati
+on, leading to additional 34 fixed bugs. Besides, we provide additiona
+l discussion from the interactive nature of ChatGPT to illustrate the 
+capacity of a dialog-based repair workflow with 9 additional fixed bug
+s. Inspired by the findings, we further pinpoint various challenges an
+d opportunities for advanced SE study equipped with such LLMs (e.g.,~C
+hatGPT) in the near future. More importantly, our work calls for more 
+research on the reevaluation of the achievements obtained by existing 
+black-box LLMs across various SE tasks, not limited to ChatGPT on APR.
+
+AU  - Zhang, Quanjun
+AU  - Zhang, Tongke
+AU  - Zhai, Juan
+AU  - Fang, Chunrong
+AU  - Yu, Bo-Chen
+AU  - Sun, Weisong
+AU  - Chen, Zhenyu
+DA  - 2023/10/13/
+PY  - 2023
+DO  - 10.48550/arxiv.2310.08879
+ID  - a-critical-review-of
+N1  - Snippet: … promising performance across a variety of Software Engineer
+ing (SE) tasks, … LLM, has been investigated by numerous recent resear
+ch studies and has shown impressive performance …
+T2  - arXiv.org
+TI  - A critical review of large language model on software engineering: An 
+example from chatgpt and automated program repair
+UR  - https://arxiv.org/abs/2310.08879
+ER  - 
+TY  - JOUR
+AB  - With the growing popularity of Large Language Models (e.g. GitHub Copi
+lot, ChatGPT, etc.) in software engineers' daily practices, it is impo
+rtant to ensure that the code generated by these tools is not only fun
+ctionally correct but also free of vulnerabilities. Although LLMs can 
+help developers to be more productive, prior empirical studies have sh
+own that LLMs can generate insecure code. There are two contributing f
+actors to the insecure code generation. First, existing datasets used 
+to evaluate Large Language Models (LLMs) do not adequately represent g
+enuine software engineering tasks sensitive to security. Instead, they
+ are often based on competitive programming challenges or classroom-ty
+pe coding tasks. In real-world applications, the code produced is inte
+grated into larger codebases, introducing potential security risks. Th
+ere's a clear absence of benchmarks that focus on evaluating the secur
+ity of the generated code. Second, existing evaluation metrics primari
+ly focus on the functional correctness of the generated code while ign
+oring security considerations. Metrics such as pass@k gauge the probab
+ility of obtaining the correct code in the top k suggestions. Other po
+pular metrics like BLEU, CodeBLEU, ROUGE, and METEOR similarly emphasi
+ze functional accuracy, neglecting security implications. In light of 
+these research gaps, in this paper, we described SALLM, a framework to
+ benchmark LLMs' abilities to generate secure code systematically. Thi
+s framework has three major components: a novel dataset of security-ce
+ntric Python prompts, an evaluation environment to test the generated 
+code, and novel metrics to evaluate the models' performance from the p
+erspective of secure code generation.
+AU  - Siddiq, Mohammed Latif
+AU  - Santos, Joanna C. S.
+DA  - 2023/11/1/
+PY  - 2023
+DO  - 10.48550/arxiv.2311.00889
+ID  - generate-and-pray-us
+N1  - Snippet: … and security smells. While a vulnerability is a flaw in a s
+oftware system that can be exploited to compromise the system’s securi
+ty, security smells are frequently used programming …
+T2  - arXiv.org
+TI  - Generate and pray: Using sallms to evaluate the security of llm genera
+ted code
+UR  - https://lsiddiqsunny.github.io/public/2311.00889.pdf
+ER  - 
+TY  - JOUR
+AB  - Evaluating the real capabilities of large language models in low-resou
+rce languages still represents a challenge, as many existing benchmark
+s focus on widespread tasks translated from English or evaluate only s
+imple language understanding. This paper introduces UA-Code-Bench, a n
+ew open-source benchmark established for a thorough evaluation of lang
+uage models' code generation and competitive programming problem-solvi
+ng abilities in Ukrainian. The benchmark comprises 500 problems from t
+he Eolymp platform, evenly distributed across five complexity levels f
+rom very easy to very hard. A diverse set of 13 leading proprietary an
+d open-source models, generating Python solutions based on a one-shot 
+prompt, was evaluated via the dedicated Eolymp environment against hid
+den tests, ensuring code correctness. The obtained results reveal that
+ even top-performing models, such as OpenAI o3 and GPT-5, solve only h
+alf of the problems, highlighting the challenge of code generation in 
+low-resource natural language. Furthermore, this research presents a c
+omprehensive analysis of performance across various difficulty levels,
+ as well as an assessment of solution uniqueness and computational eff
+iciency, measured by both elapsed time and memory consumption of the g
+enerated solutions. In conclusion, this work demonstrates the value of
+ competitive programming benchmarks in evaluating large language model
+s, especially in underrepresented languages. It also paves the way for
+ future research on multilingual code generation and reasoning-enhance
+d models. The benchmark, data parsing, preparation, code generation, a
+nd evaluation scripts are available at https://huggingface.co/datasets
+/NLPForUA/ua-code-bench. 
+AU  - Syromiatnikov, M
+AU  - Ruvinskaya, V
+DA  - 2025/11/7/
+PY  - 2025
+DO  - 10.15276/ict.02.2025.47
+ID  - ua-code-bench-a-comp
+N1  - Snippet: … rigorous evaluation of LLM code generation correctness and 
+efficiency on competitive programming … with programming tasks of diff
+erent complexities sampled from the Eolymp platform; …
+TI  - UA-Code-Bench: A Competitive Programming Benchmark for Evaluating LLM 
+Code Generation in Ukrainian
+UR  - https://arxiv.org/abs/2511.05040
+ER  - 
+TY  - JOUR
+AB  - Recent advancements in Large Language Models (LLMs) like ChatGPT and C
+opilot have led to their integration into various educational domains,
+ including software development education. Regular use of LLMs in the 
+learning process is still not well-researched; thus, this paper intend
+s to fill this gap. The paper explores the nuanced impact of informal 
+LLM usage on undergraduate students’ learning outcomes in software dev
+elopment education, focusing on React applications. We carefully desig
+ned an experiment involving thirty-two participants over ten weeks whe
+re we examined unrestricted but not specifically encouraged LLM use an
+d their correlation with student performance. Our results reveal a sig
+nificant negative correlation between increased LLM reliance for criti
+cal thinking-intensive tasks such as code generation and debugging and
+ lower final grades. Furthermore, a downward trend in final grades is 
+observed with increased average LLM use across all tasks. However, the
+ correlation between the use of LLMs for seeking additional explanatio
+ns and final grades was not as strong, indicating that LLMs may serve 
+better as a supplementary learning tool. These findings highlight the 
+importance of balancing LLM integration with the cultivation of indepe
+ndent problem-solving skills in programming education.
+AU  - Jošt, Gregor
+AU  - Taneski, Viktor
+AU  - Karakatič, Sašo
+DA  - 2024/5/13/
+PY  - 2024
+DO  - 10.3390/app14104115
+ID  - the-impact-of-large-
+N1  - Snippet: … performance in a controlled, LLM-free environment, this stu
+dy aims to explain the nuanced impact of LLM usage on undergraduate pr
+ogramming students’ ability to independently solve …
+T2  - Applied Sciences
+TI  - The impact of large language models on programming education and stude
+nt learning outcomes
+UR  - https://www.mdpi.com/2076-3417/14/10/4115
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Aguiar, Lucas Almeida
+AU  - Paixão, Matheus
+AU  - Carmo, Rafael Augusto Ferreira do
+AU  - Soares, Edson L.C.
+AU  - Leal, Antonio
+AU  - Freitas, Mélanie
+AU  - Gama, Eliakim
+DA  - 2024/10/15/
+PY  - 2024
+DO  - 10.1145/3674805.3690755
+ID  - multi-language-softw
+N1  - Snippet: … to solve different software problems. A survey suggested a 
+rather universal usage of MLSD among open-source projects, with a mean
+ number of 5 programming languages used per …
+TI  - Multi-language software development in the llm era: Insights from prac
+titioners' conversations with chatgpt
+UR  - https://dl.acm.org/doi/abs/10.1145/3674805.3690755
+ER  - 
+TY  - JOUR
+AB  - Understanding code is challenging, especially when working in new and 
+complex development environments. Code comments and documentation can 
+help, but are typically scarce or hard to navigate. Large language mod
+els (LLMs) are revolutionizing the process of writing code. Can they d
+o the same for helping understand it? In this study, we provide a firs
+t investigation of an LLM-based conversational UI built directly in th
+e IDE that is geared towards code understanding. Our IDE plugin querie
+s OpenAI's GPT-3.5-turbo model with four high-level requests without t
+he user having to write explicit prompts: to explain a highlighted sec
+tion of code, provide details of API calls used in the code, explain k
+ey domain-specific terms, and provide usage examples for an API. The p
+lugin also allows for open-ended prompts, which are automatically cont
+extualized to the LLM with the program being edited. We evaluate this 
+system in a user study with 32 participants, which confirms that using
+ our plugin can aid task completion more than web search. We additiona
+lly provide a thorough analysis of the ways developers use, and percei
+ve the usefulness of, our system, among others finding that the usage 
+and benefits differ between students and professionals. We conclude th
+at in-IDE prompt-less interaction with LLMs is a promising future dire
+ction for tool builders. 
+AU  - Nam, Daye
+AU  - Macvean, Andrew
+AU  - Hellendoorn, Vincent J.
+AU  - Vasilescu, Bogdan
+AU  - Myers, Brad A.
+DA  - 2024/4/12/
+PY  - 2024
+DO  - 10.1145/3597503.3639187
+ID  - using-an-llm-to-help
+N1  - Snippet: … -based tools to satisfy information needs for code understa
+nding, and take a step forward to test the actual utility of an LLM-in
+tegrated programming tool by assessing performance …
+TI  - Using an llm to help with code understanding
+UR  - https://dl.acm.org/doi/abs/10.1145/3597503.3639187
+ER  - 
+TY  - JOUR
+AB  - In recent years, large language models (LLMs) have seen rapid advancem
+ents, significantly impacting various fields such as computer vision, 
+natural language processing, and software engineering. These LLMs, exe
+mplified by OpenAI’s ChatGPT, have revolutionized the way we approach 
+language understanding and generation tasks. However, in contrast to t
+raditional software development practices, LLM development introduces 
+new challenges for AI developers in design, implementation, and deploy
+ment. These challenges span different areas (such as prompts, APIs, an
+d plugins), requiring developers to navigate unique methodologies and 
+considerations specific to LLM application development. Despite the pr
+ofound influence of LLMs, to the best of our knowledge, these challeng
+es have not been thoroughly investigated in previous empirical studies
+. To fill this gap, we present the first comprehensive study on unders
+tanding the challenges faced by LLM developers. Specifically, we crawl
+ and analyze 29,057 relevant questions from a popular OpenAI developer
+ forum. We first examine their popularity and difficulty. After manual
+ly analyzing 2,364 sampled questions, we construct a taxonomy of chall
+enges faced by LLM developers. Based on this taxonomy, we summarize a 
+set of findings and actionable implications for LLM-related stakeholde
+rs, including developers and providers (especially the OpenAI organiza
+tion). 
+AU  - Chen, Xiang
+AU  - Chao-yang, Gao
+AU  - Chen, Chunyang
+AU  - Zhang, Guangbei
+AU  - Liu, Yong
+DA  - 2025/1/23/
+PY  - 2025
+DO  - 10.1145/3715007
+ID  - an-empirical-study-o
+N1  - Snippet: … implement necessary security measures. … LLM development, w
+e examine the number of new posts and new users added over each period
+. Our findings indicate that LLM development …
+T2  - ACM Transactions on Software Engineering and Methodology
+TI  - An empirical study on challenges for llm application developers
+UR  - https://dl.acm.org/doi/abs/10.1145/3715007
+ER  - 
+TY  - JOUR
+AB  - Large Language Models (LLMs) are revolutionizing the field of code dev
+elopment by leveraging their deep understanding of code patterns, synt
+ax, and semantics to assist developers in various tasks, from code gen
+eration and testing to code understanding and documentation. In this s
+urvey, accompanying our proposed lecture-style tutorial for KDD 2024, 
+we explore the multifaceted impact of LLMs on the code development, de
+lving into techniques for generating a high-quality code, creating com
+prehensive test cases, automatically generating documentation, and eng
+aging in an interactive code reasoning. Throughout the survey, we high
+light some crucial components surrounding LLMs, including pre-training
+, fine-tuning, prompt engineering, iterative refinement, agent plannin
+g, and hallucination mitigation. We put forward that such ingredients 
+are essential to harness the full potential of these powerful AI model
+s in revolutionizing software engineering and paving the way for a mor
+e efficient, effective, and innovative future in code development.
+AU  - Ding, Hao
+AU  - Fan, Ziwei
+AU  - Guehring, Ingo
+AU  - Gupta, Gaurav
+AU  - Ha, Wooseok
+AU  - Huan, Jun
+AU  - Liu, Linbo
+AU  - Omidvar-Tehrani, Behrooz
+AU  - Wang, Shiqi
+AU  - Zhou, Hao
+DO  - 10.1145/3637528.3671452
+ID  - reasoning-and-planni
+N1  - Snippet: … Throughout this survey, we highlight the various aspects of
+ LLM ecosystem that are crucial to their success in code development, 
+including pre-training, fine-tuning, prompt engineering, …
+TI  - Reasoning and planning with large language models in code development
+UR  - https://dl.acm.org/doi/abs/10.1145/3637528.3671452
+ER  - 
+TY  - JOUR
+AB  - Unit tests play a key role in ensuring the correctness of software. Ho
+wever, manually creating unit tests is a laborious task, motivating th
+e need for automation. Large Language Models (LLMs) have recently been
+ applied to various aspects of software development, including their s
+uggested use for automated generation of unit tests, but while requiri
+ng additional training or few-shot learning on examples of existing te
+sts. This paper presents a large-scale empirical evaluation on the eff
+ectiveness of LLMs for automated unit test generation without requirin
+g additional training or manual effort. Concretely, we consider an app
+roach where the LLM is provided with prompts that include the signatur
+e and implementation of a function under test, along with usage exampl
+es extracted from documentation. Furthermore, if a generated test fail
+s, our approach attempts to generate a new test that fixes the problem
+ by re-prompting the model with the failing test and error message. We
+ implement our approach in T <sc xmlns:mml="http://www.w3.org/1998/Mat
+h/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">est</small> P <sc
+ xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://ww
+w.w3.org/1999/xlink">ilot</small> , an adaptive LLM-based test generat
+ion tool for JavaScript that automatically generates unit tests for th
+e methods in a given project’s API. We evaluate T <sc xmlns:mml="http:
+//www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xli
+nk">est</small> P <sc xmlns:mml="http://www.w3.org/1998/Math/MathML" x
+mlns:xlink="http://www.w3.org/1999/xlink">ilot</small> using OpenAI’s 
+<italic xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="ht
+tp://www.w3.org/1999/xlink">gpt3.5-turbo</i> LLM on 25 npm packages wi
+th a total of 1,684 API functions. The generated tests achieve a media
+n statement coverage of 70.2% and branch coverage of 52.8%. In contras
+t, the state-of-the feedback-directed JavaScript test generation techn
+ique, Nessie, achieves only 51.3% statement coverage and 25.6% branch 
+coverage. Furthermore, experiments with excluding parts of the informa
+tion included in the prompts show that all components contribute towar
+ds the generation of effective test suites. We also find that 92.8% of
+ T <sc xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="htt
+p://www.w3.org/1999/xlink">est</small> P <sc xmlns:mml="http://www.w3.
+org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">ilot<
+/small> ’s generated tests have ≤ 50% similarity with existing tests (
+as measured by normalized edit distance), with none of them being exac
+t copies. Finally, we run T <sc xmlns:mml="http://www.w3.org/1998/Math
+/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">est</small> P <sc 
+xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www
+.w3.org/1999/xlink">ilot</small> with two additional LLMs, OpenAI’s ol
+der <italic xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink
+="http://www.w3.org/1999/xlink">code-cushman-002</i> LLM and <italic x
+mlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.
+w3.org/1999/xlink">StarCoder</i> , an LLM for which the training proce
+ss is publicly documented. Overall, we observed similar results with t
+he former (68.2% median statement coverage), and somewhat worse result
+s with the latter (54.0% median statement coverage), suggesting that t
+he effectiveness of the approach is influenced by the size and trainin
+g set of the LLM, but does not fundamentally depend on the specific mo
+del. 
+AU  - Schäfer, Max
+AU  - Nadi, Sarah
+AU  - Eghbali, Aryaz
+AU  - Tip, Frank
+DA  - 2024/1/1/
+PY  - 2024
+DO  - 10.1109/tse.2023.3334955
+ID  - an-empirical-evaluat
+N1  - Snippet: … This paper presents a large-scale empirical evaluation on …
+ Concretely, we consider an approach where the LLM is … We implement o
+ur approach in TESTPILOT, an adaptive LLM-based …
+T2  - IEEE Transactions on Software Engineering
+TI  - An empirical evaluation of using large language models for automated u
+nit test generation
+UR  - https://ieeexplore.ieee.org/abstract/document/10329992/
+ER  - 
+TY  - JOUR
+AB  - Large Language Models (LLMs) are frequently discussed in academia and 
+the general public as support tools for virtually any use case that re
+lies on the production of text, including software engineering. Curren
+tly there is much debate, but little empirical evidence, regarding the
+ practical usefulness of LLM-based tools such as ChatGPT for engineers
+ in industry. We conduct an observational study of 24 professional sof
+tware engineers who have been using ChatGPT over a period of one week 
+in their jobs, and qualitatively analyse their dialogues with the chat
+bot as well as their overall experience (as captured by an exit survey
+). We find that, rather than expecting ChatGPT to generate ready-to-us
+e software artifacts (e.g., code), practitioners more often use ChatGP
+T to receive guidance on how to solve their tasks or learn about a top
+ic in more abstract terms. We also propose a theoretical framework for
+ how (i) purpose of the interaction, (ii) internal factors (e.g., the 
+user's personality), and (iii) external factors (e.g., company policy)
+ together shape the experience (in terms of perceived usefulness and t
+rust). We envision that our framework can be used by future research t
+o further the academic discussion on LLM usage by software engineering
+ practitioners, and to serve as a reference point for the design of fu
+ture empirical LLM research in this domain.
+AU  - Khojah, Ranim
+AU  - Mohamad, Mazen
+AU  - Leitner, Philipp
+AU  - Neto, Francisco Gomes de Oliveira
+DA  - 2024/4/23/
+PY  - 2024
+DO  - 10.48550/arxiv.2404.14901
+ID  - beyond-code-generati
+N1  - Snippet: … Still, we argue that future studies on LLM usage in softwar
+e engineering need to take into … 5.2 Threats to Validity The external
+ validity of our research has its limitations. Firstly, our …
+T2  - arXiv.org
+TI  - Beyond code generation: An observational study of chatgpt usage in sof
+tware engineering practice
+UR  - https://dl.acm.org/doi/abs/10.1145/3660788
+ER  - 
+TY  - JOUR
+AB  - In industrial control systems, the generation and verification of Prog
+rammable Logic Controller (PLC) code are critical for ensuring operati
+onal efficiency and safety. While Large Language Models (LLMs) have ma
+de strides in automated code generation, they often fall short in prov
+iding correctness guarantees and specialized support for PLC programmi
+ng. To address these challenges, this paper introduces Agents4PLC, a n
+ovel framework that not only automates PLC code generation but also in
+cludes code-level verification through an LLM-based multi-agent system
+. We first establish a comprehensive benchmark for verifiable PLC code
+ generation area, transitioning from natural language requirements to 
+human-written-verified formal specifications and reference PLC code. W
+e further enhance our `agents' specifically for industrial control sys
+tems by incorporating Retrieval-Augmented Generation (RAG), advanced p
+rompt engineering techniques, and Chain-of-Thought strategies. Evaluat
+ion against the benchmark demonstrates that Agents4PLC significantly o
+utperforms previous methods, achieving superior results across a serie
+s of increasingly rigorous metrics. This research not only addresses t
+he critical challenges in PLC programming but also highlights the pote
+ntial of our framework to generate verifiable code applicable to real-
+world industrial applications. 
+AU  - Liu, Zihan
+AU  - Zeng, Rong
+AU  - Wang, Dongxia
+AU  - Peng, Gang‐Ding
+AU  - Wang, Jingyi
+AU  - Zhu, Lei
+AU  - Liu, Peiyu
+AU  - Wang, Wenhai
+DA  - 2024/10/18/
+PY  - 2024
+DO  - 10.48550/arxiv.2410.14209
+ID  - agents4plc-automatin
+N1  - Snippet: … on high-level programming languages, and their performance 
+in generating PLC code … present a novel LLM-based multiagent framewor
+k designed to address the limitations of current …
+TI  - Agents4plc: Automating closed-loop plc code generation and verificatio
+n in industrial control systems using llm-based agents
+UR  - https://ieeexplore.ieee.org/abstract/document/11410524/
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Gabbay, Hagit
+AU  - Cohen, Anat
+DA  - 2024/7/9/
+PY  - 2024
+DO  - 10.1145/3657604.3662040
+ID  - combining-llm-genera
+N1  - Snippet: … -generated feedback on learning outcomes and the acquisitio
+n of programming skills, in … assistance, we suggest comparing the per
+formance of newer models in generating feedback…
+TI  - Combining LLM-generated and test-based feedback in a MOOC for programm
+ing
+UR  - https://dl.acm.org/doi/abs/10.1145/3657604.3662040
+ER  - 
+TY  - CONF
+AB  - 
+AU  - Mathews, Noble Saji
+AU  - Nagappan, Mei
+DA  - 2024/10/27/
+C2  - 2024
+DO  - 10.1145/3691620.3695527
+ID  - test-driven-developm
+N1  - Snippet: … We hypothesize that a problem statement’s difficulty could 
+significantly impact an LLM’s performance in code generation. We aim t
+o explore how varying levels of problem complexity …
+TI  - Test-driven development and llm-based code generation
+UR  - https://dl.acm.org/doi/abs/10.1145/3691620.3695527
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Pu, Kevin
+AU  - Lazaro, Daniel
+AU  - Arawjo, Ian
+AU  - Xia, Haijun
+AU  - Grossman, Tovi
+AU  - Chen, Yan
+DA  - 2025/2/25/
+PY  - 2025
+DO  - 10.1145/3706598.3713357
+ID  - assistance-or-disrup
+N1  - Snippet: … programming workfows remains unexplored. We introduce and e
+valuate Codellaborator, a design probe LLM agent that initiates progra
+mming … a within-subject experiment using three …
+TI  - Assistance or disruption? exploring and evaluating the design and trad
+e-offs of proactive ai programming support
+UR  - https://dl.acm.org/doi/abs/10.1145/3706598.3713357
+ER  - 
+TY  - JOUR
+AB  - Large Language Models (LLMs) have significantly impacted numerous doma
+ins, including Software Engineering (SE). Many recent publications hav
+e explored LLMs applied to various SE tasks. Nevertheless, a comprehen
+sive understanding of the application, effects, and possible limitatio
+ns of LLMs on SE is still in its early stages. To bridge this gap, we 
+conducted a systematic literature review on LLM4SE, with a particular 
+focus on understanding how LLMs can be exploited to optimize processes
+ and outcomes. We collect and analyze 229 research papers from 2017 to
+ 2023 to answer four key research questions (RQs). In RQ1, we categori
+ze different LLMs that have been employed in SE tasks, characterizing 
+their distinctive features and uses. In RQ2, we analyze the methods us
+ed in data collection, preprocessing, and application highlighting the
+ role of well-curated datasets for successful LLM for SE implementatio
+n. RQ3 investigates the strategies employed to optimize and evaluate t
+he performance of LLMs in SE. Finally, RQ4 examines the specific SE ta
+sks where LLMs have shown success to date, illustrating their practica
+l contributions to the field. From the answers to these RQs, we discus
+s the current state-of-the-art and trends, identifying gaps in existin
+g research, and flagging promising areas for future study. 
+AU  - Hou, Xinyi
+AU  - Zhao, Yanjie
+AU  - Liu, Yue
+AU  - Zhou, Yang
+AU  - Wang, Kailong
+AU  - Li, Li
+AU  - Luo, Xiapu
+AU  - Lo, David
+AU  - Grundy, John
+AU  - Wang, Haoyu
+DA  - 2023/1/1/
+PY  - 2023
+DO  - 10.48550/arxiv.2308.10620
+ID  - large-language-model
+N1  - Snippet: … Codex, an LLM with 12 billion parameters, has … Python prog
+ramming challenges posed by humans [43]. GPT-4 [320], an LLM from Open
+AI, has been used with a strong performance in …
+TI  - Large language models for software engineering: A systematic literatur
+e review
+UR  - https://dl.acm.org/doi/abs/10.1145/3695988
+ER  - 
+TY  - JOUR
+AB  - This work investigates large language models (LLMs) as teachable agent
+s for learning by teaching (LBT). LBT with teachable agents helps lear
+ners identify knowledge gaps and discover new knowledge. However, teac
+hable agents require expensive programming of subject-specific knowled
+ge. While LLMs as teachable agents can reduce the cost, LLMs' expansiv
+e knowledge as tutees discourages learners from teaching. We propose a
+ prompting pipeline that restrains LLMs' knowledge and makes them init
+iate"why"and"how"questions for effective knowledge-building. We combin
+ed these techniques into TeachYou, an LBT environment for algorithm le
+arning, and AlgoBo, an LLM-based tutee chatbot that can simulate misco
+nceptions and unawareness prescribed in its knowledge state. Our techn
+ical evaluation confirmed that our prompting pipeline can effectively 
+configure AlgoBo's problem-solving performance. Through a between-subj
+ect study with 40 algorithm novices, we also observed that AlgoBo's qu
+estions led to knowledge-dense conversations (effect size=0.71). Lastl
+y, we discuss design implications, cost-efficiency, and personalizatio
+n of LLM-based teachable agents.
+AU  - Jin, Hyoungwook
+AU  - Lee, Seon-Mi
+AU  - Shin, Hyun-Joon
+AU  - Kim, Juho
+DA  - 2023/9/25/
+PY  - 2023
+DO  - 10.48550/arxiv.2309.14534
+ID  - teach-ai-how-to-code
+N1  - Snippet: … LLM chatbot can serve as a teachable agent for rudimentary 
+LBT. Participants were positive about teaching an LLM … in-depth surve
+y responses revealed that the LLM chatbot fell short of …
+T2  - arXiv.org
+TI  - Teach ai how to code: Using large language models as teachable agents 
+for programming education
+UR  - https://dl.acm.org/doi/abs/10.1145/3613904.3642349
+ER  - 
+TY  - JOUR
+AB  - Historically, scientific discovery has been a lengthy and costly proce
+ss, demanding substantial time and resources from initial conception t
+o final results. To accelerate scientific discovery, reduce research c
+osts, and improve research quality, we introduce Agent Laboratory, an 
+autonomous LLM-based framework capable of completing the entire resear
+ch process. This framework accepts a human-provided research idea and 
+progresses through three stages--literature review, experimentation, a
+nd report writing to produce comprehensive research outputs, including
+ a code repository and a research report, while enabling users to prov
+ide feedback and guidance at each stage. We deploy Agent Laboratory wi
+th various state-of-the-art LLMs and invite multiple researchers to as
+sess its quality by participating in a survey, providing human feedbac
+k to guide the research process, and then evaluate the final paper. We
+ found that: (1) Agent Laboratory driven by o1-preview generates the b
+est research outcomes; (2) The generated machine learning code is able
+ to achieve state-of-the-art performance compared to existing methods;
+ (3) Human involvement, providing feedback at each stage, significantl
+y improves the overall quality of research; (4) Agent Laboratory signi
+ficantly reduces research expenses, achieving an 84% decrease compared
+ to previous autonomous research methods. We hope Agent Laboratory ena
+bles researchers to allocate more effort toward creative ideation rath
+er than low-level coding and writing, ultimately accelerating scientif
+ic discovery. 
+AU  - Schmidgall, Samuel
+AU  - Su, Yusheng
+AU  - Wang, Ze
+AU  - Sun, Ximeng
+AU  - Wu, Jialian
+AU  - Yu, Xiaodong
+AU  - Liu, Jiang
+AU  - Liu, Zicheng
+AU  - Barsoum, Emad
+DA  - 2025/1/7/
+PY  - 2025
+DO  - 10.48550/arxiv.2501.04227
+ID  - agent-laboratory-usi
+N1  - Snippet: … based on the LLM backend, with an experiment quality score 
+of 1.5/5 … In summary, the evaluation of quality across LLM backends …
+ discovery, including coding, experiment execution, …
+TI  - Agent laboratory: Using llm agents as research assistants
+UR  - https://aclanthology.org/anthology-files/anthology-files/pdf/findings/2025.findings-emnlp.320.pdf
+ER  - 
+TY  - JOUR
+AB  - Recent advancements in large language models (LLMs) have significantly
+ advanced the automation of software development tasks, including code
+ synthesis, program repair, and test generation. More recently, resear
+chers and industry practitioners have developed various autonomous LLM
+ agents to perform end-to-end software development tasks. These agents
+ are equipped with the ability to use tools, run commands, observe fee
+dback from the environment, and plan for future actions. However, the 
+complexity of these agent-based approaches, together with the limited 
+abilities of current LLMs, raises the following question: Do we really
+ have to employ complex autonomous software agents? To attempt to answ
+er this question, we build Agentless -- an agentless approach to autom
+atically solve software development problems. Compared to the verbose 
+and complex setup of agent-based approaches, Agentless employs a simpl
+istic two-phase process of localization followed by repair, without le
+tting the LLM decide future actions or operate with complex tools. Our
+ results on the popular SWE-bench Lite benchmark show that surprisingl
+y the simplistic Agentless is able to achieve both the highest perform
+ance (27.33%) and lowest cost (\$0.34) compared with all existing open
+-source software agents! Furthermore, we manually classified the probl
+ems in SWE-bench Lite and found problems with exact ground truth patch
+ or insufficient/misleading issue descriptions. As such, we construct 
+SWE-bench Lite-S by excluding such problematic issues to perform more 
+rigorous evaluation and comparison. Our work highlights the current ov
+erlooked potential of a simple, interpretable technique in autonomous 
+software development. We hope Agentless will help reset the baseline, 
+starting point, and horizon for autonomous software agents, and inspir
+e future work along this crucial direction. 
+AU  - Xia, Chunqiu Steven
+AU  - Deng, Yinlin
+AU  - Dunn, Stanley
+AU  - Zhang, Lingming
+DA  - 2024/7/1/
+PY  - 2024
+DO  - 10.48550/arxiv.2407.01489
+ID  - agentless-demystifyi
+N1  - Snippet: … limitations of LLM agents in software development. We evalu
+ate AGENTLESS on the popular SWE-bench Lite [23] benchmark and demonst
+rate that AGENTLESS not only achieves the …
+TI  - Agentless: Demystifying llm-based software engineering agents
+UR  - https://arxiv.org/abs/2407.01489
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - He, Zhongmou
+AU  - Choi, Yee Man
+AU  - Zhang, Kexun
+AU  - Ji, Jiabao
+AU  - Zhou, Junting
+AU  - Xu, Dejia
+AU  - Bercovich, Ivan
+AU  - Zhang, Aidan
+AU  - Li, Lei
+DA  - 2025/5/30/
+PY  - 2025
+DO  - 10.48550/arxiv.2505.24098
+ID  - hardtests-synthesizi
+N1  - Snippet: … , can largely improve coding LLM performance after RL train
+ing. … LLM, while the other two are generated by LLM-generated program
+s. Before generating inputs, we first prompt an LLM …
+T2  - arXiv.org
+TI  - Hardtests: Synthesizing high-quality test cases for llm coding
+UR  - https://arxiv.org/abs/2505.24098
+ER  - 
+TY  - JOUR
+AB  - The past few decades have witnessed an upsurge in data, forming the fo
+undation for data-hungry, learning-based AI technology. Conversational
+ agents, often referred to as AI chatbots, rely heavily on such data t
+o train large language models (LLMs) and generate new content (knowled
+ge) in response to user prompts. With the advent of OpenAI's ChatGPT, 
+LLM-based chatbots have set new standards in the AI community. This pa
+per presents a complete survey of the evolution and deployment of LLM-
+based chatbots in various sectors. We first summarize the development 
+of foundational chatbots, followed by the evolution of LLMs, and then 
+provide an overview of LLM-based chatbots currently in use and those i
+n the development phase. Recognizing AI chatbots as tools for generati
+ng new knowledge, we explore their diverse applications across various
+ industries. We then discuss the open challenges, considering how the 
+data used to train the LLMs and the misuse of the generated knowledge 
+can cause several issues. Finally, we explore the future outlook to au
+gment their efficiency and reliability in numerous applications. By ad
+dressing key milestones and the present-day context of LLM-based chatb
+ots, our survey invites readers to delve deeper into this realm, refle
+cting on how their next generation will reshape conversational AI. 
+AU  - Dam, Sumit Kumar
+AU  - Hong, Choong Seon
+AU  - Qiao, Yu
+AU  - Zhang, Chaoning
+DA  - 2024/6/17/
+PY  - 2024
+DO  - 10.48550/arxiv.2406.16937
+ID  - a-complete-survey-on
+N1  - Snippet: … With the advent of OpenAI’s ChatGPT, LLM-based chatbots hav
+e … survey of the evolution and deployment of LLM-based chatbots in va
+rious sectors. We first summarize the development …
+TI  - A complete survey on llm-based ai chatbots
+UR  - https://arxiv.org/abs/2406.16937
+ER  - 
+TY  - JOUR
+AB  - While current chat-based AI assistants primarily operate reactively, r
+esponding only when prompted by users, there is significant potential 
+for these systems to proactively assist in tasks without explicit invo
+cation, enabling a mixed-initiative interaction. This work explores th
+e design and implementation of proactive AI assistants powered by larg
+e language models. We first outline the key design considerations for 
+building effective proactive assistants. As a case study, we propose a
+ proactive chat-based programming assistant that automatically provide
+s suggestions and facilitates their integration into the programmer's 
+code. The programming context provides a shared workspace enabling the
+ assistant to offer more relevant suggestions. We conducted a randomiz
+ed experimental study examining the impact of various design elements 
+of the proactive assistant on programmer productivity and user experie
+nce. Our findings reveal significant benefits of incorporating proacti
+ve chat assistants into coding environments and uncover important nuan
+ces that influence their usage and effectiveness. 
+AU  - Chen, Valerie
+AU  - Zhu, A A
+AU  - Zhao, Sebastian
+AU  - Mozannar, Hussein
+AU  - Sontag, David
+AU  - Talwalkar, Ameet
+DA  - 2024/10/6/
+PY  - 2024
+DO  - 10.48550/arxiv.2410.04596
+ID  - need-help-designing-
+N1  - Snippet: … As a case study, we propose a proactive chat-based programm
+ing assistant that … In this work, all LLM calls are made to GPT-4o [3
+9], a state-of-the-art LLM. In pilot studies, we …
+TI  - Need help? designing proactive ai assistants for programming
+UR  - https://dl.acm.org/doi/abs/10.1145/3706598.3714002
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Ferino, S
+AU  - Hoda, R
+AU  - Grundy, J
+AU  - Treude, C
+ID  - B9kWdYER-yoJ
+N1  - Snippet: … We also identify which LLM-based tools are being used by th
+e novice software developers/… We suggest that future research investi
+gate the impact of the performance of LLM users in …
+TI  - Novice developers' perspectives on adopting llms for software developm
+ent: A systematic literature review
+UR  - https://dl.acm.org/doi/abs/10.1145/3800580
+ER  - 
+TY  - JOUR
+AB  - Large language models (LLMs) have shown impressive in-context learning
+ (ICL) ability in code generation. LLMs take a prompt consisting of re
+quirement-code examples and a new requirement as input, and output new
+ programs. Existing studies have found that ICL is highly dominated by
+ the examples and thus arises research on example selection. However, 
+existing approaches randomly select examples or only consider the text
+ual similarity of requirements to retrieve, leading to sub-optimal per
+formance. In this paper, we propose a novel learning-based selection a
+pproach named LAIL (LLM-Aware In-context Learning) for code generation
+. Given a candidate example, we exploit LLMs themselves to estimate it
+ by considering the generation probabilities of ground-truth programs 
+given a requirement and the example. We then label candidate examples 
+as positive or negative through the probability feedback. Based on the
+ labeled data, we import a contrastive learning objective to train an 
+effective retriever that acquires the preference of LLMs in code gener
+ation. We apply LAIL to three LLMs and evaluate it on three representa
+tive datasets (e.g., MBJP, MBPP, and MBCPP). LATA outperforms the stat
+e-of-the-art baselines by 11.58%, 6.89%, and 5.07% on CodeGen, and 4.3
+8%, 2.85%, and 2.74% on GPT-3.5 in terms of Pass@1, respectively.
+AU  - Li, Jia
+AU  - Li, Ge
+AU  - Tao, Chongyang
+AU  - Zhang, Huangzhao
+AU  - Liu, Fang
+AU  - Jin, Zhi
+DA  - 2023/10/15/
+PY  - 2023
+DO  - 10.48550/arxiv.2310.09748
+ID  - large-language-model
+N1  - Snippet: … a Large language model-Aware … performance of LAIL on the r
+epository-level code generation, to evaluate whether our approach can 
+generalize to the complex real-world programming …
+T2  - arXiv.org
+TI  - Large language model-aware in-context learning for code generation
+UR  - https://dl.acm.org/doi/abs/10.1145/3715908
+ER  - 
+TY  - JOUR
+AB  - The integration of Large Language Models (LLMs) and Edge Intelligence 
+(EI) introduces a groundbreaking paradigm for intelligent edge devices
+. With their capacity for human-like language processing and generatio
+n, LLMs empower edge computing with a powerful set of tools, paving th
+e way for a new era of decentralized intelligence. Yet, a notable rese
+arch gap exists in obtaining a thorough comprehension of LLM-based EI 
+architectures, which should incorporate crucial elements such as secur
+ity, optimization, and responsible development. This survey aims to br
+idge this gap by providing a comprehensive resource for both researche
+rs and practitioners. We explore LLM-based EI architectures in-depth, 
+carefully analyzing state-of-the-art paradigms and design decisions. T
+o facilitate efficient and scalable edge deployments, we perform a com
+parative analysis of recent optimization and autonomy techniques speci
+fically designed for resource-constrained edge environments. Additiona
+lly, we shed light on the extensive potential of LLM-based EI by demon
+strating its varied practical applications across a wide range of doma
+ins. Acknowledging the utmost importance of security, our survey thoro
+ughly investigates potential vulnerabilities inherent in LLM-based EI 
+deployments. We explore corresponding defense mechanisms to protect th
+e integrity and confidentiality of data processed at the edge. In conc
+lusion, highlighting the essential aspect of trustworthiness, we outli
+ne best practices and guiding principles for the responsible developme
+nt and deployment of these systems. By conducting a comprehensive revi
+ew of these key components, our survey aims to support the ethical dev
+elopment and strategic implementation of LLM-driven EI, paving the way
+ for its transformative impact on diverse applications.
+AU  - Friha, Othmane
+AU  - Ferrag, Mohamed Amine
+AU  - Kantarcı, Burak
+AU  - Çakmak, Burak
+AU  - Ozgun, Arda
+AU  - Ghoualmi‐Zine, Nacira
+DA  - 2024/1/1/
+PY  - 2024
+DO  - 10.1109/ojcoms.2024.3456549
+ID  - llm-based-edge-intel
+N1  - Snippet: … and guiding principles for the responsible development and 
+deployment of these systems. By … , our survey aims to support the eth
+ical development and strategic implementation of LLM-…
+T2  - IEEE open journal of the Communications Society
+TI  - Llm-based edge intelligence: A comprehensive survey on architectures, 
+applications, security and trustworthiness
+UR  - https://ieeexplore.ieee.org/abstract/document/10669603/
+ER  - 
+TY  - JOUR
+AB  - With the advent of large language models (LLMs) in the artificial inte
+lligence (AI) area, the field of software engineering (SE) has also wi
+tnessed a paradigm shift. These models, by leveraging the power of dee
+p learning and massive amounts of data, have demonstrated an unprecede
+nted capacity to understand, generate, and operate programming languag
+es. They can assist developers in completing a broad spectrum of softw
+are development activities, encompassing software design, automated pr
+ogramming, and maintenance, which potentially reduces huge human effor
+ts. Integrating LLMs within the SE landscape (LLM4SE) has become a bur
+geoning trend, necessitating exploring this emergent landscape’s chall
+enges and opportunities. The paper aims at revisiting the software dev
+elopment life cycle (SDLC) under LLMs, and highlighting challenges and
+ opportunities of the new paradigm. The paper first summarizes the ove
+rall process of LLM4SE, and then elaborates on the current challenges 
+based on a through discussion. The discussion was held among more than
+ 20 participants from academia and industry, specializing in fields su
+ch as software engineering and artificial intelligence. Specifically, 
+we achieve 26 key challenges from seven aspects, including software re
+quirement &amp; design, coding assistance, testing code generation, co
+de review, code maintenance, software vulnerability management, and da
+ta, training, and evaluation. We hope the achieved challenges would be
+nefit future research in the LLM4SE field. 
+AU  - Gao, Cuiyun
+AU  - Hu, Xing
+AU  - Gao, Shan
+AU  - Xia, Xin
+AU  - Jin, Zhi
+DA  - 2025/1/13/
+PY  - 2025
+DO  - 10.1145/3712005
+ID  - the-current-challeng
+N1  - Snippet: … evaluation of LLM-based software requirements and design pr
+ocess has received scant attention. (6) Inconsistency between software
+ … 124] have demonstrated the software modeling …
+T2  - ACM Transactions on Software Engineering and Methodology
+TI  - The current challenges of software engineering in the era of large lan
+guage models
+UR  - https://dl.acm.org/doi/abs/10.1145/3712005
+ER  - 
+TY  - JOUR
+AB  - 
+AU  - Jalil, S
+ID  - lqUh7tX237wJ
+N1  - Snippet: … AI Pair Programming Assistants spurred the development of s
+pecialized models aimed at aiding software … 4) Software License Viola
+tion: Our survey has found that the training data used …
+TI  - The transformative influence of llms on software development & develop
+er productivity
+UR  - https://ieeexplore.ieee.org/abstract/document/11166110/
+ER  - 
+TY  - JOUR
+AB  - As the adoption of LLMs becomes more widespread in software coding eco
+systems, a pressing issue has emerged: does the generated code contain
+ social bias and unfairness, such as those related to age, gender, and
+ race? This issue concerns the integrity, fairness, and ethical founda
+tion of software applications that depend on the code generated by the
+se models but are underexplored in the literature. This paper presents
+ a novel bias testing framework that is specifically designed for code
+ generation tasks. Based on this framework, we conduct an extensive em
+pirical study on the biases in code generated by five widely studied L
+LMs (i.e., PALM-2-CodeChat-bison, Claude-instant-1, GPT-3.5-turbo, GPT
+-4-turbo, and GPT-4). Our findings reveal that biases are prevalent. F
+or example, 13.47% to 49.10% of the codes generated by these LLMs have
+ biased behaviors towards gender. Moreover, we study five bias mitigat
+ion prompt strategies that are commonly used in current code generatio
+n scenarios, i.e., zero-shot, one-shot, few-shot, and two Chain-of-Tho
+ught (CoT) prompts, with and without provided feedback-driven refineme
+nt. Our evaluation results illustrate that using direct prompt enginee
+ring strategies has limited effectiveness in mitigating bias, but our 
+test execution feedback can help to reduce the ratio of code biases to
+ a large extent (e.g., from 59.88% to 4.79% for GPT-4) 1 . 
+AU  - Huang, Dong
+AU  - Zhang, Jie M.
+AU  - Bu, Qingwen
+AU  - Xie, Xiaofei
+AU  - Chen, Junjie
+AU  - Cui, Heming
+DA  - 2025/3/18/
+PY  - 2025
+DO  - 10.1145/3724117
+ID  - bias-testing-and-mit
+N1  - Snippet: … the bias of the LLM-generated code, we evaluate the CBS of 
+the LLM-generated code at six different temperatures: 0.0, 0.2, 0.4, 0
+.6, 0.8, and 1.0. The evaluation results are shown in …
+T2  - ACM Transactions on Software Engineering and Methodology
+TI  - Bias testing and mitigation in llm-based code generation
+UR  - https://dl.acm.org/doi/abs/10.1145/3724117
+ER  - 
+TY  - JOUR
+AB  - Since the advent of personal computing devices, intelligent personal a
+ssistants (IPAs) have been one of the key technologies that researcher
+s and engineers have focused on, aiming to help users efficiently obta
+in information and execute tasks, and provide users with more intellig
+ent, convenient, and rich interaction experiences. With the developmen
+t of smartphones and IoT, computing and sensing devices have become ub
+iquitous, greatly expanding the boundaries of IPAs. However, due to th
+e lack of capabilities such as user intent understanding, task plannin
+g, tool using, and personal data management etc., existing IPAs still 
+have limited practicality and scalability. Recently, the emergence of 
+foundation models, represented by large language models (LLMs), brings
+ new opportunities for the development of IPAs. With the powerful sema
+ntic understanding and reasoning capabilities, LLM can enable intellig
+ent agents to solve complex problems autonomously. In this paper, we f
+ocus on Personal LLM Agents, which are LLM-based agents that are deepl
+y integrated with personal data and personal devices and used for pers
+onal assistance. We envision that Personal LLM Agents will become a ma
+jor software paradigm for end-users in the upcoming era. To realize th
+is vision, we take the first step to discuss several important questio
+ns about Personal LLM Agents, including their architecture, capability
+, efficiency and security. We start by summarizing the key components 
+and design choices in the architecture of Personal LLM Agents, followe
+d by an in-depth analysis of the opinions collected from domain expert
+s. Next, we discuss several key challenges to achieve intelligent, eff
+icient and secure Personal LLM Agents, followed by a comprehensive sur
+vey of representative solutions to address these challenges.
+AU  - Li, Yuanchun
+AU  - Wen, Hao
+AU  - Wang, Weijun
+AU  - Li, Xiangyu
+AU  - Yuan, Yizhen
+AU  - Liu, Guohong
+AU  - Liu, Jiacheng
+AU  - Xu, Wenxing
+AU  - Wang, Xiang
+AU  - Sun, Yi
+AU  - Kong, Rui
+AU  - Wang, Yile
+AU  - Geng, Hanfei
+AU  - Luan, Jian
+AU  - Jin, Xuefeng
+AU  - Ye, Zi-Liang
+AU  - Xiong, Guanjing
+AU  - Zhang, Fan
+AU  - Li, Xiang
+AU  - Xu, Mengwei
+AU  - Li, Zhijun
+AU  - Li, Peng
+AU  - Liu, Yang
+AU  - Zhang, Yaqiong
+AU  - Liu, Yunxin
+DA  - 2024/1/10/
+PY  - 2024
+DO  - 10.48550/arxiv.2401.05459
+ID  - personal-llm-agents-
+N1  - Snippet: … , LLM can enable intelligent agents to solve complex proble
+ms autonomously. In this paper, we focus on Personal LLM Agents, which
+ are LLM… LLM Agents will become a major software …
+T2  - arXiv.org
+TI  - Personal llm agents: Insights and survey about the capability, efficie
+ncy and security
+UR  - https://arxiv.org/abs/2401.05459
+ER  - 
+TY  - JOUR
+AB  - Researchers have made significant progress in automating the software 
+development process in the past decades. Recent progress in Large Lang
+uage Models (LLMs) has significantly impacted the development process,
+ where developers can use LLM-based programming assistants to achieve 
+automated coding. Nevertheless software engineering involves the proce
+ss of program improvement apart from coding, specifically to enable so
+ftware maintenance (e.g. bug fixing) and software evolution (e.g. feat
+ure additions). In this paper, we propose an automated approach for so
+lving GitHub issues to autonomously achieve program improvement. In ou
+r approach called AutoCodeRover, LLMs are combined with sophisticated 
+code search capabilities, ultimately leading to a program modification
+ or patch. In contrast to recent LLM agent approaches from AI research
+ers and practitioners, our outlook is more software engineering orient
+ed. We work on a program representation (abstract syntax tree) as oppo
+sed to viewing a software project as a mere collection of files. Our c
+ode search exploits the program structure in the form of classes/metho
+ds to enhance LLM's understanding of the issue's root cause, and effec
+tively retrieve a context via iterative search. The use of spectrum ba
+sed fault localization using tests, further sharpens the context, as l
+ong as a test-suite is available. Experiments on SWE-bench-lite which 
+consists of 300 real-life GitHub issues show increased efficacy in sol
+ving GitHub issues (22-23% on SWE-bench-lite). On the full SWE-bench c
+onsisting of 2294 GitHub issues, AutoCodeRover solved around 16% of is
+sues, which is higher than the efficacy of the recently reported AI so
+ftware engineer Devin from Cognition Labs, while taking time comparabl
+e to Devin. We posit that our workflow enables autonomous software eng
+ineering, where, in future, auto-generated code from LLMs can be auton
+omously improved.
+AU  - Zhang, Yuntong
+AU  - Ruan, Haifeng
+AU  - Fan, Zhiyu
+AU  - Roychoudhury, Abhik
+DA  - 2024/4/8/
+PY  - 2024
+DO  - 10.48550/arxiv.2404.05427
+ID  - autocoderover-autono
+N1  - Snippet: … LLM agent approaches from AI researchers and practitioners,
+ our outlook is more software … We address this by repeating our main 
+evaluation experiment three times and releasing a …
+T2  - arXiv.org
+TI  - Autocoderover: Autonomous program improvement
+UR  - https://dl.acm.org/doi/abs/10.1145/3650212.3680384
+ER  - 
+TY  - JOUR
+AB  - Software development is a complex task that necessitates cooperation a
+mong multiple members with diverse skills. Numerous studies used deep 
+learning to improve specific phases in a waterfall model, such as desi
+gn, coding, and testing. However, the deep learning model in each phas
+e requires unique designs, leading to technical inconsistencies across
+ various phases, which results in a fragmented and ineffective develop
+ment process. In this paper, we introduce ChatDev, a chat-powered soft
+ware development framework in which specialized agents driven by large
+ language models (LLMs) are guided in what to communicate (via chat ch
+ain) and how to communicate (via communicative dehallucination). These
+ agents actively contribute to the design, coding, and testing phases 
+through unified language-based communication, with solutions derived f
+rom their multi-turn dialogues. We found their utilization of natural 
+language is advantageous for system design, and communicating in progr
+amming language proves helpful in debugging. This paradigm demonstrate
+s how linguistic communication facilitates multi-agent collaboration, 
+establishing language as a unifying bridge for autonomous task-solving
+ among LLM agents. The code and data are available at https://github.c
+om/OpenBMB/ChatDev.
+AU  - Chen, Qian
+AU  - Liu, Wei
+AU  - Liu, Hongzhang
+AU  - Chen, Nuo
+AU  - Dang, Yufan
+AU  - Li, Jiahao
+AU  - Yang, Cheng
+AU  - Chen, Weize
+AU  - Su, Yu-Sheng
+AU  - Cong, Xin
+AU  - Xu, Juyuan
+AU  - Li, D.
+AU  - Liu, Zhiyuan
+AU  - Sun, Maosong
+DA  - 2024/1/1/
+PY  - 2024
+DO  - 10.18653/v1/2024.acl-long.810
+ID  - chatdev-communicativ
+N1  - Snippet: … 4 Evaluation Baselines We chose some representative LLMbase
+d software development … 2023) is a fundamental single-agent approach 
+in LLM-driven software agents with a precise …
+TI  - Chatdev: Communicative agents for software development
+UR  - https://aclanthology.org/2024.acl-long.810/
+ER  - 
+TY  - JOUR
+AB  - As Large Language Models (LLMs) have shown significant intelligence, t
+he progress to leverage LLMs as planning modules of autonomous agents 
+has attracted more attention. This survey provides the first systemati
+c view of LLM-based agents planning, covering recent works aiming to i
+mprove planning ability. We provide a taxonomy of existing works on LL
+M-Agent planning, which can be categorized into Task Decomposition, Pl
+an Selection, External Module, Reflection and Memory. Comprehensive an
+alyses are conducted for each direction, and further challenges for th
+e field of research are discussed.
+AU  - Huang, Xu
+AU  - Liu, Weiwen
+AU  - Chen, Xiaolong
+AU  - Wang, Xingmei
+AU  - Wang, Hao
+AU  - Lian, Defu
+AU  - Wang, Yasheng
+AU  - Tang, Ruiming
+AU  - Chen, Enhong
+DA  - 2024/2/5/
+PY  - 2024
+DO  - 10.48550/arxiv.2402.02716
+ID  - understanding-the-pl
+N1  - Snippet: … advantages and limitations, aiming to provide a systematic 
+view of the planning ability of LLMbased … Leveraging the semantic und
+erstanding and coding capabilities of LLM, the authors …
+T2  - arXiv.org
+TI  - Understanding the planning of llm agents: A survey
+UR  - https://www.researchgate.net/profile/Xu-Huang-37/publication/380756642_Understanding_the_planning_of_LLM_agents_A_survey/links/664d5a9dbc86444c72f64b6f/Understanding-the-planning-of-LLM-agents-A-survey.pdf
+ER  - 
+TY  - JOUR
+AB  - Large Language Models (LLMs) are emerging as transformative tools for 
+software vulnerability detection. Traditional methods, including stati
+c and dynamic analysis, face limitations in efficiency, false-positive
+ rates, and scalability with modern software complexity. Through code 
+structure analysis, pattern identification, and repair suggestion gene
+ration, LLMs demonstrate a novel approach to vulnerability mitigation.
+
+ This survey examines LLMs in vulnerability detection, analyzing probl
+em formulation, model selection, application methodologies, datasets, 
+and evaluation metrics. We investigate current research challenges, em
+phasizing cross-language detection, multimodal integration, and reposi
+tory-level analysis. Based on our findings, we propose solutions addre
+ssing dataset scalability, model interpretability, and low-resource sc
+enarios.
+ Our contributions include: (1) a systematic analysis of LLM applicati
+ons in vulnerability detection; (2) a unified framework examining patt
+erns and variations across studies; and (3) identification of key chal
+lenges and research directions. This work advances the understanding o
+f LLM-based vulnerability detection. The latest findings are maintaine
+d at https://github.com/OwenSanzas/LLM-For-Vulnerability-Detection
+AU  - Sheng, Ze
+AU  - Chen, Zhicheng
+AU  - Gu, Shuning
+AU  - Huang, Heqing
+AU  - Gu, Guofei
+AU  - Huang, Jeff
+DA  - 2025/2/10/
+PY  - 2025
+DO  - 10.48550/arxiv.2502.07049
+ID  - llms-in-software-sec
+N1  - Snippet: … Our survey speciically focuses on LLMbased vulnerability de
+tection with a more detailed summary of techniques and methodologies. 
+At the same time, Zhou et al. [159] investigated …
+T2  - arXiv.org
+TI  - Llms in software security: A survey of vulnerability detection techniq
+ues and insights
+UR  - https://dl.acm.org/doi/abs/10.1145/3769082
+ER  - 
+TY  - JOUR
+AB  - Large language models (LLMs) have achieved remarkable success across v
+arious domains, driving significant technological advancements and inn
+ovations. Despite the rapid growth in model scale and capability, syst
+ematic, data-driven research on how structural configurations affect p
+erformance remains scarce. To address this gap, we present a large-sca
+le dataset encompassing diverse open-source LLM structures and their p
+erformance across multiple benchmarks. Leveraging this dataset, we con
+duct a systematic, data mining-driven analysis to validate and quantif
+y the relationship between structural configurations and performance. 
+Our study begins with a review of the historical development of LLMs a
+nd an exploration of potential future trends. We then analyze how vari
+ous structural choices impact performance across benchmarks and furthe
+r corroborate our findings using mechanistic interpretability techniqu
+es. By providing data-driven insights into LLM optimization, our work 
+aims to guide the targeted development and application of future model
+s. We will release our dataset at https://huggingface.co/datasets/DX03
+69/LLM-Structure-Performance-Dataset 
+AU  - Su-qing, Wang
+AU  - Zuchao, Li,
+AU  - Luohe, Shi
+AU  - Bo, Du,
+AU  - Hai, Zhao
+AU  - Yun, Li,
+DA  - 2025/9/24/
+PY  - 2025
+DO  - 10.48550/arxiv.2509.18136
+ID  - from-parameters-to-p
+N1  - Snippet: … performance remains scarce. To address this gap, we present
+ a large-scale dataset encompassing diverse open-source LLM structures
+ and their performance … and performance. Our …
+TI  - From Parameters to Performance: A Data-Driven Study on LLM Structure a
+nd Development
+UR  - https://aclanthology.org/2025.emnlp-main.1325/
+ER  - 
+TY  - JOUR
+AB  - Large Language Models (LLMs) such as ChatGPT and GitHub Copilot have r
+evolutionized automated code generation in software engineering. Howev
+er, as these models are increasingly utilized for software development
+, concerns have arisen regarding the security and quality of the gener
+ated code. These concerns stem from LLMs being primarily trained on pu
+blicly available code repositories and internet-based textual data, wh
+ich may contain insecure code. This presents a significant risk of per
+petuating vulnerabilities in the generated code, creating potential at
+tack vectors for exploitation by malicious actors. Our research aims t
+o tackle these issues by introducing a framework for secure behavioral
+ learning of LLMs through In-Content Learning (ICL) patterns during th
+e code generation process, followed by rigorous security evaluations. 
+To achieve this, we have selected four diverse LLMs for experimentatio
+n. We have evaluated these coding LLMs across three programming langua
+ges and identified security vulnerabilities and code smells. The code 
+is generated through ICL with curated problem sets and undergoes rigor
+ous security testing to evaluate the overall quality and trustworthine
+ss of the generated code. Our research indicates that ICL-driven one-s
+hot and few-shot learning patterns can enhance code security, reducing
+ vulnerabilities in various programming scenarios. Developers and rese
+archers should know that LLMs have a limited understanding of security
+ principles. This may lead to security breaches when the generated cod
+e is deployed in production systems. Our research highlights LLMs are 
+a potential source of new vulnerabilities to the software supply chain
+. It is important to consider this when using LLMs for code generation
+. This research article offers insights into improving LLM security an
+d encourages proactive use of LLMs for code generation to ensure softw
+are system safety. 
+AU  - Mohsin, Ahmad
+AU  - Janicke, Helge
+AU  - Wood, Adrian
+AU  - Sarker, Iqbal H.
+AU  - Μαγλαράς, Λέανδρος
+AU  - Janjua, Naeem Khalid
+DA  - 2024/6/18/
+PY  - 2024
+DO  - 10.48550/arxiv.2406.12513
+ID  - can-we-trust-large-l
+N1  - Snippet: … LLM security research. We apply each ICL security pattern s
+pecifically within programming … • We perform security assessments on 
+the generated LLM code using industry-standard …
+TI  - Can we trust large language models generated code? a framework for in-
+context learning, security patterns, and code evaluations across diver
+se llms
+UR  - https://arxiv.org/abs/2406.12513
+ER  - 
+TY  - JOUR
+AB  - Automated program repair has emerged as a powerful technique to mitiga
+te the impact of software bugs on system reliability and user experien
+ce. This paper introduces RepairAgent, the first work to address the p
+rogram repair challenge through an autonomous agent based on a large l
+anguage model (LLM). Unlike existing deep learning-based approaches, w
+hich prompt a model with a fixed prompt or in a fixed feedback loop, o
+ur work treats the LLM as an agent capable of autonomously planning an
+d executing actions to fix bugs by invoking suitable tools. RepairAgen
+t freely interleaves gathering information about the bug, gathering re
+pair ingredients, and validating fixes, while deciding which tools to 
+invoke based on the gathered information and feedback from previous fi
+x attempts. Key contributions that enable RepairAgent include a set of
+ tools that are useful for program repair, a dynamically updated promp
+t format that allows the LLM to interact with these tools, and a finit
+e state machine that guides the agent in invoking the tools. Our evalu
+ation on the popular Defects4J dataset demonstrates RepairAgent's effe
+ctiveness in autonomously repairing 164 bugs, including 39 bugs not fi
+xed by prior techniques. Interacting with the LLM imposes an average c
+ost of 270,000 tokens per bug, which, under the current pricing of Ope
+nAI's GPT-3.5 model, translates to 14 cents of USD per bug. To the bes
+t of our knowledge, this work is the first to present an autonomous, L
+LM-based agent for program repair, paving the way for future agent-bas
+ed techniques in software engineering.
+AU  - Bouzenia, Islem
+AU  - Devanbu, Premkumar
+AU  - Pradel, Michael
+DA  - 2024/3/25/
+PY  - 2024
+DO  - 10.48550/arxiv.2403.17134
+ID  - repairagent-an-auton
+N1  - Snippet: … performance for various tasks [26]. A promising way of usin
+g these abilities are LLM-based agents, by which we mean LLM-… In our 
+evaluation, we use the same LLM for both the main …
+T2  - arXiv.org
+TI  - Repairagent: An autonomous, llm-based agent for program repair
+UR  - https://ieeexplore.ieee.org/abstract/document/11029914/
+ER  - 
+TY  - JOUR
+AB  - There has been a recent explosion of research on Large Language Models
+ (LLMs) for software engineering tasks, in particular code generation.
+ However, results from LLMs can be highly unstable; nondeterministical
+ly returning very different code for the same prompt. Such non-determi
+nism affects the correctness and consistency of the generated code, un
+dermines developers’ trust in LLMs, and yields low reproducibility in 
+LLM-based papers. Nevertheless, there is no work investigating how ser
+ious this non-determinism threat is. To fill this gap, this paper cond
+ucts an empirical study on the non-determinism of ChatGPT in code gene
+ration. We chose to study ChatGPT because it is already highly prevale
+nt in the code generation research literature. We report results from 
+a study of 829 code generation problems across three code generation b
+enchmarks (i.e., CodeContests, APPS, and HumanEval) with three aspects
+ of code similarities: semantic similarity, syntactic similarity, and 
+structural similarity. Our results reveal that ChatGPT exhibits a high
+ degree of non-determinism under the default setting: the ratio of cod
+ing tasks with zero equal test output across different requests is 75.
+76%, 51.00%, and 47.56% for three different code generation datasets (
+i.e., CodeContests, APPS, and HumanEval), respectively. In addition, w
+e find that setting the temperature to 0 does not guarantee determinis
+m in code generation, although it indeed brings less non-determinism t
+han the default configuration ( temperature =1). In order to put LLM-b
+ased research on firmer scientific foundations, researchers need to ta
+ke into account non-determinism in drawing their conclusions. 
+AU  - Ouyang, Shuyin
+AU  - Zhang, Jie M.
+AU  - Harman, Mark
+AU  - Wang, Meng
+DA  - 2024/9/26/
+PY  - 2024
+DO  - 10.1145/3697010
+ID  - an-empirical-study-o
+N1  - Snippet: … threat, we collect 76 LLM-based code generation papers … of
+ coding tasks (eg, the length of code generation instructions, the cod
+e problem difficulty, and labels) and the similarity metrics …
+T2  - ACM Transactions on Software Engineering and Methodology
+TI  - An empirical study of the non-determinism of chatgpt in code generatio
+n
+UR  - https://dl.acm.org/doi/abs/10.1145/3697010
+ER  - 
+TY  - JOUR
+AB  - Current approaches to program synthesis with Large Language Models (LL
+Ms) exhibit a"near miss syndrome": they tend to generate programs that
+ semantically resemble the correct answer (as measured by text similar
+ity metrics or human evaluation), but achieve a low or even zero accur
+acy as measured by unit tests due to small imperfections, such as the 
+wrong input or output format. This calls for an approach known as Synt
+hesize, Execute, Debug (SED), whereby a draft of the solution is gener
+ated first, followed by a program repair phase addressing the failed t
+ests. To effectively apply this approach to instruction-driven LLMs, o
+ne needs to determine which prompts perform best as instructions for L
+LMs, as well as strike a balance between repairing unsuccessful progra
+ms and replacing them with newly generated ones. We explore these trad
+e-offs empirically, comparing replace-focused, repair-focused, and hyb
+rid debug strategies, as well as different template-based and model-ba
+sed prompt-generation techniques. We use OpenAI Codex as the LLM and P
+rogram Synthesis Benchmark 2 as a database of problem descriptions and
+ tests for evaluation. The resulting framework outperforms both conven
+tional usage of Codex without the repair phase and traditional genetic
+ programming approaches.
+AU  - Liventsev, Vadim
+AU  - Grishina, Anastasiia
+AU  - Härmä, Aki
+AU  - Moonen, Leon
+DA  - 2023/4/20/
+PY  - 2023
+DO  - 10.1145/3583131.3590481
+ID  - fully-autonomous-pro
+N1  - Snippet: … We test SEIDR on 11 debug instructions to explore whether t
+he use of the LLM for text completion 𝑝text(input) benefits the perfo
+rmance of our framework, as well as what effect different …
+T2  - arXiv.org
+TI  - Fully autonomous programming with large language models
+UR  - https://dl.acm.org/doi/abs/10.1145/3583131.3590481
+ER  - 
+TY  - JOUR
+AB  - LLM-based coding agents are rapidly being deployed in software develop
+ment, yet their security implications remain poorly understood. These 
+agents, while capable of accelerating software development, may inadve
+rtently introduce insecure practices. We conducted the first systemati
+c security evaluation of autonomous coding agents, analyzing over 12,0
+00 actions across five state-of-the-art models (GPT-4o, GPT-4.1, Claud
+e variants) on 93 real-world software setup tasks. Our findings reveal
+ significant security concerns: 21% of agent trajectories contained in
+secure actions, with models showing substantial variation in security 
+behavior. We developed a high-precision detection system that identifi
+ed four major vulnerability categories, with information exposure (CWE
+-200) being the most prevalent one. We also evaluated mitigation strat
+egies including feedback mechanisms and security reminders with variou
+s effectiveness between models. GPT-4.1 demonstrated exceptional secur
+ity awareness with 96.8% mitigation success. Our work provides the fir
+st comprehensive framework for evaluating coding agent security and hi
+ghlights the need for security-aware design of next generation LLM-bas
+ed coding agents.
+AU  - Kozak, Matous
+AU  - Moghaddam, Roshanak Zilouchian
+AU  - Sivaraman, Siva
+DA  - 2025/7/12/
+PY  - 2025
+DO  - 10.48550/arxiv.2507.09329
+ID  - when-developer-aid-b
+N1  - Snippet: … • Systematic Security Analysis and Vulnerability Taxonomy: 
+We conduct the first comprehensive evaluation of insecure behaviors in
+ LLM-based coding agents across multiple state-of-…
+T2  - arXiv.org
+TI  - When Developer Aid Becomes Security Debt: A Systematic Analysis of Ins
+ecure Behaviors in LLM Coding Agents
+UR  - https://arxiv.org/abs/2507.09329
+ER  - 
+TY  - JOUR
+AB  - The emergence of foundation models, such as large language models (LLM
+s) GPT-4 and text-to-image models DALL-E, has opened up numerous possi
+bilities across various domains. People can now use natural language (
+i.e. prompts) to communicate with AI to perform tasks. While people ca
+n use foundation models through chatbots (e.g., ChatGPT), chat, regard
+less of the capabilities of the underlying models, is not a production
+ tool for building reusable AI services. APIs like LangChain allow for
+ LLM-based application development but require substantial programming
+ knowledge, thus posing a barrier. To mitigate this, we propose the co
+ncept of AI chain and introduce the best principles and practices that
+ have been accumulated in software engineering for decades into AI cha
+in engineering, to systematise AI chain engineering methodology. We al
+so develop a no-code integrated development environment, Prompt Sapper
+, which embodies these AI chain engineering principles and patterns na
+turally in the process of building AI chains, thereby improving the pe
+rformance and quality of AI chains. With Prompt Sapper, AI chain engin
+eers can compose prompt-based AI services on top of foundation models 
+through chat-based requirement analysis and visual programming. Our us
+er study evaluated and demonstrated the efficiency and correctness of 
+Prompt Sapper.
+AU  - Chen, Jieshan
+AU  - Huang, Qing
+AU  - Xing, Zhenchang
+AU  - Xu, Xiwei
+AU  - Lu, Qinghua
+DA  - 2023/6/21/
+PY  - 2023
+DO  - 10.48550/arXiv.2306.12028
+ID  - prompt-sapper-a-llm-
+N1  - Snippet: … LLM performance in … with LLM may work well for simple task
+s, more intricate tasks that involve multiple steps and nuances requir
+es extra considerations, without which the output of LLM …
+T2  - arXiv.org
+TI  - Prompt sapper: A LLM-empowered production tool for building AI chains
+UR  - https://dl.acm.org/doi/abs/10.1145/3638247
+ER  - 
+TY  - JOUR
+AB  - Developers often build software on top of third-party libraries (Libs)
+ to improve programmer productivity and software quality. The librarie
+s may contain vulnerabilities exploitable by hackers to attack the app
+lications (Apps) built on top of them. People refer to such attacks as
+ supply chain attacks, the documented number of which has increased 74
+2% in 2022. People created tools to mitigate such attacks, by scanning
+ the library dependencies of Apps, identifying the usage of vulnerable
+ library versions, and suggesting secure alternatives to vulnerable de
+pendencies. However, recent studies show that many developers do not t
+rust the reports by these tools; they ask for code or evidence to demo
+nstrate how library vulnerabilities lead to security exploits, in orde
+r to assess vulnerability severity and modification necessity. Unfortu
+nately, manually crafting demos of application-specific attacks is cha
+llenging and time-consuming, and there is insufficient tool support to
+ automate that procedure. In this study, we used ChatGPT-4.0 to genera
+te security tests, and to demonstrate how vulnerable library dependenc
+ies facilitate the supply chain attacks to given Apps. We explored var
+ious prompt styles/templates, and found that ChatGPT-4.0 generated tes
+ts for all 55 Apps, demonstrating 24 attacks successfully. It outperfo
+rmed two state-of-the-art security test generators -- TRANSFER and SIE
+GE -- by generating a lot more tests and achieving more exploits. Chat
+GPT-4.0 worked better when prompts described more on the vulnerabiliti
+es, possible exploits, and code context. Our research will shed light 
+on new research in security test generation. The generated tests will 
+help developers create secure by design and secure by default software
+.
+AU  - Zhang, Ying
+AU  - Song, Wenjia
+AU  - Ji, Zhengjie
+AU  - Yao, Danfeng
+AU  - Meng, Na
+DA  - 2023/10/1/
+PY  - 2023
+DO  - 10.48550/arxiv.2310.00710
+ID  - how-well-does-llm-ge
+N1  - Snippet: … security tests for software applications (Apps) that depend
+ on vulnerable libraries (Libs). These test cases demonstrate proof-of
+-concept exploits, which execute Apps in certain ways to (i…
+T2  - arXiv.org
+TI  - How well does LLM generate security tests?
+UR  - https://arxiv.org/abs/2310.00710
+ER  - 

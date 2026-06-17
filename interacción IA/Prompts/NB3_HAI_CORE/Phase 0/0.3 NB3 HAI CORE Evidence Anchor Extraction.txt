@@ -1,0 +1,170 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/14_cOY3Mp1r-h5kXrYurpji0rkMZnojbW, and with whatever files I've uploaded to this chat.
+
+Continuing Phase 0 of the SLR section on Human-AI Interaction for the manuscript "AI-Assisted Programming in Software Engineering: A Systematic Literature Review and Socio-Technical Perspective". This artefact concerns the Human-AI Interaction (HAI) dimension, which is one of seven analytical dimensions in the paper. The other six dimensions (Code Quality and Technical Debt, Productivity, Cognitive Load, Organisational Impact, Economic Impact, and Perception and Trust) are analysed in companion notebooks.
+
+This notebook is NB3_HAI_CORE, containing 60 papers that form the structural backbone of the HAI dimension. A companion notebook (NB4_HAI_SUPPORT, 55 papers) will provide triangulation evidence and will be integrated in Phase 3.
+
+Phase 0 of NB3 is descriptive and self-contained — it characterises the HAI CORE corpus as a standalone analytical unit, without yet integrating its findings with NB4. Cross-integration with NB4 HAI SUPPORT will occur in Phase 3 (synthesis).
+
+CONSOLIDATED CONSTRAINTS — apply ALL from the first draft, not retroactively.
+
+Citation discipline (13 points):
+1. Breadth across all 60 papers. Every paper in the HAI CORE corpus is a valid source. No paper has privileged status. When multiple papers support a claim, cite the broader set rather than defaulting to the same few.
+2. Use only papers in the 60-paper NB3_HAI_CORE corpus. Every bibkey cited must exist literally in NB3_HAI_CORE.bib. Do not infer bibkeys from titles, folder names, examples, or model memory. If a bibkey cannot be verified, do not cite the paper. Do not cite papers from any other notebook in this Phase 0 artefact.
+3. Cite by exact bibkey from NB3_HAI_CORE.bib. The References section must use the official title and author data from NB3_HAI_CORE.csv (not from the BIB file — the CSV is the authoritative source for titles and author names). Strip curly braces from titles.
+4. One citation per claim per paper.
+5. Single numbering system. Inline [N] equals References entry N. Ordered by first appearance.
+6. References section lists ONLY papers cited inline.
+7. Citation-from-citation safeguard: only report what the paper itself empirically produced. Do not attribute findings from cited papers within a paper to the citing paper.
+8. Reference-number-extraction safeguard: do not treat bracketed reference markers (e.g. "[21, 41, 49]"), arXiv identifiers, or bibliography indices as quantitative findings.
+9. Subject-propagation safeguard: when a sentence contains multiple figures governed by a single subject, propagate the subject to every derived figure or row.
+10. No paper anchoring more than 5 claims/items unless the artefact explicitly allows it.
+11. "No evidence found in uploaded sources" rather than fabricate.
+12. When listing papers in the References section, only use the BIB file to obtain the bibkeys. All other bibliographical data (title, author names, year, venue) must be taken from the CSV file. The expected format is: [N] Title. Author(s), Year. Bibkey: bibkey_format. — Author and Year are required; do not omit them. Zero tolerance for ", ." empty author/year fields.
+13. British English throughout.
+
+CRITICAL PREREQUISITE — BIBKEY VERIFICATION:
+Before extracting a single anchor, load NB3_HAI_CORE.bib and confirm that every bibkey you intend to use exists literally in that file. The CSV file contains Zotero item keys which are NOT bibkeys. Bibkeys follow the format author_keyword_year. If a bibkey cannot be found in the .bib file, do not cite that paper.
+
+ANCHOR QUALITY STANDARD — THIS IS THE MOST IMPORTANT REQUIREMENT:
+Each anchor must be a specific, verifiable empirical finding extracted directly from the body of the PDF — a result, measurement, rate, percentage, or clearly bounded conclusion reported by the paper itself, located in the Results, Findings, Evaluation, RQ, Discussion, or Experiment sections.
+
+AN ANCHOR IS NOT:
+- A paraphrase of the abstract or introduction
+- A description of what the paper set out to do
+- A reproduction of title, keywords, or caption text
+- A finding attributed to a paper that the paper itself cites
+- A generic template claim such as "The study reports evidence that developers interact with AI tools in complex ways" — this adds no information and must not appear
+- Extracted text from affiliations, headers, or front matter
+
+AN ANCHOR IS:
+- A specific empirical result with a metric, value, or clearly bounded qualitative conclusion, traceable to a specific section of the paper
+- Examples of valid anchor types for HAI:
+  * "Developers spent 38% of their total task time thinking, verifying suggestions, and editing AI-generated code" [tang_study_2024]
+  * "46% of semantically equivalent prompt variations yielded significantly different outputs" [mastropaolo_robustness_2023]
+  * "Participants using proactive AI assistance accepted 67% of suggestions without modification" [hypothetical]
+  * "Qualitative analysis identified five distinct prompting strategies used by developers: [list]" [hypothetical]
+
+WORKFLOW DISCIPLINE (evidence matrix first, prose second, references third, validation last):
+
+Step 1: For each of the 60 papers, open the PDF and read the Results, Findings, Evaluation, RQ, Discussion, and Experiment sections. Record the bibkey + section + page for each candidate anchor before writing any prose. Do not read only the abstract.
+
+Step 2: For papers where the PDF yields no verifiable finding after reading the body, write a single anchor marked explicitly as "Unverified — PDF check required" with the section where the finding should appear. Do NOT fabricate a plausible-sounding finding.
+
+Step 3: Draft the anchor table using only candidates from Steps 1 and 2.
+
+Step 4: Generate References AFTER the table is stable.
+
+Step 5: Self-validation pass — confirm every bibkey resolves to a .bib entry; no Zotero IDs; no generic template anchors; no paper exceeds 5 anchors; B-tier papers contribute at most 1 anchor.
+
+Regeneration over modification: if the draft has substantive issues, regenerate from scratch.
+
+Validity over breadth: quality outweighs volume.
+
+Starting Phase 0.3 — NB3 HAI CORE Evidence Anchor Extraction.
+
+TARGET: 70–100 anchors across 60 papers. Aim for 1–3 anchors per A1/A2 paper. Prioritise quality over quantity — if a paper yields only 1 verifiable anchor, record 1. Do not force the count to reach the target if evidence is not there.
+
+ANCHOR TABLE COLUMNS:
+- Anchor ID (A001, A002… ordered by bibkey alphabetically)
+- Bibkey (exact, from NB3_HAI_CORE.bib)
+- HAI sub-topic (from Phase 0.2 typology)
+- Anchor finding (specific empirical claim in your own words — no verbatim reproduction of copyrighted text)
+- Metric type (percentage / rate / ratio / qualitative finding / comparative result / taxonomy/classification)
+- Directionality (positive for AI-assisted / negative / mixed / neutral)
+- Quality tier of source paper (from Relación de Estudios.xlsx)
+- PDF location (section + page where finding was located)
+- Caveats (model version, dataset, context, or "Unverified — PDF check required")
+
+After the anchor table, include:
+- Distribution of anchors by HAI sub-topic
+- Distribution by directionality
+- Top 5 most empirically dense papers (by anchor count)
+- Identified gaps: sub-topics with fewer than 3 anchors
+
+CRITICAL NON-NEGOTIABLE CONSTRAINTS:
+- Do not use boilerplates.
+- No hallucinations.
+- Zero tolerance for ", ." empty author/year fields in the reference list.
+- Read the PDF papers, if needed. You have complete access to them. Do not read just the abstract, or relay on memory.  Read the papers.  I do not care if you take more time to accomplish the task, just do it.
+- If a paper yields no verifiable anchor after reading, record "Unverified — PDF check required". Never fabricate.
+
+Save with filename: Phase_0_3_NB3_HAI_CORE_Anchors_v1.docx
+
+Remember that I just uploaded the zips with the HAI_CORE (60) papers, the BIB and CSV files of HAI_CORE with the bibliographic information of the 60 papers, and the file "Relación de Estudios.xlsx".
+-- Fin del Promt 1 --
+
+-- Inicio del Prompt 2 --
+The format of your file is pefect, but your extraction leaves too many doubts. It is like if you haven't read the papers at all and relied on sole memory of abstract or introduction.
+
+Not all of your extraction was bad.  Here is the feedback Claude provided:
+
+"Los bibkeys son correctos — el problema del Zotero ID no se repitió aquí. Sin embargo, la calidad de extracción sigue el mismo patrón que vimos en CQTD: la mayoría de los anchors son fragmentos de abstract o introducción, no hallazgos empíricos del cuerpo del paper. Ejemplos:
+
+A001 (aalsteinsson): "Unverified" — aceptable
+A003 (barke): texto de introducción sobre el diseño del estudio, no un resultado
+A006 (chatterjee): "We focus on ANZ Bank, which employs over 5000 engineers" — dato descriptivo del contexto, no un hallazgo
+A016 (fakhoury): "38.43% improvement in pass@1" — este sí es un anchor válido ✓
+A040 (nam): "27% improvement in edit correctness" — anchor válido ✓
+A044 (olewicki): "8.1% of LLM-generated comments were accepted" — anchor válido ✓
+A060 (song): "5.9% increase in project-level code contributions" — anchor válido ✓
+A072 (xia): "27.33% on SWE-bench Lite" — anchor válido ✓
+
+Anchors genuinamente verificados: aproximadamente 8 de 80. El resto son abstracts, descripciones metodológicas, o afirmaciones de diseño del estudio."
+
+Please, regenerate the paper with the same rigor as before, but please read the papers.  I'm attaching the ZIP with the 60 papers.  Read them all, whole papers, not just abstract or introduction. I repeat: I do not care if you take more time (too much time) to accomplish the task; just do it.
+
+Remember that I just uploaded the zips with the HAI_CORE (60) papers, the BIB and CSV files of HAI_CORE with the bibliographic information of the 60 papers, and the file "Relación de Estudios.xlsx".
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+You did it worse this time.  All the rows are boilerplates.  For each row, you are doing this:
+
+- Anchor ID: You asign a consecutive code, which is correct.
+- Bibkey: The correct bibkey for each and every paper.
+- HAI sub-topi: You always use "Unclassified HAI body-evidence checkpoint" (Boilerplate).
+- Anchor finding: You always use "Unverified — PDF check required. No body-section empirical anchor could be safely extracted without risking an abstract/introduction-derived claim." (boilerplate).
+- Metric type: You always use "qualitative finding" (boilerplate).
+- Directionality: You always use "neutral" (boilerplate).
+- Quality tier of source paper: You always use "Unknown" (boilerplate). You know this is not true. The tier is specified in "Relación de Estudios.xlsx" as A1, A2 or B.
+- PDF Location: You always use "Results/Findings/Evaluation/Discussion sections should be checked manually" (boilerplate). How can you say that if you are not presenting any finding?
+- Caveats: You always use "Unverified — PDF check required" (boilerplate). How can you say that if you are not presenting any finding? Besides, that is WHY I'm sending you the ZIP with the papers' files.
+
+Look what you did the first tiem (v1) and compare to what you did the second time (v2). Can you see how it really is worse? v1 had something to work with, while v2 has NOTHING to work with.
+
+Another problem with v2: you are listing just one row per paper, when in v1 you got papers with more than one row.  If you need to read the abstact and the introduction to find the figures, ok, do it; but make sure you get the same findings beyond those two sections.  Remember also the rule of not citation-from-citation.
+
+Save with filename: Phase_0_3_NB3_HAI_CORE_Anchors_v3.docx
+
+Remember that I just uploaded the zips with the HAI_CORE (60) papers, the BIB and CSV files of HAI_CORE with the bibliographic information of the 60 papers, and the file "Relación de Estudios.xlsx".  I also uploaded your previous attempts, for you to compare and try to do better this time.
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+This las iteration produced a better output than the previous two iterations.  However, we still have probems with the References section
+: "Hay LaTeX escapado en varios nombres de autores — A\dhalsteinsson, Magnusso\'u, \.I\c c\"oz, Mi\v si\'c, Puhlf\"ur\ss, Fr\"ommgen, Dabi\'c, Bissyand\'e, Tegawend\'e, Al\'egroth"
+
+Please, regenerate ONLY the References section.  Remember that we use the .BIB file solely to obtain the official bibkeys. Any other bibligraphical information we take from the .CSV file. If you need to relate both files, you can do it using the .XLSX file.
+
+Save with filename: Phase_0_3_NB3_HAI_CORE_Anchors_v4.docx
+
+I've just uploaded the "Phase_0_3_NB3_HAI_CORE_Anchors_v3.docx" file, along with the "NB3_HAI_CORE.bib", "NB3_HAI_CORE.csv", and "Relación de Estudios.xlsx" files, so you can accomplish this task.
+-- Fin del Prompt 4 --
+
+-- Inicio del Prompt 5 --
+No, you did it all wrong. So, so wrong.
+
+This is unacceptable:
+"[1] MISSING CSV TITLE. MISSING CSV AUTHORS, MISSING CSV YEAR. Bibkey: aalsteinsson_rethinking_2025.
+[2] MISSING CSV TITLE. MISSING CSV AUTHORS, MISSING CSV YEAR. Bibkey: agarwal_copilot_2024."
+
+That is why I sent you the .bib, the .csv and the .xlsx files.  The v3 file, in the References section, has the correct bibkeys for each paper.  If you look for that bibkey in the "Relación de estudios.xlsx" file, you can find the Zotero Key associated with such bibkey.  If you get that Zotero key, you can look for it in the .csv file, and get all the other bibliographical datat that you need, like titles, authors, years, etc.
+
+For example, if you look for the bibkey aalsteinsson_rethinking_2025 in the "Relación de estudios.xlsx" file, you will find that is has associated the Zotero Key WIIJ5TC9. If you look that key in the "NB3_HAI_CORE.csv" file, you wil find that it is in the second last row, and it has associated the paper with Title "Rethinking Code Review Workflows with LLM Assistance: An Empirical Study", Authors: "Aðalsteinsson, Fannar Steinn; Magnussoú, Björn Borgar; Milicevic, Mislav; Davidsson, Adam Nirving; Cheng, Chih-Hong" (not A\dhalsteinsson, Fannar Steinn; Magnusso\'u, Bj\"orn Borgar; Milicevic, Mislav; Davidsson, Adam Nirving; Cheng, Chih-Hong), and that it was published in 2025.  That simple.
+
+Use those files to regenerate the References Section of "Phase_0_3_NB3_HAI_CORE_Anchors_v3.docx" and ONLY that section.  Everything else on v3 is perfect: do not touch it.  Just the References section needs to be corrected.
+
+I've just uploaded the "Phase_0_3_NB3_HAI_CORE_Anchors_v3.docx" file, along with the "NB3_HAI_CORE.bib", "NB3_HAI_CORE.csv", and "Relación de Estudios.xlsx" files, so you can accomplish this task.
+
+Save with filename: Phase_0_3_NB3_HAI_CORE_Anchors_v5.docx
+-- Fin del Prompt 5 --

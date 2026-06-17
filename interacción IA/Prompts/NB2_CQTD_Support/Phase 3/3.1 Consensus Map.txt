@@ -1,0 +1,115 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1QYMu1_U8yiJDY7I4sw_lWYZ4vR8ZR6hi (The NB2_CQTD_Support folder in Google Drive), this other URL: https://drive.google.com/drive/folders/1ywIisQOCRL3dPVOSdJrIh7BJVtINiVbk (The NB2_CQTD_CORE folder in Google Drive), and with whatever files I've uploaded to this chat.
+
+We are starting with Phase 3 of the SLR section on Code Quality and Technical Debt for the manuscript "AI-Assisted Programming in Software Engineering: A Systematic Literature Review and Socio-Technical Perspective". This artefact concerns the Code Quality and Technical Debt (CQTD) dimension, which is one of seven analytical dimensions in the paper. The other six dimensions (Productivity, Human-AI Interaction, Cognitive Load, Organizational Impact, Economic Impact, Perception and Trust) are analysed in companion notebooks.
+
+This is Phase 3 of the CQTD analytical workflow. Phase 3 integrates findings from NB1_CQTD_CORE (77 papers, analysis complete in companion artefacts) and  NB2_CQTD_Support (64 papers, analysis complete in Phase 1.1–1.6 and Phase 2.1–2.3).
+
+FRAMING:
+- NB1_CQTD_CORE provides the structural backbone of the CQTD argument.
+- NB2_CQTD_Support provides triangulation, breadth, and scope extension.
+- SUPPORT evidence does not replace CORE evidence. It qualifies, confirms, extends, or tensions it.
+- Cross-corpus citations are now permitted. Use bibkeys from both NB1_CQTD_CORE.bib and NB2_CQTD_Support.bib.
+
+This artefact is Phase 3 of NB2_CQTD_Support. Do not restrict citations to one corpus. Cross-integration between NB1 and NB2 is the explicit goal of Phase 3. The SUPPORT corpus triangulates and extends CORE findings; it does not replace them.
+
+CONSOLIDATED CONSTRAINTS — apply ALL from the first draft, not retroactively.
+
+Citation discipline (16 points):
+1. Breadth across both corpora. Every paper in both CORE and SUPPORT is a valid source. No paper has privileged status. When multiple papers support a claim, cite the broader set.
+2. Use only papers present in NB1_CQTD_CORE.bib or NB2_CQTD_Support.bib. Every bibkey cited must exist literally in one of these files. Do not infer bibkeys from titles, folder names, or model memory.
+3. Cite by exact bibkey from the relevant .bib file.
+4. One citation per claim per paper.
+5. Single numbering system. Inline [N] equals References entry N. Ordered by first appearance.
+6. References section lists ONLY papers cited inline.
+7. Citation-from-citation safeguard: only report what the paper itself empirically produced. Do not attribute findings from cited papers within a paper to the citing paper.
+8. Reference-number-extraction safeguard: do not treat bracketed reference markers, arXiv identifiers, or bibliography indices as quantitative findings.
+9. Subject-propagation safeguard: propagate the grammatical subject to every figure derived from a multi-figure sentence.
+10. No paper anchoring more than 5 claims/items.
+11. "No evidence found in uploaded sources" rather than fabricate.
+12. When listing papers in the References section, only use the BIB files to obtain the bibkeys. All other bibliographical data (title, author names, year, venue) must be taken from the CSV files. The expected format is: [N] Title. Author, Year. Bibkey: bibkey_format. — Author and Year are required; do not omit them.
+13. British English throughout.
+14. When a finding appears in both CORE and SUPPORT, cite both corpora but treat them as converging evidence, not as two independent studies, unless they used different methods, datasets, or contexts.
+15. Do not cite SUPPORT papers for claims already fully established by CORE A1 evidence unless the SUPPORT paper adds a materially different angle (e.g., different language, task type, or evaluation method).
+16. Quality tiers are fixed as per the Phase 0.2 inventory and Relación de Estudios (authoritative source for tier conflicts).
+
+INPUTS: 
+- All NB1_CQTD_CORE Phase 1–4 artefacts (companion notebooks)
+- Phase 2.3 NB2_CQTD_Support_Consolidated_v1.docx (primary SUPPORT input)
+- Phase 3 integration notes N1–N10 from Phase 2.3 as mandatory constraints
+- NB1_CQTD_CORE.bib and NB2_CQTD_Support.bib (bibkeys only)
+- NB1_CQTD_CORE.csv and NB2_CQTD_Support.csv (all other bibliographical data)
+
+WORKFLOW DISCIPLINE (evidence matrix first, prose second, references third, validation last):
+
+Step 1: Construct a source-control table of every paper-item relationship before drafting prose. Verify all bibkeys against both NB1_CQTD_CORE.bib and NB2_CQTD_Support.bib at this stage. Tag each entry as CORE, SUPPORT, or BOTH.
+
+Step 2: Draft each item using only papers from the source-control table.
+
+Step 3: Generate References AFTER the prose is stable, ordered by first appearance. Bibkeys from BIB files only. All other bibliographical data (titles, author names, year, venue) from CSV files only.
+
+Step 4: Run self-validation pass: every inline [N] has a corresponding References entry; no empty brackets, orphan commas, or formatting residue; no paper in more than 5 items; spot-check 3 citations against both BIB and CSV sources; no fabricated bibkeys; no curly braces in titles; no LaTeX-escaped characters in author names or titles.
+
+Regeneration over modification: if the draft has substantive issues, regenerate from scratch.
+
+Validity over breadth: quality outweighs volume.
+
+Starting Phase 3.1 — CQTD Integrated Consensus Map (NB1_CQTD_CORE + NB2_CQTD_Support).
+
+TASK: Produce a DOCX containing a Consensus Map — a structured analytical table that maps the state of integrated evidence across all CQTD sub-topics.
+
+TABLE STRUCTURE — one section per CQTD sub-topic, each with:
+
+Column 1: Claim — a specific, falsifiable CQTD claim
+Column 2: CORE evidence (bibkeys + quality tier + brief descriptor)
+Column 3: SUPPORT evidence (bibkeys + quality tier + brief descriptor)
+Column 4: Integration verdict — one of:
+  - CONFIRMED: CORE and SUPPORT converge, same direction, compatible methods
+  - EXTENDED: SUPPORT adds scope CORE did not cover
+  - QUALIFIED: SUPPORT narrows or conditions a CORE claim
+  - TENSIONED: SUPPORT and CORE point in different directions
+  - CORE-ONLY: No SUPPORT evidence; CORE claim stands alone
+  - SUPPORT-ONLY: No CORE evidence; SUPPORT claim awaits corroboration
+Column 5: Confidence level (high / moderate / low)
+Column 6: Phase 4 use recommendation
+
+CQTD SUB-TOPICS to cover (minimum):
+1. Functional correctness and task performance
+2. Security vulnerabilities in AI-generated code
+3. Maintainability, code smells, and technical debt
+4. Program repair and automated correction
+5. Non-determinism, reproducibility, and benchmark reliability
+6. Human validation and developer behaviour
+7. Agentic and multi-turn code generation quality
+
+After the table, add:
+- A 200-word integration summary explaining the overall state of CQTD 
+  evidence after fusion, and identifying the 2–3 claims with highest 
+  combined confidence
+- A list of any CORE-SUPPORT citation conflicts requiring manual resolution 
+  before Phase 4
+
+CONSTRAINTS:
+- Do not introduce new empirical claims not present in CORE or Support Artifacts.
+
+CRITICAL NON-NEGOTIABLE CONSTRAINTS:
+- Do not use boilerplates.
+- No hallucinations.
+- Read the PDF papers. You have complete access to them. Do not read just de abstract, or relay on memory.  Read the papers.  I do not care if you take more time to accomplish the task, just do it.
+
+Save as: Phase_3_1_CQTD_Consensus_Map_v1.docx
+
+Remember that I just uploaded the zips with the CORE (77) and Support (64) papers, the zips with the artifacts of the previous phases of both CORE and Support, the BIB and CSV files of both CORE and Support with the bibliographic information of the 77+64 papers, and the file "Relación de Estudios.xlsx".
+-- Fin del Promt 1 --
+
+-- Inicio del Prompt 2 --
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+-- Fin del Prompt 4 --
+
+-- Inicio del Prompt 5 --
+-- Fin del Prompt 5 --

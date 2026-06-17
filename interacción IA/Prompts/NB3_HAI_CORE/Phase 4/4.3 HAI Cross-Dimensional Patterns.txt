@@ -1,0 +1,124 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/14_cOY3Mp1r-h5kXrYurpji0rkMZnojbW (NB3_HAI_CORE) and in this URL: https://drive.google.com/drive/folders/1btkfM0ybzsOyKeeppWVSzlQNjfB2fpOO (NB4_HAI_Support), and with whatever files I've uploaded to this chat.
+
+Continuing Phase 4 of the SLR section on Human-AI Interaction for the manuscript "AI-Assisted Programming in Software Engineering: A Systematic Literature Review and Socio-Technical Perspective". This artefact concerns the Human-AI Interaction (HAI) dimension, which is one of seven analytical dimensions in the paper. The other six dimensions (Code Quality and Technical Debt, Productivity, Cognitive Load, Organisational Impact, Economic Impact, and Perception and Trust) are analysed in companion notebooks.
+
+This is Phase 4 of the HAI analytical workflow. Phase 4 builds on the integrated Phase 3 evidence to produce theoretical and manuscript-ready contributions. The primary input for all Phase 4 artefacts is Phase_3_4_HAI_Dimension_Synthesis_v3.docx.
+
+FRAMING:
+The paper's theoretical backbone is a socio-technical equilibrium framework comprising five constructs:
+1. Generation efficiency — the ability of AI tools to accelerate code production
+2. Verification overhead — the additional effort to validate, correct, and integrate AI-generated outputs
+3. Interaction quality — the effectiveness of human-AI communication through prompting and iterative refinement
+4. Trust calibration — the extent to which developers appropriately balance reliance on AI outputs with critical evaluation
+5. Cognitive redistribution — the shift in mental effort from code construction toward supervision, validation, and decision-making
+
+For the HAI dimension, interaction quality and trust calibration are the two constructs most directly addressed by the evidence. The theoretical contribution must foreground these two while connecting all five. HAI is the dimension that makes the interaction quality / trust calibration dynamic most empirically visible across the seven sub-topics.
+
+CONSOLIDATED CONSTRAINTS — apply ALL from the first draft, not retroactively.
+
+Citation discipline (16 points):
+1. Breadth across both corpora. Every CORE paper and every SUPPORTING paper in NB4 is a valid source. No paper has privileged status.
+2. Use only papers present in NB3_HAI_CORE.bib or NB4_HAI_SUPPORT.bib. Every bibkey cited must exist literally in one of these files. Do not infer bibkeys from titles, folder names, or model memory. If a bibkey cannot be verified, do not cite the paper. Do not cite papers from any other notebook.
+3. Cite by exact bibkey from the relevant .bib file. The References section must use the official title and author data from NB4_HAI_Support.csv (not from the BIB file — the CSV is the authoritative source for titles and author names). Strip curly braces from titles.
+4. One citation per claim per paper.
+5. Single numbering system. Inline [N] equals References entry N. Ordered by first appearance.
+6. References section lists ONLY papers cited inline.
+7. Citation-from-citation safeguard: only report what the paper itself empirically produced. Do not attribute findings from cited papers within a paper to the citing paper.
+8. Reference-number-extraction safeguard: do not treat bracketed reference markers (e.g. "[21, 41, 49]"), arXiv identifiers, or bibliography indices as quantitative findings.
+9. Subject-propagation safeguard: when a sentence contains multiple figures governed by a single subject, propagate the subject to every derived figure or row.
+10. No paper anchoring more than 5 claims/items unless the artefact explicitly allows it.
+11. "No evidence found in uploaded sources" rather than fabricate.
+12. When listing papers in the References section, only use the BIB file to obtain the bibkeys. All other bibliographical data (title, author names, year, venue) must be taken from the CSV file. The expected format is: [N] Title. Author(s), Year. Bibkey: bibkey_format. — Author and Year are required; do not omit them. Zero tolerance for ", ." empty author/year fields. Zero tolerance for LaTeX-escaped characters in author names or titles.
+   12.1. Use the BIB file to obtain te bibkeys.
+   12.2. Search that bibkey in the "Relación de Estudios.xlsx" file to get the Key Field (Column B), that represents the Zotero Key for that paper.
+   12.3. Search that key in the CSV file to obtain the rest of the bibliographical data of such paper.
+13. British English throughout.
+14. When a finding appears in both CORE and SUPPORT, cite both corpora but treat them as converging evidence, not as two independent studies, unless they used different methods, datasets, or contexts.
+15. Do not cite SUPPORT papers for claims already fully established by CORE A1 evidence unless the SUPPORT paper adds a materially different angle (e.g. different population, tool, or context).
+16. Quality tiers from column S (Clasificación) of Relación de Estudios.xlsx only. Valid values: A1, A2, B.
+Additional: REMOVE_CANDIDATE papers (ahmad_towards_2023, fajkovic_impact_2023, seker_experiences_2024) must not appear.
+
+CRITICAL PREREQUISITE — BIBKEY VERIFICATION:
+Before extracting a single anchor, load NB4_HAI_Support.bib and confirm that every bibkey you intend to use exists literally in that file. The CSV file contains Zotero item keys which are NOT bibkeys. Bibkeys follow the format author_keyword_year. If a bibkey cannot be found in the .bib file, do not cite that paper.
+
+CRITICAL PREREQUISITE - QUALITY TIERS:
+Quality tiers must be taken exclusively from column S (Clasificación) of "Relación de Estudios.xlsx" file. Do not use any other column, file, or internal heuristic to assign tiers. Do not reassign tiers. The only valid values are A1, A2, and B.
+
+WORKFLOW:
+Step 1: Load Phase 3.4 as the primary evidence base. Load Phase 4.1 to extract the five construct mappings and the three propositions — these define which HAI mechanisms connect to other dimensions. Load Phase 4.2 to extract the overarching narrative arc statement — cross-dimensional patterns must be consistent with it. For each cross-dimensional connection in the table, ground it in a specific HAI finding from Phase 3.4, not in assumed knowledge of the other dimension.
+Step 2: Draft the artefact structure in order.
+Step 3: Generate references using Phase 3.4 entries as primary bibliographical source. Verify bibkeys against BIB files.
+Step 4: Self-validation pass: no new empirical claims; no empty author/year fields; no LaTeX-escaped characters; no REMOVE_CANDIDATE papers; no scaffolding language in manuscript-prose sections; British English throughout.
+
+Regeneration over modification: if the draft has substantive issues, regenerate from scratch.
+
+Validity over breadth: quality outweighs volume.
+
+NOTE ON SCOPE: The other six SLR dimensions (Code Quality and Technical Debt, Productivity, Cognitive Load, Organisational Impact, Economic Impact, Perception and Trust) are not all analytically complete in companion notebooks. The CQTD dimension is complete (Phase 3.4 available). Base all cross-dimensional patterns primarily on HAI evidence from Phase 3.4. Do not fabricate findings from dimensions not yet analytically complete. Where a connection is speculative or not yet empirically grounded in HAI evidence, label it explicitly as "speculative — pending companion notebook evidence." For CQTD, the connection may be stated with higher confidence because both dimensions have completed Phase 3.4 artefacts.
+
+INPUTS:
+- Phase_3_4_HAI_Dimension_Synthesis_v3.docx (primary)
+- Phase_4_1_HAI_Theoretical_Contribution_v1.docx
+- Phase_4_2_HAI_Narrative_Arc_v1.docx
+- NB3_HAI_CORE.bib and NB4_HAI_SUPPORT.bib (bibkeys only)
+- NB3_HAI_CORE.csv and NB4_HAI_SUPPORT.csv (all other bibliographical data via Zotero key mapping)
+- Relación de Estudios.xlsx (quality tiers column S; Zotero key mapping for reference resolution)
+
+Starting Phase 4.1 — HAI Theoretical Contribution Statement.
+
+TASK: Identify and articulate the patterns in HAI evidence that connect to other dimensions of the SLR.
+
+STRUCTURE:
+
+1. Cross-dimensional pattern table — for each of the six other SLR dimensions:
+   Dimension | HAI connection | Direction of influence (HAI → dimension / dimension → HAI / bidirectional) | Key HAI bibkeys | Strength (strong / moderate / speculative)
+
+2. Three cross-dimensional propositions (same format as Phase 4.1)
+   — each connecting HAI to at least one other dimension
+   — grounded in HAI evidence from Phase 3.4
+   — falsifiable
+   — where the other dimension is speculative, label as such
+   — at least one proposition must connect HAI to CQTD with high confidence, given both have completed Phase 3.4
+
+3. Narrative synthesis (400–500 words)
+   — prose explaining how HAI connects to the other six dimensions
+   — identifies the two strongest cross-dimensional connections (one must be CQTD)
+   — identifies one cross-dimensional gap where evidence is missing
+   — written as manuscript prose without scaffolding language
+
+
+CONSTRAINTS:
+- Do not introduce new empirical claims not present in Phase 3.1 or Phase 3.4.
+- Do not fabricate findings from companion dimensions not yet analytically complete.
+
+CRITICAL NON-NEGOTIABLE CONSTRAINTS:
+- Do not use boilerplates.
+- No hallucinations.
+- Zero tolerance for ", ." empty author/year fields in the reference list.
+- Zero tolerance for LaTeX-escaped characters in author names or titles.
+- Zero tolerance for Zotero IDs used as bibkeys.
+- Zero tolerance for citations to REMOVE_CANDIDATE papers.
+- Quality tier column must use A1, A2, or B only.
+- Written sections must read as manuscript-ready prose.
+- Do not introduce any empirical claim not present in Phase 3.1 or Phase 3.4.
+- Read the PDF papers, if needed. You have complete access to them. Do not read just the abstract, or relay on memory.  Read the papers.  I do not care if you take more time to accomplish the task, just do it.
+- British English throughout.
+- No methodological scaffolding language in the narrative ("Phase 1 evidence shows", "SUPPORT confirms", "CORE grounds").
+
+Save as: Phase_4_3_HAI_Cross_Dimensional_v1.docx
+
+Remember that I just uploaded the zips with the HAI_CORE (60) papers and HAI_Support (55) papers, the BIB and CSV files of both HAI_CORE and HAI_Support with the bibliographic information of the 60+55 papers, the file "Relación de Estudios.xlsx" and all the Pahse 3 artefacts 3.1 and 3.4, as well as Phase 4 artefacts 4.1 and 4.2.
+-- Fin del Promt 1 --
+
+-- Inicio del Prompt 2 --
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+-- Fin del Prompt 4 --
+
+-- Inicio del Prompt 5 --
+-- Fin del Prompt 5 --

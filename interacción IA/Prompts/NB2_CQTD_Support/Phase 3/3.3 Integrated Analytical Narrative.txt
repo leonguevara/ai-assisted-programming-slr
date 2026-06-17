@@ -1,0 +1,111 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1QYMu1_U8yiJDY7I4sw_lWYZ4vR8ZR6hi (The NB2_CQTD_Support folder in Google Drive), this other URL: https://drive.google.com/drive/folders/1ywIisQOCRL3dPVOSdJrIh7BJVtINiVbk (The NB2_CQTD_CORE folder in Google Drive), and with whatever files I've uploaded to this chat.
+
+We are continuing with Phase 3 of the SLR section on Code Quality and Technical Debt for the manuscript "AI-Assisted Programming in Software Engineering: A Systematic Literature Review and Socio-Technical Perspective". This artefact concerns the Code Quality and Technical Debt (CQTD) dimension, which is one of seven analytical dimensions in the paper. The other six dimensions (Productivity, Human-AI Interaction, Cognitive Load, Organizational Impact, Economic Impact, Perception and Trust) are analysed in companion notebooks.
+
+This is Phase 3 of the CQTD analytical workflow. Phase 3 integrates findings from NB1_CQTD_CORE (77 papers, analysis complete in companion artefacts) and  NB2_CQTD_Support (64 papers, analysis complete in Phase 1.1–1.6 and Phase 2.1–2.3).
+
+FRAMING:
+- NB1_CQTD_CORE provides the structural backbone of the CQTD argument.
+- NB2_CQTD_Support provides triangulation, breadth, and scope extension.
+- Cross-corpus citations are permitted. Use bibkeys from both 
+  NB1_CQTD_CORE.bib and NB2_CQTD_Support.bib.
+
+This artefact is Phase 3 of NB2_CQTD_Support. Do not restrict citations to one corpus. Cross-integration between NB1 and NB2 is the explicit goal of Phase 3. The SUPPORT corpus triangulates and extends CORE findings; it does not replace them.
+
+CONSOLIDATED CONSTRAINTS — apply ALL from the first draft, not retroactively.
+
+Citation discipline (16 points):
+1. Breadth across both corpora. Every paper in both CORE and SUPPORT is a valid source. No paper has privileged status. When multiple papers support a claim, cite the broader set.
+2. Use only papers present in NB1_CQTD_CORE.bib or NB2_CQTD_Support.bib. Every bibkey cited must exist literally in one of these files. Do not infer bibkeys from titles, folder names, or model memory.
+3. Cite by exact bibkey from the relevant .bib file.
+4. One citation per claim per paper.
+5. Single numbering system. Inline [N] equals References entry N. Ordered by first appearance.
+6. References section lists ONLY papers cited inline.
+7. Citation-from-citation safeguard: only report what the paper itself empirically produced. Do not attribute findings from cited papers within a paper to the citing paper.
+8. Reference-number-extraction safeguard: do not treat bracketed reference markers, arXiv identifiers, or bibliography indices as quantitative findings.
+9. Subject-propagation safeguard: propagate the grammatical subject to every figure derived from a multi-figure sentence.
+10. No paper anchoring more than 5 claims/items.
+11. "No evidence found in uploaded sources" rather than fabricate.
+12. When listing papers in the References section, only use the BIB files to obtain the bibkeys. All other bibliographical data (title, author names, year, venue) must be taken from the CSV files. The expected format is: [N] Title. Author, Year. Bibkey: bibkey_format. — Author and Year are required; do not omit them.
+13. British English throughout.
+14. When a finding appears in both CORE and SUPPORT, cite both corpora but treat them as converging evidence, not as two independent studies, unless they used different methods, datasets, or contexts.
+15. Do not cite SUPPORT papers for claims already fully established by CORE A1 evidence unless the SUPPORT paper adds a materially different angle (e.g., different language, task type, or evaluation method).
+16. Quality tiers are fixed as per the Phase 0.2 inventory and Relación de Estudios (authoritative source for tier conflicts).
+
+WORKFLOW DISCIPLINE:
+Step 1: Load Phase 3.2 and extract every inline citation [N] with its bibkey.
+Step 2: For each bibkey, verify it exists in NB1_CQTD_CORE.bib or NB2_CQTD_Support.bib. Tag as CORE, SUPPORT, or BOTH.
+Step 3: For each verified bibkey, retrieve bibliographical data from the corresponding CSV file (title, authors, year). Do not use BIB fields for author names or titles.
+Step 4: Check for cross-corpus duplicates — any bibkey present in both BIB files.
+Step 5: Check for orphans — any bibkey cited in Phase 3.2 that does not resolve in either BIB file.
+Step 6: Generate the unified reference list ordered by first appearance in Phase 3.2.
+Step 7: Self-validation pass.
+
+Regeneration over modification: if the draft has substantive issues, regenerate from scratch.
+
+Validity over breadth: quality outweighs volume.
+
+INPUTS:
+- Phase_3_2_CQTD_Integrated_Narrative_v1.docx (all inline citations)
+- NB1_CQTD_CORE.bib and NB2_CQTD_Support.bib (bibkeys only)
+- NB1_CQTD_CORE.csv and NB2_CQTD_Support.csv (all other bibliographical data)
+
+Starting Phase 3.3 — CQTD Reference List and Citation Integrity Audit.
+
+TASK: Produce a DOCX containing:
+
+1. Unified reference list — all 74 papers cited in Phase 3.2, merged from 
+   both corpora, formatted as:
+   [N] Title. Author(s), Year. Bibkey: bibkey. Corpus: CORE / SUPPORT / BOTH.
+   Ordered by first appearance in Phase 3.2.
+   Titles and author names from CSV files only.
+   Bibkeys from BIB files only.
+   The "BOTH" tag applies to any paper present in both BIB files.
+
+2. Citation integrity audit table — columns:
+   Bibkey | Corpus tag | Cited in Phase 3.2 (yes/no) | 
+   Appears in Phase 3.1 map (yes/no) | Conflict or anomaly noted
+
+3. Cross-corpus duplicate check — list any bibkey present in both 
+   NB1_CQTD_CORE.bib and NB2_CQTD_Support.bib. For each duplicate:
+   - Confirm whether the bibkey is identical in both files
+   - Note which Phase 1 artefacts (CORE or SUPPORT) it was used in
+   - Recommend: retain in CORE, retain in SUPPORT, or merge citation
+
+4. Orphan check — list any bibkey cited in Phase 3.2 that does not 
+   resolve to an entry in either BIB file. If none, state explicitly 
+   "No orphan bibkeys detected."
+
+5. Self-validation note — confirm:
+   - Total cited paper count (should be 74)
+   - CORE-only count
+   - SUPPORT-only count  
+   - BOTH count
+   - Whether any LaTeX-escaped characters or curly braces appear in 
+     author names or titles (must be zero)
+
+CONSTRAINTS:
+- Do not introduce new empirical claims not present in CORE or Support Artifacts.
+
+CRITICAL NON-NEGOTIABLE CONSTRAINTS:
+- Do not use boilerplates.
+- No hallucinations.
+- Read the PDF papers, if needed. You have complete access to them. Do not read just de abstract, or relay on memory.  Read the papers.  I do not care if you take more time to accomplish the task, just do it.
+
+Save as: Phase_3_3_CQTD_Reference_Audit_v1.docx
+
+Remember that I just uploaded the zips with the CORE (77) and Support (64) papers, the BIB and CSV files of both CORE and Support with the bibliographic information of the 77+64 papers, the artifacts 3.2 of Support, and the file "Relación de Estudios.xlsx".
+-- Fin del Promt 1 --
+
+-- Inicio del Prompt 2 --
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+-- Fin del Prompt 4 --
+
+-- Inicio del Prompt 5 --
+-- Fin del Prompt 5 --

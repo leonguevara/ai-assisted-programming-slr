@@ -1,0 +1,12 @@
+TY  - CHAP
+AU  - Babu, C.
+AU  - Kishore, Kathari
+PY  - 2025/02/28
+SP  - 87
+EP  - 116
+N2  - This study explores the integration of Generative AI in cloud-native software engineering, aiming to enhance the efficiency and effectiveness of source code creation. Targeting software developers, engineers, and organizations leveraging cloud technologies, the research employs a multi-disciplinary approach, combining qualitative interviews and case studies from successful implementations of AI tools like GitHub Copilot and OpenAI's Codex. The findings reveal that Generative AI significantly reduces manual coding efforts, automates routine tasks, and allows developers to focus on complex problem-solving and innovative design. Furthermore, the study highlights the transformative impact of cloud-native architectures in facilitating scalable and flexible software development processes. The conclusions underscore the necessity for developers to adapt to new roles that emphasize critical thinking and creativity, while also addressing potential challenges such as code quality and security.
+SN  - 9798369393567
+T1  - Generative AI for Source Code Creation: Revolutionizing Cloud-Native Software Engineering
+VL  - 
+DO  - 10.4018/979-8-3693-9356-7.ch004
+ER  - 

@@ -1,0 +1,91 @@
+Query para SciSpace
+
+You are an academic research assistant helping me conduct a rigorous Systematic Literature Review (SLR).
+
+---
+
+## TOPIC
+
+The impact of AI-assisted code generation tools (e.g., GitHub Copilot, ChatGPT, Amazon CodeWhisperer, Claude Code, Gemini, OpenAI Codex) on software development.
+
+---
+
+## RESEARCH QUESTIONS (RQs)
+
+RQ1. What is the impact of AI-assisted coding tools on developer productivity?
+RQ2. How do these tools affect code quality (e.g., correctness, maintainability, readability)?
+RQ3. What are the common evaluation metrics used in empirical studies of AI code generation?
+RQ4. What are the main benefits reported when using these tools?
+RQ5. What are the limitations, risks, or challenges (e.g., security, hallucinations, over-reliance)?
+RQ6. What research methodologies are used (experiment, survey, case study, etc.)?
+RQ7. What trends and research gaps can be identified in the literature?
+
+---
+
+## SEARCH TASK
+
+Retrieve academic papers published between 2021 and 2026 from reliable sources (arXiv, IEEE, ACM, Springer, Elsevier, Scopus-indexed venues).
+
+---
+
+## INCLUSION CRITERIA (STRICT)
+
+Include ONLY papers that meet ALL of the following:
+
+* Empirical studies (quantitative, qualitative, or mixed-methods)
+* Focus on AI-assisted programming or LLM-based code generation tools
+* Evaluate tools such as GitHub Copilot, ChatGPT, CodeWhisperer, or similar
+* Include measurable outcomes (e.g., productivity, defect rate, time, accuracy)
+* Published in peer-reviewed venues OR reputable preprints (e.g., arXiv)
+* Written in English
+* Published between 2021 and 2026
+
+---
+
+## EXCLUSION CRITERIA (STRICT)
+
+Exclude any paper that meets ANY of the following:
+
+* Opinion papers, essays, editorials, or blog-style content
+* No empirical validation or no evaluation data
+* Pure NLP studies not related to programming tasks
+* Papers without accessible metadata (no DOI, URL, or identifiable source)
+* Duplicate studies or extended versions (keep the most complete one)
+* Non-verifiable or potentially hallucinated references
+
+---
+
+## OUTPUT FORMAT (MANDATORY)
+
+For each paper, provide:
+
+1. Title
+2. Authors
+3. Year
+4. Venue (conference/journal/arXiv)
+5. DOI or URL (MANDATORY – must be verifiable)
+6. Type of study (experiment, survey, case study, etc.)
+7. Tools evaluated (e.g., Copilot, ChatGPT)
+8. Evaluation metrics used
+9. Key findings (2–3 bullet points)
+10. Mapping to RQs (explicitly indicate which RQs this paper helps answer)
+
+---
+
+## QUALITY CONTROL
+
+* DO NOT fabricate or hallucinate references
+* ONLY include papers that can be verified through DOI, arXiv, or official publisher links
+* Flag any uncertain or partially verifiable entries
+* Prioritize highly cited or well-known studies when possible
+
+---
+
+## GOAL
+
+Return a high-quality, verifiable dataset of 30–50 academic papers that can be directly used in an SLR.
+
+Additionally:
+
+* Provide a brief synthesis identifying initial trends across the collected studies
+* Highlight potential research gaps aligned with RQ7

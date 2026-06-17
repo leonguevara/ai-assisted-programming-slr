@@ -1,0 +1,46 @@
+Selección recomendada de 10 papers
+NLPerturbator: Studying the Robustness of Code LLMs to Natural Language Variations
+Copilot Evaluation Harness: Evaluating LLM-Guided Software Programming
+E2Edev: Benchmarking Large Language Models in End-to-End Software Development Task
+A.S.E: A Repository-Level Benchmark for Evaluating Security in AI-Generated Code
+Using AI-Based Coding Assistants in Practice: State of Affairs, Perceptions, and Ways Forward
+TREAT: A Code LLMs Trustworthiness / Reliability Evaluation and Testing Framework
+SecureAgentBench: Benchmarking Secure Code Generation under Realistic Vulnerability Scenarios
+LLM-based Test-driven Interactive Code Generation: User Study and Empirical Evaluation
+Towards more realistic evaluation of LLM-based code generation: an experimental study and beyond
+Quality and Trust in LLM-generated Code
+Por qué estos 10
+
+Estos 10 te fortalecen justo donde más te conviene:
+
+robustez y prompting: 1
+evaluación realista / benchmarking fuerte: 2, 3, 9
+seguridad: 4, 7
+trust / reliability: 6, 10
+uso en práctica / percepción: 5
+interacción humano-IA con evidencia empírica: 8
+
+Eso los hace mejores reemplazos que papers más generales, muy narrativos, o demasiado cercanos a revisiones secundarias.
+
+Los que dejaría como reserva
+
+Si alguno de los 10 no te convence después de revisión más fina, mis siguientes candidatos serían:
+
+SIMCOPILOT: Evaluating Large Language Models for Copilot-Style Code Generation
+Bugs in Large Language Models Generated Code: An Empirical Study
+Codexity: Secure AI-assisted Code Generation
+Security Analysis of Automated Code Generation
+Automating the Correctness Assessment of AI-generated Code for Security Contexts
+
+
+Haz la revisión y análisis de este paper, y dime a cuál paper sustituiría?
+
+Va el siguiente documento. Analiza su contenido y decide si puede ser parte de esos artículos que estamos buscando con precisión quirúrgica, o inclusive si puede ser parte del repositorio de Primary studies. Si no cumple los criterios, dímelo y pasamos a otro paper.  Si sí cumple, si lo agregramos a Primary Studies o a Related Works para redondear la investigación.
+
+Actualiza el Excel, agregando este artículo como Paper_114.  Asegúrate de llenar todas las columnas.
+
+
+
+
+
+

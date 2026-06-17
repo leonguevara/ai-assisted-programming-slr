@@ -1,0 +1,177 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1ywIisQOCRL3dPVOSdJrIh7BJVtINiVbk?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto
+
+Continuing Phase 3 of the SLR section on Code Quality and Technical Debt in AI-Assisted Programming. Same NB1_CQTD_CORE corpus (77 PDFs in the Google Drive folder), same Phase 2 extractive workbooks (11,628 atomic findings across 2.1-2.6).
+
+CONSOLIDATED CONSTRAINTS — apply ALL from the first draft, not retroactively.
+
+Citation discipline (12 points):
+1. Breadth across all 77 papers. Every paper in the corpus is a valid source, including Bayram, Belozerov, and Siroš, but no paper has privileged status. When multiple papers support a claim, cite the broader set rather than defaulting to the same few.
+2. Use only papers in the 77-PDF corpus. Every bibkey cited must exist literally in NB1_CQTD_CORE.bib. Do not infer bibkeys from titles, folder names, examples in the prompt, or model memory. If a bibkey cannot be verified, do not cite the paper — even if it would round out a quota.
+3. Cite by exact bibkey from NB1_CQTD_CORE.bib. The References section must use the official title from the .bib file, not a paraphrased version.
+4. One citation per claim per paper. Do not cite the same paper twice (once to abstract, once to body) for the same finding.
+5. Single numbering system across the document. Inline [N] equals References entry N. References are ordered by first appearance in section 2, not alphabetically.
+6. The References section lists ONLY the papers actually cited inline, not the full corpus.
+7. Citation-from-citation safeguard: if a figure or finding is reported by a citation within a paper (e.g., "Pearce et al. report 40%"), do not attribute that figure to the citing paper. Only count what the paper itself empirically produced.
+8. Reference-number-extraction safeguard: do not treat bracketed reference markers (e.g., "[21, 41, 49]"), arXiv identifiers (e.g., "2107.03374"), or bibliography indices as quantitative findings.
+9. Subject-propagation safeguard: when a sentence contains multiple figures governed by a single subject (e.g., "GPT-5 achieves 98.4%, 82.6%, and 26.9%"), propagate the subject to every derived figure or row. Do not record "not specified" when the source sentence names a specific model.
+10. No paper anchoring more than 5 claims/items unless the artefact explicitly allows it.
+11. If you cannot find evidence in the uploaded PDFs for a particular claim, say "No evidence found in uploaded sources" rather than inventing one. No hallucinations.
+12. British English throughout.
+
+Workflow discipline:
+Apply the "evidence matrix first, prose second, references third, validation last" workflow established in the Phase 3.1 Lessons Learned:
+
+Step 1: Construct a source-control table (mental or actual) of every paper-item relationship before drafting prose. Verify all bibkeys against NB1_CQTD_CORE.bib at this stage.
+Step 2: Draft the prose of each item using only papers from the source-control table. Do not introduce new papers during drafting.
+Step 3: Generate the References section AFTER the prose is stable, ordered by first appearance.
+Step 4: Run a self-validation pass before delivery:
+- Every inline [N] has a corresponding References entry.
+- No empty brackets, orphan commas, or formatting residue.
+- Sub-points are numbered correctly.
+- No paper appears in more than 5 items.
+- Spot-check 3 inline citations against References.
+- No fabricated bibkeys.
+
+Regeneration over modification: If on review the draft has substantive issues, regenerate the whole document rather than apply local patches. Iterative editing of complex internally-linked documents introduces ghost citations, orphan commas, and semantic drift (the "iterative-editing entropy" pattern). Regenerate from scratch when significant changes are needed.
+
+Validity over breadth: A claim with 6 verified papers is preferable to a claim with 12 papers if 6 of them are weak, irrelevant, or unverified. Quality outweighs volume.
+
+Task: Phase 3.4 — Empirical Anchors Compendium
+Produce the empirical anchors compendium: a curated catalogue of the 50-80 most defensible quantitative anchors from the corpus, ready for direct use in the manuscript.
+
+Source material: the six Phase 2 workbooks (11,628 atomic findings) plus the three Phase 3 documents (3.1 Consensus Map, 3.2 Contradiction Map, 3.3 Methodological Pattern Atlas).
+
+WHAT TO PRODUCE:
+
+A DOCX document AND an XLSX workbook.
+
+DOCX structure:
+1. Overview — 2 paragraphs framing what makes an "empirical anchor" suitable for the manuscript. Criteria for inclusion:
+(a) The figure is the paper's own empirical finding (not citation-from-citation).
+(b) The figure has a clear denominator and unit of measurement.
+(c) The figure has been replicated, paralleled, or contextualised by at least one other paper in the corpus, OR it is a methodologically singular finding that the SLR's argument depends on.
+(d) The figure is methodologically defensible (study design appropriate to the claim).
+(e) The figure is conceptually central to the SLR's argument.
+
+2. Anchors organised by analytical theme — Group the 50-80 anchors into 7-10 themes, with 6-10 anchors per theme. For each theme:
+- 2.X.1 Theme description (1-2 sentences).
+- 2.X.2 List of anchors in the theme, each as a sub-numbered entry (2.X.2.1, 2.X.2.2...) with:
+- The exact figure (e.g., "20.6% of 126 programmes").
+- The paper that produced it (title, first author, bibkey verified against NB1_CQTD_CORE.bib).
+- The study design used (drawn from Phase 3.3 categorisation).
+- Why this anchor is defensible (1 sentence).
+- Where in the manuscript this anchor could be cited (e.g., "Section 3.3 Methods", "Section 4.2 Quality findings", "Discussion 5.1").
+
+Suggested themes:
+- A. Synthetic benchmark performance (HumanEval, MBPP, Pass@1, etc.)
+- B. Real-world performance gap (class-level, repository-level, multi-step tasks)
+- C. Defect rates and structural error patterns
+- D. Security vulnerability rates (CWE prevalence, per-language, per-model)
+- E. Maintainability and technical debt (code smells, complexity, survival rates)
+- F. Reproducibility and dependency issues
+- G. Productivity effects (with control comparisons)
+- H. Multi-turn interaction effects
+- I. Modification effort and validation behaviour
+- J. Cognitive load and developer behaviour
+
+3. Headline anchors — A closing table of the TOP 15 anchors across all themes — the ones likely to appear in the manuscript's abstract, introduction, and conclusions. Columns: # | Figure | Paper | Theme | Why headline.
+
+4. Anchors flagged for caution — A 5-8 row sub-list of anchors that frequently appear in the literature but require careful framing. For each: anchor, paper, why caution applies, recommended manuscript framing.
+
+5. References — Generated AFTER prose is stable. Ordered by first appearance.
+
+6. Reference-alignment spot-check — Verify 3 inline citations.
+
+XLSX structure (companion workbook):
+Sheet 1: "Anchors compendium" — one row per anchor. Columns:
+- Anchor ID (A01, A02 ... A80)
+- Theme (A through J)
+- Exact figure
+- Paper title
+- First author
+- Year
+- Bibkey
+- Study design (from Phase 3.3 categorisation)
+- Denominator / sample size
+- Unit of measurement
+- Model evaluated (apply subject-propagation rule)
+- Why defensible (1 sentence)
+- Where in manuscript (suggested section)
+- Phase 2 source workbook (e.g., "Phase 2.1 Defect rates")
+- Flagged for caution (Yes/No)
+- Caution note (if flagged)
+
+Sheet 2: "Theme summary" — one row per theme. Columns: Theme | Number of anchors | Most-cited bibkeys | Most-recent year | Quantitative anchor range.
+
+Sheet 3: "References" — Ref # | Bibkey | First author | Year | Paper title. Ordered by first appearance.
+
+Sheet 4: "Coverage check" — Total anchors | Anchors per theme | Unique papers contributing anchors | Heibel & Lowd contribution status | Anchors per Phase 2 source.
+
+Additional task-specific constraints:
+- Aim for 50-80 anchors total. Fewer than 50 risks under-coverage; more than 80 risks dilution. No hallucinations.
+- Each theme should have 6-10 anchors.
+- Anchors should come from at least 30-40 different papers (no single paper anchoring more than 6 anchors).
+- Every anchor must point to a Phase 2 workbook row that can be traced back.
+- The DOCX and XLSX must be internally consistent: every anchor in the DOCX appears in Sheet 1 of the XLSX, and vice versa.
+Save with filenames: Phase_3_4_CQTD_Anchors_Compendium_v1.docx and Phase_3_4_CQTD_Anchors_Compendium_v1.xlsx
+-- Fin de Prompt 1 --
+
+-- Inicio del Prompt 2 --
+The Phase 3.4 Anchors Compendium has the correct structure (67 anchors, 10 themes balanced, 54 papers, frequency caps respected, 4 sheets in XLSX, anchors numbered 2.X.2.Y in DOCX), but the content is critically insufficient for manuscript use. Three problems must be corrected:
+
+Problem 1 (most critical): Anchors have no description of what they measure.
+
+Every anchor in the DOCX is currently structured as "[FIGURE] — [paper title] (Author, bibkey) [N]. Study design: X. Defensibility: Y. Suggested use: Z."
+
+This is unusable for the manuscript because a reader cannot tell what the figure represents. What does "25%" mean? Is it accuracy? Defect rate? Pass rate on HumanEval? Vulnerability rate?
+
+Each anchor must be re-narrated to include a measurement description. The required format is:
+
+"2.1.2.1 25% [accuracy on HumanEval Python problems, ChatGPT model evaluated on 164 problems] — Comparative Analysis of AI Models for Python Code Generation: A HumanEval Benchmark Study (Bayram, bayram_comparative_2025) [1]. ..."
+
+Also, you are using boilerplates for Study design and Defensibility.  Each anchor should have its own narrative (see problem 3 below).
+
+Equivalently in the XLSX, the columns must be populated so the reader can construct this sentence for this specific example:
+
+- 'Exact figure' = "25%"
+- 'Unit of measurement' = "accuracy" or "pass rate" or whatever applies
+- 'Model evaluated' = "ChatGPT" (not "not reported")
+- 'Denominator / sample size' = "164 HumanEval Python problems" (not "not reported")
+- 'Specific measurement context' = (NEW required column) — describe what the figure measures in 1 sentence
+
+Re-read the original source PDF for each of the 67 anchors to recover this context. The "subject-propagation safeguard" from the 12-point header requires this: when a Phase 2 row says "Bayram, 25%, not reported, not reported", but the original PDF sentence says "Bayram evaluates six models on 164 HumanEval Python problems and reports ChatGPT achieves 25% accuracy", the model and denominator must be propagated to the anchor.
+
+Problem 2: Duplicate anchors.
+
+A03 and A04 (anchors 2.1.2.3 and 2.1.2.4) are identical: same paper (Liu_is_2023), same figure (-28.9%), same fields. One must be removed (or replaced with a different figure from the same paper that captures different context, if such exists).
+
+Audit the full 67-anchor set for other duplicates and either de-duplicate or differentiate.
+
+Problem 3: Boilerplate in three columns.
+
+- 'Why defensible': 67 entries with only 10 distinct values (one boilerplate per theme). Make each anchor's defensibility claim-specific: name what makes THAT figure defensible (study design appropriateness, sample size sufficiency, replication status, etc.).
+- 'Suggested use' / 'Where in manuscript': 67 entries with only 2 distinct values ("Section 4" or "Discussion 5"). Make this anchor-specific: a Bayram HumanEval anchor goes to "Section 4.2.1 Synthetic benchmark performance"; a Rahman class-level anchor goes to "Section 4.2.2 Real-world performance gap". Use the actual sub-section structure of the planned manuscript.
+- 'Study design': 67 entries with 10 distinct values (one per theme). Use the per-paper Phase 3.3 design assignment, not a theme-level default. A paper categorised in Phase 3.3 as "controlled user study" stays "controlled user study" regardless of which Phase 3.4 theme it appears in.
+
+Output:
+
+Regenerate both files (XLSX and DOCX) keeping:
+- Same Anchor IDs A01-A67 (minus any de-duplicated)
+- Same theme assignments
+- Same flagged-for-caution decisions
+- Same 54-paper bibkey set (minus de-duplications)
+
+Add to the XLSX a new column "Specific measurement context" between 'Unit of measurement' and 'Model evaluated', describing in 1 sentence what each figure measures.
+
+Ensure DOCX and XLSX are perfectly synchronised: every anchor's description in the DOCX prose must match the row data in the XLSX.
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+-- Fin del Prompt 4 --
+
+-- Inicio del Prompt 5 --
+-- Fin del Prompt 5 --

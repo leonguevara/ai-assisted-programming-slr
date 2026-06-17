@@ -1,0 +1,728 @@
+TY  - GEN
+T1  - A Multimodal XR Framework for Heritage Engagement and Analysis: The Case of Torre del Mar in Borriana (Castellón, Spain)
+AN  - 3303185304
+AB  - The transition from Cultural Heritage (CH) digital documentation to dynamic, experiential heritage requires versatile workflows that engage diverse audiences. This paper proposes a scalable, multimodal eXtended Reality (XR) framework for the Torre del Mar (Castellón, Spain) and demonstrates how a single high-fidelity dataset can generate a comprehensive ecosystem of interactive experiences. Starting from a multi-source data fusion of UAV photogrammetry and Terrestrial Laser Scanning (TLS), a master model was developed to drive three distinct interaction pipelines. First, a phygital interface combines a modular, disassemblable 3D-printed replica with model-based Augmented Reality (AR), enabling tangible exploration of constructive details. Second, a collaborative Mixed Reality (MR) environment allows remote experts to co-inhabit the digital space for real-time analysis. Third, a multi-tiered Virtual Reality (VR) strategy optimizes the asset for PC-tethered, standalone, and WebVR platforms, balancing graphical fidelity with accessibility. The results validate a reproducible methodology that transforms technical survey data into an active knowledge system, effectively bridging the gap between scientific preservation and public dissemination while ensuring the long-term valorization of digital heritage assets.
+JF  - The International Archives of Photogrammetry, Remote Sensing and Spatial Information Sciences
+AU  - Pupi, Enrico
+AU  - Spallone, Roberta
+AU  - Rinascimento, Martina
+AU  - Gil-Piqueras, Teresa
+AU  - Rodriguez-Navarro, Pablo
+AD  - Politecnico di Torino, Department of Architecture and Design, Turin, Italy ; Universitat Politècnica de València. Centro de Investigación PEGASO. Departamento de Expresión Gráfica Arquitectónica, Valencia, Spain
+Y1  - 2026
+PY  - 2026
+DA  - 2026
+SP  - 399
+EP  - 406
+CY  - Gottingen
+PB  - Copernicus GmbH
+PP  - Gottingen
+VL  - XLVIII-2/W12-2026
+KW  - Geography
+KW  - Augmented reality
+KW  - Data integration
+KW  - Virtual reality
+KW  - Real time
+KW  - Photogrammetry
+KW  - Mixed reality
+KW  - Cultural resources
+KW  - Cultural heritage
+KW  - Environmental
+KW  - Spain
+KW  - Environmental
+KW  - Spain
+UR  - https://www.proquest.com/conference-papers-proceedings/multimodal-xr-framework-heritage-engagement/docview/3303185304/se-2?accountid=11643
+L2  - https://libkey.io/libraries/2563/openurl?genre=article&au=Pupi%2C+Enrico%3BSpallone%2C+Roberta%3BRinascimento%2C+Martina%3BGil-Piqueras%2C+Teresa%3BRodriguez-Navarro%2C+Pablo&aulast=Pupi&issn=16821750&isbn=&title=A+Multimodal+XR+Framework+for+Heritage+Engagement+and+Analysis%3A+The+Case+of+Torre+del+Mar+in+Borriana+%28Castell%C3%B3n%2C+Spain%29&jtitle=The+International+Archives+of+Photogrammetry%2C+Remote+Sensing+and+Spatial+Information+Sciences&pubname=The+International+Archives+of+Photogrammetry%2C+Remote+Sensing+and+Spatial+Information+Sciences&btitle=&atitle=A+Multimodal+XR+Framework+for+Heritage+Engagement+and+Analysis%3A+The+Case+of+Torre+del+Mar+in+Borriana+%28Castell%26oacute%3Bn%2C+Spain%29&volume=XLVIII-2%2FW12-2026&issue=&spage=399&date=2026&doi=10.5194%2Fisprs-archives-XLVIII-2-W12-2026-399-2026&sid=ProQuest
+LA  - English
+DB  - ProQuest Central Premium; Publicly Available Content Database
+N1  - Copyright - © 2026. This work is published under https://creativecommons.org/licenses/by/4.0/  (the "License"). Notwithstanding the ProQuest Terms and Conditions, you may use this content in accordance with the terms of the License.
+N1  - Last updated - 2026-02-12
+DO  - https://doi.org/10.5194/isprs-archives-XLVIII-2-W12-2026-399-2026
+L1  - https://media.proquest.com/media/hms/PFT/1/393Rf?_a=ChgyMDI2MDQwMzIxMjAzNTc4OTozNTkyNDESBjEwMzA0MBoKT05FX1NFQVJDSCIOMTg3LjE5MC43OS4yMDIqBzIwMzc2NzQyCjMzMDMxODUzMDQ6DURvY3VtZW50SW1hZ2VCATBSBk9ubGluZVoCRlRiA1BGVGoKMjAyNi8wMS8wMXIKMjAyNi8xMi8zMXoAggE7UC0xMDEwNDg0LTExNjQzLUNVU1RPTUVSLTEwMDAwNDMxLzEwMDAwNDMwLzEwMDAwNDA0LTgwNjMyNDOSAQZPbmxpbmXKAVRNb3ppbGxhLzUuMCAoTWFjaW50b3NoOyBJbnRlbCBNYWMgT1MgWCAxMC4xNTsgcnY6MTQ5LjApIEdlY2tvLzIwMTAwMTAxIEZpcmVmb3gvMTQ5LjDSAR9Db25mZXJlbmNlIFBhcGVycyAmIFByb2NlZWRpbmdzmgIHUHJlUGFpZKoCK09TOkVNUy1NZWRpYUxpbmtzU2VydmljZS1nZXRNZWRpYVVybEZvckl0ZW3KAg9BcnRpY2xlfEZlYXR1cmXSAgFZ8gIA%2BgIBWYIDA1dlYooDHENJRDoyMDI2MDQwMzIxMjAzNTc4OTo3Nzk0MDU%3D&_s=u9nQQ9HY2WKhMGK7pKxm8ITgvo0%3D
+ER  - 
+
+
+
+TY  - JOUR
+T1  - Ask a Belt
+AN  - 3229942223
+JF  - Lean & Six Sigma Review
+AU  - Radziwill, Nicole M
+Y1  - 2025/02//
+PY  - 2025
+DA  - Feb 2025
+SP  - 30
+EP  - 31
+CY  - Milwaukee
+PB  - American Society for Quality
+PP  - Milwaukee
+VL  - 24
+IS  - 2
+SN  - 26387980
+KW  - Business And Economics--Production Of Goods And Services
+KW  - Problem solving
+KW  - Software
+KW  - Collaboration
+KW  - Algorithms
+KW  - Documentation
+KW  - Teams
+KW  - Quality management
+KW  - Customer feedback
+KW  - Six Sigma
+UR  - https://www.proquest.com/trade-journals/ask-belt/docview/3229942223/se-2?accountid=11643
+L2  - https://libkey.io/libraries/2563/openurl?genre=article&au=Radziwill%2C+Nicole+M&aulast=Radziwill&issn=26387980&isbn=&title=Ask+a+Belt&jtitle=Lean+%26+Six+Sigma+Review&pubname=Lean+%26+Six+Sigma+Review&btitle=&atitle=Ask+a+Belt&volume=24&issue=2&spage=30&date=2025&doi=&sid=ProQuest
+LA  - English
+DB  - ProQuest Central Premium
+N1  - Copyright - Copyright American Society for Quality 2025
+N1  - Last updated - 2026-02-14
+L1  - https://media.proquest.com/media/hms/PFT/1/sz7zc?_a=ChgyMDI2MDQwMzIxMjAzNTc4OTozNTkyNDESBjEwMzA0MBoKT05FX1NFQVJDSCIOMTg3LjE5MC43OS4yMDIqBTI1NzgxMgozMjI5OTQyMjIzOg1Eb2N1bWVudEltYWdlQgEwUgZPbmxpbmVaAkZUYgNQRlRqCjIwMjUvMDIvMDFyCjIwMjUvMDIvMjh6AIIBO1AtMTAwOTkyNC0xMTY0My1DVVNUT01FUi0xMDAwMDQzMS8xMDAwMDQzMC8xMDAwMDM2OS04MDYzMjIykgEGT25saW5lygFUTW96aWxsYS81LjAgKE1hY2ludG9zaDsgSW50ZWwgTWFjIE9TIFggMTAuMTU7IHJ2OjE0OS4wKSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzE0OS4w0gEOVHJhZGUgSm91cm5hbHOaAgdQcmVQYWlkqgIrT1M6RU1TLU1lZGlhTGlua3NTZXJ2aWNlLWdldE1lZGlhVXJsRm9ySXRlbcoCD0FydGljbGV8RmVhdHVyZdICAVnyAgD6AgFOggMDV2ViigMcQ0lEOjIwMjYwNDAzMjEyMDM1Nzg5Ojc3OTQwNQ%3D%3D&_s=7Xrqqw%2BSb51qXXZ0u4WXj6ZviK0%3D
+ER  - 
+
+
+
+TY  - GEN
+T1  - A preliminary Study on the Use of Generative AI in Software Engineering Education
+AN  - 3285779098
+AB  - This study investigates the use of generative AI within a university-level software engineering (SE) course by analysing survey responses from secondyear students. The survey explored multiple dimensions of students' interaction with AI while working on their course projects, including frequency of use, task types, prompting strategies, and perceived challenges. The results reveal widespread use of Al, especially for coding and debugging, though students also apply it across other phases of the software development lifecycle (SDLC). Despite this broad engagement, and even some use of advanced prompting, understanding of these techniques remains limited. All students reported verifying Al outputs, indicating low trust, which is further reinforced by the fact that many cited the inaccuracy of Al-generated results as their biggest challenge. Students also expressed a clear interest in improving their skills, particularly in prompt design. These findings underscore the need for structured support in AI literacy and prompting skills, as well as adapting course projects for an Al-enhanced learning context. This study provides a foundation for future research and instructional design in SE education.
+JF  - Central European Conference on Information and Intelligent Systems
+AU  - Hidalgo, Pablo
+AU  - Dominguez, Adrian
+AU  - Rodriguez, Daniel
+AU  - Mijac, Marko
+AD  - Department of Computer Science University of Alcala Alcala de Henares, 28805, Madrid, Spain ; University of Zagreb Faculty of Organization and Informatics Pavlinska 2, 42000 Varazdin, Croatia
+Y1  - 2025
+PY  - 2025
+DA  - 2025
+SP  - 779
+EP  - 786
+CY  - Varazdin
+PB  - Faculty of Organization and Informatics Varazdin
+PP  - Varazdin
+KW  - Computers--Information Science And Information Theory
+KW  - Use statistics
+KW  - Pedagogy
+KW  - Higher education
+KW  - Students
+KW  - Software development
+KW  - Educational objectives
+KW  - Curricula
+KW  - Engineering education
+KW  - Debugging
+KW  - Optimization techniques
+KW  - Instructional design
+KW  - Skills
+KW  - Generative artificial intelligence
+KW  - Ethics
+KW  - Large language models
+KW  - Software engineering
+KW  - Learning
+KW  - Chatbots
+KW  - Digital literacy
+KW  - Colleges & universities
+UR  - https://www.proquest.com/conference-papers-proceedings/preliminary-study-on-use-generative-ai-software/docview/3285779098/se-2?accountid=11643
+L2  - https://libkey.io/libraries/2563/openurl?genre=proceeding&au=Hidalgo%2C+Pablo%3BDominguez%2C+Adrian%3BRodriguez%2C+Daniel%3BMijac%2C+Marko&aulast=Hidalgo&issn=18472001&isbn=&title=A+preliminary+Study+on+the+Use+of+Generative+AI+in+Software+Engineering+Education&jtitle=Central+European+Conference+on+Information+and+Intelligent+Systems&pubname=Central+European+Conference+on+Information+and+Intelligent+Systems&btitle=&atitle=A+preliminary+Study+on+the+Use+of+Generative+AI+in+Software+Engineering+Education&volume=&issue=&spage=779&date=2025&doi=&sid=ProQuest
+LA  - English
+DB  - ProQuest Central Premium; Publicly Available Content Database
+N1  - Copyright - © 2025. This work is published under http://archive.ceciis.foi.hr/app/index.php/ceciis/archive (the "License"). Notwithstanding the ProQuest Terms and Conditions, you may use this content in accordance with the terms of the License.
+N1  - Last updated - 2025-12-22
+L1  - https://media.proquest.com/media/hms/PFT/1/caY1f?_a=ChgyMDI2MDQwMzIxMjAzNTc4OTozNTkyNDESBjEwMzA0MBoKT05FX1NFQVJDSCIOMTg3LjE5MC43OS4yMDIqBzE5ODYzNTQyCjMyODU3NzkwOTg6DURvY3VtZW50SW1hZ2VCATBSBk9ubGluZVoCRlRiA1BGVGoKMjAyNS8wMS8wMXIKMjAyNS8xMi8zMXoAggFEUC0xMDA3ODUyLTExNjQzLUNVU1RPTUVSLTEwMDAwNDMxLzEwMDAwNDMwLzEwMDAwNDE5LzEwMDAwMjMzLTgwNjMyNzmSAQZPbmxpbmXKAVRNb3ppbGxhLzUuMCAoTWFjaW50b3NoOyBJbnRlbCBNYWMgT1MgWCAxMC4xNTsgcnY6MTQ5LjApIEdlY2tvLzIwMTAwMTAxIEZpcmVmb3gvMTQ5LjDSAR9Db25mZXJlbmNlIFBhcGVycyAmIFByb2NlZWRpbmdzmgIHUHJlUGFpZKoCK09TOkVNUy1NZWRpYUxpbmtzU2VydmljZS1nZXRNZWRpYVVybEZvckl0ZW3KAhVDb25mZXJlbmNlIFByb2NlZWRpbmfSAgFZ8gIA%2BgIBWYIDA1dlYooDHENJRDoyMDI2MDQwMzIxMjAzNTc4OTo3Nzk0MDU%3D&_s=7tMGyqB5swv1P4aUJXLM5TmvAm8%3D
+ER  - 
+
+
+
+TY  - GEN
+T1  - How ChatGPT and Gemini View the Elements of Communication Competence of Large Language Models: A Pilot Study
+AN  - 3285779088
+AB  - A concise overview is provided of selected theoretical models of communication competence in the fields of linguistics, interpersonal communication, second language use, and human-robot interaction. The following practical research consisted of two case studies with the goals of investigating how advanced AI tools like ChatGPT and Gemini interpret elements of two communication competence theories in the context of Large Language Model (LLM) interactions with users. The focus was on these theoretical approaches: (1) an integrated linguistic-interpersonal model and (2) an interpersonal human-humanoid interaction model. The conclusion is that both approaches are suitable for a better understanding of LLM-user interaction.
+JF  - Central European Conference on Information and Intelligent Systems
+AU  - Bubas, Goran
+AD  - University of Zagreb Faculty of Organization and Informatics Pavlinska 2, 42000 Varazdin Croatia
+Y1  - 2025
+PY  - 2025
+DA  - 2025
+SP  - 455
+EP  - 466
+CY  - Varazdin
+PB  - Faculty of Organization and Informatics Varazdin
+PP  - Varazdin
+KW  - Computers--Information Science And Information Theory
+KW  - Language
+KW  - Linguistics
+KW  - Large language models
+KW  - Artificial intelligence
+KW  - Chatbots
+KW  - Knowledge
+KW  - Interpersonal communication
+KW  - Interaction models
+KW  - Robots
+KW  - Human engineering
+KW  - Personal communication
+KW  - Case studies
+KW  - Sociolinguistics
+UR  - https://www.proquest.com/conference-papers-proceedings/how-chatgpt-gemini-view-elements-communication/docview/3285779088/se-2?accountid=11643
+L2  - https://libkey.io/libraries/2563/openurl?genre=proceeding&au=Bubas%2C+Goran&aulast=Bubas&issn=18472001&isbn=&title=How+ChatGPT+and+Gemini+View+the+Elements+of+Communication+Competence+of+Large+Language+Models%3A+A+Pilot+Study&jtitle=Central+European+Conference+on+Information+and+Intelligent+Systems&pubname=Central+European+Conference+on+Information+and+Intelligent+Systems&btitle=&atitle=How+ChatGPT+and+Gemini+View+the+Elements+of+Communication+Competence+of+Large+Language+Models%3A+A+Pilot+Study&volume=&issue=&spage=455&date=2025&doi=&sid=ProQuest
+LA  - English
+DB  - ProQuest Central Premium; Publicly Available Content Database
+N1  - Copyright - © 2025. This work is published under http://archive.ceciis.foi.hr/app/index.php/ceciis/archive (the "License"). Notwithstanding the ProQuest Terms and Conditions, you may use this content in accordance with the terms of the License.
+N1  - Last updated - 2025-12-22
+L1  - https://media.proquest.com/media/hms/PFT/1/RZY1f?_a=ChgyMDI2MDQwMzIxMjAzNTc4OTozNTkyNDESBjEwMzA0MBoKT05FX1NFQVJDSCIOMTg3LjE5MC43OS4yMDIqBzE5ODYzNTQyCjMyODU3NzkwODg6DURvY3VtZW50SW1hZ2VCATBSBk9ubGluZVoCRlRiA1BGVGoKMjAyNS8wMS8wMXIKMjAyNS8xMi8zMXoAggFEUC0xMDA3ODUyLTExNjQzLUNVU1RPTUVSLTEwMDAwNDMxLzEwMDAwNDMwLzEwMDAwNDE5LzEwMDAwMjMzLTgwNjMyNzmSAQZPbmxpbmXKAVRNb3ppbGxhLzUuMCAoTWFjaW50b3NoOyBJbnRlbCBNYWMgT1MgWCAxMC4xNTsgcnY6MTQ5LjApIEdlY2tvLzIwMTAwMTAxIEZpcmVmb3gvMTQ5LjDSAR9Db25mZXJlbmNlIFBhcGVycyAmIFByb2NlZWRpbmdzmgIHUHJlUGFpZKoCK09TOkVNUy1NZWRpYUxpbmtzU2VydmljZS1nZXRNZWRpYVVybEZvckl0ZW3KAhVDb25mZXJlbmNlIFByb2NlZWRpbmfSAgFZ8gIA%2BgIBWYIDA1dlYooDHENJRDoyMDI2MDQwMzIxMjAzNTc4OTo3Nzk0MDU%3D&_s=1Tgtwg6JFKKhk8lckm6gkcyty6E%3D
+ER  - 
+
+
+
+TY  - GEN
+T1  - A Comparative Study of Vibe Coding with ChatGPT and Gemini in Front-end Web Development
+AN  - 3285779079
+AB  - The invention of Generative AI and Large Language Models has recently catalyzed "vibe coding" as a new paradigm of software development in which developers use natural language to state their intentions. However, there is currently a significant lack of empirical research comparing the fundamental behaviors of GenAI tools and their code quality. This paper presents such comparative study of GPT-40 and Gemini 2.5 Pro for front-end web development using everyday technologies HTML, CSS, and JavaScript. Using zero-shot and prompt-chaining strategies, we tasked the models to create three commonplace web applications of increasing complexity. The architecture and features of the generated code were evaluated using a mixed-method evaluation framework. The results show that GPT-40 and Gemini 2.5 Pro represent two different development paradigms; GPT-4o functions as a tool that generates minimal, concise code that follows user instructions, but in more complex tasks it sometimes generates errors and unwanted changes in the codebase. In contrast, Gemini 2.5 Pro operates as a proactive-enhancement agent that generates more complex, feature-rich code by anticipating the user's needs and adding advanced UI functionalities. Importantly, vibe coding is formally defined, explained, and compared to other AI-assisted programming approaches. The codebase created for this research is available at: https://github.com/mhorvat/vibecoding_frontend.
+JF  - Central European Conference on Information and Intelligent Systems
+AU  - Horvat, Marko
+AU  - Kralj, Barbara
+AU  - Gledec, Gordan
+Y1  - 2025
+PY  - 2025
+DA  - 2025
+SP  - 787
+EP  - 796
+CY  - Varazdin
+PB  - Faculty of Organization and Informatics Varazdin
+PP  - Varazdin
+KW  - Computers--Information Science And Information Theory
+KW  - Comparative studies
+KW  - Programming languages
+KW  - Software development
+KW  - Computer science
+KW  - Large language models
+KW  - Applications programs
+KW  - Science education
+KW  - Rapid prototyping
+KW  - Task complexity
+KW  - Generative artificial intelligence
+KW  - Computer engineering
+KW  - Architecture
+KW  - Human-computer interaction
+KW  - Software engineering
+KW  - Chatbots
+KW  - Coding
+KW  - Natural language
+UR  - https://www.proquest.com/conference-papers-proceedings/comparative-study-vibe-coding-with-chatgpt-gemini/docview/3285779079/se-2?accountid=11643
+L2  - https://libkey.io/libraries/2563/openurl?genre=proceeding&au=Horvat%2C+Marko%3BKralj%2C+Barbara%3BGledec%2C+Gordan&aulast=Horvat&issn=18472001&isbn=&title=A+Comparative+Study+of+Vibe+Coding+with+ChatGPT+and+Gemini+in+Front-end+Web+Development&jtitle=Central+European+Conference+on+Information+and+Intelligent+Systems&pubname=Central+European+Conference+on+Information+and+Intelligent+Systems&btitle=&atitle=A+Comparative+Study+of+Vibe+Coding+with+ChatGPT+and+Gemini+in+Front-end+Web+Development&volume=&issue=&spage=787&date=2025&doi=&sid=ProQuest
+LA  - English
+DB  - ProQuest Central Premium; Publicly Available Content Database
+N1  - Copyright - © 2025. This work is published under http://archive.ceciis.foi.hr/app/index.php/ceciis/archive (the "License"). Notwithstanding the ProQuest Terms and Conditions, you may use this content in accordance with the terms of the License.
+N1  - Last updated - 2025-12-22
+L1  - https://media.proquest.com/media/hms/PFT/1/WaY1f?_a=ChgyMDI2MDQwMzIxMjAzNTc4OTozNTkyNDESBjEwMzA0MBoKT05FX1NFQVJDSCIOMTg3LjE5MC43OS4yMDIqBzE5ODYzNTQyCjMyODU3NzkwNzk6DURvY3VtZW50SW1hZ2VCATBSBk9ubGluZVoCRlRiA1BGVGoKMjAyNS8wMS8wMXIKMjAyNS8xMi8zMXoAggFEUC0xMDA3ODUyLTExNjQzLUNVU1RPTUVSLTEwMDAwNDMxLzEwMDAwNDMwLzEwMDAwNDE5LzEwMDAwMjMzLTgwNjMyNzmSAQZPbmxpbmXKAVRNb3ppbGxhLzUuMCAoTWFjaW50b3NoOyBJbnRlbCBNYWMgT1MgWCAxMC4xNTsgcnY6MTQ5LjApIEdlY2tvLzIwMTAwMTAxIEZpcmVmb3gvMTQ5LjDSAR9Db25mZXJlbmNlIFBhcGVycyAmIFByb2NlZWRpbmdzmgIHUHJlUGFpZKoCK09TOkVNUy1NZWRpYUxpbmtzU2VydmljZS1nZXRNZWRpYVVybEZvckl0ZW3KAhVDb25mZXJlbmNlIFByb2NlZWRpbmfSAgFZ8gIA%2BgIBWYIDA1dlYooDHENJRDoyMDI2MDQwMzIxMjAzNTc4OTo3Nzk0MDU%3D&_s=MvgdUODt25CEGg4Uzq%2Bqu0p4gZ0%3D
+ER  - 
+
+
+
+TY  - GEN
+T1  - Lightweight Prompt Engineering for Cognitive Alignment in Educational AI: A OneClickQuiz Case Study
+AN  - 3285779065
+AB  - The rapid integration of Artificial Intelligence (AI) into educational technology promises to revolutionize content creation and assessment. However, the quality and pedagogical alignment of AIgenerated content remain critical challenges. This paper investigates the impact of lightweight prompt engineering strategies on the cognitive alignment of Al-generated questions within OneClickQuiz, a Moodle plugin leveraging generative AI. We evaluate three prompt variants-a detailed baseline, a simpler version, and a persona-based approach-across Knowledge, Application, and Analysis levels of Bloom's Taxonomy. Utilizing an automated classification model (from prior work) and human review, our findings demonstrate that explicit, detailed prompts are crucial for precise cognitive alignment. While simpler and persona-based prompts yield clear and relevant questions, they frequently misalign with intended Bloom's levels, generating outputs that are either too complex or deviate from the desired cognitive objective. This study underscores the importance of strategic prompt engineering т fostering pedagogically sound Al-driven educational solutions and advises on optimizing Al for quality content generation in learning analytics and smart learning environments.
+JF  - Central European Conference on Information and Intelligent Systems
+AU  - Yaacoub, Antoun
+AU  - Da-Rugna, Jérôme
+AU  - Assaghir, Zainab
+AD  - Faculty of Science, Lebanese University Rafic Hariri University Campus, Beirut, Lebanon
+Y1  - 2025
+PY  - 2025
+DA  - 2025
+SP  - 489
+EP  - 496
+CY  - Varazdin
+PB  - Faculty of Organization and Informatics Varazdin
+PP  - Varazdin
+KW  - Computers--Information Science And Information Theory
+KW  - Pedagogy
+KW  - Questions
+KW  - Alignment
+KW  - Learning
+KW  - Educational objectives
+KW  - Education
+KW  - Blooms taxonomy
+KW  - Content creation
+KW  - Generative artificial intelligence
+KW  - Classification
+KW  - Taxonomy
+KW  - Design
+KW  - Engineering
+KW  - Learning analytics
+KW  - Prompt engineering
+KW  - Automation
+KW  - Teachers
+KW  - Cognition & reasoning
+KW  - Artificial intelligence
+UR  - https://www.proquest.com/conference-papers-proceedings/lightweight-prompt-engineering-cognitive/docview/3285779065/se-2?accountid=11643
+L2  - https://libkey.io/libraries/2563/openurl?genre=proceeding&au=Yaacoub%2C+Antoun%3BDa-Rugna%2C+J%C3%A9r%C3%B4me%3BAssaghir%2C+Zainab&aulast=Yaacoub&issn=18472001&isbn=&title=Lightweight+Prompt+Engineering+for+Cognitive+Alignment+in+Educational+AI%3A+A+OneClickQuiz+Case+Study&jtitle=Central+European+Conference+on+Information+and+Intelligent+Systems&pubname=Central+European+Conference+on+Information+and+Intelligent+Systems&btitle=&atitle=Lightweight+Prompt+Engineering+for+Cognitive+Alignment+in+Educational+AI%3A+A+OneClickQuiz+Case+Study&volume=&issue=&spage=489&date=2025&doi=&sid=ProQuest
+LA  - English
+DB  - ProQuest Central Premium; Publicly Available Content Database
+N1  - Copyright - © 2025. This work is published under http://archive.ceciis.foi.hr/app/index.php/ceciis/archive (the "License"). Notwithstanding the ProQuest Terms and Conditions, you may use this content in accordance with the terms of the License.
+N1  - Last updated - 2026-03-15
+L1  - https://media.proquest.com/media/hms/PFT/1/NZY1f?_a=ChgyMDI2MDQwMzIxMjAzNTc4OTozNTkyNDESBjEwMzA0MBoKT05FX1NFQVJDSCIOMTg3LjE5MC43OS4yMDIqBzE5ODYzNTQyCjMyODU3NzkwNjU6DURvY3VtZW50SW1hZ2VCATBSBk9ubGluZVoCRlRiA1BGVGoKMjAyNS8wMS8wMXIKMjAyNS8xMi8zMXoAggFEUC0xMDA3ODUyLTExNjQzLUNVU1RPTUVSLTEwMDAwNDMxLzEwMDAwNDMwLzEwMDAwNDE5LzEwMDAwMjMzLTgwNjMyNzmSAQZPbmxpbmXKAVRNb3ppbGxhLzUuMCAoTWFjaW50b3NoOyBJbnRlbCBNYWMgT1MgWCAxMC4xNTsgcnY6MTQ5LjApIEdlY2tvLzIwMTAwMTAxIEZpcmVmb3gvMTQ5LjDSAR9Db25mZXJlbmNlIFBhcGVycyAmIFByb2NlZWRpbmdzmgIHUHJlUGFpZKoCK09TOkVNUy1NZWRpYUxpbmtzU2VydmljZS1nZXRNZWRpYVVybEZvckl0ZW3KAhVDb25mZXJlbmNlIFByb2NlZWRpbmfSAgFZ8gIA%2BgIBWYIDA1dlYooDHENJRDoyMDI2MDQwMzIxMjAzNTc4OTo3Nzk0MDU%3D&_s=bxVwzq8KEIzqgDOuI7Xljy0WCzY%3D
+ER  - 
+
+
+
+TY  - GEN
+T1  - GenerativeWorldcrafting: A Modular Framework for AI-Assisted Content Creation in Games
+AN  - 3285777845
+AB  - We present a modular framework for Al-assisted world generation in sandbox games, using Minecraft as a case study. Our system integrates multimodal user inputs, i.e. text, speech, and images, with large language and vision-language models to generate structured in-game content. By decomposing complex prompts into reusable components and translating them into executable game commands, the approach supports scalable and intuitive content creation. This work demonstrates how generative AI can enhance creative expression and interactivity in virtual environments.
+JF  - Central European Conference on Information and Intelligent Systems
+AU  - Peharda, Tomislav
+AU  - Durié, Bogdan Okresa
+AD  - University of Zagreb Faculty of Organization and Informatics Artificial Intelligence Laboratory Pavlinska 2, 42000 Varazdin, Croatia
+Y1  - 2025
+PY  - 2025
+DA  - 2025
+SP  - 23
+EP  - 27
+CY  - Varazdin
+PB  - Faculty of Organization and Informatics Varazdin
+PP  - Varazdin
+KW  - Computers--Information Science And Information Theory
+KW  - Language
+KW  - Translating
+KW  - User interface
+KW  - Computer & video games
+KW  - Reusable components
+KW  - Communication
+KW  - Content creation
+KW  - Generative artificial intelligence
+KW  - Design
+KW  - Virtual communities
+KW  - Large language models
+KW  - Keyboards
+KW  - Virtual environments
+UR  - https://www.proquest.com/conference-papers-proceedings/generativeworldcrafting-modular-framework-ai/docview/3285777845/se-2?accountid=11643
+L2  - https://libkey.io/libraries/2563/openurl?genre=proceeding&au=Peharda%2C+Tomislav%3BDuri%C3%A9%2C+Bogdan+Okresa&aulast=Peharda&issn=18472001&isbn=&title=GenerativeWorldcrafting%3A+A+Modular+Framework+for+AI-Assisted+Content+Creation+in+Games&jtitle=Central+European+Conference+on+Information+and+Intelligent+Systems&pubname=Central+European+Conference+on+Information+and+Intelligent+Systems&btitle=&atitle=GenerativeWorldcrafting%3A+A+Modular+Framework+for+AI-Assisted+Content+Creation+in+Games&volume=&issue=&spage=23&date=2025&doi=&sid=ProQuest
+LA  - English
+DB  - ProQuest Central Premium; Publicly Available Content Database
+N1  - Copyright - © 2025. This work is published under http://archive.ceciis.foi.hr/app/index.php/ceciis/archive (the "License"). Notwithstanding the ProQuest Terms and Conditions, you may use this content in accordance with the terms of the License.
+N1  - Last updated - 2025-12-22
+L1  - https://media.proquest.com/media/hms/PFT/1/qXY1f?_a=ChgyMDI2MDQwMzIxMjAzNTc4OTozNTkyNDESBjEwMzA0MBoKT05FX1NFQVJDSCIOMTg3LjE5MC43OS4yMDIqBzE5ODYzNTQyCjMyODU3Nzc4NDU6DURvY3VtZW50SW1hZ2VCATBSBk9ubGluZVoCRlRiA1BGVGoKMjAyNS8wMS8wMXIKMjAyNS8xMi8zMXoAggFEUC0xMDA3ODUyLTExNjQzLUNVU1RPTUVSLTEwMDAwNDMxLzEwMDAwNDMwLzEwMDAwNDE5LzEwMDAwMjMzLTgwNjMyNzmSAQZPbmxpbmXKAVRNb3ppbGxhLzUuMCAoTWFjaW50b3NoOyBJbnRlbCBNYWMgT1MgWCAxMC4xNTsgcnY6MTQ5LjApIEdlY2tvLzIwMTAwMTAxIEZpcmVmb3gvMTQ5LjDSAR9Db25mZXJlbmNlIFBhcGVycyAmIFByb2NlZWRpbmdzmgIHUHJlUGFpZKoCK09TOkVNUy1NZWRpYUxpbmtzU2VydmljZS1nZXRNZWRpYVVybEZvckl0ZW3KAhVDb25mZXJlbmNlIFByb2NlZWRpbmfSAgFZ8gIA%2BgIBWYIDA1dlYooDHENJRDoyMDI2MDQwMzIxMjAzNTc4OTo3Nzk0MDU%3D&_s=t0RoNnqbYFB9vDUaevkbTRTS6pE%3D
+ER  - 
+
+
+
+TY  - GEN
+T1  - Exploration of Large language model assisted boulder detection from Lidar data
+AN  - 3207249806
+AB  - In recent years, large language models (LLMs) have revolutionized many aspects of life and work, and their impact is expected to continue transforming professional practices in the near future. Artificial intelligence is poised to become a standard tool in our workflows. This paper investigates the comprehension and reasoning capabilities of LLMs for boulder detection from high-density Lidar data (20 points/m²) and its derivatives, such as DEM, DSM, slope, and roughness, evaluating their potential to achieve reliable results. Three LLMs with notable reasoning and coding capabilities—Claude 3.7 Sonnet, Gemini 2.5 Pro, and OpenAI o1—were selected for this study. Due to the complexity of working and availability with very high-resolution data for boulder detection, few studies have explored this area. As a result, this research highlights the potential of LLMs in innovative applications and underscores their role in advancing collaborative research efforts to enhance scientific capabilities.
+JF  - The International Archives of Photogrammetry, Remote Sensing and Spatial Information Sciences
+AU  - Zhu, Lingli
+AU  - Hattula, Emilia
+AU  - Raninen, Jere
+AD  - National Land Survey of Finland (NLS), Vuorimiehentie 5, 02150 Espoo, Finland; National Land Survey of Finland (NLS), Vuorimiehentie 5, 02150 Espoo, Finland
+Y1  - 2025
+PY  - 2025
+DA  - 2025
+SP  - 57
+EP  - 65
+CY  - Gottingen
+PB  - Copernicus GmbH
+PP  - Gottingen
+VL  - XLVIII-M-7-2025
+KW  - Geography
+KW  - Lidar
+KW  - Artificial intelligence
+KW  - Boulders
+KW  - Large language models
+KW  - Reasoning
+KW  - Language
+KW  - Deep learning
+KW  - Automation
+KW  - Geology
+KW  - Machine learning
+KW  - Construction
+KW  - Remote sensing
+KW  - Image retrieval
+KW  - Neural networks
+KW  - Classification
+KW  - Archives & records
+KW  - Semantics
+KW  - Mars
+KW  - Environmental
+KW  - Environmental
+UR  - https://www.proquest.com/conference-papers-proceedings/exploration-large-language-model-assisted-boulder/docview/3207249806/se-2?accountid=11643
+L2  - https://libkey.io/libraries/2563/openurl?genre=article&au=Zhu%2C+Lingli%3BHattula%2C+Emilia%3BRaninen%2C+Jere&aulast=Zhu&issn=16821750&isbn=&title=Exploration+of+Large+language+model+assisted+boulder+detection+from+Lidar+data&jtitle=The+International+Archives+of+Photogrammetry%2C+Remote+Sensing+and+Spatial+Information+Sciences&pubname=The+International+Archives+of+Photogrammetry%2C+Remote+Sensing+and+Spatial+Information+Sciences&btitle=&atitle=Exploration+of+Large+language+model+assisted+boulder+detection+from+Lidar+data&volume=XLVIII-M-7-2025&issue=&spage=57&date=2025&doi=10.5194%2Fisprs-archives-XLVIII-M-7-2025-57-2025&sid=ProQuest
+LA  - English
+DB  - ProQuest Central Premium; Publicly Available Content Database
+N1  - Copyright - © 2025. This work is published under  https://creativecommons.org/licenses/by/4.0/ (the “License”).  Notwithstanding the ProQuest Terms and Conditions, you may use this content in accordance with the terms of the License.
+N1  - Last updated - 2025-06-03
+DO  - https://doi.org/10.5194/isprs-archives-XLVIII-M-7-2025-57-2025
+L1  - https://media.proquest.com/media/hms/PFT/1/Otoec?_a=ChgyMDI2MDQwMzIxMjAzNTc4OTozNTkyNDESBjEwMzA0MBoKT05FX1NFQVJDSCIOMTg3LjE5MC43OS4yMDIqBzIwMzc2NzQyCjMyMDcyNDk4MDY6DURvY3VtZW50SW1hZ2VCATBSBk9ubGluZVoCRlRiA1BGVGoKMjAyNS8wMS8wMXIKMjAyNS8xMi8zMXoAggE7UC0xMDEwNDg0LTExNjQzLUNVU1RPTUVSLTEwMDAwNDMxLzEwMDAwNDMwLzEwMDAwNDA0LTgwNjMyNDOSAQZPbmxpbmXKAVRNb3ppbGxhLzUuMCAoTWFjaW50b3NoOyBJbnRlbCBNYWMgT1MgWCAxMC4xNTsgcnY6MTQ5LjApIEdlY2tvLzIwMTAwMTAxIEZpcmVmb3gvMTQ5LjDSAR9Db25mZXJlbmNlIFBhcGVycyAmIFByb2NlZWRpbmdzmgIHUHJlUGFpZKoCK09TOkVNUy1NZWRpYUxpbmtzU2VydmljZS1nZXRNZWRpYVVybEZvckl0ZW3KAg9BcnRpY2xlfEZlYXR1cmXSAgFZ8gIA%2BgIBWYIDA1dlYooDHENJRDoyMDI2MDQwMzIxMjAzNTc4OTo3Nzk0MDU%3D&_s=bC4mPeZx8xzc4xtURnfh%2Fk2jKlg%3D
+ER  - 
+
+
+
+TY  - GEN
+T1  - Student perspectives on using Artificial Intelligence tools for solving programming assignments
+TT  - Perspektiva studenata o korištenju alata umjetne inteligencije za rješavanje programskih zadataka
+AN  - 3166286645
+AB  - Sažetak. Učenici koriste različite metode za rješavanje programskih zadataka. S obzirom na široko prihvaćanje alata umjetne inteligencije (AI), nije iznenaðuju&eccute;e da su ih studenti uključili u svoj repertoar. Meðutim, glavno pitanje se vrti oko dopuštenosti takvog korištenja. U ovoj studiji provedena je anketa meðu studentima u Hrvatskoj s ciljem razjašnjavanja njihovih perspektiva o implementaciji alata umjetne inteligencije. Primarni cilj je razlučiti u kojoj mjeri studenti koriste te alate u rješavanju programskih zadataka i istrašiti načine na koje ih studenti koriste.Alternate abstract:Abstract. Students use various methods for solving their programming assignments. Notably, with the widespread adoption of artificial intelligence (AI) tools, it is unsurprising that students have incorporated them into their repertoire. The main question, however, revolves around the permissibility of such utilization. In this study a survey was conducted among university students in Croatia, aiming to clarify their perspectives on the deployment of AI tools. The primary objective is to discern the extent to which students employ these tools in solving programming assignments and investigate the ways in which the students use them.
+JF  - Central European Conference on Information and Intelligent Systems
+AU  - Novak, Matija
+AU  - Maček, Marija
+Y1  - 2024
+PY  - 2024
+DA  - 2024
+SP  - 1
+EP  - 13
+CY  - Varazdin
+PB  - Faculty of Organization and Informatics Varazdin
+PP  - Varazdin
+KW  - Computers--Information Science And Information Theory
+KW  - Programming
+KW  - Search engines
+KW  - Students
+KW  - Artificial intelligence
+KW  - Colleges & universities
+KW  - Teachers
+KW  - Sensors
+KW  - Chatbots
+KW  - Croatia
+KW  - Croatia
+UR  - https://www.proquest.com/conference-papers-proceedings/student-perspectives-on-using-artificial/docview/3166286645/se-2?accountid=11643
+L2  - https://libkey.io/libraries/2563/openurl?genre=proceeding&au=Novak%2C+Matija%3BMa%C4%8Dek%2C+Marija&aulast=Novak&issn=18472001&isbn=&title=Student+perspectives+on+using+Artificial+Intelligence+tools+for+solving+programming+assignments&jtitle=Central+European+Conference+on+Information+and+Intelligent+Systems&pubname=Central+European+Conference+on+Information+and+Intelligent+Systems&btitle=&atitle=Student+perspectives+on+using+Artificial+Intelligence+tools+for+solving+programming+assignments&volume=&issue=&spage=1&date=2024&doi=&sid=ProQuest
+LA  - English
+DB  - ProQuest Central Premium; Publicly Available Content Database
+N1  - Copyright - © 2024. This work is published under http://archive.ceciis.foi.hr/app/index.php/ceciis/archive (the “License”). Notwithstanding the ProQuest Terms and Conditions, you may use this content in accordance with the terms of the License.
+N1  - Last updated - 2025-02-13
+L1  - https://media.proquest.com/media/hms/PFT/1/0TFZb?_a=ChgyMDI2MDQwMzIxMjAzNTc4OTozNTkyNDESBjEwMzA0MBoKT05FX1NFQVJDSCIOMTg3LjE5MC43OS4yMDIqBzE5ODYzNTQyCjMxNjYyODY2NDU6DURvY3VtZW50SW1hZ2VCATBSBk9ubGluZVoCRlRiA1BGVGoKMjAyNC8wMS8wMXIKMjAyNC8xMi8zMXoAggFEUC0xMDA3ODUyLTExNjQzLUNVU1RPTUVSLTEwMDAwNDMxLzEwMDAwNDMwLzEwMDAwNDE5LzEwMDAwMjMzLTgwNjMyNzmSAQZPbmxpbmXKAVRNb3ppbGxhLzUuMCAoTWFjaW50b3NoOyBJbnRlbCBNYWMgT1MgWCAxMC4xNTsgcnY6MTQ5LjApIEdlY2tvLzIwMTAwMTAxIEZpcmVmb3gvMTQ5LjDSAR9Db25mZXJlbmNlIFBhcGVycyAmIFByb2NlZWRpbmdzmgIHUHJlUGFpZKoCK09TOkVNUy1NZWRpYUxpbmtzU2VydmljZS1nZXRNZWRpYVVybEZvckl0ZW3KAhVDb25mZXJlbmNlIFByb2NlZWRpbmfSAgFZ8gIA%2BgIBWYIDA1dlYooDHENJRDoyMDI2MDQwMzIxMjAzNTc4OTo3Nzk0MDU%3D&_s=dJa%2BalHdJBG7IjYoS%2FGlvTymhLk%3D
+ER  - 
+
+
+
+TY  - GEN
+T1  - Text Analysis Methods for Identifying and Recognizing Gender Bias, Inequality, and Violence in Language: An Overview
+TT  - Metode analize teksta za identifikaciju i prepoznavanje rodne pristranosti, nejednakosti i nasilja u jeziku: Pregled
+AN  - 3166286390
+AB  - U ovom radu dan je pregled metoda analize teksta koje se koriste za identificiranje i otkrivanje rodne pristranosti, nejednakosti i nasilja u jeziku. Korištenje metoda i tehnika analize teksta kao što su korpusna lingvistika, analiza sentimenta, analiza sadržaja, analiza diskursa, analiza mreža i strojno prevođenje, može otkriti obrasce i tendencije u tekstovima koje perpetuiraju rodnu pristranost, stereotipe i nasilje. Naglašava se važnost korištenja alata za analizu teksta za promicanje rodne jednakosti i razvoj inkluzivnijih jezičnih praksi.Alternate abstract:This paper provides an overview of text analysis methods used to identify and uncover gender bias, inequality and violence in language. By examining text analysis methods and techniques such as corpus linguistics, sentiment analysis, content analysis, discourse analysis, network analysis and machine translation, the study shows how these methods can uncover patterns and tendencies in texts that perpetuate gender bias, stereotypes and violence. The findings highlight the importance of using text analysis tools to promote gender equality and develop more inclusive language practices.
+JF  - Central European Conference on Information and Intelligent Systems
+AU  - Prskalo, Lucia Načinovič
+AD  - University of Rijeka Faculty of Informatics and Digital Technologies Radmile Matejčić 2, 51000 Rijeka
+Y1  - 2024
+PY  - 2024
+DA  - 2024
+SP  - 1
+EP  - 19
+CY  - Varazdin
+PB  - Faculty of Organization and Informatics Varazdin
+PP  - Varazdin
+KW  - Computers--Information Science And Information Theory
+KW  - Gender differences
+KW  - Language
+KW  - Human bias
+KW  - Sex roles
+KW  - Deep learning
+KW  - Content analysis
+KW  - Discourse analysis
+KW  - Violence
+KW  - Machine translation
+KW  - Network analysis
+KW  - Labor market
+KW  - Bias
+KW  - Linguistics
+KW  - Machine learning
+KW  - Gender-based violence
+KW  - Sex discrimination
+KW  - Sentiment analysis
+KW  - Text analysis
+KW  - Gender equity
+KW  - Stereotypes
+KW  - Literature reviews
+KW  - Women
+KW  - Inequality
+KW  - Education
+KW  - Equal rights
+KW  - Europe
+KW  - Croatia
+KW  - Europe
+KW  - Croatia
+UR  - https://www.proquest.com/conference-papers-proceedings/text-analysis-methods-identifying-recognizing/docview/3166286390/se-2?accountid=11643
+L2  - https://libkey.io/libraries/2563/openurl?genre=proceeding&au=Prskalo%2C+Lucia+Na%C4%8Dinovi%C4%8D&aulast=Prskalo&issn=18472001&isbn=&title=Text+Analysis+Methods+for+Identifying+and+Recognizing+Gender+Bias%2C+Inequality%2C+and+Violence+in+Language%3A+An+Overview&jtitle=Central+European+Conference+on+Information+and+Intelligent+Systems&pubname=Central+European+Conference+on+Information+and+Intelligent+Systems&btitle=&atitle=Text+Analysis+Methods+for+Identifying+and+Recognizing+Gender+Bias%2C+Inequality%2C+and+Violence+in+Language%3A+An+Overview&volume=&issue=&spage=1&date=2024&doi=&sid=ProQuest
+LA  - English
+DB  - ProQuest Central Premium; Publicly Available Content Database
+N1  - Name - European Commission
+N1  - Copyright - © 2024. This work is published under http://archive.ceciis.foi.hr/app/index.php/ceciis/archive (the “License”). Notwithstanding the ProQuest Terms and Conditions, you may use this content in accordance with the terms of the License.
+N1  - Last updated - 2025-02-13
+L1  - https://media.proquest.com/media/hms/PFT/1/mPFZb?_a=ChgyMDI2MDQwMzIxMjAzNTc4OTozNTkyNDESBjEwMzA0MBoKT05FX1NFQVJDSCIOMTg3LjE5MC43OS4yMDIqBzE5ODYzNTQyCjMxNjYyODYzOTA6DURvY3VtZW50SW1hZ2VCATBSBk9ubGluZVoCRlRiA1BGVGoKMjAyNC8wMS8wMXIKMjAyNC8xMi8zMXoAggFEUC0xMDA3ODUyLTExNjQzLUNVU1RPTUVSLTEwMDAwNDMxLzEwMDAwNDMwLzEwMDAwNDE5LzEwMDAwMjMzLTgwNjMyNzmSAQZPbmxpbmXKAVRNb3ppbGxhLzUuMCAoTWFjaW50b3NoOyBJbnRlbCBNYWMgT1MgWCAxMC4xNTsgcnY6MTQ5LjApIEdlY2tvLzIwMTAwMTAxIEZpcmVmb3gvMTQ5LjDSAR9Db25mZXJlbmNlIFBhcGVycyAmIFByb2NlZWRpbmdzmgIHUHJlUGFpZKoCK09TOkVNUy1NZWRpYUxpbmtzU2VydmljZS1nZXRNZWRpYVVybEZvckl0ZW3KAhVDb25mZXJlbmNlIFByb2NlZWRpbmfSAgFZ8gIA%2BgIBWYIDA1dlYooDHENJRDoyMDI2MDQwMzIxMjAzNTc4OTo3Nzk0MDU%3D&_s=dboj2aChTPZCMZkX3ZMeTNgdL10%3D
+ER  - 
+
+
+
+TY  - GEN
+T1  - Towards Automated Detection of Qualitative Spreadsheet Errors in Multi-user Environments
+AN  - 2876106367
+AB  - Spreadsheets are one of the most used software systems in business and academia. Since the first introduction of electronic spreadsheets for personal computers in 1979, they have evolved into a powerful computing platform. Their use spans from asset administration to complex scientific analysis and process modelling. However, spreadsheets are associated with high incidence of errors, causing companies and organizations significant reputational and financial losses. The goal of this work-in-progress article is to present a model for an automated detection of qualitative spreadsheet errors in multi-user environments, based on abstract state machines.
+JF  - Central European Conference on Information and Intelligent Systems
+AU  - Zdilar, Miro
+AD  - University of Zagreb Faculty of Organization and Informatics Pavlinska 2, 42000 Varaždin, Croatia
+Y1  - 2023
+PY  - 2023
+DA  - 2023
+SP  - 419
+EP  - 424
+CY  - Varazdin
+PB  - Faculty of Organization and Informatics Varazdin
+PP  - Varazdin
+KW  - Computers--Information Science And Information Theory
+KW  - Spreadsheet
+KW  - Abstract state machine
+KW  - User
+KW  - Artificial intelligence
+KW  - End users
+KW  - Software
+KW  - Quality standards
+KW  - Spreadsheets
+KW  - Error correction & detection
+KW  - State machines
+KW  - Workflow
+KW  - Accounting
+KW  - Quality control
+KW  - Taxonomy
+KW  - Errors
+KW  - Automation
+KW  - Personal computers
+KW  - Auditors
+KW  - Financial reporting
+UR  - https://www.proquest.com/conference-papers-proceedings/towards-automated-detection-qualitative/docview/2876106367/se-2?accountid=11643
+L2  - https://libkey.io/libraries/2563/openurl?genre=proceeding&au=Zdilar%2C+Miro&aulast=Zdilar&issn=18472001&isbn=&title=Towards+Automated+Detection+of+Qualitative+Spreadsheet+Errors+in+Multi-user+Environments&jtitle=Central+European+Conference+on+Information+and+Intelligent+Systems&pubname=Central+European+Conference+on+Information+and+Intelligent+Systems&btitle=&atitle=Towards+Automated+Detection+of+Qualitative+Spreadsheet+Errors+in+Multi-user+Environments&volume=&issue=&spage=419&date=2023&doi=&sid=ProQuest
+LA  - English
+DB  - ProQuest Central Premium; Publicly Available Content Database
+N1  - Copyright - © 2023. This work is published under http://archive.ceciis.foi.hr/app/index.php/ceciis/archive (the “License”). Notwithstanding the ProQuest Terms and Conditions, you may use this content in accordance with the terms of the License.
+N1  - Last updated - 2024-08-27
+L1  - https://media.proquest.com/media/hms/PFT/1/2fJoV?_a=ChgyMDI2MDQwMzIxMjAzNTc4OTozNTkyNDESBjEwMzA0MBoKT05FX1NFQVJDSCIOMTg3LjE5MC43OS4yMDIqBzE5ODYzNTQyCjI4NzYxMDYzNjc6DURvY3VtZW50SW1hZ2VCATBSBk9ubGluZVoCRlRiA1BGVGoKMjAyMy8wMS8wMXIKMjAyMy8xMi8zMXoAggFEUC0xMDA3ODUyLTExNjQzLUNVU1RPTUVSLTEwMDAwNDMxLzEwMDAwNDMwLzEwMDAwNDE5LzEwMDAwMjMzLTgwNjMyNzmSAQZPbmxpbmXKAVRNb3ppbGxhLzUuMCAoTWFjaW50b3NoOyBJbnRlbCBNYWMgT1MgWCAxMC4xNTsgcnY6MTQ5LjApIEdlY2tvLzIwMTAwMTAxIEZpcmVmb3gvMTQ5LjDSAR9Db25mZXJlbmNlIFBhcGVycyAmIFByb2NlZWRpbmdzmgIHUHJlUGFpZKoCK09TOkVNUy1NZWRpYUxpbmtzU2VydmljZS1nZXRNZWRpYVVybEZvckl0ZW3KAhVDb25mZXJlbmNlIFByb2NlZWRpbmfSAgFZ8gIA%2BgIBWYIDA1dlYooDHENJRDoyMDI2MDQwMzIxMjAzNTc4OTo3Nzk0MDU%3D&_s=tHLQzR57fsc7QRpS1lconiHQvPQ%3D
+ER  - 
+
+
+
+TY  - GEN
+T1  - Semantic methods in our research and teaching
+AN  - 2876106259
+AB  - The formal semantics of programming languages forms the basis for many other formal methods used in software engineering. Its role is primarily in finding the meanings of programs and language constructs and in verifying the correctness of the design and implementation by means of formal procedures. Formal semantics has an irreplaceable place in the curricula of computer science and related fields of most universities. Its study requires a certain knowledge of mathematics and formal principles, therefore one of the results of our research is the visualization of semantic methods, primarily for educational purposes. In this article, we present an overview of our results in the field of definition and extension of semantic methods and their visualization.
+JF  - Central European Conference on Information and Intelligent Systems
+AU  - Steingartner, William
+AU  - Novitzká, Valerie
+Y1  - 2023
+PY  - 2023
+DA  - 2023
+SP  - 525
+EP  - 533
+CY  - Varazdin
+PB  - Faculty of Organization and Informatics Varazdin
+PP  - Varazdin
+KW  - Computers--Information Science And Information Theory
+KW  - Software engineering
+KW  - Formal semantics
+KW  - Programming language
+KW  - Teaching method
+KW  - Semantics
+KW  - Formal methods
+KW  - Research
+KW  - Teaching
+KW  - Programming languages
+KW  - Students
+KW  - Formal method
+KW  - Curricula
+KW  - Variables
+KW  - Methods
+KW  - Visualization
+KW  - Colleges & universities
+UR  - https://www.proquest.com/conference-papers-proceedings/semantic-methods-our-research-teaching/docview/2876106259/se-2?accountid=11643
+L2  - https://libkey.io/libraries/2563/openurl?genre=proceeding&au=Steingartner%2C+William%3BNovitzk%C3%A1%2C+Valerie&aulast=Steingartner&issn=18472001&isbn=&title=Semantic+methods+in+our+research+and+teaching&jtitle=Central+European+Conference+on+Information+and+Intelligent+Systems&pubname=Central+European+Conference+on+Information+and+Intelligent+Systems&btitle=&atitle=Semantic+methods+in+our+research+and+teaching&volume=&issue=&spage=525&date=2023&doi=&sid=ProQuest
+LA  - English
+DB  - ProQuest Central Premium; Publicly Available Content Database
+N1  - Copyright - © 2023. This work is published under http://archive.ceciis.foi.hr/app/index.php/ceciis/archive (the “License”). Notwithstanding the ProQuest Terms and Conditions, you may use this content in accordance with the terms of the License.
+N1  - Last updated - 2024-08-27
+L1  - https://media.proquest.com/media/hms/PFT/1/drJoV?_a=ChgyMDI2MDQwMzIxMjAzNTc4OTozNTkyNDESBjEwMzA0MBoKT05FX1NFQVJDSCIOMTg3LjE5MC43OS4yMDIqBzE5ODYzNTQyCjI4NzYxMDYyNTk6DURvY3VtZW50SW1hZ2VCATBSBk9ubGluZVoCRlRiA1BGVGoKMjAyMy8wMS8wMXIKMjAyMy8xMi8zMXoAggFEUC0xMDA3ODUyLTExNjQzLUNVU1RPTUVSLTEwMDAwNDMxLzEwMDAwNDMwLzEwMDAwNDE5LzEwMDAwMjMzLTgwNjMyNzmSAQZPbmxpbmXKAVRNb3ppbGxhLzUuMCAoTWFjaW50b3NoOyBJbnRlbCBNYWMgT1MgWCAxMC4xNTsgcnY6MTQ5LjApIEdlY2tvLzIwMTAwMTAxIEZpcmVmb3gvMTQ5LjDSAR9Db25mZXJlbmNlIFBhcGVycyAmIFByb2NlZWRpbmdzmgIHUHJlUGFpZKoCK09TOkVNUy1NZWRpYUxpbmtzU2VydmljZS1nZXRNZWRpYVVybEZvckl0ZW3KAhVDb25mZXJlbmNlIFByb2NlZWRpbmfSAgFZ8gIA%2BgIBWYIDA1dlYooDHENJRDoyMDI2MDQwMzIxMjAzNTc4OTo3Nzk0MDU%3D&_s=9TBU0CpV8KHzuSV8nJo9HnoP27g%3D
+ER  - 
+
+
+
+TY  - GEN
+T1  - AI-Democratization: From Data-first to Human-first AI
+AN  - 2876104622
+AB  - In recent years, there have been significant advances in artificial intelligence (Al) research. However, not everyone can benefit from these advancements because it requires a significant amount of expertise to apply them. The concept of democratizing Al, known as Al democratization, aims to make Al accessible to everyone. One exciting development in this field, is the shift from a model-first to a data-first approach. Previously, the focus was on building aridtraining complex models, which required- a high level of expertise. However, new high-level frameworks have drastically simplified- the process, making it possible to create machine learning (ML) models based- on data descriptions automatically. This has paved the way for data-first Al, where the focus is on the data engineering rather than model creation. The next logical step in this progression is a human-first approach to Al. By simplifying the process of creating ML models even further and leveraging the insights gained from data-first Al, we can make Al accessible to a even broader range of users. We underpin our theoretical considerations with the development of the Open space for Machine Learning (Os4ML) platform and- summarize our achievments so far in this endeavor. Our approach has the potential to significantly lower the barrier to entry for using Al arid- to accelerate Al adoption across a wide range of industries and- domains.
+JF  - Central European Conference on Information and Intelligent Systems
+AU  - Rall, Dennis
+AU  - Fraunholz, Thomas
+AU  - Bauer, Bernhard
+AD  - University of Augsburg
+Y1  - 2023
+PY  - 2023
+DA  - 2023
+SP  - 261
+EP  - 267
+CY  - Varazdin
+PB  - Faculty of Organization and Informatics Varazdin
+PP  - Varazdin
+KW  - Computers--Information Science And Information Theory
+KW  - Democratization
+KW  - Machine learning
+KW  - Information engineering
+KW  - Artificial intelligence
+KW  - Accessibility
+KW  - Datasets
+UR  - https://www.proquest.com/conference-papers-proceedings/ai-democratization-data-first-human/docview/2876104622/se-2?accountid=11643
+L2  - https://libkey.io/libraries/2563/openurl?genre=proceeding&au=Rall%2C+Dennis%3BFraunholz%2C+Thomas%3BBauer%2C+Bernhard&aulast=Rall&issn=18472001&isbn=&title=AI-Democratization%3A+From+Data-first+to+Human-first+AI&jtitle=Central+European+Conference+on+Information+and+Intelligent+Systems&pubname=Central+European+Conference+on+Information+and+Intelligent+Systems&btitle=&atitle=AI-Democratization%3A+From+Data-first+to+Human-first+AI&volume=&issue=&spage=261&date=2023&doi=&sid=ProQuest
+LA  - English
+DB  - ProQuest Central Premium; Publicly Available Content Database
+N1  - Copyright - © 2023. This work is published under http://archive.ceciis.foi.hr/app/index.php/ceciis/archive (the “License”). Notwithstanding the ProQuest Terms and Conditions, you may use this content in accordance with the terms of the License.
+N1  - Last updated - 2024-08-27
+L1  - https://media.proquest.com/media/hms/PFT/1/LqIoV?_a=ChgyMDI2MDQwMzIxMjAzNTc4OTozNTkyNDESBjEwMzA0MBoKT05FX1NFQVJDSCIOMTg3LjE5MC43OS4yMDIqBzE5ODYzNTQyCjI4NzYxMDQ2MjI6DURvY3VtZW50SW1hZ2VCATBSBk9ubGluZVoCRlRiA1BGVGoKMjAyMy8wMS8wMXIKMjAyMy8xMi8zMXoAggFEUC0xMDA3ODUyLTExNjQzLUNVU1RPTUVSLTEwMDAwNDMxLzEwMDAwNDMwLzEwMDAwNDE5LzEwMDAwMjMzLTgwNjMyNzmSAQZPbmxpbmXKAVRNb3ppbGxhLzUuMCAoTWFjaW50b3NoOyBJbnRlbCBNYWMgT1MgWCAxMC4xNTsgcnY6MTQ5LjApIEdlY2tvLzIwMTAwMTAxIEZpcmVmb3gvMTQ5LjDSAR9Db25mZXJlbmNlIFBhcGVycyAmIFByb2NlZWRpbmdzmgIHUHJlUGFpZKoCK09TOkVNUy1NZWRpYUxpbmtzU2VydmljZS1nZXRNZWRpYVVybEZvckl0ZW3KAhVDb25mZXJlbmNlIFByb2NlZWRpbmfSAgFZ8gIA%2BgIBWYIDA1dlYooDHENJRDoyMDI2MDQwMzIxMjAzNTc4OTo3Nzk0MDU%3D&_s=QfCyZ7JKZhOO%2FK3xeBavevPooTE%3D
+ER  - 
+
+
+
+TY  - GEN
+T1  - Industry 4.0 and the impact of technology on the future of work. A qualitative approach to the IT jobs
+AN  - 2768531758
+AB  - Scientific research leads the scientific progress based on which information technology (I.T.) professionals drive technology changes, impacting our daily life, business, and work models. The same inventions are impacting the work of the software developers, the ones responsible for building this technology. While I. Tprofessionals are building new tools for automation used in the industry, the work of I. T. professionals is significantly impacted by the tools they build. Paying heed to these considerations, the paper intends to bring forward qualitative research based on semi-structured interviews with 18 I.T. professionals. The research purpose is to scrutinize to what extent the workers in the software development industry are aware of the transformations happening in their profession, how they see the future of their jobs and how they prepare for that future. The I. T. engineers taking part in the interviews see the impact of technology in changing their work models, making them more productive rather than a threat to their jobs. They also understand the importance of continuous learning, keeping up with technological changes and soft skills.
+JF  - CES Working Papers
+AU  - Moldoveanu, Ion
+PY  - 2022
+SP  - 133
+EP  - 150
+CY  - Iasi
+PP  - Iasi
+KW  - History--History Of Europe
+KW  - Soft skills
+KW  - Machine learning
+KW  - Big Data
+KW  - Active learning
+KW  - Technological change
+KW  - Artificial intelligence
+KW  - Employment
+KW  - Software industry
+KW  - Design
+KW  - Literature reviews
+KW  - Automation
+KW  - Qualitative research
+KW  - Technology
+KW  - Internet of Things
+KW  - Professions
+KW  - Value creation
+KW  - Industry 4.0
+KW  - Software development
+KW  - Designers
+KW  - Digital technology
+KW  - Organizational structure
+KW  - Interviews
+KW  - Everyday life
+KW  - Models
+KW  - Software
+KW  - Future
+KW  - Information technology
+KW  - Work
+KW  - Professionals
+KW  - Activities of daily living
+KW  - Research
+KW  - Inventions
+KW  - Robotics
+KW  - Digital transformation
+KW  - 51321:Software Publishers
+UR  - https://www.proquest.com/working-papers/industry-4-0-impact-technology-on-future-work/docview/2768531758/se-2?accountid=11643
+L2  - https://libkey.io/libraries/2563/openurl?genre=article&au=Moldoveanu%2C+Ion&aulast=Moldoveanu&issn=&isbn=&title=Industry+4.0+and+the+impact+of+technology+on+the+future+of+work.+A+qualitative+approach+to+the+IT+jobs&jtitle=CES+Working+Papers&pubname=CES+Working+Papers&btitle=&atitle=Industry+4.0+and+the+impact+of+technology+on+the+future+of+work.+A+qualitative+approach+to+the+IT+jobs&volume=14&issue=2&spage=133&date=2022&doi=&sid=ProQuest
+LA  - English
+DB  - ProQuest Central Premium; Publicly Available Content Database
+N1  - Copyright - © 2022. This work is published under https://creativecommons.org/licenses/by/4.0/ (the “License”). Notwithstanding the ProQuest Terms and Conditions, you may use this content in accordance with the terms of the License.
+N1  - Last updated - 2026-03-27
+L1  - https://media.proquest.com/media/hms/PFT/1/W4saQ?_a=ChgyMDI2MDQwMzIxMjAzNTc4OTozNTkyNDESBjEwMzA0MBoKT05FX1NFQVJDSCIOMTg3LjE5MC43OS4yMDIqBzIwMzU2NzEyCjI3Njg1MzE3NTg6DURvY3VtZW50SW1hZ2VCATBSBk9ubGluZVoCRlRiA1BGVGoKMjAyMi8wNC8wMXIKMjAyMi8wNi8zMHoAggE7UC0xMDA5OTI0LTExNjQzLUNVU1RPTUVSLTEwMDAwNDMxLzEwMDAwNDMwLzEwMDAwMzY5LTgwNjMyMjKSAQZPbmxpbmXKAVRNb3ppbGxhLzUuMCAoTWFjaW50b3NoOyBJbnRlbCBNYWMgT1MgWCAxMC4xNTsgcnY6MTQ5LjApIEdlY2tvLzIwMTAwMTAxIEZpcmVmb3gvMTQ5LjDSAQ5Xb3JraW5nIFBhcGVyc5oCB1ByZVBhaWSqAitPUzpFTVMtTWVkaWFMaW5rc1NlcnZpY2UtZ2V0TWVkaWFVcmxGb3JJdGVtygIPQXJ0aWNsZXxGZWF0dXJl0gIBWfICAPoCAVmCAwNXZWKKAxxDSUQ6MjAyNjA0MDMyMTIwMzU3ODk6Nzc5NDA1&_s=U5vYOH%2B6S5OGTP4N64RgYvG0%2Fvs%3D
+ER  - 
+
+
+
+TY  - GEN
+T1  - GEOSPATIAL DATA EXCHANGE USING BINARY DATA SERIALIZATION APPROACHES
+AN  - 2699049448
+AB  - In this paper we investigate the benefits of binary data serialization as a means of storing and sharing large amounts of geospatial data in an interoperable way. De-facto text-based exchange encodings typically exposed by modern Application Programming Interfaces (APIs), including eXtensible Markup Language (XML) and JavaScript Object Notation (JSON), are generally inefficient for an increasingly higher number of applications due to their inflated volumes of data, low speed and the high computational cost for parsing and processing. In this work we consider comparisons of JSON/Geospatial JSON (GeoJSON) and two popular binary data encodings (Protocol Buffers and Apache Avro) for storing and sharing geospatial data. Using a number of experiments, we illustrate the advantages and disadvantages of both approaches for common workflows that make use of geospatial data encodings such as GeoPackage and GeoJSON. The paper contributes a number of practical recommendations around the potential for binary data serialization for interoperable (geospatial) data storage and sharing in the future.
+JF  - The International Archives of Photogrammetry, Remote Sensing and Spatial Information Sciences
+AU  - Mooney, P
+AU  - Minghini, M
+AD  - Department of Computer Science, Maynooth University, Co. Kildare, Ireland; Department of Computer Science, Maynooth University, Co. Kildare, Ireland ; European Commission, Joint Research Centre (JRC), Ispra, Italy; European Commission, Joint Research Centre (JRC), Ispra, Italy
+Y1  - 2022
+PY  - 2022
+DA  - 2022
+SP  - 307
+EP  - 313
+CY  - Gottingen
+PB  - Copernicus GmbH
+PP  - Gottingen
+VL  - XLVIII-4/W1-2022
+KW  - Geography
+KW  - Data exchange
+KW  - Binary data
+KW  - JSON
+KW  - Data storage
+KW  - Data sharing
+KW  - Serialization
+KW  - Spatial data
+KW  - Extensible Markup Language
+KW  - Document markup languages
+KW  - Interfaces
+KW  - Information storage
+KW  - Binary system
+KW  - Low speed
+KW  - Interoperability
+KW  - Environmental
+KW  - Environmental
+UR  - https://www.proquest.com/conference-papers-proceedings/geospatial-data-exchange-using-binary/docview/2699049448/se-2?accountid=11643
+L2  - https://libkey.io/libraries/2563/openurl?genre=article&au=Mooney%2C+P%3BMinghini%2C+M&aulast=Mooney&issn=16821750&isbn=&title=GEOSPATIAL+DATA+EXCHANGE+USING+BINARY+DATA+SERIALIZATION+APPROACHES&jtitle=The+International+Archives+of+Photogrammetry%2C+Remote+Sensing+and+Spatial+Information+Sciences&pubname=The+International+Archives+of+Photogrammetry%2C+Remote+Sensing+and+Spatial+Information+Sciences&btitle=&atitle=GEOSPATIAL+DATA+EXCHANGE+USING+BINARY+DATA+SERIALIZATION+APPROACHES&volume=XLVIII-4%2FW1-2022&issue=&spage=307&date=2022&doi=10.5194%2Fisprs-archives-XLVIII-4-W1-2022-307-2022&sid=ProQuest
+LA  - English
+DB  - ProQuest Central Premium; Publicly Available Content Database
+N1  - Copyright - © 2022. This work is published under  https://creativecommons.org/licenses/by/4.0/ (the “License”).  Notwithstanding the ProQuest Terms and Conditions, you may use this content in accordance with the terms of the License.
+N1  - Last updated - 2024-11-05
+DO  - https://doi.org/10.5194/isprs-archives-XLVIII-4-W1-2022-307-2022
+L1  - https://media.proquest.com/media/hms/PFT/1/cJ6rN?_a=ChgyMDI2MDQwMzIxMjAzNTc4OTozNTkyNDESBjEwMzA0MBoKT05FX1NFQVJDSCIOMTg3LjE5MC43OS4yMDIqBzIwMzc2NzQyCjI2OTkwNDk0NDg6DURvY3VtZW50SW1hZ2VCATBSBk9ubGluZVoCRlRiA1BGVGoKMjAyMi8wMS8wMXIKMjAyMi8xMi8zMXoAggE7UC0xMDEwNDg0LTExNjQzLUNVU1RPTUVSLTEwMDAwNDMxLzEwMDAwNDMwLzEwMDAwNDA0LTgwNjMyNDOSAQZPbmxpbmXKAVRNb3ppbGxhLzUuMCAoTWFjaW50b3NoOyBJbnRlbCBNYWMgT1MgWCAxMC4xNTsgcnY6MTQ5LjApIEdlY2tvLzIwMTAwMTAxIEZpcmVmb3gvMTQ5LjDSAR9Db25mZXJlbmNlIFBhcGVycyAmIFByb2NlZWRpbmdzmgIHUHJlUGFpZKoCK09TOkVNUy1NZWRpYUxpbmtzU2VydmljZS1nZXRNZWRpYVVybEZvckl0ZW3KAg9BcnRpY2xlfEZlYXR1cmXSAgFZ8gIA%2BgIBWYIDA1dlYooDHENJRDoyMDI2MDQwMzIxMjAzNTc4OTo3Nzk0MDU%3D&_s=9XT7UucMBEnNX6%2FBGlqCdKlB8A4%3D
+ER  - 
+
+
+
+TY  - GEN
+T1  - Some modeling technologies in educating of young IT experts in the field of formal languages and their semantics
+AN  - 2604878719
+AB  - Visualization of calculations in the field of semantic methods significantly contributes to a better understanding of the individual steps of the methods used. The use of virtual machines to design and prove the language properties is an important element in teaching compiler design. In this paper, we present visualization software that for a given input source in the model (toy) language Jane generates bytecode for an existing Computron virtual machine platform and a sequence of instructions for an abstract machine for operational semantics.
+JF  - Central European Conference on Information and Intelligent Systems
+AU  - Steingartner, William
+AU  - Novitzká, Valerie
+AU  - Zorvan, Pavol
+Y1  - 2021
+PY  - 2021
+DA  - 2021
+SP  - 385
+EP  - 393
+CY  - Varazdin
+PB  - Faculty of Organization and Informatics Varazdin
+PP  - Varazdin
+KW  - Computers--Information Science And Information Theory
+KW  - Formal
+KW  - Compiler
+KW  - Semantics
+KW  - JavaScript
+KW  - Formal language
+KW  - Virtualization
+KW  - Virtual machine
+KW  - Programming languages
+KW  - Students
+KW  - Syntax
+KW  - Curricula
+KW  - Boolean
+KW  - Software utilities
+KW  - Algorithms
+KW  - Informatics
+KW  - Research & development--R&D
+KW  - Visualization
+KW  - Virtual environments
+KW  - Abstract machines
+UR  - https://www.proquest.com/conference-papers-proceedings/some-modeling-technologies-educating-young/docview/2604878719/se-2?accountid=11643
+L2  - https://libkey.io/libraries/2563/openurl?genre=proceeding&au=Steingartner%2C+William%3BNovitzk%C3%A1%2C+Valerie%3BZorvan%2C+Pavol&aulast=Steingartner&issn=18472001&isbn=&title=Some+modeling+technologies+in+educating+of+young+IT+experts+in+the+field+of+formal+languages+and+their+semantics&jtitle=Central+European+Conference+on+Information+and+Intelligent+Systems&pubname=Central+European+Conference+on+Information+and+Intelligent+Systems&btitle=&atitle=Some+modeling+technologies+in+educating+of+young+IT+experts+in+the+field+of+formal+languages+and+their+semantics&volume=&issue=&spage=385&date=2021&doi=&sid=ProQuest
+LA  - English
+DB  - ProQuest Central Premium; Publicly Available Content Database
+N1  - Copyright - © 2021. This work is published under http://archive.ceciis.foi.hr/app/index.php/ceciis/archive (the “License”). Notwithstanding the ProQuest Terms and Conditions, you may use this content in accordance with the terms of the License.
+N1  - Last updated - 2024-08-27
+L1  - https://media.proquest.com/media/hms/PFT/1/qCpfL?_a=ChgyMDI2MDQwMzIxMjAzNTc4OTozNTkyNDESBjEwMzA0MBoKT05FX1NFQVJDSCIOMTg3LjE5MC43OS4yMDIqBzE5ODYzNTQyCjI2MDQ4Nzg3MTk6DURvY3VtZW50SW1hZ2VCATBSBk9ubGluZVoCRlRiA1BGVGoKMjAyMS8wMS8wMXIKMjAyMS8xMi8zMXoAggFEUC0xMDA3ODUyLTExNjQzLUNVU1RPTUVSLTEwMDAwNDMxLzEwMDAwNDMwLzEwMDAwNDE5LzEwMDAwMjMzLTgwNjMyNzmSAQZPbmxpbmXKAVRNb3ppbGxhLzUuMCAoTWFjaW50b3NoOyBJbnRlbCBNYWMgT1MgWCAxMC4xNTsgcnY6MTQ5LjApIEdlY2tvLzIwMTAwMTAxIEZpcmVmb3gvMTQ5LjDSAR9Db25mZXJlbmNlIFBhcGVycyAmIFByb2NlZWRpbmdzmgIHUHJlUGFpZKoCK09TOkVNUy1NZWRpYUxpbmtzU2VydmljZS1nZXRNZWRpYVVybEZvckl0ZW3KAhVDb25mZXJlbmNlIFByb2NlZWRpbmfSAgFZ8gIA%2BgIBWYIDA1dlYooDHENJRDoyMDI2MDQwMzIxMjAzNTc4OTo3Nzk0MDU%3D&_s=jSKtQKKSLBWuEZ5OKnwEGXzIS4Y%3D
+ER  - 
+
+
+

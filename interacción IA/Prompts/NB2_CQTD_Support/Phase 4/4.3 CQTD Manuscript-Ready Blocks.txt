@@ -1,0 +1,121 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1QYMu1_U8yiJDY7I4sw_lWYZ4vR8ZR6hi (The NB2_CQTD_Support folder in Google Drive), this other URL: https://drive.google.com/drive/folders/1ywIisQOCRL3dPVOSdJrIh7BJVtINiVbk (The NB2_CQTD_CORE folder in Google Drive), and with whatever files I've uploaded to this chat.
+
+We are continuing with Phase 4 of the SLR section on Code Quality and Technical Debt for the manuscript "AI-Assisted Programming in Software Engineering: A Systematic Literature Review and Socio-Technical Perspective". This artefact concerns the Code Quality and Technical Debt (CQTD) dimension, which is one of seven analytical dimensions in the paper. The other six dimensions (Productivity, Human-AI Interaction, Cognitive Load, Organizational Impact, Economic Impact, Perception and Trust) are analysed in companion notebooks.
+
+Phase 4 builds on the integrated Phase 3 evidence to produce theoretical and manuscript-ready contributions. The primary input for all Phase 4 artefacts is Phase_3_4_CQTD_Dimension_Synthesis_v1.docx.
+
+FRAMING:
+The paper's theoretical backbone is a socio-technical equilibrium framework comprising five constructs:
+1. Generation efficiency — the ability of AI tools to accelerate code production
+2. Verification overhead — the additional effort to validate, correct, and integrate AI-generated outputs
+3. Interaction quality — the effectiveness of human-AI communication through prompting and iterative refinement
+4. Trust calibration — the extent to which developers appropriately balance reliance on AI outputs with critical evaluation
+5. Cognitive redistribution — the shift in mental effort from code construction toward supervision, validation, and decision-making
+
+This artefact is Phase 4 of NB2_CQTD_Support. Do not restrict citations to one corpus. Cross-integration between NB1 and NB2 is the explicit goal of Phase 4. The SUPPORT corpus triangulates and extends CORE findings; it does not replace them.
+
+CQTD is the dimension that makes the generation efficiency / verification overhead trade-off most empirically visible. The theoretical contribution for this dimension must formalise how CQTD evidence supports, extends, or qualifies the equilibrium framework.
+
+CONSOLIDATED CONSTRAINTS — apply ALL from the first draft, not retroactively.
+
+Citation discipline (16 points):
+1. Breadth across both corpora. Every paper in both CORE and SUPPORT is a valid source. No paper has privileged status. When multiple papers support a claim, cite the broader set.
+2. Use only papers present in NB1_CQTD_CORE.bib or NB2_CQTD_Support.bib. Every bibkey cited must exist literally in one of these files. Do not infer bibkeys from titles, folder names, or model memory.
+3. Cite by exact bibkey from the relevant .bib file.
+4. One citation per claim per paper.
+5. Single numbering system. Inline [N] equals References entry N. Ordered by first appearance.
+6. References section lists ONLY papers cited inline.
+7. Citation-from-citation safeguard: only report what the paper itself empirically produced. Do not attribute findings from cited papers within a paper to the citing paper.
+8. Reference-number-extraction safeguard: do not treat bracketed reference markers, arXiv identifiers, or bibliography indices as quantitative findings.
+9. Subject-propagation safeguard: propagate the grammatical subject to every figure derived from a multi-figure sentence.
+10. No paper anchoring more than 5 claims/items.
+11. "No evidence found in uploaded sources" rather than fabricate.
+12. For the final reference list, use Phase_3_4_CQTD_Dimension_Synthesis_v1.docx as the primary source of bibliographical data (titles, author names, years). The CSV files serve as verification only for any field not present in Phase 3.4. Bibkeys must still be verified against the BIB files. Zero empty author/year fields.
+13. British English throughout.
+14. When a finding appears in both CORE and SUPPORT, cite both corpora but treat them as converging evidence, not as two independent studies, unless they used different methods, datasets, or contexts.
+15. Do not cite SUPPORT papers for claims already fully established by CORE A1 evidence unless the SUPPORT paper adds a materially different angle (e.g., different language, task type, or evaluation method).
+16. Quality tiers are fixed as per the Phase 0.2 inventory and Relación de Estudios (authoritative source for tier conflicts).
+
+WORKFLOW DISCIPLINE:
+Step 1: Load Phase 3.4 as the primary evidence base. Load Phase 4.1 to extract the theoretical contribution statement and the five construct mappings — the Discussion paragraph must reference all five constructs using the language established there. Load Phase 4.2 to extract the opening and closing sentences and the narrative arc statement — the Results introduction paragraph must be consistent with that arc. Load Phase 4.3 to extract the cross-dimensional gap identified there — the Limitations paragraph must include that gap explicitly. Do not introduce claims not present in Phase 3.4.
+
+Step 2: Draft the four blocks in order.
+
+Step 3: Generate references using Phase 3.4 entries as primary source. Verify bibkeys against BIB files.
+
+Step 4: Self-validation pass: no new empirical claims; no empty author/year fields; all four blocks publishable without further editing; British English throughout; five constructs named explicitly in block 3; no methodological scaffolding language in any block.
+
+Regeneration over modification: if the draft has substantive issues, regenerate from scratch.
+
+Validity over breadth: quality outweighs volume.
+
+INPUTS:
+- Phase_3_4_CQTD_Dimension_Synthesis_v1.docx
+- Phase_4_1_CQTD_Theoretical_Contribution_v1.docx
+- Phase_4_2_CQTD_Narrative_Arc_v1.docx
+- Phase_4_3_CQTD_Cross_Dimensional_v1.docx
+- NB1_CQTD_CORE.bib and NB2_CQTD_Support.bib (bibkey verification)
+- NB1_CQTD_CORE.csv and NB2_CQTD_Support.csv (bibliographical data)
+
+Starting Phase 4.4 — CQTD Manuscript-Ready Abstract Contribution Paragraph.
+
+TASK: Produce four manuscript-ready text blocks for direct insertion 
+into the final manuscript without further editing.
+
+1. Abstract contribution sentence (40–60 words)
+   — one sentence summarising the CQTD contribution for the abstract
+   — integrates both the empirical finding and the theoretical implication
+   — British English, no citations
+   — must be consistent with the narrative arc statement in Phase_4_2_CQTD_Narrative_Arc_v1.docx
+
+2. Results section introduction paragraph (100–120 words)
+   — introduces the CQTD results section to the reader
+   — states the evidence base (77 CORE + 64 SUPPORT = 141 papers), the seven sub-topics, and the overarching finding
+   — no methodological scaffolding language
+   — 2–3 citations from Phase 3.4
+
+3. Discussion contribution paragraph (150–200 words)
+   — connects CQTD findings to the socio-technical equilibrium framework
+   — references all five constructs explicitly: generation efficiency, 
+     verification overhead, trust calibration, interaction quality, 
+     cognitive redistribution
+   — written as continuous Discussion prose, not as a summary
+   — 3–5 citations from Phase 3.4
+   — must reference all five constructs using the language from Phase_4_1_CQTD_Theoretical_Contribution_v1.docx
+   — must not introduce constructs or mechanisms not present in Phase 4.1
+
+4. Limitations paragraph contribution (80–100 words)
+   — identifies the specific limitations of the CQTD evidence base for inclusion in the manuscript's Threats to Validity section
+   — concrete and honest, not generic
+   — no citations needed
+   — must include the cross-dimensional gap identified in Phase_4_3_CQTD_Cross_Dimensional_v1.docx as one of the specific limitations
+
+CONSTRAINTS:
+- Do not introduce new empirical claims not present in CORE or Support Artifacts.
+- Do not fabricate findings from companion dimension notebooks that have not yet been produced.
+
+CRITICAL NON-NEGOTIABLE CONSTRAINTS:
+- Do not use boilerplates.
+- No hallucinations.
+- Zero tolerance for ", ." empty author/year fields in the reference list.
+- The condensed narratives must read as manuscript-ready prose, not as an analytical report.
+- Do not introduce any empirical claim not present in Phase 3.4, Phase 4.1, Phase 4.2 or Phase 4.3.
+- Read the PDF papers, if needed. You have complete access to them. Do not read just the abstract, or relay on memory.  Read the papers.  I do not care if you take more time to accomplish the task, just do it.
+
+Save as: Phase_4_4_CQTD_Manuscript_Blocks_v1.docx
+
+Remember that I just uploaded the zips with the CORE (77) and Support (64) papers, the BIB and CSV files of both CORE and Support with the bibliographic information of the 77+64 papers, the artifacts 3.1, 3.4, 4.1, 4.2 and 4.3 of Support, and the file "Relación de Estudios.xlsx".
+-- Fin del Promt 1 --
+
+-- Inicio del Prompt 2 --
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+-- Fin del Prompt 4 --
+
+-- Inicio del Prompt 5 --
+-- Fin del Prompt 5 --

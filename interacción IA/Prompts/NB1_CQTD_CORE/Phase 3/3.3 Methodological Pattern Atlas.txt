@@ -1,0 +1,100 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1ywIisQOCRL3dPVOSdJrIh7BJVtINiVbk?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto
+
+Continuing Phase 3 of the SLR section on Code Quality and Technical Debt in AI-Assisted Programming. Same NB1_CQTD_CORE corpus (77 PDFs in the Google Drive folder), same Phase 2 extractive workbooks (11,628 atomic findings across 2.1-2.6).
+
+CONSOLIDATED CONSTRAINTS — apply ALL from the first draft, not retroactively.
+
+Citation discipline (12 points):
+1. Breadth across all 77 papers. Every paper in the corpus is a valid source, including Bayram, Belozerov, and Siroš, but no paper has privileged status. When multiple papers support a claim, cite the broader set rather than defaulting to the same few.
+2. Use only papers in the 77-PDF corpus. Every bibkey cited must exist literally in NB1_CQTD_CORE.bib. Do not infer bibkeys from titles, folder names, examples in the prompt, or model memory. If a bibkey cannot be verified, do not cite the paper — even if it would round out a quota.
+3. Cite by exact bibkey from NB1_CQTD_CORE.bib. The References section must use the official title from the .bib file, not a paraphrased version.
+4. One citation per claim per paper. Do not cite the same paper twice (once to abstract, once to body) for the same finding.
+5. Single numbering system across the document. Inline [N] equals References entry N. References are ordered by first appearance in section 2, not alphabetically.
+6. The References section lists ONLY the papers actually cited inline, not the full corpus.
+7. Citation-from-citation safeguard: if a figure or finding is reported by a citation within a paper (e.g., "Pearce et al. report 40%"), do not attribute that figure to the citing paper. Only count what the paper itself empirically produced.
+8. Reference-number-extraction safeguard: do not treat bracketed reference markers (e.g., "[21, 41, 49]"), arXiv identifiers (e.g., "2107.03374"), or bibliography indices as quantitative findings.
+9. Subject-propagation safeguard: when a sentence contains multiple figures governed by a single subject (e.g., "GPT-5 achieves 98.4%, 82.6%, and 26.9%"), propagate the subject to every derived figure or row. Do not record "not specified" when the source sentence names a specific model.
+10. No paper anchoring more than 5 claims/items unless the artefact explicitly allows it.
+11. If you cannot find evidence in the uploaded PDFs for a particular claim, say "No evidence found in uploaded sources" rather than inventing one. No hallucinations.
+12. British English throughout.
+
+Workflow discipline:
+Apply the "evidence matrix first, prose second, references third, validation last" workflow established in the Phase 3.1 Lessons Learned:
+
+Step 1: Construct a source-control table (mental or actual) of every paper-item relationship before drafting prose. Verify all bibkeys against NB1_CQTD_CORE.bib at this stage.
+Step 2: Draft the prose of each item using only papers from the source-control table. Do not introduce new papers during drafting.
+Step 3: Generate the References section AFTER the prose is stable, ordered by first appearance.
+Step 4: Run a self-validation pass before delivery:
+- Every inline [N] has a corresponding References entry.
+- No empty brackets, orphan commas, or formatting residue.
+- Sub-points are numbered correctly.
+- No paper appears in more than 5 items.
+- Spot-check 3 inline citations against References.
+- No fabricated bibkeys.
+
+Regeneration over modification: If on review the draft has substantive issues, regenerate the whole document rather than apply local patches. Iterative editing of complex internally-linked documents introduces ghost citations, orphan commas, and semantic drift (the "iterative-editing entropy" pattern). Regenerate from scratch when significant changes are needed.
+
+Validity over breadth: A claim with 6 verified papers is preferable to a claim with 12 papers if 6 of them are weak, irrelevant, or unverified. Quality outweighs volume.
+
+Task: Phase 3.3 — Methodological Pattern Atlas
+Produce a methodological pattern atlas: a DOCX document that maps which study designs in the corpus yield which kinds of findings.
+Use as input: the Phase 1.2 (Methodology Distribution Table) and Phase 1.4 (Quality Operationalisation) workbooks, supplemented by the six Phase 2 workbooks.
+
+WHAT TO PRODUCE:
+1. Overview — 2 paragraphs framing why methodological pattern matters. The reader should be able to assess whether a particular finding is artefactual of the study design or robust across designs.
+
+2. Study design categories — Establish 6-8 design categories based on what the corpus actually contains (verify via Phase 1.2). For each category, exactly 8 numbered sub-points:
+- 2.X.1 Category name and one-sentence definition.
+- 2.X.2 Number of papers in the corpus using this design (verify from Phase 1.2).
+- 2.X.3 Typical sample size range and scale (verify from Phase 1.2 sample-size column).
+- 2.X.4 Typical evaluation contexts: benchmarks, datasets, real-world settings.
+- 2.X.5 Strengths: what this design measures well (1-2 sentences).
+- 2.X.6 Limitations: what this design systematically misses or biases (1-2 sentences).
+- 2.X.7 Representative papers: 5-8 papers per category with bibkeys, drawn from the verified Phase 1.2 list.
+- 2.X.8 Typical findings produced by this design, with 2-3 quantitative anchors attributed to specific papers (apply subject-propagation rule).
+
+Suggested categories (refine based on Phase 1.2):
+- (a) Benchmark-based comparative evaluations (HumanEval, MBPP, SWE-bench, etc.)
+- (b) Repository-mining studies at scale
+- (c) User studies with controlled groups and timing measurement
+- (d) Observational studies in industrial/workplace settings
+- (e) Security-focused empirical assessments (CWE-based, static-analysis-based)
+- (f) Agentic / multi-step workflow evaluations
+- (g) Qualitative interview-based or diary studies
+- (h) Reproducibility and dependency studies
+
+3. Cross-design pattern analysis — 3-4 paragraphs identifying which findings appear in multiple design categories (high robustness) versus which findings appear in only one design (lower robustness).
+- Findings that converge across designs: list 5-8 robust empirical claims with their cross-design support (cite which papers in which categories).
+- Findings observable only in one design: list 4-6 claims that depend on a specific methodology, and explain what this implies for interpretation.
+
+Papers cited in this section must come from the categories established in section 2.
+
+4. Methodological gaps — 2-3 paragraphs identifying study designs that are systematically underrepresented in the corpus. Examples might be: longitudinal studies, randomised controlled trials at scale, multi-organisation studies, post-deployment monitoring studies. If a proposed gap actually has papers in the corpus, do not call it a gap. Cite the gap-claim with reference to which Phase 1.2 categories are sparse.
+
+5. Implications for the manuscript — A short section advising how the SLR should weight findings by methodological strength. Claims supported by 8 papers across 4 different designs should be presented as robust; claims supported by 3 papers from one design type should be presented as suggestive.
+
+6. Headline design-pattern anchors — A closing table of 10 entries. Columns: # | Finding category | Design that produced it | Representative paper | Quantitative anchor.
+
+7. References — Generated AFTER prose is stable. Ordered by first appearance.
+
+8. Reference-alignment spot-check — Verify 3 inline citations.
+
+Additional task-specific constraints:
+- Each design category must cite at least 5 distinct papers.
+- If the corpus does not contain a proposed design category (e.g., no longitudinal studies), note it as a gap in section 4 rather than inventing papers to fill the category.
+- The category counts in 2.X.2 must match the actual count in Phase 1.2 Methodology Distribution Table.
+Save with filename: Phase_3_3_CQTD_Methodological_Pattern_Atlas_v1.docx
+-- Fin de Prompt 1 --
+
+-- Inicio del Prompt 2 --
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+-- Fin del Prompt 4 --
+
+-- Inicio del Prompt 5 --
+-- Fin del Prompt 5 --

@@ -1,0 +1,62 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1ywIisQOCRL3dPVOSdJrIh7BJVtINiVbk?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto
+
+IMPORTANT CONSTRAINTS:
+
+1. Use ONLY the 77 PDFs uploaded to the files folder's subfolders. Do NOT use your general knowledge of the LLM-for-code field.
+2. Aim for breadth across ALL 77 papers. Every paper in the notebook is a valid source, including Bayram, Belozerov, and Siroš, but no paper has privileged status. When multiple papers in the corpus support a claim, cite the broader set rather than defaulting to the same few.
+3. For every claim, cite the exact paper by title and first author or its citation key, that you can find in the NB1_CQTD_CORE.bib file. If a paper is not in the uploaded sources, do NOT mention it.
+4. If you cannot find evidence in the uploaded PDFs, say "No evidence found in uploaded sources" rather than inventing one. In other words, no hallucinations.
+5. Use ONE citation per claim per paper. Do NOT cite the same paper twice (once to its abstract section and once to its body) for the same finding.
+6. If the output includes a final References section, list ONLY the papers actually cited inline in the text above. Do NOT list every paper available in the notebook.
+7. Use a SINGLE numbering system across the entire output. The number [N] used inline in the text must point to the same paper as entry N in the final References list. Do NOT use one numbering for inline citations (e.g., order of first appearance) and a different numbering for the References list (e.g., alphabetical). After producing the output, verify by spot-checking 3 inline citations against the References list: if [N] inline does not match entry N in the list, regenerate with explicit alignment.
+
+Produce a textual description of a mind map covering the 77 papers, organised as a hierarchy. The mind map should have:
+
+(a) A central node: "Code Quality & Technical Debt in AI-Assisted Programming"
+(b) 6-8 first-level branches, each a major sub-theme (e.g., Defect Rates, Security Vulnerabilities, Maintainability, Multi-turn Effects, Tool-Specific Behaviour, etc.).
+(c) For each first-level branch, list 4-6 second-level sub-branches with the title and first author of the papers that exemplify them.
+(d) Aim for breadth — every first-level branch must cite at least 6-8 different papers across its sub-branches.
+
+Format as a nested list, not as prose.
+
+Apply the same conventions used before:
+- Numbered sections (1.1, 1.2...)
+- British English
+- Surface specific empirical figures with paper attribution
+- One citation per claim per paper, not clustered at end of paragraphs
+- Final References section ordered by first appearance, with bibkeys
+- A closing "Headline empirical anchors" table similar to Part 4 of the Study Guide, but focused on Mindmap-relevant anchors.
+
+Read the papers, not just the abstracts or the memory you have of them. I don't care that you take more time, just do it. If you ask me to do it, I can upload again the zip with the 77 PDF files.
+
+I'm attaching, as an example, what NotebookLM produced as a Timeline. However, just as it happened with the briefing report, the references here are misplaced and misnumbered.  It is just an example.  I am sure you can do a better job.
+
+Just as you did with the briefing report, add a References section, where you can list the references to the papers used within the Timeline, in order of appearence.
+
+As an output, I expext a DOCX document with the resulting Mind map narrative report. Remember to produce the output in British English and to number the sections and subsections (if any) of your Timeline.
+
+I guess you will not have them in this report but, if any, remove repetead boilerplates.
+-- Fin de Prompt 1 --
+
+-- Inicio del Prompt 2 --
+Good work, but let's modify a little bit its structure.
+
+You have a Heading 1 row that says 1.0 Central Node, and then an Heading 2 row that says 1.1 Code Quality & Technical Debt in AI-Assisted Programming.  The actual format should be a Heading 1 row that says 1. Code Quality & Technical Debt in AI-Assisted Programming.
+
+Then, you have a Heading 1 row that says 2.0 Defect Rates, Correctness, and Benchmark Validity, and then a Heading 2 that says 2.1 Synthetic benchmark performance and saturation.  The actual format should be:
+
+- Heading 2: 1.1. Defect Rates, Correctness, and Benchmark Validity
+- Heading 3: 1.1.1 Synthetic benchmark performance and saturation
+
+And so on with the rest of the headings. You shifted the headings one level up when they indeed belong inside the Central Node.
+
+Your document, as you have it right now, should have only four Heading one rows:
+
+1. Code Quality & Technical Debt in AI-Assisted Programming
+2. Headline empirical anchors for the mind map
+3. References
+4. Reference-alignment spot-check
+
+Please give me the corrected report.
+-- Fin del Prompt 2 --

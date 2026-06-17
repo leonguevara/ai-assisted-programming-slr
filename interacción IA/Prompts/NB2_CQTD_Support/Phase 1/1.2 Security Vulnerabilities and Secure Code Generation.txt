@@ -1,0 +1,93 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1QYMu1_U8yiJDY7I4sw_lWYZ4vR8ZR6hi, and with whatever files I've uploaded to this chat.
+
+We are continuing with Phase 1 of the SLR section on Code Quality and Technical Debt for the manuscript "AI-Assisted Programming in Software Engineering: A Systematic Literature Review and Socio-Technical Perspective". This artefact concerns the Code Quality and Technical Debt (CQTD) dimension, which is one of seven analytical dimensions in the paper. The other six dimensions (Productivity, Human-AI Interaction, Cognitive Load, Organizational Impact, Economic Impact, Perception and Trust) are analysed in companion notebooks.
+
+This notebook is NB2_CQTD_Support, containing 64 triangulation papers that provide complementary empirical evidence for the CQTD dimension. These papers are not the structural backbone of the SLR (that role is played by the 77 papers in NB1_CQTD_CORE, whose analysis has been completed in companion artefacts). Instead, NB2_CQTD_Support papers either:
+
+(a) provide additional quantitative evidence on CQTD constructs already established by CORE,
+(b) extend the dimension's scope to topics where CORE coverage is thin, or
+(c) offer methodological triangulation through alternative study designs.
+
+Phase 1 produces analytical sub-topic narratives grounded exclusively in the 64 SUPPORT papers. Do not cite papers from NB1_CQTD_CORE. Cross-integration between NB1 and NB2 will occur in Phase 3 (synthesis). The SUPPORT corpus triangulates and extends CORE findings; it does not replace them.
+
+CONSOLIDATED CONSTRAINTS — apply ALL from the first draft, not retroactively.
+
+Citation discipline (13 points):
+1. Breadth across all 64 papers. Every paper in the SUPPORT corpus is a valid source. No paper has privileged status. When multiple papers support a claim, cite the broader set rather than defaulting to the same few.
+2. Use only papers in the 64-PDF NB2_CQTD_Support corpus. Every bibkey cited must exist literally in NB2_CQTD_Support.bib. Do not infer bibkeys from titles, folder names, examples, or model memory. If a bibkey cannot be verified, do not cite the paper. Do not cite papers from NB1 CQTD CORE in this Phase 0 artefact; this notebook is autocontenido at this stage.
+3. Cite by exact bibkey from NB2_CQTD_Support.bib. The References section must use the official title from the .bib file (strip the curly braces; see point 12).
+4. One citation per claim per paper.
+5. Single numbering system. Inline [N] equals References entry N. Ordered by first appearance.
+6. References section lists ONLY papers cited inline.
+7. Citation-from-citation safeguard: if a figure or finding is reported by a citation within a paper (e.g., "Pearce et al. report 40%"), do not attribute that figure to the citing paper. Only count what the paper itself empirically produced.
+8. Reference-number-extraction safeguard: do not treat bracketed reference markers (e.g., "[21, 41, 49]"), arXiv identifiers (e.g., "2107.03374"), or bibliography indices as quantitative findings.
+9. Subject-propagation safeguard: when a sentence contains multiple figures governed by a single subject (e.g., "GPT-5 achieves 98.4%, 82.6%, and 26.9%"), propagate the subject to every derived figure or row. Do not record "not specified" when the source sentence names a specific model.
+10. No paper anchoring more than 5 claims/items unless the artefact explicitly allows it.
+11. "No evidence found in uploaded sources" rather than fabricate.
+12. When listing papers in the References section, strip curly brackets from titles (BibTeX uses them for case-preservation; they are not part of the actual title). The expected format is: [N] Title. Author, Year. Bibkey: bibkey_format. — Author and Year are required; do not omit them. The .csv file NB2_CQTD_Support.csv contains clean titles without curly brackets if you need a reference.
+13. British English throughout.
+
+Workflow discipline (evidence matrix first, prose second, references third, validation last):
+
+Step 1: Construct a source-control table of every paper-item relationship before drafting prose. Verify all bibkeys against NB2_CQTD_Support.bib at this stage.
+Step 2: Draft each item using only papers from the source-control table.
+Step 3: Generate References AFTER the prose is stable, ordered by first appearance.
+Step 4: Run self-validation pass: every inline [N] has a corresponding References entry; no empty brackets, orphan commas, or formatting residue; sub-points numbered correctly; no paper in more than 5 items; spot-check 3 citations; no fabricated bibkeys; no curly braces in titles.
+
+Regeneration over modification: If draft has substantive issues, regenerate from scratch.
+
+Validity over breadth: Quality outweighs volume.
+
+Starting Phase 1.2 — NB2 CQTD SUPPORT: Security Vulnerabilities and Secure Code Generation.
+
+Quality tiers are fixed as per the Phase 0.2 Inventory — do not reclassify.
+
+SCOPE: Papers whose primary sub-topic is security vulnerabilities, secure code generation, or vulnerability detection/repair. Based on Phase 0.2 inventory: tihanyi_how_2025, kim_security_2025, kharma_security_2025, dora_hidden_2025, sabra_assessing_2025, saleem_prompting_2025, schaad_you_2025, cetin_empirical_2024, toth_llms_2024, hu_empirical_2025, gong_how_2025 (if present), mou_can_2025, mohsin_can_2024, nangia_-context_2025, jensen_software_2024, ambati_navigating_2024, bosnak_explicit_2025, steenhoek_err_2025, rawal_benchmarking_2025, le_study_2024, mondal_can_2025, mhatre_can_2025, al-hashimi_generative_2026, yang_robustness_2024, patel_comparative_2024.
+
+WORKFLOW (mandatory):
+Step 1: For each in-scope paper, open the PDF and read the Results, Evaluation, RQ, and Discussion sections. Record candidate findings with bibkey + section + page before drafting anything.
+Step 2: Draft the evidence matrix (paper × finding) before writing prose.
+Step 3: Write the analytical narrative using only findings from the matrix.
+Step 4: Generate References after prose is stable.
+Step 5: Self-validation pass.
+
+WHAT TO PRODUCE — a DOCX with:
+
+1. Evidence matrix — same columns as Phase 1.1, plus a "Vulnerability type / CWE" column where reported.
+
+2. Analytical narrative — 700–1000 words organised around:
+   (a) Prevalence and rates of security vulnerabilities in AI-generated code
+   (b) Variation by model, language, and task context
+   (c) Effect of prompting strategies and static analysis on security outcomes
+   (d) Multi-turn and agentic settings as amplifiers of security risk
+   (e) Limits of AI self-detection of vulnerabilities
+   Minimum 10 distinct papers cited.
+
+3. Triangulation note — 1 paragraph on how SUPPORT security evidence extends CORE coverage (same instructions as Phase 1.1).
+
+4. References.
+
+ANCHOR QUALITY STANDARD: same as Phase 1.1.
+
+CRITICAL NON-NEGOTIABLE CONSTRAINTS:
+- Do not use boilerplates.
+- No hallucinations.
+- Read the PDF papers. You have complete access to them. Do not read just de abstract, or relay on memory.  Read the papers.  I do not care if you take more time to accomplish the task, just do it.
+
+Save as: Phase_1_2_NB2_CQTD_Support_Security_v1.docx
+
+Remember that I just uploaded the zip with the 64 papers and the BIB and CSV files with the bibliographic information of the 64 papers, the file "Relación de Estudios.xlsx" and the artifact from phase 0.2.
+-- Fin del Promt 1 --
+
+-- Inicio del Prompt 2 --
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+-- Fin del Prompt 4 --
+
+-- Inicio del Prompt 5 --
+-- Fin del Prompt 5 --

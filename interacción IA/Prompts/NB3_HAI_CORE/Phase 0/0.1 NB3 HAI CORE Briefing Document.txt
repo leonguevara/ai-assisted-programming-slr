@@ -1,0 +1,138 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/14_cOY3Mp1r-h5kXrYurpji0rkMZnojbW, and with whatever files I've uploaded to this chat.
+
+Starting Phase 0 of the SLR section on Human-AI Interaction for the manuscript "AI-Assisted Programming in Software Engineering: A Systematic Literature Review and Socio-Technical Perspective". This artefact concerns the Human-AI Interaction (HAI) dimension, which is one of seven analytical dimensions in the paper. The other six dimensions (Code Quality and Technical Debt, Productivity, Cognitive Load, Organisational Impact, Economic Impact, and Perception and Trust) are analysed in companion notebooks.
+
+This notebook is NB3_HAI_CORE, containing 60 papers that form the structural backbone of the HAI dimension. A companion notebook (NB4_HAI_SUPPORT, 55 papers) will provide triangulation evidence and will be integrated in Phase 3.
+
+Phase 0 of NB3 is descriptive and self-contained — it characterises the HAI CORE corpus as a standalone analytical unit, without yet integrating its findings with NB4. Cross-integration with NB4 HAI SUPPORT will occur in Phase 3 (synthesis).
+
+CONSOLIDATED CONSTRAINTS — apply ALL from the first draft, not retroactively.
+
+Citation discipline (16 points):
+1. Breadth across all 60 papers. Every paper in the HAI CORE corpus is a valid source. No paper has privileged status. When multiple papers support a claim, cite the broader set rather than defaulting to the same few.
+2. Use only papers in the 60-paper NB3_HAI_CORE corpus. Every bibkey cited must exist literally in NB3_HAI_CORE.bib. Do not infer bibkeys from titles, folder names, examples, or model memory. If a bibkey cannot be verified, do not cite the paper. Do not cite papers from any other notebook in this Phase 0 artefact.
+3. Cite by exact bibkey from NB3_HAI_CORE.bib. The References section must use the official title and author data from NB3_HAI_CORE.csv (not from the BIB file — the CSV is the authoritative source for titles and author names). Strip curly braces from titles.
+4. One citation per claim per paper.
+5. Single numbering system. Inline [N] equals References entry N. Ordered by first appearance.
+6. References section lists ONLY papers cited inline.
+7. Citation-from-citation safeguard: only report what the paper itself empirically produced. Do not attribute findings from cited papers within a paper to the citing paper.
+8. Reference-number-extraction safeguard: do not treat bracketed reference markers (e.g. "[21, 41, 49]"), arXiv identifiers, or bibliography indices as quantitative findings.
+9. Subject-propagation safeguard: when a sentence contains multiple figures governed by a single subject, propagate the subject to every derived figure or row.
+10. No paper anchoring more than 5 claims/items unless the artefact explicitly allows it.
+11. "No evidence found in uploaded sources" rather than fabricate.
+12. When listing papers in the References section, only use the BIB file to obtain the bibkeys. All other bibliographical data (title, author names, year, venue) must be taken from the CSV file. The expected format is: [N] Title. Author(s), Year. Bibkey: bibkey_format. — Author and Year are required; do not omit them. Zero tolerance for ", ." empty author/year fields.
+13. British English throughout.
+
+WORKFLOW DISCIPLINE (evidence matrix first, prose second, references third, validation last):
+
+Step 1: Construct a source-control table of every paper-item relationship before drafting prose. Verify all bibkeys against NB3_HAI_CORE.bib at this stage. Tag each entry as verified or unverified.
+
+Step 2: Draft each item using only papers from the source-control table.
+
+Step 3: Generate References AFTER the prose is stable, ordered by first appearance. Titles and author names from CSV only. Bibkeys from BIB only.
+
+Step 4: Run self-validation pass: every inline [N] has a corresponding References entry; no empty brackets, orphan commas, or formatting residue; no paper in more than 5 items; spot-check 3 citations against both BIB and CSV sources; no fabricated bibkeys; no curly braces in titles; no LaTeX-escaped characters in author names or titles.
+
+Regeneration over modification: if the draft has substantive issues, regenerate from scratch.
+
+Validity over breadth: quality outweighs volume.
+
+Starting Phase 0.1 — NB3 HAI CORE Briefing Document
+
+TASK: Produce a DOCX document that provides a comprehensive descriptive overview of the 60 HAI CORE papers, suitable as an internal reference document for the SLR team and as Supplementary Material for the manuscript.
+
+WHAT TO PRODUCE:
+
+1. Overview — 2 paragraphs framing what the NB3 HAI CORE corpus represents: 60 papers selected as the structural backbone for the HAI dimension. Articulate the analytical purpose: HAI CORE papers establish the primary empirical evidence base for how developers interact with AI coding tools, how prompting and validation behaviours shape outcomes, and how human-AI co-development patterns emerge.
+
+2. Corpus composition — describe the 60 papers structurally:
+   2.1 Temporal distribution: papers per year (2022–2026), with brief 
+       commentary on the temporal centre of gravity.
+   2.2 Publication venue distribution: top venues represented (journals, 
+       conferences, preprints), with 5–8 venues named explicitly.
+   2.3 Methodological mix: breakdown of study designs (controlled 
+       experiment, user study, observational, interview/survey, 
+       mixed-methods, repository mining, qualitative), with paper 
+       counts per design type. Note: HAI papers are expected to have 
+       more qualitative and user-study designs than CQTD.
+   2.4 Sub-topic coverage: which HAI sub-topics does the CORE corpus 
+       cover (prompting dynamics, validation behaviour, interaction 
+       patterns, tool usability, trust and adoption, cognitive aspects 
+       of interaction, developer experience, agentic interaction), 
+       with approximate paper counts per sub-topic.
+   2.5 Models and tools studied: which AI models and coding tools are 
+       evaluated across the corpus (top 10–15 with paper counts).
+
+3. Analytical role of the CORE corpus — 3–4 paragraphs articulating what the 60 HAI CORE papers establish:
+   - Where CORE provides the primary empirical backbone for HAI claims
+   - Which sub-topics are well-covered by CORE alone
+   - Which sub-topics will need NB4 SUPPORT triangulation
+   - Where the evidence is strongest (A1/A2) and where it is thinner (B)
+   Cite 12–20 representative CORE papers across these roles.
+
+4. Notable individual papers — 8–12 papers that stand out for their methodological strength, empirical depth, or unique angle within the HAI CORE corpus. For each, 2–3 sentences naming what makes it valuable for the SLR's HAI argumentation.
+
+5. Limitations of the CORE corpus — 2–3 paragraphs honestly addressing what CORE does NOT cover well, where it has known biases (publication venue, language, year, tool coverage), and what triangulation gaps NB4 SUPPORT will need to address.
+
+6. Headline composition table — a closing table with 10–15 rows summarising key compositional facts. Columns: Compositional dimension | Value | Most-representative bibkeys.
+
+7. References — generated after prose is stable. Ordered by first appearance. Format: [N] Title. Author(s), Year. Bibkey: bibkey.
+
+8. Reference-alignment spot-check — verify 3 inline citations against the References list using the final numbering.
+
+ADDITIONAL CONSTRAINTS:
+- Be honest about thin coverage and limitations. A CORE corpus described as comprehensive when it is not damages the manuscript's credibility.
+- Quality tiers (A1/A2/B) must come from the Relación de Estudios.xlsx file, not reassigned by the model.
+- Do not assume knowledge of NB1 or NB2 for this artefact.
+
+CRITICAL NON-NEGOTIABLE CONSTRAINTS:
+- Do not use boilerplates.
+- No hallucinations.
+- Zero tolerance for ", ." empty author/year fields in the reference list.
+- Read the PDF papers, if needed. You have complete access to them. Do not read just the abstract, or relay on memory.  Read the papers.  I do not care if you take more time to accomplish the task, just do it.
+
+Save with filename: Phase_0_1_NB3_HAI_CORE_Briefing_v1.docx
+
+Remember that I just uploaded the zips with the HAI_CORE (60) papers, the BIB and CSV files of HAI_CORE with the bibliographic information of the 60 papers, and the file "Relación de Estudios.xlsx".
+-- Fin del Promt 1 --
+
+-- Inicio del Prompt 2 --
+Regenerate only the References section. All the paper was excellent but from that section. You used the Zotero ID instead of the real Bibkey.
+
+For example, you are saying:
+
+"[1] An Empirical Study on Developers' Shared Conversations with ChatGPT in GitHub Pull Requests and Issues. Hao, Huizi; Hasan, Kazi Amit; Qin, Hong; Macedo, Marcos; Tian, Yuan; Ding, Steven H. H.; Hassan, Ahmed E., 2024. Bibkey: B98SQIGG."
+
+When it should really be:
+
+"[1] An Empirical Study on Developers' Shared Conversations with ChatGPT in GitHub Pull Requests and Issues. Hao, Huizi; Hasan, Kazi Amit; Qin, Hong; Macedo, Marcos; Tian, Yuan; Ding, Steven H. H.; Hassan, Ahmed E., 2024. Bibkey: hao_empirical_2024."
+
+I'm attaching your produced file "Phase_0_1_NB3_HAI_CORE_Briefing_v1.docx" and the "NB3_HAI_CORE.bib" and "NB3_HAI_CORE.csv" files, so you can use the correct bibkeys.  Remember: Bibkeys ALWAYS come from the BIB file. That is the authoritative source for bibkey.
+
+Save with filename: Phase_0_1_NB3_HAI_CORE_Briefing_v2.docx, you are saying:
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+Somehting is happening that you are not identifying correctly the bibkeys in some papers.
+
+For example, you are saying:
+
+"[1] An Empirical Study on Developers' Shared Conversations with ChatGPT in GitHub Pull Requests and Issues. Hao, Huizi; Hasan, Kazi Amit; Qin, Hong; Macedo, Marcos; Tian, Yuan; Ding, Steven H. H.; Hassan, Ahmed E., 2024. Bibkey: none."
+
+When it should really be:
+
+"[1] An Empirical Study on Developers' Shared Conversations with ChatGPT in GitHub Pull Requests and Issues. Hao, Huizi; Hasan, Kazi Amit; Qin, Hong; Macedo, Marcos; Tian, Yuan; Ding, Steven H. H.; Hassan, Ahmed E., 2024. Bibkey: hao_empirical_2024."
+
+I'm attaching your produced file "Phase_0_1_NB3_HAI_CORE_Briefing_v1.docx" and the "NB3_HAI_CORE.bib" and "NB3_HAI_CORE.csv" files, so you can use the correct bibkeys.  Remember: Bibkeys ALWAYS come from the BIB file. That is the authoritative source for bibkey.
+
+I'm attaching your produced file "Phase_0_1_NB3_HAI_CORE_Briefing_v2.docx" and the "NB3_HAI_CORE.bib", "NB3_HAI_CORE.csv", and "Relación de Estudios.xlsx" files, so you can use the correct bibkeys.  Remember: Bibkeys ALWAYS come from the BIB file. That is the authoritative source for bibkey. However, if for some strange reason you can't find it there, that you should (hao_empirical_2024 is the first item within the BIB file), you can always look in the XLSX file,
+
+Save with filename: Phase_0_1_NB3_HAI_CORE_Briefing_v3.docx
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+-- Fin del Prompt 4 --
+
+-- Inicio del Prompt 5 --
+-- Fin del Prompt 5 --

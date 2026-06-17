@@ -1,0 +1,74 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1ywIisQOCRL3dPVOSdJrIh7BJVtINiVbk?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto
+
+IMPORTANT CONSTRAINTS:
+
+1. Use ONLY the 77 PDFs uploaded to the files folder's subfolders. Do NOT use your general knowledge of the LLM-for-code field.
+2. Aim for breadth across ALL 77 papers. Every paper in the notebook is a valid source, including Bayram, Belozerov, and Siroš, but no paper has privileged status. When multiple papers in the corpus support a claim, cite the broader set rather than defaulting to the same few.
+3. For every claim, cite the exact paper by title and first author or its citation key, that you can find in the NB1_CQTD_CORE.bib file. If a paper is not in the uploaded sources, do NOT mention it.
+4. If you cannot find evidence in the uploaded PDFs, say "No evidence found in uploaded sources" rather than inventing one. In other words, no hallucinations.
+5. Use ONE citation per claim per paper. Do NOT cite the same paper twice (once to its abstract section and once to its body) for the same finding.
+6. If the output includes a final References section, list ONLY the papers actually cited inline in the text above. Do NOT list every paper available in the notebook.
+7. Use a SINGLE numbering system across the entire output. The number [N] used inline in the text must point to the same paper as entry N in the final References list. Do NOT use one numbering for inline citations (e.g., order of first appearance) and a different numbering for the References list (e.g., alphabetical). After producing the output, verify by spot-checking 3 inline citations against the References list: if [N] inline does not match entry N in the list, regenerate with explicit alignment.
+
+Generate a conceptual framework synthesising the relationships between AI-assisted programming and code quality / technical debt as understood across the 77 papers. This framework should be an analytical abstraction grounded in observed empirical regularities, not a prescriptive design.
+
+Output as a single DOCX document with these sections:
+
+1. Framework overview
+Brief introduction explaining the framework's purpose (synthesise causal, correlational, and mediating relationships found across the 77 papers) and its limits (an analytical lens, not a theory).
+
+2. Core constructs — Identify 5-7 core constructs that recur across the corpus. For each construct:
+- Construct name and one-sentence definition derived from the corpus
+- 4-6 representative papers (with bibkeys) that operationalise the construct
+- A quantitative anchor where one exists
+- Where the construct sits in the framework (input / process / output / mediator / moderator)
+Candidate constructs based on prior phases (use these as a starting point but adjust based on what the corpus actually supports): tool autonomy / model capability; prompt / interaction quality; verification effort; code quality outcome; security outcome; maintainability outcome; trust calibration; developer expertise.
+
+3. Relationships among constructs — For each relationship described in the literature, list:
+- Construct A → Construct B
+- Direction (positive / negative / context-dependent / not yet resolved)
+- Strength of evidence (multiple studies converge; single study only; contradictory)
+- 3-5 supporting papers with bibkeys
+Examples of relationships found in the corpus to look for: tool autonomy → verification effort; prompt quality → code quality outcome; developer expertise → verification effort; tool autonomy → security outcome; verification effort → trust calibration; etc.
+
+4. Framework diagram (textual) — Render the framework as a nested list with arrows, suitable for conversion to a figure later. Structure:
+- Central node
+- Input constructs
+- Mediating constructs
+- Outcome constructs
+- Arrows between them, annotated with the supporting bibkeys
+
+5. What the framework explains, what it does not — A short section reflecting:
+- Phenomena the framework integrates well (e.g., why benchmark performance does not predict real-world success; why AI-introduced debt persists)
+- Phenomena that remain unsettled or that the framework cannot fully accommodate (e.g., long-term innovation capacity; deskilling)
+- 4-6 supporting papers per item
+
+6. Headline empirical anchors for the framework — Table (8-10 rows) showing the quantitative findings that most strongly support the framework's claimed relationships. Same format as previous Headline Anchors tables.
+
+7. References — Ordered by first appearance, with bibkeys.
+
+8. Reference-alignment spot-check — Verify 3 inline citations against the References list.
+
+Apply the same conventions:
+- Numbered sections (1.1, 1.2...)
+- British English
+- Only papers in the uploaded sources
+- Surface specific empirical figures with paper attribution
+- One citation per claim per paper, not clustered at end of paragraphs
+- Keep the same citation discipline: every number must be attributed to the paper that produced it, not to a paper that cites it. If a paper cites another paper's number, do not extract it as belonging to the citing paper.
+- Maintain Heibel & Lowd presence
+- Single numbering system across the document
+
+Important framing note: the framework should be derived inductively from what the corpus actually says, not imposed from outside. If you find that the corpus does not strongly support a relationship I suggested above, drop it and explain why. If you find a stronger relationship that I did not suggest, include it.
+
+Read the papers, not just the abstracts or the memory you have of them. I don't care that you take more time, just do it. If you ask me to do it, I can upload again the zip with the 77 PDF files.
+
+I'm not attaching any NotebookLM example, as its results were so poor and I don't want to bias you.
+-- Fin de Prompt 1 --
+
+-- Inicio del Prompt 2 --
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+-- Fin del Prompt 3 --

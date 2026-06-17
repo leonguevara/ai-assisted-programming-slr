@@ -1,0 +1,144 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/14_cOY3Mp1r-h5kXrYurpji0rkMZnojbW (NB3_HAI_CORE) and in this URL: https://drive.google.com/drive/folders/1btkfM0ybzsOyKeeppWVSzlQNjfB2fpOO (NB4_HAI_Support), and with whatever files I've uploaded to this chat.
+
+Continuing Phase 3 of the SLR section on Human-AI Interaction for the manuscript "AI-Assisted Programming in Software Engineering: A Systematic Literature Review and Socio-Technical Perspective". This artefact concerns the Human-AI Interaction (HAI) dimension, which is one of seven analytical dimensions in the paper. The other six dimensions (Code Quality and Technical Debt, Productivity, Cognitive Load, Organisational Impact, Economic Impact, and Perception and Trust) are analysed in companion notebooks.
+
+This is Phase 3 of the HAI analytical workflow. Phase 3 integrates findings from NB3_HAI_CORE (60 papers, analysis complete in Phase 1.1–1.6 and Phase 2.1–2.3) and NB4_HAI_SUPPORT (55 papers, analysis complete in Phase 1.1–1.6 and Phase 2.1–2.3).
+
+FRAMING FOR THIS ARTEFACT:
+The paper's theoretical backbone is a socio-technical equilibrium framework comprising five constructs:
+1. Generation efficiency — the ability of AI tools to accelerate code production
+2. Verification overhead — the additional effort to validate, correct, and integrate AI-generated outputs
+3. Interaction quality — the effectiveness of human-AI communication through prompting and iterative refinement
+4. Trust calibration — the extent to which developers appropriately balance reliance on AI outputs with critical evaluation
+5. Cognitive redistribution — the shift in mental effort from code construction toward supervision, validation, and decision-making
+
+Note: for the HAI dimension, interaction quality and trust calibration are the two constructs most directly addressed by the evidence. The theoretical implications paragraph must connect HAI findings to all five constructs but foreground these two.
+
+CONSOLIDATED CONSTRAINTS — apply ALL from the first draft, not retroactively.
+
+Citation discipline (16 points):
+1. Breadth across both corpora. Every CORE paper and every SUPPORTING paper in NB4 is a valid source. No paper has privileged status.
+2. Use only papers present in NB3_HAI_CORE.bib or NB4_HAI_SUPPORT.bib. Every bibkey cited must exist literally in one of these files. Do not infer bibkeys from titles, folder names, or model memory. If a bibkey cannot be verified, do not cite the paper. Do not cite papers from any other notebook.
+3. Cite by exact bibkey from the relevant .bib file. The References section must use the official title and author data from NB4_HAI_Support.csv (not from the BIB file — the CSV is the authoritative source for titles and author names). Strip curly braces from titles.
+4. One citation per claim per paper.
+5. Single numbering system. Inline [N] equals References entry N. Ordered by first appearance.
+6. References section lists ONLY papers cited inline.
+7. Citation-from-citation safeguard: only report what the paper itself empirically produced. Do not attribute findings from cited papers within a paper to the citing paper.
+8. Reference-number-extraction safeguard: do not treat bracketed reference markers (e.g. "[21, 41, 49]"), arXiv identifiers, or bibliography indices as quantitative findings.
+9. Subject-propagation safeguard: when a sentence contains multiple figures governed by a single subject, propagate the subject to every derived figure or row.
+10. No paper anchoring more than 5 claims/items unless the artefact explicitly allows it.
+11. "No evidence found in uploaded sources" rather than fabricate.
+12. When listing papers in the References section, only use the BIB file to obtain the bibkeys. All other bibliographical data (title, author names, year, venue) must be taken from the CSV file. The expected format is: [N] Title. Author(s), Year. Bibkey: bibkey_format. — Author and Year are required; do not omit them. Zero tolerance for ", ." empty author/year fields. Zero tolerance for LaTeX-escaped characters in author names or titles.
+   12.1. Use the BIB file to obtain te bibkeys.
+   12.2. Search that bibkey in the "Relación de Estudios.xlsx" file to get the Key Field (Column B), that represents the Zotero Key for that paper.
+   12.3. Search that key in the CSV file to obtain the rest of the bibliographical data of such paper.
+13. British English throughout.
+14. When a finding appears in both CORE and SUPPORT, cite both corpora but treat them as converging evidence, not as two independent studies, unless they used different methods, datasets, or contexts.
+15. Do not cite SUPPORT papers for claims already fully established by CORE A1 evidence unless the SUPPORT paper adds a materially different angle (e.g. different population, tool, or context).
+16. Quality tiers must be taken exclusively from column S (Clasificación) of Relación de Estudios.xlsx. The only valid values are A1, A2, and B.
+
+CRITICAL PREREQUISITE — BIBKEY VERIFICATION:
+Before extracting a single anchor, load NB4_HAI_Support.bib and confirm that every bibkey you intend to use exists literally in that file. The CSV file contains Zotero item keys which are NOT bibkeys. Bibkeys follow the format author_keyword_year. If a bibkey cannot be found in the .bib file, do not cite that paper.
+
+CRITICAL PREREQUISITE - QUALITY TIERS:
+Quality tiers must be taken exclusively from column S (Clasificación) of "Relación de Estudios.xlsx" file. Do not use any other column, file, or internal heuristic to assign tiers. Do not reassign tiers. The only valid values are A1, A2, and B.
+
+WORKFLOW:
+Step 1: Load Phase 3.1 Consensus Map, Phase 3.2 Integrated Narrative, and Phase 3.3 Reference Audit. Confirm the verified bibkey list from 3.3 as the citation scope for this document.
+Step 2: Draft the condensed sub-topic narratives by tightening Phase 3.2 prose. Remove all methodological scaffolding language. Write as continuous manuscript prose.
+Step 3: Build the quantitative anchors table from Phase 3.1 confidence levels and Phase 3.2 specific findings.
+Step 4: Draft the theoretical implications paragraph using the five-construct framing above. All five constructs must be named explicitly; interaction quality and trust calibration must receive primary emphasis.
+Step 5: Draft research gaps and future directions.
+Step 6: Generate the final reference list using Phase 3.2 entries as the primary bibliographical source. Verify every bibkey against BIB files. Zero tolerance for ", ." empty author/year fields and LaTeX-escaped characters.
+Step 7: Self-validation pass.
+
+Regeneration over modification: if the draft has substantive issues, regenerate from scratch.
+
+Validity over breadth: quality outweighs volume.
+
+INPUTS:
+- Phase_3_1_HAI_Consensus_Map_v1.docx
+- Phase_3_2_HAI_Integrated_Narrative_v1.docx (primary bibliographical source for references)
+- Phase_3_3_HAI_Reference_Audit_v1.docx (verified bibkeys and corpus tags)
+- NB3_HAI_CORE.bib and NB4_HAI_SUPPORT.bib (bibkeys only)
+- NB3_HAI_CORE.csv and NB4_HAI_SUPPORT.csv (all other bibliographical data via Zotero key mapping)
+- Relación de Estudios.xlsx (quality tiers column S; Zotero key mapping for reference resolution)
+
+Starting Phase 3.4 — HAI Dimension Synthesis for Manuscript Integration.
+
+TASK: Produce the final manuscript-integration package for 
+the HAI dimension.
+
+STRUCTURE:
+
+1. Section header and framing paragraph (100–150 words)
+   — frames HAI as a dimension within the SLR
+   — states evidence base: 60 CORE + 45 SUPPORTING NB4 papers (excluding PERIPHERAL and REMOVE_CANDIDATE) = 105 papers
+   — previews the seven sub-topic structure
+   — no methodological scaffolding language
+
+2. Condensed sub-topic narratives (from Phase 3.2, tightened)
+   — 2,500–3,200 words total across all seven sub-topics
+   — Each sub-topic: 1 opening claim + integrated evidence + 1 closing synthesis sentence
+   — Write as continuous manuscript prose, not as a report
+   — No headers such as "CORE evidence paragraph" or "SUPPORT triangulation"
+   — No phrases such as "Phase 1 evidence shows", "SUPPORT confirms", "CORE evidence grounds", "the integrated finding is"
+   — Retain quantitative anchors from Phase 3.2 where present
+   — British English throughout
+
+3. Key quantitative anchors table — 10–15 most important quantitative findings in the integrated HAI evidence base. Columns:
+   Finding | Source bibkey(s) | Corpus | Quality tier | Phase 3.1 verdict | Confidence
+
+4. Theoretical implications paragraph (200–250 words)
+   — connects HAI findings to all five equilibrium constructs
+   — foregrounds interaction quality and trust calibration as the primary HAI constructs
+   — no methodological scaffolding language
+   — feeds directly into the Discussion section
+
+5. Research gaps and future directions (150–200 words)
+   — 4–6 specific gaps from the integrated evidence
+   — concrete research needs, not generic observations
+   — must include the longitudinal gap identified in NB4 Phase 2.3 (how calibrated use evolves over time, whether dependency declines with instruction, how novices transition from scaffolded to independent use)
+
+6. Final reference list
+   — all papers cited in this document
+   — primary source: Phase 3.2 reference entries (titles, authors, years)
+   — bibkeys verified against BIB files
+   — format: [N] Title. Author(s), Year. Bibkey: bibkey. Corpus: CORE/SUPPORT.
+   — ordered by first appearance in section 2
+   — zero empty author or year fields
+   — zero LaTeX-escaped characters
+   — no REMOVE_CANDIDATE papers
+
+CRITICAL NON-NEGOTIABLE CONSTRAINTS:
+- Do not use boilerplates.
+- No hallucinations.
+- Zero tolerance for ", ." empty author/year fields in the reference list.
+- Zero tolerance for LaTeX-escaped characters in author names or titles.
+- Zero tolerance for Zotero IDs used as bibkeys.
+- Zero tolerance for citations to REMOVE_CANDIDATE papers.
+- Quality tier column must use A1, A2, or B only.
+- Condensed narratives must read as manuscript-ready prose.
+- Do not introduce any empirical claim not present in Phase 3.1 or the Phase 2.3 Consolidated artefacts.
+- Read the PDF papers, if needed. You have complete access to them. Do not read just the abstract, or relay on memory.  Read the papers.  I do not care if you take more time to accomplish the task, just do it.
+- British English throughout.
+- No methodological scaffolding language in the narrative ("Phase 1 evidence shows", "SUPPORT confirms", "CORE grounds").
+- Never apply the same boilerplate to all papers.
+
+Save as: Phase_3_4_HAI_Dimension_Synthesis_v1.docx
+
+Remember that I just uploaded the zips with the HAI_CORE (60) papers and HAI_Support (55) papers, the BIB and CSV files of both HAI_CORE and HAI_Support with the bibliographic information of the 60+55 papers, the file "Relación de Estudios.xlsx" and all the Pahse 3 artefacts.
+-- Fin del Promt 1 --
+
+-- Inicio del Prompt 2 --
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+-- Fin del Prompt 4 --
+
+-- Inicio del Prompt 5 --
+-- Fin del Prompt 5 --

@@ -1,0 +1,20 @@
+TY  - CONF
+AU  - Schaad, Andreas
+AU  - Götz, Stefan
+AU  - Binder, Dominik
+ED  - Nemec Zlatolas, Lili
+ED  - Rannenberg, Kai
+ED  - Welzer, Tatjana
+ED  - Garcia-Alfaro, Joaquin
+PY  - 2025
+DA  - 2025//
+TI  - You Still have to Study On the Security of LLM Generated Code
+BT  - ICT Systems Security and Privacy Protection
+SP  - 111
+EP  - 124
+PB  - Springer Nature Switzerland
+CY  - Cham
+AB  - We witness an increasing usage of AI-assistants even for routine (classroom) programming tasks. However, the code generated on basis of a so called “prompt” by the programmer does not always meet accepted security standards. The actual quality of the programmers’ prompt determines whether generated code contains weaknesses or not.
+SN  - 978-3-031-92886-4
+ID  - 10.1007/978-3-031-92886-4_8
+ER  - 

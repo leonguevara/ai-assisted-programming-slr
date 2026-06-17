@@ -1,0 +1,473 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1ywIisQOCRL3dPVOSdJrIh7BJVtINiVbk?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto
+
+IMPORTANT CONSTRAINTS:
+
+1. Use ONLY the 77 PDFs uploaded to the files folder's subfolders. Do NOT use your general knowledge of the LLM-for-code field.
+2. Aim for breadth across ALL 77 papers. Every paper in the notebook is a valid source, including Bayram, Belozerov, and Siroš, but no paper has privileged status. When multiple papers in the corpus support a claim, cite the broader set rather than defaulting to the same few.
+3. For every claim, cite the exact paper by title and first author or its citation key, that you can find in the NB1_CQTD_CORE.bib file. If a paper is not in the uploaded sources, do NOT mention it.
+4. If you cannot find evidence in the uploaded PDFs, say "No evidence found in uploaded sources" rather than inventing one. In other words, no hallucinations.
+5. Use ONE citation per claim per paper. Do NOT cite the same paper twice (once to its abstract section and once to its body) for the same finding.
+6. If the output includes a final References section, list ONLY the papers actually cited inline in the text above. Do NOT list every paper available in the notebook.
+7. Use a SINGLE numbering system across the entire output. The number [N] used inline in the text must point to the same paper as entry N in the final References list. Do NOT use one numbering for inline citations (e.g., order of first appearance) and a different numbering for the References list (e.g., alphabetical). After producing the output, verify by spot-checking 3 inline citations against the References list: if [N] inline does not match entry N in the list, regenerate with explicit alignment.
+
+Extract every reported quantitative finding on maintainability of AI-generated code across the 77 papers.
+
+INCLUSION CRITERION (broad and explicit). Extract every quantitative original finding by the paper that measures any of:
+- Code smells counts or rates (per snippet, file, project, commit)
+- Cyclomatic complexity figures (per function, per class, per snippet, mean/median)
+- Maintainability index scores
+- Cognitive complexity scores
+- Code duplication rates (% duplicate lines, clone counts)
+- Readability scores (e.g., Flesch-like, halstead metrics, readability index)
+- Lines of code (LOC) when used as a comparative quality metric (e.g., AI-generated vs human, mean LOC per function)
+- Halstead metrics (volume, difficulty, effort)
+- Function/method length statistics (mean, median, max length when used to assess maintainability)
+- Class structure metrics (depth of inheritance, coupling, fan-in/fan-out)
+- Refactoring counts or refactoring suggestions counts
+- Dependency expansion factor (e.g., 13.5x from Vangala)
+- Code-survival rates and persistence figures (e.g., 24.2% long-term survival)
+- Lexical diversity metrics, naming-quality metrics
+- SonarQube debt ratio, debt minutes/hours
+- Static-analysis warning counts (Pylint, ESLint, SpotBugs, CodeQL, etc.) when used for maintainability assessment
+- Test coverage when used as a maintainability proxy
+- Documentation/comment density when measured
+- Per-language maintainability breakdowns (e.g., Python vs JavaScript code smells)
+- Per-model maintainability comparisons
+
+EXCLUSION CRITERION (strict):
+- Correctness or functional defect rates (those belong to Phase 2.1)
+- Security vulnerability rates (those belong to Phase 2.2)
+- Productivity, time-saved, or satisfaction figures
+- Citation-from-citation: only count what the paper itself empirically produced
+- Dataset descriptive statistics that do not quantify maintainability
+
+CALIBRATION ANCHORS:
+Several papers in the corpus produce rich maintainability data and should yield many atomic findings:
+- Liu et al. 2026 "Debt Behind the AI Boom" — should have multiple rows including the 89.1% code-smell figure, the 24.2% long-term survival, and the per-debt-category breakdowns across 304,362 commits.
+- Vangala et al. 2026 — 31.7% fail out of the box, 13.5x dependency expansion, per-language and per-tool breakdowns.
+- Borg et al. 2026 "Echoes of AI" — downstream maintainability metrics, per-quality-dimension figures.
+- Rabbi et al. 2024 — 76.46% / 84.51% snippet quality issues, per-Pylint-warning rates, per-CWE refactoring counts, alpha/beta/gamma/nu metrics. Should yield 30+ atomic findings on maintainability alone.
+- Idrisov et al. 2024 — cyclomatic complexity, maintainability index, halstead metrics per language and per model.
+- Bayram et al. 2025 — code-quality metrics alongside Pass@1.
+- Ovi et al. 2024 — comparative code-quality metrics across Copilot, ChatGPT, Codeium.
+- Chen and Jiang 2024 "Evaluating Software Development Agents" — patch quality, code complexity, issue complexity figures across 4,892 patches.
+- Cotroneo et al. 2025 (DeVAIC) — code quality alongside security.
+- He et al. 2026 — Cursor AI maintainability impact, including the speed-vs-quality trade-off figures.
+- Wu et al. 2024 — API quality / hallucination rates as a maintainability dimension.
+- Singhal et al. 2024 (NoFunEval) — non-functional requirement evaluations across multiple maintainability dimensions.
+- Honarvar et al. 2025 (Turbulence) — robustness and consistency figures.
+- Pan et al. 2024 — multilingual maintainability.
+- Dou et al. 2026 — multi-dimensional quality assessment.
+- Wang et al. 2025 "Towards Understanding the Characteristics of Code Generation Errors" — characterisation of error types as a maintainability concern.
+
+Aim for 1,500-3,000 atomic findings across the maintainability-relevant subset of the corpus. Do NOT apply any per-paper extraction cap.
+
+WORKBOOK STRUCTURE (XLSX with 5 sheets):
+Sheet 1: "Maintainability findings" — one row per atomic finding. Columns:
+- Paper title
+- First author
+- Year
+- Bibkey
+- Exact figure or range
+- Maintainability dimension (code smells / cyclomatic complexity / cognitive complexity / maintainability index / duplication / readability / Halstead / LOC / dependency expansion / debt ratio / static-analysis warnings / refactoring count / test coverage / documentation density / code-survival / lexical-diversity / per-language / per-model / other)
+- Specific metric used (e.g., Pylint warning count, McCabe CC, SonarQube debt minutes, mean function length)
+- Measurement instrument (e.g., SonarQube, Pylint, ESLint, manual review, CodeBLEU, custom analyser)
+- Model or tool evaluated (specific or "generic LLM")
+- Programming language (when reported)
+- Benchmark or dataset used
+- Sample size or denominator
+- Unit of measurement
+- Source location
+- Citation status (must be "own empirical finding")
+
+Sheet 2: "Per-paper maintainability summary" — one row per bibkey that contributed at least one finding.
+
+Sheet 3: "Screened papers" — one row per bibkey in the 77-paper corpus with status:
+- "maintainability figures extracted"
+- "no maintainability findings (correctness/security-only study)"
+- "only citation-of-citation maintainability figures"
+- "qualitative maintainability discussion only"
+
+Sheet 4: "References" — ordered by first appearance.
+- Ref #
+- Bibkey
+- First author
+- Year
+- Paper title
+
+Sheet 5: "Coverage check" — with:
+- Total papers screened (77)
+- Papers with at least one maintainability finding
+- Papers with no maintainability findings
+- Total atomic findings
+- Mean atomic findings per extracted paper
+- Maximum atomic findings (which paper)
+- Most frequent maintainability dimensions (top 5)
+- Heibel & Lowd present (Yes/No)
+- All 77 paper bibkeys present (Yes/No).
+
+NON-NEGOTIABLE CONSTRAINTS:
+1. Every bibkey must appear in Sheet 3.
+2. Citation-from-citation safeguard rigorously applied.
+3. Per-model, per-language, per-metric breakdowns are separate rows.
+4. No per-paper cap.
+5. British English, only papers in uploaded sources, single numbering in References.
+
+Read the papers, not just the abstracts or the memory you have of them. I don't care that you take more time, just do it. If you ask me to do it, I can upload again the zip with the 77 PDF files.
+-- Fin de Prompt 1 --
+
+-- Inicio del Prompt 2 --
+The Phase 2.3 Maintainability extraction is severely under-extracted: only 22 atomic findings across 6 papers, while Phases 2.1, 2.2, 2.4, and 2.5 each yielded 1,000-3,600 findings across 51-75 papers. This is not a corpus limitation — many papers in the corpus contain extractable maintainability data that was not captured.
+
+Concrete evidence of available maintainability findings in the corpus that were missed:
+1. Liu et al. 2026 "Debt Behind the AI Boom" (liu_debt_2026) reports: 89.1% of distinct AI-introduced issues are code smells, 24.2% long-term survival, 41.1% security-flaw survival, across 304,362 verified commits. All three figures are maintainability findings (code smells, code-survival).
+2. Rabbi et al. 2024 (rabbi_ai_2024) reports Pylint warning rates, refactoring counts, convention violations, naming-quality metrics, alpha/beta/gamma/nu code-quality metrics across 1,756 Python snippets. Should yield 20-30 atomic maintainability findings.
+3. Vangala et al. 2026 reports 31.7% projects fail out of the box, 13.5x dependency expansion. These are reproducibility/dependency maintainability findings.
+4. Bayram et al. 2025 reports complexity scores, lines of code per function, and structural metrics alongside Pass@1 figures.
+5. Idrisov et al. 2024 reports cyclomatic complexity, maintainability index, and Halstead metrics across multiple languages and 7 models.
+6. Borg et al. 2026 "Echoes of AI" measures downstream maintainability effects, with multiple comparative maintainability metrics.
+7. Chen and Jiang 2024 (chen_evaluating_2024) measures patch code quality, complexity, and issue complexity across 4,892 patches.
+8. Ovi et al. 2024 compares code-quality metrics across Copilot, ChatGPT, and Codeium.
+9. Honarvar et al. 2025 (Turbulence) reports per-perturbation consistency and quality figures.
+10. Singhal et al. 2024 (NoFunEval) reports non-functional requirement evaluations across multiple maintainability dimensions.
+
+Regenerate the complete XLSX workbook applying the broader inclusion criterion from the original prompt. Include:
+- Code smells (Liu's 89.1% is a maintainability finding, not just defect)
+- Code-survival rates
+- Cyclomatic complexity figures across all papers that report them
+- Maintainability index scores
+- Static-analysis warning counts (Pylint, ESLint, SpotBugs, CodeQL, SonarQube)
+- Halstead metrics
+- Function/method length statistics
+- Dependency expansion factors
+- Lines-of-code comparisons
+- Lexical diversity and naming-quality metrics
+- Refactoring counts
+
+Do NOT exclude a finding because it could also be classified as a defect or correctness finding. The same paper can yield a row in Phase 2.1 (defect) AND a row in Phase 2.3 (maintainability) if the figure represents both — these are not mutually exclusive extractions.
+
+- Aim for at least 800-1,500 atomic findings across 50-65 papers.
+- Maintain Heibel & Lowd presence. Do not apply any per-paper cap.
+- Citation-from-citation safeguard remains active.
+
+Deliver the complete XLSX workbook with all 5 sheets, replacing the previous version.
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1ywIisQOCRL3dPVOSdJrIh7BJVtINiVbk?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto
+
+IMPORTANT CONSTRAINTS:
+
+1. Use ONLY the 77 PDFs uploaded to the files folder's subfolders. Do NOT use your general knowledge of the LLM-for-code field.
+2. Aim for breadth across ALL 77 papers. Every paper in the notebook is a valid source, including Bayram, Belozerov, and Siroš, but no paper has privileged status. When multiple papers in the corpus support a claim, cite the broader set rather than defaulting to the same few.
+3. For every claim, cite the exact paper by title and first author or its citation key, that you can find in the NB1_CQTD_CORE.bib file. If a paper is not in the uploaded sources, do NOT mention it.
+4. If you cannot find evidence in the uploaded PDFs, say "No evidence found in uploaded sources" rather than inventing one. In other words, no hallucinations.
+5. Use ONE citation per claim per paper. Do NOT cite the same paper twice (once to its abstract section and once to its body) for the same finding.
+6. If the output includes a final References section, list ONLY the papers actually cited inline in the text above. Do NOT list every paper available in the notebook.
+7. Use a SINGLE numbering system across the entire output. The number [N] used inline in the text must point to the same paper as entry N in the final References list. Do NOT use one numbering for inline citations (e.g., order of first appearance) and a different numbering for the References list (e.g., alphabetical). After producing the output, verify by spot-checking 3 inline citations against the References list: if [N] inline does not match entry N in the list, regenerate with explicit alignment.
+
+Regenerate Phase 2.3 Maintainability extraction from scratch.
+
+This is NOT a defect/correctness extraction and must NOT duplicate Phase 2.1 wholesale.
+
+Extract a quantitative figure into Phase 2.3 only if the measured construct, metric, instrument, or author interpretation directly concerns maintainability of AI-generated or AI-assisted code: code smells, technical debt, complexity, maintainability index, Halstead metrics, readability, duplication, dependency burden, refactoring, documentation/comment density, naming quality, static-analysis style/maintainability warnings, code survival/persistence, test coverage used as maintainability proxy, structural metrics, or long-term evolvability.
+
+Important overlap rule:
+A finding may appear in both Phase 2.1 and Phase 2.3 only when the exact same numerical figure is explicitly a maintainability construct. For example, code smells, maintainability debt, long-lived AI-introduced issues, refactoring counts, or static-analysis maintainability warnings may overlap with defects. However, do NOT copy correctness-only, compilation-only, runtime-error-only, pass-rate-only, benchmark-success-only, or security-only rows into Phase 2.3.
+
+For every candidate row, apply this decision test:
+1. What exact construct is measured?
+2. Is the construct maintainability-specific?
+3. What instrument or operationalisation supports that classification?
+4. Would this figure still be meaningful in a maintainability analysis if Phase 2.1 did not exist?
+
+If the answer to #2 or #4 is no, exclude it from Phase 2.3.
+
+Add these columns to Sheet 1:
+- Maintainability justification
+- Phase 2.1 overlap status: 
+  - "No overlap"
+  - "Overlap allowed: maintainability-specific construct"
+  - "Excluded from 2.3: correctness-only"
+  - "Excluded from 2.3: security-only"
+  - "Excluded from 2.3: dataset descriptor only"
+
+Do not optimise for row count. Precision is more important than volume. The expected result is likely hundreds of legitimate maintainability findings, not thousands of duplicated defect findings.
+
+Keep the citation-from-citation safeguard active.
+Use only the uploaded 77 PDFs.
+Use bibkeys only from NB1_CQTD_CORE.bib.
+
+XLSX OUTPUT CONTRACT — DO NOT MODIFY
+
+Generate one Excel workbook (.xlsx) with exactly five sheets and exactly the following sheet names, in this order:
+
+1. Maintainability findings
+2. Per-paper maintainability summary
+3. Screened papers
+4. References
+5. Coverage check
+
+Do not add, remove, rename, merge, or split sheets.
+
+Sheet 1: "Maintainability findings"
+One row per atomic quantitative maintainability finding. Use exactly these columns, in this exact order:
+
+1. Finding_ID
+2. Paper title
+3. First author
+4. Year
+5. Bibkey
+6. Ref #
+7. Exact figure or range
+8. Maintainability dimension
+9. Specific metric used
+10. Measurement instrument
+11. Model or tool evaluated
+12. Programming language
+13. Benchmark or dataset used
+14. Sample size or denominator
+15. Unit of measurement
+16. Source location
+17. Citation status
+18. Maintainability justification
+19. Phase 2.1 overlap status
+20. Extraction notes
+
+Allowed values for "Maintainability dimension":
+- code smells
+- cyclomatic complexity
+- cognitive complexity
+- maintainability index
+- duplication
+- readability
+- Halstead
+- LOC
+- dependency expansion
+- debt ratio
+- static-analysis warnings
+- refactoring count
+- test coverage
+- documentation density
+- code-survival
+- lexical-diversity
+- per-language
+- per-model
+- structural metrics
+- other
+
+Use "other" only when no listed category fits, and explain why in "Maintainability justification". Do not use "other" for correctness, security, or generic defect rows.
+
+Allowed values for "Citation status":
+- own empirical finding
+
+Do not include citation-from-citation figures.
+
+FINAL FORMAT AND EXTRACTION CLARIFICATIONS
+
+PHASE 2.1 OVERLAP FIELD
+
+For Sheet 1, allowed values for "Phase 2.1 overlap status" are only:
+- No overlap
+- Overlap allowed: maintainability-specific construct
+- Unknown because Phase 2.1 workbook was not provided
+
+Do not record rejected candidates in Sheet 1. Rejected candidates should simply be excluded from the workbook, unless an optional audit appendix is explicitly requested later.
+
+ATOMICITY RULE
+
+Each row in Sheet 1 must represent one atomic quantitative finding: one paper, one metric, one figure or range, one model/tool condition when applicable, one language when applicable, and one benchmark/dataset context when applicable.
+
+If a table reports the same maintainability metric separately by model, language, dataset, prompt condition, or tool, extract each reported cell as a separate row.
+
+If a sentence reports multiple figures, split them into separate rows.
+
+Do not create separate rows by paraphrasing the same figure in multiple ways.
+
+REFERENCE-NUMBER FILTER — MANDATORY
+
+Do not extract any number that appears only inside an inline citation marker, reference bracket, bibliography marker, or citation cluster.
+
+Examples of numbers that must NOT be extracted:
+- [21]
+- [21, 41]
+- [21, 41, 49, 59, 75]
+- (Abbassi et al., 2025)
+- [3]–[7]
+- references to sections, figures, tables, equations, algorithms, pages, or citations
+
+A number may be extracted only if it is part of the paper's own empirical result, measurement, denominator, percentage, score, rate, count, ratio, mean, median, standard deviation, confidence interval, p-value, model comparison, metric table, or quantified finding.
+
+Before adding a row, verify that the value in "Exact figure or range" is not merely a citation number, reference number, section number, figure/table number, equation number, page number, or bibliography index.
+
+If the surrounding text contains phrases such as "studies have shown", "previous work", "prior studies", "as reported by", "according to", followed by bracketed references, treat it as citation-from-citation or background and exclude it unless the paper itself reports new empirical measurements in the same sentence.
+
+POST-EXTRACTION NUMERIC SANITY CHECK
+
+Flag and remove any Sheet 1 row where "Exact figure or range" matches citation-like patterns such as:
+- one or more integers separated by commas with no unit, e.g., "21, 41, 49"
+- bracketed citation clusters, e.g., "[21, 41]"
+- small integer lists that correspond to reference numbers
+- values immediately preceded or followed by citation brackets
+
+Rows with no unit of measurement, no denominator, no metric, and no instrument must be manually reviewed and excluded unless clearly justified as an empirical maintainability count.
+
+SOURCE LOCATION RULE
+
+"Source location" must be as specific as possible:
+- Prefer page number + table/figure number + section name when available.
+- If the figure appears in running text, provide page number and surrounding section/subsection.
+- If page number cannot be determined, provide section/table/figure identifier and state "page not available".
+- Do not invent page numbers.
+
+Sheet 2: "Per-paper maintainability summary"
+One row per bibkey that contributed at least one finding. Use exactly these columns, in this exact order:
+
+1. Bibkey
+2. Ref #
+3. Paper title
+4. First author
+5. Year
+6. Number of maintainability findings
+7. Maintainability dimensions represented
+8. Main measurement instruments
+9. Models or tools evaluated
+10. Programming languages covered
+11. Benchmarks or datasets used
+12. Summary of maintainability evidence
+13. Notes
+
+Sheet 3: "Screened papers"
+One row for every bibkey in the 77-paper corpus, including papers with zero findings. Use exactly these columns, in this exact order:
+
+1. Bibkey
+2. Ref #
+3. Paper title
+4. First author
+5. Year
+6. Screening status
+7. Number of maintainability findings extracted
+8. Reason if zero findings
+9. Evidence type
+10. Notes
+
+Allowed values for "Screening status":
+- maintainability figures extracted
+- no maintainability findings (correctness/security-only study)
+- only citation-of-citation maintainability figures
+- qualitative maintainability discussion only
+- no evidence found in uploaded sources
+
+Allowed values for "Evidence type":
+- quantitative maintainability evidence
+- qualitative maintainability discussion only
+- correctness/security only
+- citation-of-citation only
+- no relevant evidence
+
+Sheet 4: "References"
+List only papers cited in Sheets 1 and 2, ordered by first appearance in Sheet 1. Use exactly these columns, in this exact order:
+
+1. Ref #
+2. Bibkey
+3. First author
+4. Year
+5. Paper title
+
+The same Ref # must be used consistently across all sheets. Do not use alphabetical numbering if first appearance order differs.
+
+Sheet 5: "Coverage check"
+Use exactly two columns:
+
+1. Check item
+2. Value
+
+Include exactly these check items, in this order:
+
+1. Total papers screened
+2. Papers with at least one maintainability finding
+3. Papers with no maintainability findings
+4. Total atomic findings
+5. Mean atomic findings per extracted paper
+6. Maximum atomic findings
+7. Paper with maximum atomic findings
+8. Most frequent maintainability dimension #1
+9. Most frequent maintainability dimension #2
+10. Most frequent maintainability dimension #3
+11. Most frequent maintainability dimension #4
+12. Most frequent maintainability dimension #5
+13. Heibel & Lowd present
+14. All 77 paper bibkeys present in Screened papers
+15. All Sheet 1 bibkeys found in NB1_CQTD_CORE.bib
+16. All Ref # values consistent across sheets
+17. Citation-from-citation safeguard applied
+18. Number of rows with Maintainability dimension = other
+19. Percentage of rows with Maintainability dimension = other
+20. Number of rows marked overlap with Phase 2.1
+21. Percentage of rows marked overlap with Phase 2.1
+
+VALIDATION RULES BEFORE FINAL DELIVERY
+
+Before delivering the workbook, perform these checks:
+
+1. The workbook has exactly 5 sheets with the exact names specified above.
+2. Sheet 3 contains exactly 77 unique bibkeys.
+3. Every bibkey in Sheet 1 exists in NB1_CQTD_CORE.bib.
+4. Every bibkey in Sheet 2 exists in Sheet 1.
+5. Every paper with findings in Sheet 1 appears in Sheet 2.
+6. Every Ref # in Sheets 1, 2, and 3 matches the same Bibkey in Sheet 4 when applicable.
+7. No Sheet 1 row is correctness-only, security-only, productivity-only, satisfaction-only, or dataset-descriptive only.
+8. Rows classified as "other" must be manually reviewed and justified.
+9. If more than 25% of Sheet 1 rows are classified as "other", stop and revise the classification before delivery.
+10. If more than 35% of Sheet 1 rows overlap exactly with Phase 2.1 by same paper + same figure, stop and manually audit whether the overlap is maintainability-specific.
+11. Do not pad the workbook to reach a target number of findings.
+12. Do not omit low-yield papers from Sheet 3.
+13. Do not invent bibkeys.
+14. Do not invent source locations.
+15. Do not invent measurement instruments.
+
+Do not target a fixed row count. Extract all legitimate maintainability findings. A plausible output may contain hundreds rather than thousands of rows. Completeness and precision are more important than volume.
+
+ANTI-DUPLICATION RULE
+
+Do not import or copy rows from Phase 2.1. Phase 2.3 must be independently extracted from maintainability-relevant evidence in the papers. A row may share the same numerical figure with Phase 2.1 only if the figure is explicitly a maintainability construct, such as code smells, code survival, static-analysis maintainability warnings, refactoring, complexity, maintainability index, debt, dependency burden, or structural quality. Generic defects, bugs, failed tests, compilation failures, runtime errors, incorrect outputs, Pass@k, or vulnerability rates must not be included merely because they are code-quality problems.
+
+MULTI-METRIC SENTENCE RULE
+
+If one sentence reports multiple figures, each figure must be evaluated independently.
+
+Do not place multiple percentages, scores, rates, or counts in the same "Exact figure or range" cell unless they are explicitly presented by the paper as a single range or interval.
+
+For each figure, separately extract:
+- the exact figure;
+- the metric it measures;
+- the model/tool associated with that figure;
+- the task/context associated with that figure;
+- whether the figure is maintainability-relevant.
+
+Example:
+"GPT-5 achieves 98.4% accuracy in code summarisation, 82.6% coverage rate in test generation, and 26.9% score in code review" must be split into three candidate findings:
+1. GPT-5 — 98.4% — code summarisation accuracy — exclude unless explicitly tied to maintainability.
+2. GPT-5 — 82.6% — test generation coverage rate — include as test coverage if used as maintainability proxy.
+3. GPT-5 — 26.9% — code review score — include only if the paper operationalises code review as maintainability/quality assessment.
+
+Do not merge distinct metrics from the same sentence into one row.
+
+NON-NEGOTIABLE CONSTRAINTS:
+1. Every bibkey must appear in Sheet 3.
+2. Citation-from-citation safeguard rigorously applied.
+4. No per-paper cap.
+5. British English, only papers in uploaded sources, single numbering in References.
+
+Read the papers, not just the abstracts or the memory you have of them. I don't care that you take more time, just do it. If you ask me to do it, I can upload again the zip with the 77 PDF files.
+
+Use the uploaded Phase 2.1 and Phase 2.2 workbooks only as boundary-control artefacts, not as extraction sources.
+
+Do not copy rows from Phase 2.1 or Phase 2.2 into Phase 2.3. Use them only to identify figures that are correctness/security-only and therefore should be excluded from maintainability unless the same numerical figure is explicitly tied to a maintainability construct in the original PDF.
+
+If a candidate finding appears conceptually close to Phase 2.1 or Phase 2.2, include it in Phase 2.3 only when the maintainability justification column can clearly explain why it belongs to maintainability independently of correctness or security.
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+-- Fin del Prompt 4 --

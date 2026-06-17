@@ -1,0 +1,99 @@
+-- Inicio de Prompt 1 --
+Continuing Phase 4 of the SLR section on Code Quality and Technical Debt in AI-Assisted Programming. Same NB1_CQTD_CORE corpus (77 PDFs), same Phase 2 extractive workbooks (11,628 atomic findings), same Phase 3 synthesis artefacts (Consensus Map, Contradiction Map, Methodological Pattern Atlas, Anchors Compendium).
+
+CONSOLIDATED CONSTRAINTS — apply ALL from the first draft, not retroactively.
+
+Citation discipline (13 points):
+1. Breadth across all 77 papers. Every paper in the corpus is a valid source. No paper has privileged status. When multiple papers support a claim, cite the broader set rather than defaulting to the same few.
+2. Use only papers in the 77-PDF corpus. Every bibkey cited must exist literally in NB1_CQTD_CORE.bib. Do not infer bibkeys from titles, folder names, examples, or model memory. If a bibkey cannot be verified, do not cite the paper.
+3. Cite by exact bibkey from NB1_CQTD_CORE.bib. The References section must use the official title from the .bib file, not paraphrased.
+4. One citation per claim per paper.
+5. Single numbering system. Inline [N] equals References entry N. Ordered by first appearance.
+6. References section lists ONLY papers cited inline.
+7. Citation-from-citation safeguard.
+8. Reference-number-extraction safeguard.
+9. Subject-propagation safeguard.
+10. No paper anchoring more than 5 claims/items unless the artefact explicitly allows it.
+11. "No evidence found in uploaded sources" rather than fabricate.
+12. When listing papers in the References section, use the title format from the NB1_CQTD_CORE.csv file (clean text, no curly brackets around capitalised words). The .bib file's title field surrounds capitalised words with curly brackets (e.g., "Program {Code} {Generation} with {Generative} {AIs}") because BibTeX requires those for case preservation, but the curly brackets are formatting instructions for LaTeX compilation, not part of the actual title. Strip them. The expected format is: [N] Title. Author, Year. Bibkey: bibkey_format. — Author and Year are required; do not omit them.
+13. British English throughout.
+
+Workflow discipline:
+Apply "evidence matrix first, prose second, references third, validation last":
+
+Step 1: Construct a source-control table of every construct-paper-finding relationship before drafting prose. Verify all bibkeys.
+Step 2: Draft each item using only papers from that table.
+Step 3: Generate References AFTER prose is stable, ordered by first appearance.
+Step 4: Run self-validation: zero ghosts, no orphan commas, sub-points numbered, no paper in >5 items, spot-check 3 citations, no fabricated bibkeys.
+
+- Regeneration over modification: If draft has substantive issues, regenerate from scratch rather than patch.
+- Validity over breadth: 6 verified papers beats 12 papers if 6 are weak.
+
+Task: Phase 4.7 — Narrative Arc for the Manuscript
+
+Produce a DOCX document that articulates the master narrative arc of the SLR manuscript, mapping each section of the planned paper (Introduction, Background, Methods, Results, Discussion, Conclusion) to the analytical material from Phase 0-4. This is the structural blueprint for writing.
+
+WHAT TO PRODUCE:
+
+1. Overview — 2 paragraphs articulating the central thesis of the manuscript and how the narrative arc supports it. The thesis is approximately: "AI-assisted programming should be understood not as a productivity tool but as a socio-technical equilibrium system where gains in generation efficiency are systematically offset by verification overhead, mediated by interaction quality, trust calibration, and cognitive redistribution."
+
+2. Section-by-section narrative mapping — For each manuscript section, exactly 7 numbered sub-points:
+2.1 Introduction (target 3-4 pages)
+- 2.1.1 Section purpose: what the Introduction must achieve in the reader.
+- 2.1.2 Opening hook: 1-2 quantitative anchors from the corpus that immediately establish the magnitude and tension of the topic.
+- 2.1.3 Background problem statement: how to frame the gap that motivates the SLR.
+- 2.1.4 Research questions: the RQ structure (RQ1, RQ2, etc.) with one-sentence justification each.
+- 2.1.5 SLR contribution: how to articulate this paper's contribution distinctly from prior SLRs.
+- 2.1.6 Paper organisation: brief preview of the manuscript's structure.
+- 2.1.7 Key citations: 6-10 anchor citations for the Introduction.
+2.2 Background and Related Work (target 3-4 pages)
+- Same 7-point structure.
+2.3 Methodology (target 4-5 pages)
+- Same 7-point structure. Sub-point 2.3.2 should describe how to frame the PRISMA 2020 + Kitchenham approach.
+2.4 Results — organised by 7 dimensions (target 12-15 pages)
+- 2.4.1 Section purpose and structure (one paragraph each per dimension).
+- 2.4.2 Per-dimension narrative structure: how each subsection should open, what anchors to include, how to handle within-dimension contradictions.
+- 2.4.3 Cross-dimensional integration: where in the Results to refer forward to Phase 4.2 patterns.
+- 2.4.4 Figure and table strategy: which dimensions warrant figures, which warrant tables.
+- 2.4.5 Quantitative anchors per dimension: 5-8 anchors per dimension from Phase 3.4 Compendium.
+- 2.4.6 Treatment of contradictions and tensions: where to fold in Phase 3.2 findings.
+- 2.4.7 Closing per dimension: how each Results subsection should conclude to set up the Discussion.
+2.5 Discussion (target 6-8 pages)
+- Same 7-point structure. Should integrate Phase 4.1 (framework alignment), Phase 4.2 (cross-dimensional patterns), Phase 4.6 (counter-narrative responses).
+2.6 Threats to Validity (target 1.5-2 pages)
+- Same 7-point structure. Should incorporate the methodological audit findings (eight failure modes documented across retrieval and generation stages).
+2.7 Conclusions and Future Work (target 1.5-2 pages)
+- Same 7-point structure. Should integrate Phase 4.5 (research gaps) for Future Work.
+
+3. Argument flow check — 2-3 paragraphs verifying that the narrative arc flows coherently: does each section set up the next? Are the major claims foreshadowed and then paid off? Does the Discussion deliver what the Introduction promises?
+
+4. Anchor distribution check — Summary table showing how the 65 anchors from Phase 3.4 are distributed across manuscript sections. Identify anchors that are not yet allocated and either assign them or note them as optional supplementary material.
+
+5. Foreseeable reviewer concerns — A short section (2-3 paragraphs) listing the 4-6 most likely reviewer concerns and where in the manuscript they will be addressed. This is the practical translation of Phase 4.6 Counter-Narrative Analysis.
+
+6. Writing sequence recommendation — A short section recommending the order in which the author should draft the manuscript sections. Recommend whether to write Methods first, Results before Introduction, etc., and why.
+
+7. References — Ordered by first appearance.
+
+8. Reference-alignment spot-check.
+
+Additional constraints:
+- This artefact is the bridge between analysis (Phase 0-4) and authorship. It must be operationally useful — the author should be able to open Section 2.1 of this artefact and start drafting the manuscript's Introduction.
+- For each manuscript section, anchor recommendations must be drawn from the existing Phase 3.4 Compendium. Do not invent new figures.
+
+Save with filename: Phase_4_7_CQTD_Narrative_Arc_v1.docx
+
+Remember that I just uploaded the zip with the 77 papers, the zip with the artifacts from phases 0 to 4, and the BIB and CSV files with the bibliographic information of the 77 papers.
+-- Fin del Promt 1 --
+
+-- Inicio del Prompt 2 --
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+-- Fin del Prompt 4 --
+
+-- Inicio del Prompt 5 --
+-- Fin del Prompt 5 --

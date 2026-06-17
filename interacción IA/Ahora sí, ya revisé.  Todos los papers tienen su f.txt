@@ -1,0 +1,28 @@
+Ahora sí, ya revisé.  Todos los papers tienen su fuente de origen en la columna E del archivo "Relación de Estudios.xlsx" (en las hojas desde Core hasta Relación completa).  Las fuentes principales fueron:
+
+- SciSpace con su búsqueda especializada (tenemos los archivos CSV de todo lo que encontró).
+- Scopus con su búsqueda  (tenemos tanto el archivo CSV de todo lo que encontró).
+- ProQuest (Tenemos archivos RIS con las búsquedas realizadas ahí)
+
+De los 3 papers que tienen como fuente arXiv:
+
+- chen_securevibebench_2026 fue propuesto por SciSpace en el listado de abstracts, solo que SciSpace lo encontró como "SecureAgentBench: Benchmarking Secure Code Generation under Realistic Vulnerability Scenarios" (la primera versión del paper).  Decidí tomar la versión más reciente hasta el momento (la 3), donde ya habia cambiado su nombre a "SecureVibeBench: Evaluating Secure Coding Capabilities of Code Agents with Realistic Vulnerability Scenarios".  En este momento ya hay una versión 4, de nombre "SecureVibeBench: Benchmarking Secure Vibe Coding of AI Agents via Reconstructing Vulnerability-Introducing Scenarios" y estoy tendado a reemplazar la versión que tengo. ¿Cómo ves? ¿Lo hago? ¿O ya no le movemos ahí?
+- liu_debt_2026, fue encontrado directamente en arXiv utilizando una cadena de búsqueda de keywords.  El título me pareció interesante, no se repetía con lo que tenía de Scopus ni SciSpace, y lo descargué.  Este paper nunca fue un Serendipity; el que si lo fue de liu, fue liu_what_2025, en Related Work, y lo quitamos ya que no era citado en lado alguno.
+- hutter_agentstepper_2026, decía arXiv porque de ahí lo descargué, pero éste paper fue uno de los que encontré a través de Google Scholar tras la sugerencia de keywords por parte de ChatGPT para solventar las dimensiones que tenía más bajas en ese momento.  Sin embargo, también aparece en la misma búsqueda en arXiv en donde encontré liu_debt_2026.
+
+De los que vienen marcados como Google Scholar:
+
+- butler_dear_2024, no sé por qué lo marqué como Google Scholar, cuando claramente le cargué su información de SciSpace.  Este paper llegó hasta el listado de fulltext de SciSpace.  Ya cambié su fuente a la correcta.
+- zhang_are_2025, fue un serendipity al buscar otro paper y sí, su fuente fue arXiv.  Ya lo corregí.
+- bonin_exploring_2025, está bien marcado como GoogleScholar.  Se descargó de SSRN, pero la búsqueda y descubrimiento se hizo en Google Scholar.
+- li_exploring_2025, está bien marcado como GoogleScholar.   Se descargó de SSRN, pero la búsqueda y descubrimiento se hizo en Google Scholar.
+- stray_generative_2025, está bien marcado como GoogleScholar.
+- prather_its_2024, fue encontrado manualmente en Scopus con las primeras cadenas de búsqueda, pero cuando quise entrar a ver el full text, me envió al sitio de ACM. Como no tengo acceso total a ACM DL, busqué el título por Google Scholar y ahí encontré la liga al PDF, pero el descubrimiento del paper fue por medio de Scopus.  Ya corregí el registro
+- brown_identifying_2024, mismo caso que el de prather_its_2024: fue encontrado manualmente en Scopus con las primeras cadenas de búsqueda, pero cuando quise entrar a ver el full text, me envió al sitio de ACM. Como no tengo acceso total a ACM DL, busqué el título por Google Scholar y ahí encontré la liga al PDF, pero el descubrimiento del paper fue por medio de Scopus.  Ta corregí el registro
+- hutter_agentstepper_2026 ya lo aclaramos arriba: ahora sestá bien marcdo como Google Scholar.
+- modi_measuring_2026, está bien marcado como GoogleScholar. Lo descubrí por serendipia buscando una de las alucinaciones de Gemini.
+- salmo_application_2024, al igual que modi_measuring_2026, está bien marcado como GoogleScholar. Lo descubrí también por serendipia buscando una de las alucinaciones de Gemini.
+
+Del archivo que viene marcado como ResearchGate:
+
+- rodriguez_comparative_2025, como ya lo habíamos platicado, el enlace a este paper me salió cuando estaba recuperando el fulltext de otro paper en ResearchGate y, dado que el título hablaba sobre la dimensión económica, lo descargué.

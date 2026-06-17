@@ -1,0 +1,95 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1QYMu1_U8yiJDY7I4sw_lWYZ4vR8ZR6hi, and with whatever files I've uploaded to this chat.
+
+We are continuing with Phase 0 of the SLR section on Code Quality and Technical Debt for the manuscript "AI-Assisted Programming in Software Engineering: A Systematic Literature Review and Socio-Technical Perspective". This artefact concerns the Code Quality and Technical Debt (CQTD) dimension, which is one of seven analytical dimensions in the paper. The other six dimensions (Productivity, Human-AI Interaction, Cognitive Load, Organizational Impact, Economic Impact, Perception and Trust) are analysed in companion notebooks.
+
+This notebook is NB2_CQTD_Support, containing 64 triangulation papers that provide complementary empirical evidence for the CQTD dimension. These papers are not the structural backbone of the SLR (that role is played by the 77 papers in NB1_CQTD_CORE, whose analysis has been completed in companion artefacts). Instead, NB2_CQTD_Support papers either:
+
+(a) provide additional quantitative evidence on CQTD constructs already established by CORE,
+(b) extend the dimension's scope to topics where CORE coverage is thin, or
+(c) offer methodological triangulation through alternative study designs.
+
+Phase 0 of NB2 is descriptive and autocontenido — it characterises the SUPPORT corpus as a standalone analytical unit, without yet integrating its findings with those of NB1. Cross-integration with NB1 CORE will occur in Phase 3 (synthesis).
+
+CONSOLIDATED CONSTRAINTS — apply ALL from the first draft, not retroactively.
+
+Citation discipline (13 points):
+1. Breadth across all 64 papers. Every paper in the SUPPORT corpus is a valid source. No paper has privileged status. When multiple papers support a claim, cite the broader set rather than defaulting to the same few.
+2. Use only papers in the 64-PDF NB2_CQTD_Support corpus. Every bibkey cited must exist literally in NB2_CQTD_Support.bib. Do not infer bibkeys from titles, folder names, examples, or model memory. If a bibkey cannot be verified, do not cite the paper. Do not cite papers from NB1 CQTD CORE in this Phase 0 artefact; this notebook is autocontenido at this stage.
+3. Cite by exact bibkey from NB2_CQTD_Support.bib. The References section must use the official title from the .bib file (strip the curly braces; see point 12).
+4. One citation per claim per paper.
+5. Single numbering system. Inline [N] equals References entry N. Ordered by first appearance.
+6. References section lists ONLY papers cited inline.
+7. Citation-from-citation safeguard: if a figure or finding is reported by a citation within a paper (e.g., "Pearce et al. report 40%"), do not attribute that figure to the citing paper. Only count what the paper itself empirically produced.
+8. Reference-number-extraction safeguard: do not treat bracketed reference markers (e.g., "[21, 41, 49]"), arXiv identifiers (e.g., "2107.03374"), or bibliography indices as quantitative findings.
+9. Subject-propagation safeguard: when a sentence contains multiple figures governed by a single subject (e.g., "GPT-5 achieves 98.4%, 82.6%, and 26.9%"), propagate the subject to every derived figure or row. Do not record "not specified" when the source sentence names a specific model.
+10. No paper anchoring more than 5 claims/items unless the artefact explicitly allows it.
+11. "No evidence found in uploaded sources" rather than fabricate.
+12. When listing papers in the References section, strip curly brackets from titles (BibTeX uses them for case-preservation; they are not part of the actual title). The expected format is: [N] Title. Author, Year. Bibkey: bibkey_format. — Author and Year are required; do not omit them. The .csv file NB2_CQTD_Support.csv contains clean titles without curly brackets if you need a reference.
+13. British English throughout.
+
+Workflow discipline (evidence matrix first, prose second, references third, validation last):
+
+Step 1: Construct a source-control table of every paper-item relationship before drafting prose. Verify all bibkeys against NB2_CQTD_Support.bib at this stage.
+Step 2: Draft each item using only papers from the source-control table.
+Step 3: Generate References AFTER the prose is stable, ordered by first appearance.
+Step 4: Run self-validation pass: every inline [N] has a corresponding References entry; no empty brackets, orphan commas, or formatting residue; sub-points numbered correctly; no paper in more than 5 items; spot-check 3 citations; no fabricated bibkeys; no curly braces in titles.
+
+Regeneration over modification: If draft has substantive issues, regenerate from scratch.
+
+Validity over breadth: Quality outweighs volume.
+
+Starting Phase 0.2 — NB2 CQTD SUPPORT Corpus Inventory Table.
+
+Task: Produce a DOCX document containing a structured inventory table of all 64 papers 
+in the NB2_CQTD_Support corpus. This is a reference artefact for internal SLR use and 
+potential Supplementary Material.
+
+TABLE STRUCTURE — one row per paper, 64 rows total, with the following columns:
+
+1. Row number (1–64, ordered by bibkey alphabetically)
+2. Bibkey (exact, from NB2_CQTD_Support.bib)
+3. Author(s) — first author surname + "et al." if >2 authors
+4. Year (from .bib file)
+5. Title (clean, no curly braces)
+6. Venue/Source (journal, conference, or arXiv/preprint)
+7. Study design (from §2.3 typology: Benchmark-based, Security-focused, 
+   User-study/observational, Repository/mining, APR/repair, Agentic/contextual, 
+   Reproducibility/reliability — a paper may have 2 tags if clearly dual-design)
+8. Primary CQTD sub-topic (from §2.4 typology: Functional correctness, Security 
+   vulnerabilities, Maintainability/code smells, Technical debt/quality risk, 
+   Reproducibility/reliability, Performance/efficiency, Bias/fairness, 
+   Program repair/debugging, Human validation/usability)
+9. Main model(s)/tool(s) studied (top 1–3, or "Multiple" if >3)
+10. Quality tier (A1 / A2 / B — apply the same rubric used in the main SLR)
+
+CONSTRAINTS:
+- Every row must be populated; use "Not specified" only if genuinely absent from 
+  the PDF/metadata.
+- Do not fabricate venue or model information. If uncertain, mark as "Unclear".
+- Quality tier assignment must be consistent with the A1/A2/B rubric: 
+  A1 = controlled experiment or large-scale empirical/causal study; 
+  A2 = structured user study, case study, or benchmark with evaluation; 
+  B = qualitative, perception-based, or model-only analysis.
+- The table must cover all 64 papers; no paper may be omitted.
+
+After the table, add a brief validation note (3–5 sentences) confirming: 
+total row count, any papers where venue or model could not be verified from 
+available metadata, and any dual-design tags applied.
+
+Save with filename: Phase_0_2_NB2_CQTD_Support_Inventory_v1.docx
+
+Remember that I just uploaded the zip with the 64 papers and the BIB and CSV files with the bibliographic information of the 64 papers.
+-- Fin del Promt 1 --
+
+-- Inicio del Prompt 2 --
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+-- Fin del Prompt 4 --
+
+-- Inicio del Prompt 5 --
+-- Fin del Prompt 5 --

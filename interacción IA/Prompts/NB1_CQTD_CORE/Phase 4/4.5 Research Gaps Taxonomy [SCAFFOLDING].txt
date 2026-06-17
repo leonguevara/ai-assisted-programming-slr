@@ -1,0 +1,92 @@
+-- Inicio de Prompt 1 --
+Continuing Phase 4 of the SLR section on Code Quality and Technical Debt in AI-Assisted Programming. Same NB1_CQTD_CORE corpus (77 PDFs), same Phase 2 extractive workbooks (11,628 atomic findings), same Phase 3 synthesis artefacts (Consensus Map, Contradiction Map, Methodological Pattern Atlas, Anchors Compendium).
+
+CONSOLIDATED CONSTRAINTS — apply ALL from the first draft, not retroactively.
+
+Citation discipline (13 points):
+1. Breadth across all 77 papers. Every paper in the corpus is a valid source. No paper has privileged status. When multiple papers support a claim, cite the broader set rather than defaulting to the same few.
+2. Use only papers in the 77-PDF corpus. Every bibkey cited must exist literally in NB1_CQTD_CORE.bib. Do not infer bibkeys from titles, folder names, examples, or model memory. If a bibkey cannot be verified, do not cite the paper.
+3. Cite by exact bibkey from NB1_CQTD_CORE.bib. The References section must use the official title from the .bib file, not paraphrased.
+4. One citation per claim per paper.
+5. Single numbering system. Inline [N] equals References entry N. Ordered by first appearance.
+6. References section lists ONLY papers cited inline.
+7. Citation-from-citation safeguard.
+8. Reference-number-extraction safeguard.
+9. Subject-propagation safeguard.
+10. No paper anchoring more than 5 claims/items unless the artefact explicitly allows it.
+11. "No evidence found in uploaded sources" rather than fabricate.
+12. When listing papers in the References section, use the title format from the NB1_CQTD_CORE.csv file (clean text, no curly brackets around capitalised words). The .bib file's title field surrounds capitalised words with curly brackets (e.g., "Program {Code} {Generation} with {Generative} {AIs}") because BibTeX requires those for case preservation, but the curly brackets are formatting instructions for LaTeX compilation, not part of the actual title. Strip them. The expected format is: "Program Code Generation with Generative AIs", not "Program {Code} {Generation} with {Generative} {AIs}
+13. British English throughout.
+
+Workflow discipline:
+Apply "evidence matrix first, prose second, references third, validation last":
+
+Step 1: Construct a source-control table of every construct-paper-finding relationship before drafting prose. Verify all bibkeys.
+Step 2: Draft each item using only papers from that table.
+Step 3: Generate References AFTER prose is stable, ordered by first appearance.
+Step 4: Run self-validation: zero ghosts, no orphan commas, sub-points numbered, no paper in >5 items, spot-check 3 citations, no fabricated bibkeys.
+
+- Regeneration over modification: If draft has substantive issues, regenerate from scratch rather than patch.
+- Validity over breadth: 6 verified papers beats 12 papers if 6 are weak.
+
+Task: Phase 4.5 — Research Gaps Taxonomy
+Produce a DOCX document that catalogues and classifies the research gaps revealed by the corpus, structured as a taxonomy across multiple gap types (methodological, empirical, conceptual, contextual). Each gap is articulated with specificity about what future research would resolve it.
+WHAT TO PRODUCE:
+1. Overview — 2 paragraphs framing the analytical purpose: a corpus of 77 papers reveals what has been studied, but also what has not been adequately studied. This artefact classifies those gaps and translates them into actionable research questions for future work.
+2. Gaps organised by category — Four gap categories, each with multiple specific gaps:
+2.1 Methodological gaps — 4-6 specific gaps. For each, structured as:
+- 2.1.X.1 Gap statement (one sentence)
+- 2.1.X.2 Why this is a gap: explain what evidence is missing or what study design has not been applied
+- 2.1.X.3 Evidence from the corpus: cite 3-6 papers that either expose the gap or attempt to close it but at insufficient scale
+- 2.1.X.4 What would resolve it: name specific study designs, sample sizes, or contexts needed
+- 2.1.X.5 Priority: high / medium / low for the field's progression
+Examples of methodological gaps to consider:
+- Longitudinal multi-organisation studies of AI-assisted teams
+- Randomised controlled trials at scale with diverse expertise levels
+- Post-deployment monitoring of AI-generated code over multi-year windows
+- Standardised real-world (non-benchmark) evaluation protocols
+- Cross-cultural and cross-organisational comparative studies
+2.2 Empirical gaps — 4-6 specific gaps with same structure.
+Examples to consider:
+- Multi-language and multi-domain coverage (most corpus is Python-centric)
+- Underrepresented developer populations (women, students from non-elite institutions, non-Western teams)
+- Quality effects on safety-critical and high-stakes domains
+- Maintenance effort attribution over 12+ month horizons
+- Cost-benefit analysis with reliable hidden-cost accounting
+2.3 Conceptual gaps — 3-5 specific gaps with same structure.
+Examples to consider:
+- Operationalisation of "trust" in human-AI development contexts
+- Operationalisation of "interaction quality" beyond prompt formulation
+- Distinction between AI-introduced and AI-amplified technical debt
+- Theoretical models of developer-AI cognitive co-construction
+- Definition and measurement of prompting and validation literacy as competencies
+2.4 Contextual gaps — 3-4 specific gaps with same structure.
+Examples to consider:
+- Open-source vs proprietary codebase dynamics
+- Small organisation vs large organisation deployment patterns
+- Education and onboarding contexts beyond university CS programmes
+- Regulated industry contexts (healthcare, finance, safety-critical)
+3. Gap interaction analysis — 2-3 paragraphs identifying gaps that compound each other. For example: the empirical gap on longitudinal effects compounded by the methodological gap on multi-organisation studies creates a particularly acute knowledge deficit about long-term enterprise AI-assisted development outcomes.
+4. Priority gaps for the next research cycle — A closing assessment (2-3 paragraphs) naming the 5-7 gaps the field most urgently needs to address, with brief justification.
+5. Headline gaps table — Closing table with 8-12 rows of the highest-priority gaps. Columns: # | Gap | Category | Why priority | Required study type.
+6. References — Ordered by first appearance.
+7. Reference-alignment spot-check.
+Additional constraints:
+- Each gap must be supported by corpus evidence (i.e., papers that either expose the gap or insufficiently address it). Do not list gaps as abstract concerns without empirical traction in the corpus.
+- Distinguish "gap because no one has studied this" from "gap because studies disagree and need replication". Both are legitimate but conceptually distinct.
+Save with filename: Phase_4_5_CQTD_Research_Gaps_Taxonomy_v1.docx
+
+Remember that I just uploaded again the zip with the 77 papers, the zip with the artifacts from phases 0 to 3, and the BIB ans CSV files with the bibliographic informtion of the 77 papers.
+-- Fin del Promt 1 --
+
+-- Inicio del Prompt 2 --
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+-- Fin del Prompt 4 --
+
+-- Inicio del Prompt 5 --
+-- Fin del Prompt 5 --

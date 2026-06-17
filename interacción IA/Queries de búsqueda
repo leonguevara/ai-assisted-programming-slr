@@ -1,0 +1,53 @@
+\subsection{Search Strategy}
+
+The search strategy was designed to identify relevant studies on AI-assisted programming:
+
+\begin{verbatim}
+("AI-assisted programming" 
+OR "AI coding assistant" 
+OR "code generation" 
+OR "large language models")
+AND
+("software engineering" 
+OR "software development")
+AND
+(productivity 
+OR "code quality" 
+OR evaluation 
+OR efficiency)
+\end{verbatim}
+
+---
+("AI-assisted programming" OR "AI coding assistant" OR "code generation" OR "large language models")
+AND
+("software engineering" OR "software development")
+AND
+(productivity OR "code quality" OR evaluation OR efficiency)
+---
+(("AI coding assistant" OR "GitHub Copilot" OR "code generation") AND ("software development") AND (productivity OR "code quality")) AND (stype.exact(("Scholarly Journals" OR "Conference Papers & Proceedings") NOT ("Trade Journals" OR "Working Papers")) AND pd(20200101-20260403) AND PEER(yes))
+---
+(("AI-assisted programming" OR "AI coding assistant" OR "code generation" OR "large language models") AND ("software engineering" OR "software development") AND (productivity OR "code quality" OR evaluation OR efficiency)) AND stype.exact("Scholarly Journals" OR "Conference Papers & Proceedings") AND (stype.exact(("Scholarly Journals" OR "Conference Papers & Proceedings") NOT ("Trade Journals" OR "Working Papers")) AND pd(20200101-20260403) AND PEER(yes))
+---
+(("AI-assisted programming" OR "AI coding assistant" OR "code generation" OR "large language models") AND ("software engineering" OR "software development") AND (productivity OR "code quality" OR evaluation OR efficiency)) AND (stype.exact("Scholarly Journals") AND yr(2020-2029) AND PEER(yes))
+
+
+
+
+The search was conducted in IEEE Xplore, ACM Digital Library, Scopus, and SpringerLink, covering publications from 2020 to 2026.
+
+Google Scholar:
+The Economics of Generative AI in Software Engineering: ROI, Cost-Benefit Analysis, and Labor Market Shifts
+https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6731681
+https://osuva.uwasa.fi/items/d7c78a72-60c6-4b78-92ef-7f0d7c0207ab
+https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5100609
+
+Google:
+"The Economics of Generative AI in Software Engineering: ROI, Cost-Benefit Analysis, and Labor Market Shifts" + PDF
+https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4611256
+https://arxiv.org/abs/2508.16811
+https://www.researchgate.net/publication/390661760_Generative_AI%27s_Impact_on_Enterprise_Software_Development_Lifecycles_A_Framework_for_Integration_Governance_and_ROI_Measurement
+
+
+
+
+ Li, Xinyu and Costello, Francis Joseph and Kim, Keongtae and Zhang, Xiaoquan (Michael), Exploring Altered Open Source Software Development Patterns in a Time of Generative AI (January 15, 2025). Available at SSRN: https://ssrn.com/abstract=5100609 or http://dx.doi.org/10.2139/ssrn.5100609 

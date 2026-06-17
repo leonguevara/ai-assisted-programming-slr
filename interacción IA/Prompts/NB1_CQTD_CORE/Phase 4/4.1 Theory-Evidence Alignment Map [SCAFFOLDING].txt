@@ -1,0 +1,82 @@
+-- Inicio de Prompt 1 --
+Continuing Phase 4 of the SLR section on Code Quality and Technical Debt in AI-Assisted Programming. Same NB1_CQTD_CORE corpus (77 PDFs), same Phase 2 extractive workbooks (11,628 atomic findings), same Phase 3 synthesis artefacts (Consensus Map, Contradiction Map, Methodological Pattern Atlas, Anchors Compendium).
+
+CONSOLIDATED CONSTRAINTS — apply ALL from the first draft, not retroactively.
+
+Citation discipline (12 points):
+1. Breadth across all 77 papers. Every paper in the corpus is a valid source. No paper has privileged status. When multiple papers support a claim, cite the broader set rather than defaulting to the same few.
+2. Use only papers in the 77-PDF corpus. Every bibkey cited must exist literally in NB1_CQTD_CORE.bib. Do not infer bibkeys from titles, folder names, examples, or model memory. If a bibkey cannot be verified, do not cite the paper.
+3. Cite by exact bibkey from NB1_CQTD_CORE.bib. The References section must use the official title from the .bib file, not paraphrased.
+4. One citation per claim per paper.
+5. Single numbering system. Inline [N] equals References entry N. Ordered by first appearance.
+6. References section lists ONLY papers cited inline.
+7. Citation-from-citation safeguard.
+8. Reference-number-extraction safeguard.
+9. Subject-propagation safeguard.
+10. No paper anchoring more than 5 claims/items unless the artefact explicitly allows it.
+11. "No evidence found in uploaded sources" rather than fabricate.
+12. British English throughout.
+
+Workflow discipline:
+Apply "evidence matrix first, prose second, references third, validation last":
+
+Step 1: Construct a source-control table of every construct-paper-finding relationship before drafting prose. Verify all bibkeys.
+Step 2: Draft each item using only papers from that table.
+Step 3: Generate References AFTER prose is stable, ordered by first appearance.
+Step 4: Run self-validation: zero ghosts, no orphan commas, sub-points numbered, no paper in >5 items, spot-check 3 citations, no fabricated bibkeys.
+
+- Regeneration over modification: If draft has substantive issues, regenerate from scratch rather than patch.
+- Validity over breadth: 6 verified papers beats 12 papers if 6 are weak.
+
+Task: Phase 4.1 — Theory-Evidence Alignment Map
+
+Produce a DOCX document that maps the five core constructs of the socio-technical equilibrium framework to the empirical evidence from the corpus that supports, qualifies, or challenges each construct.
+
+Framework constructs (these are the SLR's theoretical claim):
+
+1. Generation efficiency — the AI's ability to accelerate code production.
+2. Verification overhead — the additional effort required to validate, correct, and integrate AI-generated outputs.
+3. Interaction quality — the effectiveness of human-AI communication, particularly through prompting and iterative refinement.
+4. Trust calibration — the degree to which developers appropriately balance reliance on AI outputs with critical evaluation.
+5. Cognitive redistribution — the shift in mental effort from code construction toward supervision, validation, and decision-making.
+
+WHAT TO PRODUCE:
+1. Overview — 2 paragraphs framing the analytical purpose: each construct of the framework must be tested against the corpus. Either the construct is supported (the corpus contains evidence converging on it), qualified (the corpus partially supports it but adds boundary conditions), or challenged (the corpus contains substantive evidence that contradicts or weakens it).
+
+2. Construct-by-construct analysis — For each of the 5 constructs, exactly 7 numbered sub-points:
+- 2.X.1 Construct statement (one sentence, declarative form from the framework).
+- 2.X.2 Theoretical role: explain in 2-3 sentences why this construct matters in the framework.
+- 2.X.3 Supporting evidence: cite 6-12 papers with bibkeys and 3-5 quantitative anchors (drawn from Phase 3.4 Anchors Compendium or Phase 2 workbooks). Apply subject-propagation safeguard.
+- 2.X.4 Qualifying evidence: cite 3-6 papers that introduce boundary conditions, context dependencies, or methodological caveats. Name what context makes the construct hold differently (task type, expertise level, model generation, single-shot vs multi-turn, etc.).
+- 2.X.5 Challenging evidence: cite 2-5 papers that present evidence weakening the construct. If no challenging evidence exists, write "No challenging evidence found in uploaded sources" — do not fabricate.
+- 2.X.6 Empirical strength assessment: declare whether the construct is strongly supported / moderately supported / qualified / weakly supported by the corpus. Justify in 2-3 sentences referring to the cited papers.
+- 2.X.7 Manuscript placement: name where in the manuscript this construct should be argued — typically Discussion section 5.X — and what supporting anchors to cite there.
+
+3. Inter-construct relationships — 2-3 paragraphs analysing how the five constructs interact in the corpus evidence. For example, does increased generation efficiency causally correlate with increased verification overhead in the data? Does interaction quality mediate trust calibration? Cite specific papers that examine these relationships empirically.
+
+4. Framework integrity assessment — A short section (3-4 paragraphs) summarising whether the corpus empirically supports the socio-technical equilibrium framework as a coherent whole, identifies its strongest empirical anchors, and notes which constructs may need refinement.
+
+5. Headline alignment table — Closing table with 5 rows (one per construct). Columns: Construct | Status (strongly supported / qualified / weakly supported) | Strongest supporting paper | Strongest challenging paper | Manuscript placement.
+
+6. References — Generated after prose stable. Ordered by first appearance.
+
+7. Reference-alignment spot-check — Verify 3 inline citations.
+
+Additional constraints:
+- Distinguish "construct supported by evidence" from "construct simply assumed". The output must explicitly demonstrate empirical traction, not just assert it.
+- If a construct is weakly supported, say so. This is not a failure of the framework — it is honest reporting that can drive theoretical refinement in Discussion.
+
+Save with filename: Phase_4_1_CQTD_Theory_Evidence_Alignment_v1.docx
+-- Fin de Prompt 1 --
+
+-- Inicio del Prompt 2 --
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+-- Fin del Prompt 3 --
+
+-- Inicio del Prompt 4 --
+-- Fin del Prompt 4 --
+
+-- Inicio del Prompt 5 --
+-- Fin del Prompt 5 --

@@ -1,0 +1,19 @@
+Provider: IGI Global Scientific Publishing
+Database: IGI Global Scientific Publishing
+Content: application/x-research-info-systems
+TY  - CHAP
+ID  - 385593
+TI  - AI-Driven Coding: Transforming Education and Industry
+T2  - AI, Personalization, Equity, and the Future of Learning
+PY  - 2026
+PB  - IGI Global Scientific Publishing
+CY  - Hershey, PA, USA
+SN  - 9798337350974
+DO  - 10.4018/979-8-3373-5097-4.ch015
+UR  - https://services.igi-global.com/resolvedoi/resolve.aspx?doi=10.4018/979-8-3373-5097-4.ch015
+A2  - Wang, Viktor
+AU  - Azeroual, Otmane
+AB  - The rapid rise of Artificial Intelligence (AI) has significantly impacted both education and software development, particularly in coding instruction. AI-powered tools like GitHub Copilot, ChatGPT, and intelligent tutoring systems are transforming traditional teaching methods by offering personalized learning, real-time feedback, and enhanced debugging. While these tools show promise in supporting novice programmers and improving coding skills, concerns exist about their potential to undermine critical cognitive skills like problem-solving and creativity. This chapter examines the effectiveness of AI-driven coding tools in achieving educational and professional goals, exploring their impact on cognitive development and workforce readiness. It also addresses the societal implications of AI in education, including algorithmic biases, tool accessibility, and ethical considerations. Through empirical research and case studies, this chapter provides a nuanced view of AI's role in shaping coding education and the software industry.
+SP  - 425
+EP  - 452
+ER  -

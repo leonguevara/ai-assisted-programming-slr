@@ -1,0 +1,99 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1ywIisQOCRL3dPVOSdJrIh7BJVtINiVbk?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto
+
+IMPORTANT CONSTRAINTS:
+
+1. Use ONLY the 77 PDFs uploaded to the files folder's subfolders. Do NOT use your general knowledge of the LLM-for-code field.
+2. Aim for breadth across ALL 77 papers. Every paper in the notebook is a valid source, including Bayram, Belozerov, and Siroš, but no paper has privileged status. When multiple papers in the corpus support a claim, cite the broader set rather than defaulting to the same few.
+3. For every claim, cite the exact paper by title and first author or its citation key, that you can find in the NB1_CQTD_CORE.bib file. If a paper is not in the uploaded sources, do NOT mention it.
+4. If you cannot find evidence in the uploaded PDFs, say "No evidence found in uploaded sources" rather than inventing one. In other words, no hallucinations.
+5. Use ONE citation per claim per paper. Do NOT cite the same paper twice (once to its abstract section and once to its body) for the same finding.
+6. If the output includes a final References section, list ONLY the papers actually cited inline in the text above. Do NOT list every paper available in the notebook.
+7. Use a SINGLE numbering system across the entire output. The number [N] used inline in the text must point to the same paper as entry N in the final References list. Do NOT use one numbering for inline citations (e.g., order of first appearance) and a different numbering for the References list (e.g., alphabetical). After producing the output, verify by spot-checking 3 inline citations against the References list: if [N] inline does not match entry N in the list, regenerate with explicit alignment.
+
+Produce a briefing document on what the 77 papers in this notebook collectively say about Code Quality and Technical Debt in AI-assisted programming. Read the papers, not just the abstracts or the memory you have of them. I don't care that you take more time, just do it. The briefing should:
+
+(a) Have an executive summary of 3-4 paragraphs.
+(b) Identify the 4-6 dominant themes in the corpus.
+(c) For EACH theme, cite the title and first author of at least 8-12 supporting papers (not the same 3 repeatedly).
+(d) Highlight any consensus findings and any contradictory findings.
+(e) End with a brief paragraph on what is most clearly understood in this literature versus what remains unsettled.  The briefing should be readable to someone outside the field but should never present a single-study finding as corpus-wide consensus.
+(f) This output must include a final References section, just as described in the important constraints 6 and 7 cited above.
+
+Examples.  Your briefing could start like this:
+
+"Executive Summary
+The integration of Large Language Models (LLMs) into software development has introduced a fundamental paradigm shift, prioritising rapid code generation over traditional rigorous design processes. Across the 77 sources in this corpus, a central tension emerges: while AI assistants can reduce completion time by 20% to 55% [1][2], they simultaneously introduce significant risks to code quality, security, and long-term maintainability [3][2]. The literature identifies a critical disconnect between a model's performance on synthetic benchmarks and its ability to handle authentic production environments, where complexity and interdependencies are significantly higher [4][5]."
+
+And your last section, the References section, could end like this:
+
+"
+1. Abbassi et al. (2025) - ReCatcher Towards LLMs Regression Testing for Code Generation.
+2. Borg et al. (2026) - Echoes of AI Investigating the Downstream Effects of AI Assistants on Software Maintainability.
+3. Asare et al. (2024) - A User-centered Security Evaluation of Copilot.
+4. Bayram et al. (2025) - Comparative Analysis of AI Models for Python Code Generation A HumanEval Benchmark Study.
+5. Rahman et al. (2025) - Beyond Synthetic Benchmarks Evaluating LLM Performance on Real-World Class-Level Code Generation.
+"
+
+or like this:
+
+"
+1. abbassi_recatcher_2025
+2. borg_echoes_2026
+3. asare_user-centered_2024
+4. bayram_comparative_2025
+5. rahman_beyond_2025
+"
+
+Notice how the Reference section is not alphabetically-sorted, but the items are in order of appearance within the briefing.  Also notice that, in this example, Borg is cited two times, but we only use one number to cite it.
+
+As an output, I expext a DOCX document with the resulting briefing. Remember to produce the output in British English.
+-- Fin de Prompt 1 --
+
+Aquí me indició que, para facilitar el acceso a los PDF, mejor le subiera un ZIP con la carpeta files, para más fácil acceso, lo cual hice y me arrojó como resultado el archivo "CQTD_AI_Assisted_Programming_Briefing.docx", el cual te anexo.
+
+Me gustó lo que hizo, pero siento que le faltó algo de punch que sí me dio NotebookLM, así que se lo hice saber.
+
+-- Inicio de Prompt 2 --
+I loved your work. It is almost exactly as I expected. I'm sending you the briefing produced by NotebookLM. What I liked about the NotebookLM briefing was:
+
+1. The sections are numbered. I know that in Microsoft Word you can use the syles to know the header level, but being numbered helps a lot.
+2. There are figures within the briefing, like the 40% of vulnerable programs reported by Pearce or the the 18.5% of incorrect code even though the chain of thought reported by Zhang.
+
+What I really, really hated about the NotebookLM was that:
+
+1. The references are misplaced (it reports the Pearce finding by Cotroneo and by Bayram just because they cite Pearce), and
+2. The reference section lists all the papers alphabetically and with numbers that do not correspond with the numbers used within the text.
+
+Can you redo your briefing to incorporate what I liked about the NotebookLM briefing?
+-- Fin de Prompt 2 --
+
+Con esto en mente, me arrojó el archivo "CQTD_AI_Assisted_Programming_Briefing_numbered_with_figures.docx", el cual también te anexo.  ¿Cómo los ves, sobre todo el segundo, comparado contra lo que arrojó NotebookLM?
+
+-- Inicio de Prompt 3 --
+The briefing is methodologically clean but lacks the empirical anchors that make claims memorable. Please regenerate keeping all the formatting and reference rules, but add specific empirical numbers wherever a paper provides one. For example:
+
+- Where you wrote "code smells appear in repository studies", instead write "Liu et al. report that 89.1% of distinct issues introduced by AI assistants in 304,362 commits are code smells [N]".
+- Where you wrote "Pearce-style benchmarks show vulnerabilities", instead write "approximately 40% of programs generated by Copilot in security-sensitive scenarios were vulnerable [N]".
+- Where you wrote "models can fail on real tasks even when passing benchmarks", add specific numbers like "Rahman et al. report 25–34% success on real-world class-level tasks vs 84–89% on synthetic benchmarks [N]".
+
+Remove the repeated boilerplate sentence "Supporting papers cited for this theme are intentionally broad rather than restricted to a small set of canonical studies" — say it once at the start of section 2 if necessary.
+
+Keep the same citation discipline: every number must be attributed to the paper that produced it, not to a paper that cites it. If a paper cites another paper's number, do not extract it as belonging to the citing paper.
+-- Fin de Prompt 3--
+
+-- Inicio de Prompt 4 --
+Wow! Esto fue muchísimo mejor. Me sorprendiste. Sin embargo, me gustaría hacer un último ajuste. En la sección: "4.2 Contradictory or Unsettled Findings", podrías citar por separado las partes contradictorias.
+
+Por ejemplo, cuando dices:
+
+Some studies report strong benchmark performance for frontier models, while others report much weaker performance in realistic tasks; this is best read as a context effect rather than a simple contradiction.
+
+Bien podrías decir:
+
+Some studies report strong benchmark performance for frontier models [N1][N2][Nx], while others report much weaker performance in realistic tasks [N3][N4][Ny]; this is best read as a context effect rather than a simple contradiction.
+
+Esto ayudará a tener una mejor comprensión de la distribución de los papers.
+
+Ahora, un comentario que, si bien no es preocupante, preocupante, sí me llamó la atención: En las primeras dos versiones del briefing, usaste 56 referencias distintas, mientras que en esta tercera versión sólo usaste 53 referencias distintas. ¿Necesitas que te vuelva a subir los papers? ¿O fue solo una decisión estratégica? ¿Podrías construir una cuarta versión del briefing con el comentario que te hago sobre diferenciar los papers que presentan evidencia contradictoria?
+-- Fin de Prompt 4 --

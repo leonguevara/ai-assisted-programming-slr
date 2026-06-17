@@ -1,0 +1,60 @@
+Le pedí a Notebook LM el siguiente prompt:
+
+"Generate a Briefing document, an overveiw of the 77 sources in this notebook, featuring key insights and quotes on Code Quality and Technical Debt.
+
+CRITICAL: Do NOT focus on the most-cited 3-5 papers. Aim for breadth. I specifically want extractions from papers beyond Bayram, Belozerov, and Siroš.
+
+For each finding, report:
+
+- Paper title and first author
+- Exact figure, percentage, or quote
+- Model evaluated
+- Benchmark or dataset used"
+
+Pero más que generar un briefing document, generó una tabla de hallazgos de diversos de los papers del notebook.  La tabla parece bien, con información que puedes ver en el archivo "Quantitative Analysis of Defects in AI-Generated Code.docx" que te anexo, pero las referencias del primer registro no tenían sentido.  El primer registro habla del paper de cotroneo_devaic_2025, pero las referencias apuntan a [1] abbassi_recatcher_2025 y [2] costa_applying_2026.  Sin embargo, los hallazgos sí son los del paper de Cotroneo.
+
+Pensando en que quería un briefing y no una tabla, le pedí el siguiente prompt:
+
+"Generate a Briefing document, an overveiw of the 77 sources in this notebook, featuring key insights and quotes on Code Quality and Technical Debt.
+
+I expect a briefing document like the one you did before, "Comparative Analysis of AI Model Performance in Software Engineering: Correctness, Quality, and Security", with executive summary, and divided by topics like, but not limited to, "Model Performance and Functional Correctness", "Software Security and Vulnerability Remediation", "Programming Language Dynamics", "Code Quality and Engineering Metrics", "Critical Risks and Limitations", "Strategic Recommendations", with as many subtopics as you see fit.
+
+I also expect the briefing in British English.
+
+CRITICAL: Do NOT focus on the most-cited 3-5 papers. Aim for breadth. I specifically want extractions from papers beyond Bayram, Belozerov, and Siroš.
+
+For each finding, report:
+- Paper title and first author
+- Exact figure, percentage, or quote
+- Model evaluated  
+- Benchmark or dataset used
+
+Unless you need to use tables for better comprehension and comparison, use narrative."
+
+Me dio un reporte relativamente bueno, con referencias dentro del texto pero, a la hora de guardar el texto como nota, no añade ninguna sección con las referencias, tal como lo hace con los data tables, que cuando los exporta a Google Sheets, siempre agrega una hoja con las referencias.  Es por ello que le pasé el siguiente prompt.
+
+"Give me the same report, but add a last section, section 7, where you list all the numbered references you used within the text."
+
+Sin embargo, me enlistó los 77 artículos del notebook, a pesar de que no hizo referencia a todos ellos en el breifing.  Por ello, me regresé al primer reporte que me hizo y yo agregué manualmente las reerencias al final del texto (NB1 — Briefing — The Hidden Debt of AI-Generated Software Code.docx).  Como puedes darte cuenta, casi todas se repiten, porque para cada hallazgo, te pone una referencia al abstract del artículo y otra a la sección de resultados o desarrollo del artículo.  Esto hace que "se infle" el número de referencias.  Esto lo puedo corregir manualmente para que quede una sola por cada citación, pero quiero que estés enterado de esto.
+
+Luego le pedí el siguiente prompt
+
+"Generate a Study Guide document report, based on the 77 sources in this notebook, with short-answer quiz, suggested essay questions and glossary of key terms.
+
+I expect a study guide like the one you did before, "AI-Assisted Code Generation and Security: A Comparative Study Guide", with its sections "Part 1: Short-Answer Quiz", "Part 2: Answer Key", "Part 3: Essay Questions" and "Part 4: Glossary of Key Terms". I also expect a section "Part 5: References", where you enlist the references used in the creation of this Study Guide.
+
+I also expect the study guide in British English.
+
+CRITICAL: Do NOT focus on the most-cited 3-5 papers. Aim for breadth. I specifically want extractions from papers beyond Bayram, Belozerov, and Siroš, but not excluding them."
+
+Me hizo una guía de estudio decente pero, de nueva cuenta, el problema fueron las referencias. Detecté que algunas apuntaban a papers que nada tenían que ver con la pregunta o la respuesta en la guía de estudio.  Lo confronté y reconoció que fue error en la selección de fuentes; una especie de offset, así que le modifiqué el prompt a:
+
+"Generate a Study Guide document report, based on the 77 sources in this notebook, with short-answer quiz, suggested essay questions and glossary of key terms.
+
+I expect a study guide like the one you did before, "AI-Assisted Code Generation and Security: A Comparative Study Guide", with its sections "Part 1: Short-Answer Quiz", "Part 2: Answer Key", "Part 3: Essay Questions" and "Part 4: Glossary of Key Terms". I also expect a section "Part 5: References", where you enlist the references used in the creation of this Study Guide. Please, for the love of God, do not hallucinate in the references.  I don't want to manually correct all the references
+
+I also expect the study guide in British English.
+
+CRITICAL: Do NOT focus on the most-cited 3-5 papers. Aim for breadth. I specifically want extractions from papers beyond Bayram, Belozerov, and Siroš, but not excluding them."
+
+Volvió a generar una guía de estudio decente, donde las referencias dentro del texto sí coinciden con lo reportado, pero tuve que rehacer manualmente la sección de lista de referencias.  (NB1 — Study Guide — The Security and Reliability of AI-Assisted Code Generation.docx)

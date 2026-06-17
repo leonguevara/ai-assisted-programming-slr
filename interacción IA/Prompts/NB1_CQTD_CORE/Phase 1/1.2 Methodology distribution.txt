@@ -1,0 +1,47 @@
+-- Inicio de Prompt 1 --
+OK. Let's work with what we have in this URL: https://drive.google.com/drive/folders/1ywIisQOCRL3dPVOSdJrIh7BJVtINiVbk?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto
+
+IMPORTANT CONSTRAINTS:
+
+1. Use ONLY the 77 PDFs uploaded to the files folder's subfolders. Do NOT use your general knowledge of the LLM-for-code field.
+2. Aim for breadth across ALL 77 papers. Every paper in the notebook is a valid source, including Bayram, Belozerov, and Siroš, but no paper has privileged status. When multiple papers in the corpus support a claim, cite the broader set rather than defaulting to the same few.
+3. For every claim, cite the exact paper by title and first author or its citation key, that you can find in the NB1_CQTD_CORE.bib file. If a paper is not in the uploaded sources, do NOT mention it.
+4. If you cannot find evidence in the uploaded PDFs, say "No evidence found in uploaded sources" rather than inventing one. In other words, no hallucinations.
+5. Use ONE citation per claim per paper. Do NOT cite the same paper twice (once to its abstract section and once to its body) for the same finding. 
+6. If the output includes a final References section, list ONLY the papers actually cited inline in the text above. Do NOT list every paper available in the notebook.
+7. Use a SINGLE numbering system across the entire output. The number [N] used inline in the text must point to the same paper as entry N in the final References list. Do NOT use one numbering for inline citations (e.g., order of first appearance) and a different numbering for the References list (e.g., alphabetical). After producing the output, verify by spot-checking 3 inline citations against the References list: if [N] inline does not match entry N in the list, regenerate with explicit alignment.
+
+Build a table with the following columns: 
+
+- Paper title
+- First author
+- Year
+- Bibkey
+- Methodology type
+- Sample size or scale
+- AI tool(s) evaluated
+- Primary outcome measured.
+
+Fill the table for ALL 77 papers in the notebook. If a field is not reported in a paper, write "not reported". Do not skip any paper. CRITICAL: Aim to include all 77 papers. If you run out of context, indicate how many remain to be processed so a follow-up prompt can continue.
+
+Apply the same conventions used before:
+- British English
+- Surface specific empirical figures with paper attribution
+- Keep the same citation discipline: every number must be attributed to the paper that produced it, not to a paper that cites it. If a paper cites another paper's number, do not extract it as belonging to the citing paper.
+
+Read the papers, not just the abstracts or the memory you have of them. I don't care that you take more time, just do it. If you ask me to do it, I can upload again the zip with the 77 PDF files.
+
+I'm attaching, as an example, what NotebookLM produced as a Methodology distribution table. Although NotebookLM reference handling got better while using the data table tool, it still messed up some times with the references. You can see in the attached file that a reference to Belozarov et al. is done altogether with a reference to Pearce et al., when it should have been the reference to Pearce et al. alone, and then some other papers also refere to Belozarov when they should be refering to themselves.
+
+Just as you did with the briefing report, and as you can see in the example, add a sheet where you can list the references to the papers used within the table, in order of appearence.
+
+As an output, I expext a XLSX workbook with the resulting Methodology distribution table.
+
+Remember that it is important to use figures obtained empirically by the papers in this study and to not use vague references. Remove repetead boilerplates.
+-- Fin de Prompt 1 --
+
+-- Inicio del Prompt 2 --
+-- Fin del Prompt 2 --
+
+-- Inicio del Prompt 3 --
+-- Fin del Prompt 3 --

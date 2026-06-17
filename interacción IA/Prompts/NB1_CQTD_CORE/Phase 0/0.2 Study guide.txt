@@ -1,0 +1,41 @@
+-- Inicio de Prompt 1 --
+OK.  Let's work with what we have in this URL: https://drive.google.com/drive/folders/1ywIisQOCRL3dPVOSdJrIh7BJVtINiVbk?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto
+
+IMPORTANT CONSTRAINTS:
+
+1. Use ONLY the 77 PDFs uploaded to the files folder's subfolders. Do NOT use your general knowledge of the LLM-for-code field.
+2. Aim for breadth across ALL 77 papers. Every paper in the notebook is a valid source, including Bayram, Belozerov, and Siroš, but no paper has privileged status. When multiple papers in the corpus support a claim, cite the broader set rather than defaulting to the same few.
+3. For every claim, cite the exact paper by title and first author or its citation key, that you can find in the NB1_CQTD_CORE.bib file. If a paper is not in the uploaded sources, do NOT mention it.
+4. If you cannot find evidence in the uploaded PDFs, say "No evidence found in uploaded sources" rather than inventing one. In other words, no hallucinations.
+5. Use ONE citation per claim per paper. Do NOT cite the same paper twice (once to its abstract section and once to its body) for the same finding.
+6. If the output includes a final References section, list ONLY the papers actually cited inline in the text above. Do NOT list every paper available in the notebook.
+7. Use a SINGLE numbering system across the entire output. The number [N] used inline in the text must point to the same paper as entry N in the final References list. Do NOT use one numbering for inline citations (e.g., order of first appearance) and a different numbering for the References list (e.g., alphabetical). After producing the output, verify by spot-checking 3 inline citations against the References list: if [N] inline does not match entry N in the list, regenerate with explicit alignment.
+
+Build a study guide on the 77 papers, structured in three parts:
+
+PART 1 — Short-answer review questions (10-12 questions), each addressing a major finding in the literature. For each question, write a 2-3 sentence answer citing the paper titles and first authors that support it. Use citations from at least 25 different papers across the 12 questions.
+PART 2 — Essay-level questions (4-5 questions) probing tensions or contradictions in the corpus. No answers needed.
+PART 3 — Glossary of 12-15 key terms (e.g., Pass@1, cyclomatic complexity, CWE, technical debt, hallucination). For each term, indicate which papers define or use it most rigorously.
+
+Read the papers, not just the abstracts or the memory you have of them. I don't care that you take more time, just do it. If you ask me to do it, I can upload again the zip with the 77 PDF files.
+
+I'm attaching, as an example, what NotebookLM produced as a Study Guide. However, just as it happened with the briefing report, the references here are misplaced and misnumbered.
+
+Just as you did with the briefing report, add a References section, where you can list the references to the papers used within the Study guide, in order of appearence.
+
+As an output, I expext a DOCX document with the resulting briefing. Remember to produce the output in British English and to number the sections and subsections (if any) of your study guide.
+
+Remember also that it is important to use figures obtained empirically by the papers in this study and to not use vague references.  Remove repetead boilerplates.
+-- Fin de Prompt 1 --
+
+-- Inicio del Prompt 2 --
+Really, really nice work. I just have the following observations:
+
+1. In Q1.12, separate the role of each cited paper: Alrashedy asks X, Belozerov shows Y, Ullah concludes Z, etc. Avoid clustering 5 citations at the end without distinguishing their findings.
+
+2. In Glossary 3.4 (Technical debt), you are correctly combining two papers, but the way it is written ("Liu et al. operationalise it at repository scale... while Vangala et al. connect it to reproducibility") is a little bit generic. For a glossary that goes straight to the manuscript we need a more precise definition and then the example/anchor.
+
+3. We might need a PART 4, equivalent to the briefing's section "Empirical Anchors", so add a Part 4 — 'Headline empirical anchors' as a table of the 8-10 most empirically distinctive findings from the corpus, with the figure, paper, and one-sentence relevance, in the same style as Section 3 of the Briefing.  Remember to not use citation-from-citation, just empirical fidings by the paper.
+
+Please, produce again the study guide taking into consideration these observatons.
+-- Fin del Prompt 2 --

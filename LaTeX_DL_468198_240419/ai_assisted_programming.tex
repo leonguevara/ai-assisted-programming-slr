@@ -1,0 +1,440 @@
+%%%%%%%%%%%%%%%%%%%%%%% file template.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is a general template file for the LaTeX package SVJour3
+% for Springer journals.          Springer Heidelberg 2010/09/16
+%
+% Copy it to a new file with a new name and use it as the basis
+% for your article. Delete % signs as needed.
+%
+% This template includes a few options for different layouts and
+% content for various journals. Please consult a previous issue of
+% your journal as needed.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% First comes an example EPS file -- just ignore it and
+% proceed on the \documentclass line
+% your LaTeX will extract the file if required
+\begin{filecontents*}{example.eps}
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 19 19 221 221
+%%CreationDate: Mon Sep 29 1997
+%%Creator: programmed by hand (JK)
+%%EndComments
+gsave
+newpath
+  20 20 moveto
+  20 220 lineto
+  220 220 lineto
+  220 20 lineto
+closepath
+2 setlinewidth
+gsave
+  .4 setgray fill
+grestore
+stroke
+grestore
+\end{filecontents*}
+%
+\RequirePackage{fix-cm}
+%
+\documentclass{svjour3}                     % onecolumn (standard format)
+%\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
+%\documentclass[smallextended]{svjour3}       % onecolumn (second format)
+%\documentclass[twocolumn,draft]{svjour3}          % twocolumn
+%
+\smartqed  % flush right qed marks, e.g. at end of proof
+%
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{microtype}
+%
+% \usepackage{mathptmx}      % use Times fonts if available on your TeX system
+%
+% insert here the call for the packages your document requires
+%\usepackage{latexsym}
+% etc.
+%
+% please place your own definitions here and don't use \def but
+% \newcommand{}{}
+%
+% Insert the name of "your journal" with
+% \journalname{myjournal}
+%
+\begin{document}
+
+\journalname{Empirical Software Engineering}
+
+\title{AI-Assisted Programming in Software Engineering}
+\subtitle{A Systematic Literature Review and Socio-Technical Perspective}
+
+\titlerunning{AI Assisted Programming in SE}        % if too long for running head
+
+\author{León Felipe Guevara-Chávez}
+
+%\authorrunning{Short form of author list} % if too long for running head
+
+\institute{León Felipe Guevara-Chávez \at
+              School of Engineering and Science \\
+              Tecnológico de Monterrey \\
+%              Tel.: +123-45-678910\\
+  %            Fax: +123-45-678910\\
+              \email{leon.guevara@tec.mx}           %  \\
+%             \emph{Present address:} of F. Author  %  if needed
+}
+
+\date{Received: date / Accepted: date}
+% The correct dates will be entered by the editor
+
+
+\maketitle
+
+\begin{abstract}
+Insert your abstract here. Include keywords, PACS and mathematical
+subject classification numbers as needed.
+\keywords{AI-assisted programming \and Systematic literature review \and Socio-technical equilibrium \and Human–AI collaboration \and Developer productivity \and Large Language Models}
+% \PACS{PACS code1 \and PACS code2 \and more}
+% \subclass{MSC code1 \and MSC code2 \and more}
+\end{abstract}
+
+\section{Introduction}
+\label{intro}
+Your text comes here. Separate text sections with
+
+% Methodology start here
+\section{Methodology}
+\label{sec:methodology}
+
+\subsection{Research Design}
+
+This study follows a Systematic Literature Review (SLR) methodology, structured according to established evidence-based software engineering guidelines \cite{kitchenham_guidelines_2007} and the PRISMA 2020 framework \cite{page_prisma_2021} to ensure transparency, rigour, and reproducibility.
+
+The objective is to identify, evaluate, and synthesise empirical evidence regarding the impact of AI-assisted programming tools on software development. The review process was designed as a multi-stage protocol comprising two complementary discovery pathways, screening, eligibility assessment, quality evaluation, epistemic segmentation, and synthesis.
+
+\subsection{Research Question}
+
+The study is guided by the following research question:
+
+\begin{itemize}
+    \item RQ1: What is the impact of AI-assisted programming on software development processes and outcomes?
+\end{itemize}
+
+To address this question, the analysis was structured across seven analytical dimensions: productivity, code quality and technical debt, human--AI interaction, cognitive load, organisational impact, economic impact, and perception and trust.
+
+\subsection{Search Strategy}
+
+The literature search combined two complementary discovery pathways. The primary pathway (Branch A) used SciSpace, an AI-assisted academic discovery engine that orchestrates retrieval across multiple indexed sources. The complementary pathway (Branch B) used author-executed direct queries on three academic databases: Scopus, ProQuest, and arXiv. Both pathways targeted publications between 2021 and 2026, reflecting the emergence and rapid evolution of modern AI-assisted coding tools. Bibliographic information for individual papers was occasionally imported from publisher sites (IEEE Xplore, ACM Digital Library, SpringerLink, ACL Anthology); these channels served solely as bibliographic-import mechanisms and are not counted as search sources, since the discovery of each such paper had already occurred on one of the four search sources above.
+
+\subsubsection{Branch A: SciSpace AI-assisted retrieval}
+
+A structured search instruction was provided to SciSpace specifying the review topic, research questions, the time window, inclusion and exclusion criteria, required output fields, and quality-control constraints. SciSpace executed the instruction across three internal retrieval modes: (i) SciSpace Deep Search (855 records from two semantic queries: 371 and 484), (ii) SciSpace Full-Text Search (200 records from two queries of 100 each), and (iii) Google Scholar, queried programmatically by SciSpace as part of its retrieval pipeline (200 records from two queries of 100 each). The combined identification yielded 1,255 records, reduced to 863 unique records after SciSpace's internal deduplication. These records were then carried through SciSpace's two-stage screening pipeline (title/abstract scoring with a cutoff of 4.0, followed by full-text scoring with a cutoff of 4.5), with each AI-assisted decision validated manually by the author against the eligibility criteria described in Section 2.4. This branch retained 355 records at title/abstract screening and 349 records at full-text screening. The complete archive of SciSpace's search outputs (query logs, retrieved record CSVs, and screening artefacts) is preserved as supplementary material.
+
+\subsubsection{Branch B: Author-executed database queries}
+
+The author-executed database pathway returned 1,852 records across three sources: 1,713 from Scopus (two exports, dated 5 April and 3 May 2026), 89 from ProQuest, and 50 records browsed on arXiv through a structured keyword search combining AI-assisted-programming, software-engineering, and outcome-related terms (arXiv displays 50 records per result page; the search yielded a single page of results relevant to the review scope). After title/abstract screening (113 retained) and full-text assessment (107 retained), cross-branch deduplication against the SciSpace branch removed 32 duplicate records, yielding a net contribution of 69 unique records. Search strings, filters, and export timestamps for each query are preserved in the supplementary materials of the project.
+
+\subsection{Use of Artificial Intelligence in the Review Process}
+
+Artificial intelligence tools were used to support specific tasks in the review process. SciSpace functioned as an AI-assisted discovery engine, orchestrating queries across its proprietary semantic indexes, full-text search, and Google Scholar, and as a first-pass relevance scorer for title/abstract and full-text screening. Decisions emitted by SciSpace were treated strictly as assistive recommendations: every inclusion, exclusion, classification, and quality-assessment decision was validated and recorded manually by the author. In addition, the corpus includes a small number of studies published in Chinese, Russian, and German; for these, AI-assisted translation (ChatGPT) was used to support the author's reading and eligibility assessment, with the same inclusion criteria applied as for studies in English, Spanish, and Portuguese, which the author read directly. AI tools were not used to perform synthesis, data extraction, or interpretation of findings.
+
+\subsection{Inclusion and Exclusion Criteria}
+
+Eligibility criteria were applied identically to both branches and at every screening stage. Studies were included if they reported empirical evaluation (quantitative, qualitative, or mixed-methods) of AI-assisted programming or code generation; evaluated modern AI tools (e.g., Copilot, ChatGPT, Codex, Gemini, Claude Code, CodeWhisperer, Cursor, or comparable systems); reported results allowing analytical interpretation; and were published between 2021 and 2026.
+ 
+Studies were excluded if they were opinion papers without empirical content, focused on unrelated NLP tasks, were duplicates of records already accepted from another source, or fell outside the topical scope of AI-assisted software development. Surveys, systematic literature reviews, and conceptually adjacent works were reclassified to the Related Work or Support set rather than discarded, in order to preserve their contribution to the framing of the synthesis.
+
+\subsection{Operational Taxonomy of Records}
+
+To maintain a transparent and auditable separation between evidence used for synthesis and evidence used for framing, each retained record was assigned to one of five operational categories, summarised in Table~\ref{tab:taxonomy}.
+
+\begin{table}[h]
+\centering
+\caption{Operational taxonomy of records}
+\label{tab:taxonomy}
+\begin{tabular}{l c}
+\hline
+\textbf{Category} & \textbf{Count ($n$)} \\
+\hline
+Corpus (primary empirical evidence base) & 312 \\
+Related Work or Support & 67 \\
+Duplicated & 21 \\
+No Full Text & 22 \\
+Excluded & 5 \\
+\hline
+\end{tabular}
+\end{table}
+
+The Corpus comprises the primary empirical evidence base: studies with empirical results directly analysed across the seven analytical dimensions, weighted by an epistemic segmentation described below. The Related Work or Support category comprises surveys, systematic reviews, and conceptually adjacent works providing theoretical and contextual grounding; these are cited in the Introduction and Discussion but are not counted in corpus statistics. The Duplicated category preserves preprint/published-version pairs of records already represented in another sheet (internal SciSpace duplicates), retained for audit transparency. The No Full Text category records studies whose full text could not be retrieved, excluded from empirical analysis but retained for traceability. The Excluded category comprises records that entered the structured screening pipeline but failed quality or scope criteria at full-text assessment.
+
+Within the Corpus, a further epistemic segmentation governs interpretive weight: CORE (168 studies), SUPPORTING (120 studies), PERIPHERAL (18 studies), and REMOVE\_CANDIDATE (6 studies). All descriptive statistics reported in this paper are computed over the full Corpus ($n = 312$), while strong claims are preferentially anchored in CORE studies and triangulated with SUPPORTING evidence.
+
+\subsection{Study Selection Process and PRISMA Flow}
+
+The selection process followed the four-phase PRISMA 2020 framework (Identification, Screening, Eligibility, Inclusion) and was applied to both branches in parallel, as shown in Fig.~\ref{fig:prisma_diagram}.
+
+At identification, the SciSpace pipeline (Branch A) returned 1,255 records, reduced to 863 unique records after its internal deduplication; the author-executed database pathway (Branch B) returned 1,852 records across Scopus, ProQuest, and arXiv. At title/abstract screening, 355 records were retained from Branch A and 113 from Branch B. At full-text screening, 349 records were retained from Branch A and 107 from Branch B. Cross-branch deduplication then removed 32 Branch B records that duplicated SciSpace hits, yielding a net Branch B contribution of 69 records.
+
+The two branches thus converged into an integrated dataset of 418 unique records from structured search (349 from Branch A and 69 net from Branch B). This dataset was subjected to manual quality refinement and dimensional classification, and distributed across the five operational sheets defined in Section 2.5, yielding 308 records for the Corpus and 62 for Related Work or Support (together with 21 Duplicated, 22 No Full Text, and 5 Excluded records, totalling 418).
+
+A supplementary discovery procedure was then applied selectively to address residual gaps and to preserve methodological transparency. This procedure covered three situations: (i) targeted keyword search prompted by gap diagnosis when a specific analytical dimension showed insufficient empirical depth; (ii) citation chasing from references in already-retrieved papers; and (iii) opportunistic retrieval during full-text resolution, including cases where related-link panels or alternative result lists surfaced conceptually relevant works. All candidates identified through this procedure were subjected to the same eligibility criteria and quality-assessment framework as papers retrieved through the two structured pathways.
+
+This supplementary procedure added four primary studies to the Corpus (4 of 312, or 1.3\%) and five additional studies to Related Work or Support (5 of 67, or 7.5\%), bringing the final totals to 312 and 67 respectively. One foundational study published in 2020 (Brachten et al., on cognitive-load reduction by virtual agents) was retained explicitly as a Related Work reference, providing the conceptual basis for the cognitive-load--performance relationship subsequently extended by the field toward AI-assisted coding tools; it is not counted in the empirical corpus statistics. The full audit trail for the nine supplementary records, including provenance and discovery type, is provided in the supplementary materials.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/prisma_diagram.png}
+    \caption{PRISMA 2020 dual-pathway flow diagram for the systematic literature review.}
+    \label{fig:prisma_diagram}
+\end{figure}
+
+\subsection{Quality Assessment}
+
+A multi-criteria evaluation framework was used to assess study quality, considering empirical rigour (e.g., experimental design, sample size), methodological strength (e.g., causal inference versus observational design), venue quality, completeness and transparency of reporting, and relevance to the research question. This framework was applied consistently across all studies to ensure comparability and reduce subjective bias, and was conducted manually to ensure careful evaluation of study design and reporting quality.
+
+Studies were classified into three categories: A1 (high rigour, e.g., controlled experiments or large-scale empirical or causal studies), A2 (moderate rigour, e.g., user studies, case studies, or structured evaluations), and B (supporting evidence, e.g., perception studies, qualitative analyses, or model-based approaches). Of the 312 studies in the Corpus, 146 (46.8\%) were classified as A1, 132 (42.3\%) as A2, and 34 (10.9\%) as B. This classification was used to prioritise higher-quality studies (A1 and A2) in the synthesis and interpretation of results, while category B studies were primarily used to provide contextual support and complementary insights.
+
+\subsection{Data Extraction and Synthesis}
+
+Data extraction was performed by systematically reviewing each selected study and recording key attributes using a structured extraction template to ensure consistency across studies. For each study, the following data were extracted: study type and methodological classification, tools evaluated, evaluation metrics, key findings, and associated analytical dimensions.
+
+Given the heterogeneity of study designs, metrics, and evaluation contexts, a formal meta-analysis was not feasible. Instead, a structured synthesis approach was adopted to identify consistent patterns and trends across studies, combining quantitative aggregation (e.g., frequency distributions) with qualitative synthesis to identify patterns, contradictions, and research gaps across dimensions. This approach is consistent with established practices in systematic literature reviews, where high variability limits the applicability of statistical meta-analysis.
+
+\subsection{Reproducibility and Sensitivity}
+
+All search exports and the integrated relation of studies are preserved as supplementary materials, including SciSpace's complete pipeline artefacts (semantic-search CSVs, full-text-search CSVs, internally executed Google Scholar query CSVs, abstract- and full-text-screening CSVs, and SciSpace's own PRISMA documentation). Of the 312 primary studies in the final Corpus, 308 (98.7\%) are directly traceable to documented structured-search outputs; of the 67 papers in Related Work or Support, 62 (92.5\%) are similarly traceable; and all 5 papers in the Excluded set are traceable to structured queries.
+
+To assess the robustness of the reported figures to the inclusion of the nine supplementary-discovery records, a sensitivity analysis was conducted by recomputing all principal distributions (primary dimension, quality classification, epistemic segmentation, and publication year) for the full Corpus ($n = 312$) and for the Corpus with the four supplementary studies removed ($n = 308$). Across all four axes, no reported percentage shifts by more than 0.80 percentage points, with the largest single shift occurring in the 2025 publication-year share. This confirms that the inclusion of supplementary studies does not materially alter the empirical profile of the corpus, and that the principal findings hold whether or not these studies are included.
+% Methodology ends here
+
+% Results start here
+\section{Results}
+
+% 3.1 starts here
+\subsection{Corpus Profile and Evidence Hierarchy}
+
+The final corpus comprises 312 studies, reflecting a heterogeneous body of evidence in terms of methodological rigour, evaluation context, and analytical focus. Studies were classified into three quality categories: A1 (high rigour), A2 (moderate rigour), and B (supporting or qualitative evidence).
+
+Of the 312 studies, 146 (46.8\%) were classified as A1, 132 (42.3\%) as A2, and 34 (10.9\%) as B, as shown in Fig.~\ref{fig:main_classification}. This distribution indicates that the majority of the evidence base is grounded in empirical studies with moderate-to-high methodological rigour.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.82\linewidth]{figures/A2_quality_distribution.png}
+    \caption{Distribution of the final corpus by evidence class (A1, A2, and B).}
+    \label{fig:main_classification}
+\end{figure}
+
+In terms of analytical dimensions, as shown in Fig.~\ref{fig:dimensions}, the corpus is markedly concentrated in two areas: code quality and technical debt accounts for 45.2\% of studies (n=141), and human--AI interaction for a further 36.9\% (n=115). Together, these two dimensions represent more than four-fifths of the corpus. The remaining studies are distributed across productivity (8.3\%, n=26), perception and trust (4.2\%, n=13), cognitive load and human factors (2.9\%, n=9), organisational impact (2.2\%, n=7), and economic impact (0.3\%, n=1).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.82\linewidth]{figures/A1_dimension_distribution.png}
+    \caption{Distribution of the corpus across the seven analytical dimensions (primary dimension classification). Amber flags Economic Impact (n=1), the most critically under-evidenced dimension.}
+    \label{fig:dimensions}
+\end{figure}
+
+This concentration represents a substantial reorientation of the evidence base relative to earlier framings of the literature, which had often emphasised productivity as the dominant research focus. In the present corpus, productivity-focused studies form a comparatively small subset, while the bulk of empirical attention is directed toward the reliability, security, and maintainability of AI-generated code (code quality and technical debt) and toward the iterative, prompt-driven dynamics of developer--AI collaboration (human--AI interaction). Economic impact, organisational impact, and cognitive load remain markedly underexplored, each represented by fewer than ten studies, with economic impact represented by a single study in the corpus.
+
+Quality classification varies systematically across dimensions, as shown in Fig.~\ref{fig:quality_by_dimension}. Code quality and technical debt exhibits the highest concentration of high-rigour evidence, with 55.3\% of its studies classified as A1, reflecting the prevalence of large-scale empirical analyses, controlled benchmarking, and security-focused evaluations in this area. Human--AI interaction shows a more balanced split between A1 and A2 evidence (45.2\% and 44.3\%, respectively), consistent with a mix of large-scale interaction-log studies and smaller controlled or observational user studies. The remaining dimensions are dominated by A2 evidence, with organisational impact showing the highest proportion of category-B studies (42.9\%), reflecting its reliance on qualitative and case-study evidence. Economic impact, the smallest dimension in the corpus, is composed entirely of category-B evidence (100\%), underscoring it as the dimension most in need of methodologically stronger studies.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.82\linewidth]{figures/B1_quality_by_dimension.png}
+    \caption{Evidence quality composition within each analytical dimension. Amber highlights Economic Impact: 100\% category-B evidence, a key gap.}
+    \label{fig:quality_by_dimension}
+\end{figure}
+
+Beyond the primary-dimension classification, an epistemic segmentation was applied to capture the interpretive weight of each study within the synthesis, independently of its analytical dimension. Studies were segmented into CORE (n=168, 53.8\%), SUPPORTING (n=120, 38.5\%), PERIPHERAL (n=18, 5.8\%), and REMOVE\_CANDIDATE (n=6, 1.9\%). CORE studies anchor the principal claims advanced in each dimension; SUPPORTING studies provide corroborating or contextual evidence; PERIPHERAL studies offer tangential but relevant findings; and REMOVE\_CANDIDATE studies, while retained in the corpus for transparency, contribute marginally to the synthesis and are flagged for potential exclusion in future refinements. This segmentation is broadly consistent across dimensions, with code quality and technical debt (77 CORE of 141) and human--AI interaction (60 CORE of 115) each anchoring more than half of their respective dimensions in CORE evidence.
+
+Finally, the corpus spans publications from 2022 to 2026, with a pronounced concentration in the most recent years: 2024 (n=120, 38.5\%) and 2025 (n=121, 38.8\%) together account for more than three-quarters of the corpus, while 2026 already contributes 31 studies (9.9\%) at the time of the search cutoff. Earlier years are represented more sparsely, with 34 studies (10.9\%) from 2023 and 6 studies (1.9\%) from 2022. This temporal distribution reflects the rapid and recent expansion of empirical research on AI-assisted programming, consistent with the accelerating adoption of LLM-based coding tools over the period under review. Fig.~\ref{fig:dimension_by_year} shows how this growth is distributed across dimensions: code quality and technical debt and human--AI interaction account for the bulk of the increase from 2023 onward, while the apparent decline in 2026 reflects the partial-year search cutoff rather than a genuine slowdown in research activity.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.82\linewidth]{figures/B2_dimension_by_year.png}
+    \caption{Primary dimension by publication year. 2026 reflects a partial year (search cutoff before year-end) and should not be read as a declining trend.}
+    \label{fig:dimension_by_year}
+\end{figure}
+
+Beyond volume, the methodological rigour of the corpus has also shifted over time. As shown in Fig.~\ref{fig:quality_evolution}, the share of A1 (high-rigour) studies rose from 16.7\% in 2022 to 54.7\% in 2026, indicating that the field is maturing methodologically alongside its rapid growth in volume. This trend is examined further in the Discussion.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.82\linewidth]{figures/B3_quality_evolution_by_year.png}
+    \caption{Evolution of evidence quality by publication year. The amber line tracks the share of A1 (high-rigour) studies.}
+    \label{fig:quality_evolution}
+\end{figure}
+
+This classification enables a weighted synthesis, where conclusions are primarily grounded in stronger empirical evidence and in CORE studies, with SUPPORTING and PERIPHERAL evidence used for triangulation and contextualisation. It also reveals a clear concentration of research efforts on the technical reliability of AI-generated code and on the dynamics of human--AI interaction, with comparatively limited attention to organisational, economic, and cognitive dimensions.
+% 3.1 ends here
+
+% 3.2 starts here
+\subsection{Code Quality and Technical Debt}
+
+Code quality and technical debt is the largest and most extensively developed dimension in the corpus, accounting for 45.2\% of studies (n=141; Section 3.1). Evidence in this dimension converges on a structural pattern: AI-assisted programming reliably produces code that satisfies narrow, benchmark-style correctness criteria, but this performance does not transfer cleanly to the conditions under which software is actually maintained, secured, and integrated. The following sub-sections trace this pattern across benchmark performance, real-world generalisation, defect and structural error rates, security vulnerabilities, maintainability and dependency management, multi-turn and agentic effects, and human-versus-AI comparisons.
+
+\subsubsection{Benchmark Performance and the Realism Gap}
+
+Synthetic benchmarks remain the most common instrument for evaluating AI-generated code, and the corpus confirms that strong benchmark performance is achievable: Claude Sonnet 4 reached a 95.1\% success rate on the 164-problem HumanEval Python benchmark, with comparable assistant evaluations reporting success rates around 40\% under more varied task-difficulty conditions. However, this performance does not reliably predict repository-level code quality or maintenance outcomes, a pattern supported by seven studies spanning benchmark evaluation, repository mining, patch analysis, and agentic evaluation \cite{idrisov_program_2024,bayram_comparative_2025,chen_evaluating_2024,aleithan_swe-bench_2024,abbassi_recatcher_2025,zheng_top_2025,dou_whats_2026}. When stricter, EvalPlus-style hidden-test regimes are applied to the same benchmarks, apparent pass@k performance drops by as much as 28.9\%, indicating that headline benchmark figures substantially overstate functional reliability under more rigorous testing \cite{liu_is_2023}.
+
+This realism gap widens further at repository scale. Agentic systems evaluated on real-world GitHub issues, such as SWE-Bench-style benchmarks, report repair rates around 31--33\%, and stricter data-quality filtering on the same benchmark family can lower resolution rates to below 4\% \cite{aleithan_swe-bench_2024,chen_evaluating_2024}. A large-scale repository-mining study of 304,362 verified AI-authored commits similarly finds that benchmark-level success coexists with persistent technical debt once code is merged into production codebases \cite{liu_debt_2026}. Taken together, these results indicate that benchmark pass rates and repository-level reliability are only weakly coupled, and that claims of AI coding competence drawn solely from synthetic benchmarks should be treated as bounded rather than generalisable.
+
+\subsubsection{Defect Rates and Structural Error Patterns}
+
+Beyond benchmark-specific failure, the corpus documents substantial and recurring defect rates in AI-generated code under realistic evaluation conditions. One large-scale quality analysis of ChatGPT-generated Python code found that 76.46\% of generated snippets and 84.51\% of modified snippets contained at least one quality issue \cite{rabbi_ai_2024}. Studies focused specifically on bug characterisation report that a meaningful share of generated solutions fail to produce functional code even after revision, with one defect-characterisation study finding 19.51\% of cases unable to generate a working solution \cite{esfahani_understanding_2024}, and a code-translation study attributing 33.5\% of translation bugs to data-handling errors rather than syntactic mistakes \cite{pan_lost_2024}. Regression-testing evidence adds a further layer: fine-tuning or adapting models across programming languages can introduce syntax regressions of up to 12\%, even when the underlying generation capability appears to improve \cite{abbassi_recatcher_2025}.
+
+These structural error patterns are corroborated by the broader consensus evidence in the corpus, which identifies persistent technical debt after merging as a strong, repeatedly observed pattern across repository mining, pull-request analysis, and patch-safety studies \cite{liu_debt_2026,borg_echoes_2026,siddiq_quality_2024,cotroneo_devaic_2025,sajadi_how_2025,fu_security_2025,schreiber_security_2026}. Critically, code that passes immediate functional checks can still carry latent maintenance or security liabilities that surface only once it is exercised under real usage conditions, indicating that defect rates measured at generation time systematically understate downstream risk.
+
+\subsubsection{Security Vulnerability Exposure}
+
+Security vulnerability is the most thoroughly evidenced sub-theme in the corpus, with ten studies converging on a strong consensus claim: security vulnerabilities are systematically introduced into AI-generated code, but the precise risk profile depends on programming language, CWE family, task type, and prompting context \cite{pearce_asleep_2025,siddiq_generate_2023,schreiber_security_2026,asare_is_2024,alrashedy_can_2024,fu_security_2025,dozono_large_2026,tony_prompting_2025,res_enhancing_2024,asare_user-centered_2024}. Reported vulnerability rates vary considerably with evaluation design: foundational work on GitHub Copilot found that approximately 40\% of generated programs in security-relevant scenarios were vulnerable \cite{pearce_asleep_2025}, while large-sample evaluations such as SALLMS assessed security properties across 17,000 generated samples \cite{siddiq_generate_2023}, and comparative human-versus-AI studies report vulnerability rates around 33--49\% depending on the comparison baseline \cite{asare_is_2024}.
+
+Security repair is consistently weaker and less reliable than security diagnosis, a moderate-consensus pattern supported across eight studies \cite{alrashedy_can_2024,dozono_large_2026,belozerov_secure_2026,sajadi_how_2025,tony_prompting_2025,res_enhancing_2024,pearce_asleep_2025,fu_security_2025}. Repair-oriented evaluations report partial success at best, with patch-level repair outcomes in the range of 16--27\% depending on vulnerability type and repair strategy \cite{alrashedy_can_2024}. At the same time, prompt-engineering interventions show that mitigation is genuinely possible: targeted prompt design reduced insecure generated samples by up to 16\% and increased the proportion of secure code by up to 85\% in one study \cite{res_enhancing_2024}. This indicates that security risk in AI-generated code is conditional and addressable through deliberate intervention, rather than an immutable property of the underlying models, but that such mitigation requires active human effort rather than occurring by default.
+
+\subsubsection{Maintainability, Complexity, and Dependency Management}
+
+Maintainability evidence in the corpus is mixed in a specific and informative way: AI-generated code can be concise or superficially readable in narrow tasks while simultaneously accumulating code smells, duplication, structural complexity, or downstream maintenance burden, a strong-consensus pattern supported by six studies using metric-based, pull-request-based, and downstream-tracking designs \cite{idrisov_program_2024,rabbi_ai_2024,borg_echoes_2026,chen_evaluating_2024,dou_whats_2026,gao_treat_2025}. In some constrained tasks, AI-generated solutions used markedly fewer lines of code than human-written equivalents, with reductions of up to 60--86\% in selected benchmark tasks \cite{idrisov_program_2024}; however, this brevity does not consistently correspond to lower long-term maintenance cost. A large-scale empirical study of AI-generated code in production repositories found that 89.1\% of identified issues were classified as code smells, with 24.2\% of affected code surviving long-term and 41.1\% of security-relevant flaws persisting in the codebase after merge \cite{liu_debt_2026}.
+
+Dependency, import, and reproducibility failures emerge as a distinct and systematic sub-theme rather than a minor extension of functional correctness, supported by a moderate consensus across eight studies \cite{vangala_ai-generated_2026,twist_library_2025,latendresse_how_2025,zheng_top_2025,chen_evaluating_2024,tian_codehalu_2025,liu_debt_2026}. An empirical study of dependency gaps in LLM-based coding agents reported dependency-related failure figures as high as 89.2\%, alongside a 44.0\% rate of incomplete or misspecified listed dependencies \cite{vangala_ai-generated_2026}. Library hallucination, where generated code references packages or APIs that do not exist or do not match the specified version, is documented as a recurring and separately diagnosable failure mode \cite{twist_library_2025,latendresse_how_2025}, reinforcing the case that reproducibility and dependency management constitute a CQTD concern in their own right rather than a symptom of generic incorrectness.
+
+\subsubsection{Multi-Turn Interaction and Agentic Effects}
+
+A further moderate-consensus pattern, supported by eight studies, establishes that multi-turn interaction and agentic workflows do not monotonically improve code quality: depending on trajectory, additional turns or additional tool autonomy can repair, preserve, or amplify defects \cite{chen_evaluating_2024,vangala_ai-generated_2026,kozak_when_2025,zhong_developer-llm_2025,sajadi_how_2025,abbassi_recatcher_2025,honarvar_turbulence_2025,aleithan_swe-bench_2024}. An analysis of developer-LLM conversations found that import-related errors decreased from 48.3\% to 44.6\% across successive conversational turns, indicating genuine but incomplete improvement through iteration \cite{zhong_developer-llm_2025}. Agentic patch evaluation across 4,892 patches from ten different coding agents revealed divergent file- and function-level modification patterns relative to gold-standard patches, showing that increased autonomy expands the surface area over which quality and security risk can manifest \cite{chen_evaluating_2024}. This expansion of risk surface with autonomy is itself a moderate-consensus finding, supported by evidence that insecure agentic behaviours occur at rates including 21\% and 56.61\% depending on the study and task setting \cite{kozak_when_2025}.
+
+These dynamics connect directly to verification and modification effort, which the corpus shows only partially offsets generation-speed gains rather than eliminating the need for human oversight \cite{idrisov_program_2024,tang_developer_2024,zhong_developer-llm_2025,siddiq_quality_2024,bose_prompts_2025,abbassi_recatcher_2025,tian_codehalu_2025}. In one controlled comparison, incorrect but minimally modifiable code occurred in 8.7\% of generated outputs, with time savings from correcting near-correct code ranging from 8.9\% to 71.3\% relative to writing code from scratch \cite{idrisov_program_2024}. Eye-tracking and IDE-action studies of developer validation behaviour confirm that this verification work is cognitively substantive rather than perfunctory, requiring developers to actively trace logic and confirm correctness rather than passively accepting AI-generated suggestions \cite{tang_developer_2024}.
+
+\subsubsection{Human-versus-AI Quality Comparisons}
+
+Direct comparisons between human-written and AI-generated code are consistently context-dependent rather than categorical, a strong-consensus pattern supported by eight studies: AI systems can outperform human baselines on some surface metrics while underperforming on correctness, security, or maintainability in other settings \cite{idrisov_program_2024,bayram_comparative_2025,cotroneo_devaic_2025,asare_is_2024,rabbi_ai_2024,siddiq_quality_2024,borg_echoes_2026,pearce_asleep_2025}. In one comparative study, GitHub Copilot solved 50.0\% of a curated task set while the broader evaluated AI tool set solved only 20.6\% of tasks overall, illustrating substantial variation even among AI systems evaluated under the same conditions \cite{idrisov_program_2024}. At the same time, the strongest current models achieve benchmark scores that meet or exceed typical human baselines on narrow, well-specified tasks, with top-performing models reaching 95.1\% and 94.5\% on HumanEval in one comparative analysis \cite{bayram_comparative_2025}.
+
+The direction of this comparison reverses, however, once security and downstream maintainability are taken into account: studies comparing Copilot's behaviour regarding vulnerability introduction with that of human developers, and studies tracking downstream maintainability effects, both indicate that AI-generated code does not categorically outperform human-written code once these dimensions are considered \cite{asare_is_2024,borg_echoes_2026}. This reversal is the empirical basis for treating correctness, security, maintainability, reproducibility, and human validation as analytically separate constructs within CQTD rather than collapsing them into a single quality score, a strong-consensus conclusion supported by seven studies spanning repository-scale, downstream, reproducibility, validation, and regression-testing designs \cite{liu_debt_2026,schreiber_security_2026,borg_echoes_2026,vangala_ai-generated_2026,tang_developer_2024,siddiq_quality_2024,abbassi_recatcher_2025}.
+
+\subsubsection{Synthesis}
+
+Across all seven sub-themes, the CQTD evidence base converges on a single structural conclusion: generation efficiency in AI-assisted programming is empirically real, but it is systematically and substantially offset by verification overhead. Strong benchmark performance, concise output, and partial security mitigation are all genuine and well-documented capabilities; equally well documented are the realism gap between benchmark and repository-level performance, the persistence of technical debt and security vulnerabilities after merge, the non-monotonic effect of additional interaction turns and agentic autonomy, and the necessity of treating correctness, security, maintainability, and reproducibility as distinct rather than interchangeable quality constructs. This pattern provides the most methodologically robust empirical grounding in the corpus for the verification-overhead component of the socio-technical equilibrium framework developed in this study, a connection examined further in the Discussion.
+%3.2 ends here
+
+%3.3 starts here
+\subsection{Human--AI Interaction}
+
+Human--AI interaction is the second-largest dimension in the corpus, accounting for 36.9\% of studies (n=115; Section 3.1). The evidence base for this dimension is organised around seven sub-themes: prompting dynamics and conversational strategies, workflow integration and collaboration patterns, trust and reliance behaviour, developer experience and perceived value, learning and educational contexts, robustness and agentic reliability, and identity and socio-professional continuity. Across these sub-themes, AI-assisted programming appears less as a replacement of developer expertise than as a reconfiguration of interaction, verification, judgement, and responsibility: developers do not simply receive code, they negotiate it.
+
+\subsubsection{Prompting Dynamics and Conversational Strategies}
+
+Prompting functions as the interaction infrastructure of AI-assisted programming rather than as a generic natural-language skill. Developers express intent, surface local context, specify constraints, and negotiate the form of repair, explanation, or continuation needed to make a generated artefact usable \cite{nam_understanding_2025,barke_grounded_2023,khojah_beyond_2024}. This positions prompting as situated software work: professional use involves assembling task goals, surrounding code, desired edit behaviour, and follow-up constraints into an interaction that progressively shapes model output. This interaction channel is technically consequential rather than cosmetic. Ambiguous, contradictory, and incomplete task descriptions degrade code-model robustness \cite{larbi_when_2025}; semantically preserving natural-language perturbations can still alter results \cite{chen_nlperturbator_2026}; and faulty premises can mislead generation unless critical checking is incorporated into the interaction \cite{li_refining_2025}. Quantitative robustness evidence reinforces this point directly: only 27.43\% of GitHub Copilot paraphrase cases preserved the same correct output across semantically equivalent prompt variants \cite{mastropaolo_robustness_2023}, and both superficial programming-problem transformations and simulated Copilot-style completion context measurably alter reliability \cite{shirafuji_exploring_2023,jiang_simcopilot_2025}. Prompting can also span the full development lifecycle rather than isolated code requests, proceeding through cycles of generation, inspection, correction, and continuation from requirements through documentation \cite{li_prompting_2024,fayed_prompt-driven_2026,waseem_chatgpt_2024}.
+
+\subsubsection{Workflow Integration and Collaboration Patterns}
+
+AI assistance shifts developer work rather than removing it. The central workflow change is a redistribution of labour towards reading, editing, rejection, validation, orchestration, and trace management \cite{mozannar_reading_2024,stray_generative_2025,xia_agentless_2024}. One influential cost model frames AI-assisted programming explicitly in these terms: the value of a generated suggestion depends on the time and effort required to read, understand, and repair it, not on how quickly text appears \cite{mozannar_reading_2024}. This redistribution is visible both in everyday solo and pair programming, where Copilot and ChatGPT change how developers move between assistance, oversight, interruption, and collaborative sense-making \cite{stray_generative_2025}, and in automated program repair, where localisation, patch generation, and validation must be explicitly orchestrated for the repair process to function at all \cite{xia_agentless_2024}. Collaborative-trace evidence extends this workflow claim beyond the editor: shared ChatGPT conversations appeared in 33.2\% of pull-request conversations and 36.9\% of issue conversations in one large-scale GitHub corpus \cite{hao_empirical_2024}, with related evidence on AI-generated code and self-admitted generative-AI use confirming that this delegation-with-validation pattern is already embedded in open-source project artefacts \cite{grewal_analyzing_2024,tufano_developers_2026}. In-IDE generation studies corroborate the same pattern at the individual level: developers remain responsible for inspecting and adapting generated code rather than accepting it outright \cite{xu_-ide_2022}, and increasing automation moves work towards specification, monitoring, verification, and repair rather than eliminating it \cite{chen_code_2025}.
+
+\subsubsection{Trust, Verification, and Reliance Behaviour}
+
+Effective human--AI interaction depends on calibrated reliance rather than generic trust. Acceptance of AI-generated suggestions is shaped by perceived quality, contextual fit, controllability, effort awareness, and developers' capacity to verify outputs \cite{brown_identifying_2024,wang_investigating_2024,dibia_aligning_2023}. Trust-calibration mechanisms, including explicit indicators and controllability features, are something developers actively want rather than already have by default \cite{wang_investigating_2024}, and human judgements of code-generation value correlate with perceived accuracy and required effort in ways that offline metrics alone cannot explain \cite{dibia_aligning_2023}. Security-sensitive reliance introduces a sharper boundary condition for this calibration: developers using AI assistants can write more insecure code while simultaneously reporting higher confidence in that code \cite{perry_users_2023}, a pattern corroborated by qualitative evidence on security practices and concerns among AI-assisted developers \cite{klemmer_using_2024} and by memorisation risks that complicate claims about LLM-based program repair \cite{kong_demystifying_2025}. Trust is therefore best understood as an interaction outcome, produced through inspectability, validation, domain-aware checks, and the explicit option to accept, reject, repair, or test, rather than as a static property of either the tool or the developer.
+
+\subsubsection{Developer Experience, Usability, and Perceived Value}
+
+Positive experience and continuance are important adoption signals, but the evidence is consistent that they do not establish engineering benefit on their own. Satisfaction, code volume, and perceived acceleration can coexist with inspection, debugging, confidentiality, accessibility, and integration costs \cite{santos_model-assisted_2025,park_continuance_2025,mozannar_reading_2024}. Professional practitioners value LLM support while explicitly retaining responsibility for judgement and integration \cite{santos_model-assisted_2025}, and survey evidence from industry developers shows that continuance reflects perceived usefulness and fit rather than independently measured correctness or maintainability \cite{park_continuance_2025}. Usability concerns in this sub-theme are socio-technical rather than purely interface-level: accessibility-specific benefits and frictions have been documented for visually impaired developers using coding assistants \cite{flores-saviaga_impact_2025}, and AI Skill Threat was reported to affect 43--45\% of surveyed developers, linking tool adoption directly to professional identity and thriving \cite{hicks_new_2024}. Taken together, this sub-theme indicates that perceived value is real but bounded: experience evidence improves understanding of adoption, but it cannot substitute for validation-based quality evidence.
+
+\subsubsection{Learning, Novices, and Educational Contexts}
+
+Educational evidence shows a persistent comprehension-performance gap: AI assistance can raise visible task progress for novices while leaving comprehension, testing ability, and durable transfer uncertain \cite{prather_its_2024,qiao_comprehension-performance_2025,shah_students_2025}. Novice programmers experience tools such as Copilot as usable and sometimes surprisingly anticipatory, but this fluency can obscure what learners actually understand \cite{prather_its_2024}, a divergence explicitly framed as a comprehension-performance gap in GenAI-assisted brownfield programming \cite{qiao_comprehension-performance_2025}. Working with unfamiliar, large code bases further increases the need for review, testing, and sense-making among student users \cite{shah_students_2025}. Quantitative evidence on over-reliance is direct: 90\% of students in one study expressed over-reliance concerns even while recognising the benefits of AI code completion \cite{takerngsaksiri_students_2024}. This pattern is reinforced by evidence that prompt engineering itself must be learned as an interaction practice in introductory programming contexts \cite{denny_conversing_2023}, and that semester-long classroom collaboration with generative AI changes peer-like interaction dynamics in ways that require deliberate instructional scaffolding \cite{lyu_will_2025}. Educational use of AI-assisted programming should therefore actively force explanation, testing, reflection, and recovery strategies, so that visible task completion does not mask fragile understanding.
+
+\subsubsection{Robustness, Prompt Sensitivity, and Agentic Reliability}
+
+Developer-facing reliability is a system property: it depends on prompt quality, semantic stability, retrieval, localisation, patch generation, validation, runtime behaviour, and benchmark validity, rather than on single-run functional success alone \cite{xia_agentless_2024,olausson_is_2024,agarwal_copilot_2024,liu_e2edev_2026}. Agentless decomposes LLM-based repair into localisation, patch generation, and validation stages, making each stage a potential reliability bottleneck in its own right \cite{xia_agentless_2024}, and self-repair is explicitly shown not to be a universal solution to code-generation failures \cite{olausson_is_2024}. Evaluation-harness evidence reinforces that LLM-guided programming requires dedicated infrastructure for assessing reliability rather than relying on benchmark pass rates alone \cite{agarwal_copilot_2024}, and end-to-end development benchmarking exposes multi-step coordination demands that isolated code-generation tasks do not capture \cite{liu_e2edev_2026}. Robustness claims become especially fragile under further scrutiny: self-consistency evaluation reveals that models can fail to reproduce their own correct outputs across semantically equivalent reformulations \cite{min_beyond_2024}, and models can be shown to exploit test cases directly rather than solving the underlying task \cite{zhong_impossiblebench_2025}. Robustness in human--AI interaction is therefore produced by the interaction between user specification, repository context, orchestration design, validation tooling, runtime constraints, and benchmark assumptions, not by any single one of these factors in isolation.
+
+\subsubsection{Identity, Accessibility, and Socio-Professional Continuity}
+
+Human--AI interaction also affects professional continuity by shaping identity, perceived skill threat, accessibility, inclusion, and cross-role communication. This sub-theme is less evenly evidenced than prompting, workflow, trust, or robustness, but the available evidence is informative. AI Skill Threat was found to affect 43--45\% of surveyed developers, tying tool adoption directly to professional identity, thriving, and the meaning of developer expertise \cite{hicks_new_2024}. Generative AI coding assistants have also been shown to change the work of visually impaired developers by altering code navigation, explanation, and interaction, introducing frictions that studies of sighted users alone would not surface \cite{flores-saviaga_impact_2025}. Organisational adoption research adds that uptake depends on task fit, confidentiality, and local context rather than on tool capability alone \cite{davila_industry_2024}, and mixed-methods evidence shows that human--AI collaboration changes how developers coordinate assistance and oversight at the team level \cite{stray_human-ai_2025}. Cross-role evidence on reverse engineering and agile-epic evaluation extends this concern to artefact review and cross-role communication, though this evidence should be read as a cautious scope extension rather than as direct corroboration of identity-level change \cite{surk_reducing_2026}. Human--AI interaction is therefore not only a coding interface; it can reshape who participates in software development, how expertise is recognised, and how responsibility is negotiated.
+
+\subsubsection{Synthesis}
+
+Across all seven sub-themes, the HAI evidence base converges on a structural account in which interaction quality and trust calibration jointly determine whether generation efficiency is converted into dependable engineering value or displaced into hidden risk. Prompting, contextualisation, conversational repair, and representation choices shape the reliability and usefulness of AI-generated outputs across professional, educational, and agentic settings; trust calibration regulates whether developers accept, revise, test, or reject plausible but potentially incorrect or insecure suggestions. Cognitive redistribution connects these mechanisms by shifting developer effort away from direct code construction and towards supervision, orchestration, explanation, and decision-making. This pattern provides the empirical grounding in the corpus for treating interaction quality and trust calibration as the primary HAI constructs within the socio-technical equilibrium framework, and for understanding verification overhead, documented extensively in the CQTD dimension (Section 3.2), as something that is actively managed or amplified through the quality of human--AI interaction rather than fixed in advance. This connection is examined further in the Discussion.
+%3.3 ends here
+
+%3.4 starts heres
+\subsection{Productivity}
+
+Productivity is the third-largest dimension in the corpus, accounting for 8.3\% of studies (n=26; Section 3.1). AI assistance improves productivity most reliably when programming work is local, well specified, and readily verifiable, but the corpus does not support a universal acceleration claim. Controlled and benchmark-like studies show substantial generation efficiency: ChatGPT outperformed Stack Overflow on algorithmic and library-use tasks, including reported algorithmic task-score contrasts of 72.0 versus 0.0 and an average of 38.7 versus 5.0 in the relevant comparison \cite{liu_chatgpt_2023}. Complexity then narrows the effect. ChatGPT-3.5 solved 92\% of easy, 79\% of medium, and 51\% of hard coding problems in one complexity-stratified evaluation, with prompt engineering improving results but not removing the complexity gradient \cite{li_evaluating_2024}. A separate difficulty-level study reported complex-problem performance at just 4.3\%, indicating that decomposition and iteration are part of the work rather than optional refinements \cite{yan_closer_2023}.
+
+Brownfield and field evidence makes the productivity claim more conditional. In computing-student brownfield tasks, Copilot reduced completion time by 34.9\%, increased solution progress by 50\%, and reduced manual typing and web search by 10.6\% and 11.6\% respectively \cite{shihab_effects_2025}. This supports a positive productivity mechanism: assistants can lower the cost of producing plausible edits, scaffolding searches and repetitive implementation steps. However, experienced open-source maintainers in a field experiment took 19\% longer with AI assistance, despite predicting a 24\% speed-up before the task and estimating afterwards that the tool had made them 20\% faster \cite{becker_measuring_2025}. This contradiction is not noise; it marks the difference between local generation and situated software engineering, where repository context, testing, review, and integration can dominate raw output speed.
+
+Enterprise evidence reinforces this interpretation. Developers using an enterprise AI code assistant modified outputs and treated checking as a normal part of use, so generated code functioned as a draft requiring human validation rather than as a finished artefact \cite{weisz_examining_2025}. Across these studies, the relevant productivity unit is therefore not the suggestion, the line of code, or even the completed task in isolation: it is the net work required to move from generated candidate to accepted, maintainable project change. Productivity gains are strongest where the generated artefact is easy to inspect and weak where the artefact requires deep contextual reasoning, cross-file consistency, security judgement, or domain-specific integration.
+
+A persistent limitation across this sub-literature is that productivity studies rarely measure speed, correctness, rework, and downstream integration within the same design. Some quantify completion time or task scores, while others observe acceptance, behaviour, or perceptions, making the evidence strong for conditional acceleration but weaker for total development productivity across real projects. The most defensible synthesis is that AI assistance increases generation efficiency, while its contribution to net productivity depends on whether verification overhead remains smaller than the construction effort saved. This positions productivity as the dimension in the corpus where the trade-off between generation efficiency and verification overhead, central to the socio-technical equilibrium framework, is most directly observable, a connection examined further in the Discussion.
+%3.4 ends here
+
+% Results ends here
+
+\section{Discussion}
+\label{sec:1}
+% Text with citations \cite{RefB} and \cite{RefJ}.
+\subsection{Subsection}
+\label{sec:2}
+%as required. Don't forget to give each section
+%and subsection a unique label (see Sect.~\ref{sec:1}).
+%\paragraph{Paragraph headings} Use paragraph headings as needed.
+
+
+% For one-column wide figures use
+%\begin{figure}
+% Use the relevant command to insert your figure file.
+% For example, with the graphicx package use
+ %\includegraphics{example.eps}
+% figure caption is below the figure
+%\caption{Please write your figure caption here}
+%\label{fig:1}       % Give a unique label
+%\end{figure}
+%
+% For two-column wide figures use
+%\begin{figure*}
+% Use the relevant command to insert your figure file.
+% For example, with the graphicx package use
+ %\includegraphics[width=0.75\textwidth]{example.eps}
+% figure caption is below the figure
+%\caption{Please write your figure caption here}
+%\label{fig:2}       % Give a unique label
+%\end{figure*}
+%
+
+
+\section{Conclusion}
+\label{r}
+
+%\begin{acknowledgements}
+%If you'd like to thank anyone, place your comments here
+%and remove the percent signs.
+%\end{acknowledgements}
+
+
+% Authors must disclose all relationships or interests that 
+% could have direct or potential influence or impart bias on 
+% the work: 
+%
+% \section*{Conflict of interest}
+%
+% The authors declare that they have no conflict of interest.
+
+
+% BibTeX users please use one of
+%\bibliographystyle{spbasic}      % basic style, author-year citations
+\bibliographystyle{spmpsci}      % mathematics and physical sciences
+%\bibliographystyle{spphys}       % APS-like style for physics
+\bibliography{references}   % name your BibTeX data base
+
+% Non-BibTeX users please use
+% \begin{thebibliography}{}
+%
+% and use \bibitem to create references. Consult the Instructions
+% for authors for reference list style.
+%
+% \bibitem{RefJ}
+% Format for Journal Reference
+% Author, Article title, Journal, Volume, page numbers (year)
+% Format for books
+% \bibitem{RefB}
+% Author, Book title, page numbers. Publisher, place (year)
+% etc
+% \end{thebibliography}
+
+\end{document}
+% end of file template.tex
+

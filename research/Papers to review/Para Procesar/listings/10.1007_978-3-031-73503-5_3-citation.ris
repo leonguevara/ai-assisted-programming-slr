@@ -1,0 +1,20 @@
+TY  - CONF
+AU  - Gonçalves, Carlos Adriano
+AU  - Gonçalves, Célia Talma
+ED  - Santos, Manuel Filipe
+ED  - Machado, José
+ED  - Novais, Paulo
+ED  - Cortez, Paulo
+ED  - Moreira, Pedro Miguel
+PY  - 2025
+DA  - 2025//
+TI  - Assessment on the Effectiveness of GitHub Copilot as a Code Assistance Tool: An Empirical Study
+BT  - Progress in Artificial Intelligence
+SP  - 27
+EP  - 38
+PB  - Springer Nature Switzerland
+CY  - Cham
+AB  - The recent advancements in Machine Learning have led to significant developments in generative AI and large language models. These innovations present an opportunity for creating new features within development tools. However, as assisted programming becomes more prominent across various platforms, it is crucial to assess the implementation of such tools. The question remains: can these advancements genuinely improve the quality and speed of the development process, or are simply an intriguing buzzword?
+SN  - 978-3-031-73503-5
+ID  - 10.1007/978-3-031-73503-5_3
+ER  - 

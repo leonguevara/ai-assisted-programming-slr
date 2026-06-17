@@ -1,0 +1,37 @@
+Cuando iniciamos la investigación, intentamos recuperar papers por medio de bases de datos como ProQuest, ScienceDirect, Scopus, IEEExplore, ACM Digital Library, ectétera.  Me indicaste que podíamos usar las siguientes combinaciones para realizar las búsquedas:
+
+---
+("AI-assisted programming" OR "AI coding assistant" OR "code generation" OR "large language models")
+AND
+("software engineering" OR "software development")
+AND
+(productivity OR "code quality" OR evaluation OR efficiency)
+---
+(("AI coding assistant" OR "GitHub Copilot" OR "code generation") AND ("software development") AND (productivity OR "code quality")) AND (stype.exact(("Scholarly Journals" OR "Conference Papers & Proceedings") NOT ("Trade Journals" OR "Working Papers")) AND pd(20200101-20260403) AND PEER(yes))
+---
+(("AI-assisted programming" OR "AI coding assistant" OR "code generation" OR "large language models") AND ("software engineering" OR "software development") AND (productivity OR "code quality" OR evaluation OR efficiency)) AND stype.exact("Scholarly Journals" OR "Conference Papers & Proceedings") AND (stype.exact(("Scholarly Journals" OR "Conference Papers & Proceedings") NOT ("Trade Journals" OR "Working Papers")) AND pd(20200101-20260403) AND PEER(yes))
+---
+(("AI-assisted programming" OR "AI coding assistant" OR "code generation" OR "large language models") AND ("software engineering" OR "software development") AND (productivity OR "code quality" OR evaluation OR efficiency)) AND (stype.exact("Scholarly Journals") AND yr(2020-2029) AND PEER(yes))
+---
+
+Luego, cuando te sugerí que usáramos SciSpace para que hiciera la recopilación de informaicón por nosotros, me sugeriste un query muy bien construido que, entre sus tantos matices, contenía la referencia a estas preguntas de investigación que ya habíamos definido
+
+RQ1. What is the impact of AI-assisted coding tools on developer productivity?
+RQ2. How do these tools affect code quality (e.g., correctness, maintainability, readability)?
+RQ3. What are the common evaluation metrics used in empirical studies of AI code generation?
+RQ4. What are the main benefits reported when using these tools?
+RQ5. What are the limitations, risks, or challenges (e.g., security, hallucinations, over-reliance)?
+RQ6. What research methodologies are used (experiment, survey, case study, etc.)?
+RQ7. What trends and research gaps can be identified in the literature?
+
+SciSpace nos regresó una lista enorme de fuentes y hacía referencia a las preguntas que contestaban y, cuando comenzamos nosotros a analizar las fuentes, también identificábamos a los papers con base a cuáles de estas siete preguntas contestaban cada uno.
+
+Conforme fuimos avanzando en el análisis de los documentos y en la construcción del paper, cambiamos nuestras siete preguntas de investigación a:
+
+RQ1: What is the impact of AI-assisted programming on software development processes and outcomes?
+
+Y en la metodología también indicamos, después de especificar esta pregunta, que "To address this question, the analysis was structured across seven analytical dimensions: productivity, code quality and technical debt, human–AI interaction, cognitive load, organisational impact, economic impact, and perception and trust."
+
+Dado que la búsqueda de SciSpace fue matizada por esas siete preguntas, ¿no crees que debreríamos hacer alguna mención a esto en la metodología? ¿Algo que ayude a comprender el por qué llegamos a dichos artículos o el por qué usamos esas preguntas cuando nuestro paper final intenta responder una sola pregunta?
+
+Pregunto todo esto para poder mejorar la calidad del paper y por si te sirve de algo ahora que estás haciendo la recategorización de los papers en las dimensiones canónicas que definimos.
