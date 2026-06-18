@@ -97,9 +97,36 @@ subject classification numbers as needed.
 % \subclass{MSC code1 \and MSC code2 \and more}
 \end{abstract}
 
+% Introduction starts here
 \section{Introduction}
 \label{intro}
-Your text comes here. Separate text sections with
+
+Large language model (LLM)-based coding assistants, including GitHub Copilot, ChatGPT, Claude Code, and an increasingly autonomous generation of coding agents, have moved from experimental tooling to standard development infrastructure in a remarkably short period. Adoption figures illustrate the scale of this shift: one large-scale enterprise deployment reports 16,000 developers using an AI-assisted coding system in production, with roughly a fifth of suggestions accepted and a measurable share of committed code AI-authored \cite{murali_ai-assisted_2024}, while broader developer surveys report usage rates above 80\% among respondents \cite{sergeyuk_using_2025}. AI-assisted programming is therefore no longer a question of whether it will be adopted, but of what its adoption is actually doing to software development practice.
+
+The empirical record on that second question is considerably less settled than the adoption figures suggest. Individual studies report substantial productivity gains, particularly on routine and well-specified tasks, alongside a parallel and growing body of evidence documenting increased technical debt, security vulnerabilities, validation overhead, and, in at least one controlled field experiment, a net productivity loss for experienced developers despite their own belief that the tool had made them faster \cite{becker_measuring_2025}. Reports of high developer satisfaction coexist with evidence that a large share of nominal time savings is absorbed by checking, correcting, and integrating generated code rather than eliminated outright. Taken individually, none of these findings is surprising; taken together, across productivity, code quality, human--AI interaction, cognitive load, organisational impact, economic impact, and developer perception, they describe a literature that is accumulating evidence faster than it is accumulating an explanation for why that evidence so often points in different directions at once.
+
+Several prior reviews have already mapped parts of this terrain. Broad surveys of large language models for software engineering and code generation have catalogued model capabilities, benchmark performance, and technical evaluation methodology at scale \cite{hou_large_2023,zhang_survey_2023,jabrw_systematic_2025,chen_survey_2024}, while narrower systematic reviews have synthesised evidence within a single dimension, including code accuracy, security, and developer trust \cite{naaz_rise_2025}, human--AI interaction within integrated development environments specifically \cite{sergeyuk_human-ai_2026}, and early productivity evidence for a single tool \cite{adepoju_github_2023}. These reviews have been essential in establishing what is technically possible and in consolidating evidence within their respective scopes. What remains absent is a synthesis that treats the technical, human, organisational, and economic dimensions of AI-assisted programming as parts of a single interacting system rather than as separately reviewed literatures, and that offers an explanatory account of why gains in one dimension so consistently coincide with costs in another, rather than simply cataloguing both as separate findings.
+
+This study addresses that gap. It presents a systematic literature review of empirical research on AI-assisted programming published between 2021 and 2026, following PRISMA 2020 reporting guidelines \cite{page_prisma_2021} and established evidence-based software engineering review practice \cite{kitchenham_guidelines_2007}. The review synthesises 312 primary empirical studies, identified through a dual-pathway search strategy combining AI-assisted discovery with author-executed database queries, and organised across seven analytical dimensions: productivity, code quality and technical debt, human--AI interaction, cognitive load, organisational impact, economic impact, and perception and trust. Rather than treating these dimensions as independent literatures to be summarised in parallel, this review integrates them through a socio-technical equilibrium framework comprising five interacting constructs, generation efficiency, verification overhead, interaction quality, trust calibration, and cognitive redistribution, that is developed inductively from the evidence itself and then tested against the corpus's own internal points of agreement and disagreement.
+
+The review is guided by a single research question:
+
+\begin{itemize}
+    \item RQ1: What is the impact of AI-assisted programming on software development processes and outcomes?
+\end{itemize}
+
+This study makes the following contributions:
+
+\begin{itemize}
+    \item A systematic synthesis of 312 empirical studies on AI-assisted programming across seven analytical dimensions, substantially larger in scope than prior reviews in this space and grounded in full-text evidence extraction rather than title-and-abstract coding alone.
+    \item A socio-technical equilibrium framework, comprising five interacting constructs, that explains recurring contradictions in the literature as patterned trade-offs rather than as noise, and that is explicitly tested against rival theoretical readings of the same evidence.
+    \item Identification of prompting and validation literacy as an emerging professional competency, distinct from general programming skill, that measurably mediates whether AI assistance translates into reliable engineering outcomes.
+    \item An explicit mapping of where the corpus agrees and where it does not, showing that disagreement tracks what is measured, snippet-level, repository-level, single-agent, or multi-agent, rather than whether AI assistance helps or hurts in the abstract.
+    \item A research agenda grounded in the evidence gaps this review identifies directly, including the thinness of economic-impact evidence, the immaturity of agentic and multi-agent evaluation, and the uneven distribution of cognitive redistribution across developer populations.
+\end{itemize}
+
+The remainder of this paper is organised as follows. Section 2 describes the review methodology, including the search strategy, quality assessment framework, and use of AI-assisted tools in the review process. Section 3 presents the empirical results across all seven analytical dimensions. Section 4 discusses these results through the socio-technical equilibrium framework and tests that framework against the corpus's internal disagreements and against rival theoretical readings. Section 5 discusses threats to validity, and Section 6 concludes with implications for research and practice.
+% Introduction ends here
 
 % Methodology start here
 \section{Methodology}
@@ -208,7 +235,7 @@ To assess the robustness of the reported figures to the inclusion of the nine su
 
 % Results start here
 \section{Results}
-\label{results}
+\label{sec:results}
 % 3.1 starts here
 \subsection{Corpus Profile and Evidence Hierarchy}
 label{sec:corpus-profile}
