@@ -106,13 +106,13 @@ Your text comes here. Separate text sections with
 \label{sec:methodology}
 
 \subsection{Research Design}
-
+\label{sec:research-design}
 This study follows a Systematic Literature Review (SLR) methodology, structured according to established evidence-based software engineering guidelines \cite{kitchenham_guidelines_2007} and the PRISMA 2020 framework \cite{page_prisma_2021} to ensure transparency, rigour, and reproducibility.
 
 The objective is to identify, evaluate, and synthesise empirical evidence regarding the impact of AI-assisted programming tools on software development. The review process was designed as a multi-stage protocol comprising two complementary discovery pathways, screening, eligibility assessment, quality evaluation, epistemic segmentation, and synthesis.
 
 \subsection{Research Question}
-
+\label{sec:research-question}
 The study is guided by the following research question:
 
 \begin{itemize}
@@ -122,29 +122,29 @@ The study is guided by the following research question:
 To address this question, the analysis was structured across seven analytical dimensions: productivity, code quality and technical debt, human--AI interaction, cognitive load, organisational impact, economic impact, and perception and trust.
 
 \subsection{Search Strategy}
-
+\label{sec:search-strategy}
 The literature search combined two complementary discovery pathways. The primary pathway (Branch A) used SciSpace, an AI-assisted academic discovery engine that orchestrates retrieval across multiple indexed sources. The complementary pathway (Branch B) used author-executed direct queries on three academic databases: Scopus, ProQuest, and arXiv. Both pathways targeted publications between 2021 and 2026, reflecting the emergence and rapid evolution of modern AI-assisted coding tools. Bibliographic information for individual papers was occasionally imported from publisher sites (IEEE Xplore, ACM Digital Library, SpringerLink, ACL Anthology); these channels served solely as bibliographic-import mechanisms and are not counted as search sources, since the discovery of each such paper had already occurred on one of the four search sources above.
 
 \subsubsection{Branch A: SciSpace AI-assisted retrieval}
-
-A structured search instruction was provided to SciSpace specifying the review topic, research questions, the time window, inclusion and exclusion criteria, required output fields, and quality-control constraints. SciSpace executed the instruction across three internal retrieval modes: (i) SciSpace Deep Search (855 records from two semantic queries: 371 and 484), (ii) SciSpace Full-Text Search (200 records from two queries of 100 each), and (iii) Google Scholar, queried programmatically by SciSpace as part of its retrieval pipeline (200 records from two queries of 100 each). The combined identification yielded 1,255 records, reduced to 863 unique records after SciSpace's internal deduplication. These records were then carried through SciSpace's two-stage screening pipeline (title/abstract scoring with a cutoff of 4.0, followed by full-text scoring with a cutoff of 4.5), with each AI-assisted decision validated manually by the author against the eligibility criteria described in Section 2.4. This branch retained 355 records at title/abstract screening and 349 records at full-text screening. The complete archive of SciSpace's search outputs (query logs, retrieved record CSVs, and screening artefacts) is preserved as supplementary material.
+\label{sec:branch-a}
+A structured search instruction was provided to SciSpace specifying the review topic, research questions, the time window, inclusion and exclusion criteria, required output fields, and quality-control constraints. SciSpace executed the instruction across three internal retrieval modes: (i) SciSpace Deep Search (855 records from two semantic queries: 371 and 484), (ii) SciSpace Full-Text Search (200 records from two queries of 100 each), and (iii) Google Scholar, queried programmatically by SciSpace as part of its retrieval pipeline (200 records from two queries of 100 each). The combined identification yielded 1,255 records, reduced to 863 unique records after SciSpace's internal deduplication. These records were then carried through SciSpace's two-stage screening pipeline (title/abstract scoring with a cutoff of 4.0, followed by full-text scoring with a cutoff of 4.5), with each AI-assisted decision validated manually by the author against the eligibility criteria described in Section 2.5. This branch retained 355 records at title/abstract screening and 349 records at full-text screening. The complete archive of SciSpace's search outputs (query logs, retrieved record CSVs, and screening artefacts) is preserved as supplementary material.
 
 \subsubsection{Branch B: Author-executed database queries}
-
+\label{sec:branch-b}
 The author-executed database pathway returned 1,852 records across three sources: 1,713 from Scopus (two exports, dated 5 April and 3 May 2026), 89 from ProQuest, and 50 records browsed on arXiv through a structured keyword search combining AI-assisted-programming, software-engineering, and outcome-related terms (arXiv displays 50 records per result page; the search yielded a single page of results relevant to the review scope). After title/abstract screening (113 retained) and full-text assessment (107 retained), cross-branch deduplication against the SciSpace branch removed 32 duplicate records, yielding a net contribution of 69 unique records. Search strings, filters, and export timestamps for each query are preserved in the supplementary materials of the project.
 
 \subsection{Use of Artificial Intelligence in the Review Process}
-
+\label{sec:ai-use}
 Artificial intelligence tools were used to support specific tasks in the review process. SciSpace functioned as an AI-assisted discovery engine, orchestrating queries across its proprietary semantic indexes, full-text search, and Google Scholar, and as a first-pass relevance scorer for title/abstract and full-text screening. Decisions emitted by SciSpace were treated strictly as assistive recommendations: every inclusion, exclusion, classification, and quality-assessment decision was validated and recorded manually by the author. In addition, the corpus includes a small number of studies published in Chinese, Russian, and German; for these, AI-assisted translation (ChatGPT) was used to support the author's reading and eligibility assessment, with the same inclusion criteria applied as for studies in English, Spanish, and Portuguese, which the author read directly. AI tools were not used to perform synthesis, data extraction, or interpretation of findings.
 
 \subsection{Inclusion and Exclusion Criteria}
-
+\label{sec:inclusion-exclusion}
 Eligibility criteria were applied identically to both branches and at every screening stage. Studies were included if they reported empirical evaluation (quantitative, qualitative, or mixed-methods) of AI-assisted programming or code generation; evaluated modern AI tools (e.g., Copilot, ChatGPT, Codex, Gemini, Claude Code, CodeWhisperer, Cursor, or comparable systems); reported results allowing analytical interpretation; and were published between 2021 and 2026.
  
 Studies were excluded if they were opinion papers without empirical content, focused on unrelated NLP tasks, were duplicates of records already accepted from another source, or fell outside the topical scope of AI-assisted software development. Surveys, systematic literature reviews, and conceptually adjacent works were reclassified to the Related Work or Support set rather than discarded, in order to preserve their contribution to the framing of the synthesis.
 
 \subsection{Operational Taxonomy of Records}
-
+\label{sec:taxonomy}
 To maintain a transparent and auditable separation between evidence used for synthesis and evidence used for framing, each retained record was assigned to one of five operational categories, summarised in Table~\ref{tab:taxonomy}.
 
 \begin{table}[h]
@@ -169,7 +169,7 @@ The Corpus comprises the primary empirical evidence base: studies with empirical
 Within the Corpus, a further epistemic segmentation governs interpretive weight: CORE (168 studies), SUPPORTING (120 studies), PERIPHERAL (18 studies), and REMOVE\_CANDIDATE (6 studies). All descriptive statistics reported in this paper are computed over the full Corpus ($n = 312$), while strong claims are preferentially anchored in CORE studies and triangulated with SUPPORTING evidence.
 
 \subsection{Study Selection Process and PRISMA Flow}
-
+\label{sec:prisma-flow}
 The selection process followed the four-phase PRISMA 2020 framework (Identification, Screening, Eligibility, Inclusion) and was applied to both branches in parallel, as shown in Fig.~\ref{fig:prisma_diagram}.
 
 At identification, the SciSpace pipeline (Branch A) returned 1,255 records, reduced to 863 unique records after its internal deduplication; the author-executed database pathway (Branch B) returned 1,852 records across Scopus, ProQuest, and arXiv. At title/abstract screening, 355 records were retained from Branch A and 113 from Branch B. At full-text screening, 349 records were retained from Branch A and 107 from Branch B. Cross-branch deduplication then removed 32 Branch B records that duplicated SciSpace hits, yielding a net Branch B contribution of 69 records.
@@ -188,19 +188,19 @@ This supplementary procedure added four primary studies to the Corpus (4 of 312,
 \end{figure}
 
 \subsection{Quality Assessment}
-
+\label{sec:quality-assessment}
 A multi-criteria evaluation framework was used to assess study quality, considering empirical rigour (e.g., experimental design, sample size), methodological strength (e.g., causal inference versus observational design), venue quality, completeness and transparency of reporting, and relevance to the research question. This framework was applied consistently across all studies to ensure comparability and reduce subjective bias, and was conducted manually to ensure careful evaluation of study design and reporting quality.
 
 Studies were classified into three categories: A1 (high rigour, e.g., controlled experiments or large-scale empirical or causal studies), A2 (moderate rigour, e.g., user studies, case studies, or structured evaluations), and B (supporting evidence, e.g., perception studies, qualitative analyses, or model-based approaches). Of the 312 studies in the Corpus, 146 (46.8\%) were classified as A1, 132 (42.3\%) as A2, and 34 (10.9\%) as B. This classification was used to prioritise higher-quality studies (A1 and A2) in the synthesis and interpretation of results, while category B studies were primarily used to provide contextual support and complementary insights.
 
 \subsection{Data Extraction and Synthesis}
-
+\label{sec:data-extraction}
 Data extraction was performed by systematically reviewing each selected study and recording key attributes using a structured extraction template to ensure consistency across studies. For each study, the following data were extracted: study type and methodological classification, tools evaluated, evaluation metrics, key findings, and associated analytical dimensions.
 
 Given the heterogeneity of study designs, metrics, and evaluation contexts, a formal meta-analysis was not feasible. Instead, a structured synthesis approach was adopted to identify consistent patterns and trends across studies, combining quantitative aggregation (e.g., frequency distributions) with qualitative synthesis to identify patterns, contradictions, and research gaps across dimensions. This approach is consistent with established practices in systematic literature reviews, where high variability limits the applicability of statistical meta-analysis.
 
 \subsection{Reproducibility and Sensitivity}
-
+\label{sec:reproducibility}
 All search exports and the integrated relation of studies are preserved as supplementary materials, including SciSpace's complete pipeline artefacts (semantic-search CSVs, full-text-search CSVs, internally executed Google Scholar query CSVs, abstract- and full-text-screening CSVs, and SciSpace's own PRISMA documentation). Of the 312 primary studies in the final Corpus, 308 (98.7\%) are directly traceable to documented structured-search outputs; of the 67 papers in Related Work or Support, 62 (92.5\%) are similarly traceable; and all 5 papers in the Excluded set are traceable to structured queries.
 
 To assess the robustness of the reported figures to the inclusion of the nine supplementary-discovery records, a sensitivity analysis was conducted by recomputing all principal distributions (primary dimension, quality classification, epistemic segmentation, and publication year) for the full Corpus ($n = 312$) and for the Corpus with the four supplementary studies removed ($n = 308$). Across all four axes, no reported percentage shifts by more than 0.80 percentage points, with the largest single shift occurring in the 2025 publication-year share. This confirms that the inclusion of supplementary studies does not materially alter the empirical profile of the corpus, and that the principal findings hold whether or not these studies are included.
@@ -208,10 +208,10 @@ To assess the robustness of the reported figures to the inclusion of the nine su
 
 % Results start here
 \section{Results}
-
+\label{results}
 % 3.1 starts here
 \subsection{Corpus Profile and Evidence Hierarchy}
-
+label{sec:corpus-profile}
 The final corpus comprises 312 studies, reflecting a heterogeneous body of evidence in terms of methodological rigour, evaluation context, and analytical focus. Studies were classified into three quality categories: A1 (high rigour), A2 (moderate rigour), and B (supporting or qualitative evidence).
 
 Of the 312 studies, 146 (46.8\%) were classified as A1, 132 (42.3\%) as A2, and 34 (10.9\%) as B, as shown in Fig.~\ref{fig:main_classification}. This distribution indicates that the majority of the evidence base is grounded in empirical studies with moderate-to-high methodological rigour.
@@ -268,7 +268,7 @@ This classification enables a weighted synthesis, where conclusions are primaril
 
 % 3.2 starts here
 \subsection{Code Quality and Technical Debt}
-
+\label{sec:cqtd}
 Code quality and technical debt is the largest and most extensively developed dimension in the corpus, accounting for 45.2\% of studies (n=141; Section 3.1). Evidence in this dimension converges on a structural pattern: AI-assisted programming reliably produces code that satisfies narrow, benchmark-style correctness criteria, but this performance does not transfer cleanly to the conditions under which software is actually maintained, secured, and integrated. The following sub-sections trace this pattern across benchmark performance, real-world generalisation, defect and structural error rates, security vulnerabilities, maintainability and dependency management, multi-turn and agentic effects, and human-versus-AI comparisons.
 
 \subsubsection{Benchmark Performance and the Realism Gap}
@@ -314,7 +314,7 @@ Across all seven sub-themes, the CQTD evidence base converges on a single struct
 
 %3.3 starts here
 \subsection{Human--AI Interaction}
-
+\label{sec:hai}
 Human--AI interaction is the second-largest dimension in the corpus, accounting for 36.9\% of studies (n=115; Section 3.1). The evidence base for this dimension is organised around seven sub-themes: prompting dynamics and conversational strategies, workflow integration and collaboration patterns, trust and reliance behaviour, developer experience and perceived value, learning and educational contexts, robustness and agentic reliability, and identity and socio-professional continuity. Across these sub-themes, AI-assisted programming appears less as a replacement of developer expertise than as a reconfiguration of interaction, verification, judgement, and responsibility: developers do not simply receive code, they negotiate it.
 
 \subsubsection{Prompting Dynamics and Conversational Strategies}
@@ -352,7 +352,7 @@ Across all seven sub-themes, the HAI evidence base converges on a structural acc
 
 %3.4 starts heres
 \subsection{Productivity}
-
+\label{sec:productivity}
 Productivity is the third-largest dimension in the corpus, accounting for 8.3\% of studies (n=26; Section 3.1). AI assistance improves productivity most reliably when programming work is local, well specified, and readily verifiable, but the corpus does not support a universal acceleration claim. Controlled and benchmark-like studies show substantial generation efficiency: ChatGPT outperformed Stack Overflow on algorithmic and library-use tasks, including reported algorithmic task-score contrasts of 72.0 versus 0.0 and an average of 38.7 versus 5.0 in the relevant comparison \cite{liu_chatgpt_2023}. Complexity then narrows the effect. ChatGPT-3.5 solved 92\% of easy, 79\% of medium, and 51\% of hard coding problems in one complexity-stratified evaluation, with prompt engineering improving results but not removing the complexity gradient \cite{li_evaluating_2024}. A separate difficulty-level study reported complex-problem performance at just 4.3\%, indicating that decomposition and iteration are part of the work rather than optional refinements \cite{yan_closer_2023}.
 
 Brownfield and field evidence makes the productivity claim more conditional. In computing-student brownfield tasks, Copilot reduced completion time by 34.9\%, increased solution progress by 50\%, and reduced manual typing and web search by 10.6\% and 11.6\% respectively \cite{shihab_effects_2025}. This supports a positive productivity mechanism: assistants can lower the cost of producing plausible edits, scaffolding searches and repetitive implementation steps. However, experienced open-source maintainers in a field experiment took 19\% longer with AI assistance, despite predicting a 24\% speed-up before the task and estimating afterwards that the tool had made them 20\% faster \cite{becker_measuring_2025}. This contradiction is not noise; it marks the difference between local generation and situated software engineering, where repository context, testing, review, and integration can dominate raw output speed.
@@ -364,7 +364,7 @@ A persistent limitation across this sub-literature is that productivity studies 
 
 %3.5 starts here
 \subsection{Perception and Trust}
-
+\label{sec:perception-trust}
 Perception and Trust is the fourth-largest dimension in the corpus, accounting for 4.2\% of studies (n=13; Section 3.1). The evidence shows that developers often regard AI coding assistants as useful, but trust is selective, contextual, and vulnerable to miscalibration. In a broad developer survey, 84\% of 481 respondents reported using AI-based coding assistants, indicating that adoption is already normalised rather than experimental \cite{sergeyuk_using_2025}. A separate survey of 207 developers found that 73\% perceived productivity improvement from ChatGPT in software development \cite{vaillant_developers_2024}. These results establish perceived usefulness, but they do not by themselves establish dependable software outcomes; perception evidence becomes meaningful only when read against task difficulty, correctness evidence, and security risk.
 
 Task difficulty is the clearest calibration boundary. Kuhail and colleagues reported 73\% success on easy problems versus 10\% on hard problems across 180 problems and 99 developers, which explains why favourable perceptions are more defensible for routine work than for complex development \cite{kuhail_will_2024}. Acceptance conditions also matter: Suryavanshi and colleagues found that behavioural intention was associated with use behaviour, with a reported coefficient of $\beta=0.419$, linking acceptance to facilitating conditions, perceived usefulness, perceived ease of use, and hedonic motivation \cite{suryavanshi_integrating_2025}. Trust is therefore not a static attitude towards a tool; it is shaped by the local conditions that make use feasible, rewarding, and apparently safe.
@@ -378,7 +378,7 @@ Qualitative trust evidence makes this dynamic explicit. Developers define, grant
 
 %3.6 starts here
 \subsection{Cognitive Load and Human Factors}
-
+\label{sec:cognitive-load}
 Cognitive Load and Human Factors is the fifth-largest dimension in the corpus, accounting for 2.9\% of studies (n=9; Section 3.1). AI assistance changes the distribution of cognitive work rather than simply reducing it. The strongest behavioural evidence shows that developers spend substantial attention on interacting with and checking AI outputs: Mozannar and colleagues report that 51.5\% of interaction time was spent in AI-related activities, with verification alone accounting for 22.4\%, and suggestion acceptance around 34\% \cite{mozannar_reading_2024}. This finding reframes the assistant as a generator of supervisory work: developers may write less code manually, but they must read, judge, compare, test, and decide whether the generated output is appropriate for the task.
 
 A controlled experiment with 109 participants substantiates this redistribution directly by tracing how developers exercised, or failed to exercise, that supervisory work. Working with ChatGPT improved efficiency on simple, well-specified coding puzzles but not on a typical small-scale development task requiring developers to fix bugs in an existing codebase, and it did not improve solution quality in either setting \cite{wang_rocks_2024}. Screen-history analysis of how participants interacted with the assistant explains this gap: roughly one third of participants on the development task tried to delegate the entire problem to ChatGPT without first attempting to understand the code themselves, and this group most often gave up or produced very low-quality solutions; by contrast, close to half of participants treated the assistant as a collaborator, alternating between asking it to explain unfamiliar code, proposing a fix, and pointing out concrete errors in its output before accepting a revision. This contrast indicates that cognitive redistribution is conditional on developers retaining and exercising comprehension, not an automatic consequence of using an AI assistant.
@@ -392,7 +392,7 @@ Human-factors evidence also extends beyond performance to wellbeing. Practitione
 
 %3.7 starts here
 \subsection{Organisational Impact}
-
+\label{sec:organisational}
 Organisational Impact is the sixth-largest dimension in the corpus, accounting for 2.2\% of studies (n=7; Section 3.1). At organisational scale, AI-assisted programming becomes a workflow, governance, and role-reconfiguration issue rather than merely an individual productivity tool. The strongest deployment evidence is CodeCompose at Meta: 16,000 developers used the system, 22\% of suggestions were accepted, and approximately 8\% of committed changed code was AI-authored \cite{murali_ai-assisted_2024}. These figures show that AI assistance can become part of production software engineering infrastructure, and they also show why organisational interpretation cannot stop at individual speed: once generated code enters shared repositories, teams must govern prompting practices, disclosure, review standards, monitoring, and responsibility for accepted output.
 
 Enterprise case evidence indicates that successful adoption depends on contextual integration. The StackSpot AI case shows that a contextualised assistant required platform integration, repository context, and organisational learning loops, rather than a generic chatbot deployment \cite{pinto_lessons_2024}. Research software evidence points in the same direction: generative AI was used across development and maintenance in a research-intensive university, but adoption depended on local norms, reproducibility expectations, and institutional support \cite{besser_how_2026}. These studies suggest that interaction quality at organisational level is produced by infrastructure and routines, not by tool availability alone.
@@ -404,7 +404,7 @@ A persistent limitation is that organisational evidence remains concentrated in 
 
 %3.8 starts here
 \subsection{Economic Impact}
-
+\label{sec:economic}
 Economic Impact is the smallest dimension in the corpus, accounting for 0.3\% of studies (n=1; Section 3.1). Direct economic evidence on AI-assisted programming remains thin, and the corpus supports proxy-based economic claims more strongly than formal return-on-investment or total-cost claims. The best production proxy is accepted AI-authored output at scale: CodeCompose at Meta reports 16,000 developers, 22\% suggestion acceptance, and about 8\% AI-authored changed code, indicating potential marginal savings in code authoring but not net economic value by itself \cite{murali_ai-assisted_2024}. Open-source activity evidence also suggests that generative AI exposure can alter development patterns, but activity is not the same as profitability, maintainability, or reduced total cost \cite{li_exploring_2025}.
 
 The hidden-cost evidence is more concrete. Smart-contract generation can produce compilable outputs while still requiring validity, correctness, security, and maintainability checks, converting apparent automation into validation labour \cite{karanjai_who_2023}. In simple bug-fixing tasks, generated changes can increase repair burden, with reports of up to twice as many bugs as fixes unless prompts are constrained \cite{jesse_large_2023}. Software-development agents also leave substantial residual work: one evaluation reported 170 issues unresolved by all agents, alongside variation in patch patterns and quality \cite{chen_evaluating_2024}. These findings imply that economic value depends on the cost of checking and remediation, not only on the speed of generation.
@@ -577,7 +577,7 @@ What this Discussion supports, after testing the framework against the corpus's 
 
 As with any systematic literature review, the findings reported here are subject to limitations that should be considered when interpreting them. The threats below proceed from those bearing most directly on data collection and classification towards those bearing on synthesis and on the temporal scope of the evidence base itself.
 
-First, the dataset includes a proportion of preprint studies that may not have undergone full peer review, which could affect the reliability of some findings. As shown in Fig.~\ref{fig:item_type}, preprints account for 38.8\% of the corpus (n=121), followed by conference papers (31.1\%, n=97), journal articles (27.9\%, n=87), theses (1.9\%, n=6), and a single book section (0.3\%, n=1). However, these studies were evaluated using the same structured quality-assessment framework described in Section 2.7, which mitigates this risk by weighting conclusions toward CORE and A1/A2 evidence rather than publication venue alone.
+First, the dataset includes a proportion of preprint studies that may not have undergone full peer review, which could affect the reliability of some findings. As shown in Fig.~\ref{fig:item_type}, preprints account for 38.8\% of the corpus (n=121), followed by conference papers (31.1\%, n=97), journal articles (27.9\%, n=87), theses (1.9\%, n=6), and a single book section (0.3\%, n=1). However, these studies were evaluated using the same structured quality-assessment framework described in Section 2.8, which mitigates this risk by weighting conclusions toward CORE and A1/A2 evidence rather than publication venue alone.
 
 \begin{figure}[h]
     \centering
