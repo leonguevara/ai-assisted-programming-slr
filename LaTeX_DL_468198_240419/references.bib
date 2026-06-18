@@ -1,7 +1,7 @@
 %% This BibTeX bibliography file was created using BibDesk.
 %% https://bibdesk.sourceforge.io/
 
-%% Created for León Felipe Guevara Chávez at 2026-06-17 16:05:36 -0600 
+%% Created for León Felipe Guevara Chávez at 2026-06-17 19:08:13 -0600 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
@@ -2088,3 +2088,72 @@ Based on this framework, we design two specific methods (i.e., low-probability e
 	year = {2022},
 	bdsk-url-1 = {https://www.usenix.org/conference/usenixsecurity23/presentation/sandoval}}
 
+@misc{rahman_beyond_2025,
+	abstract = {Large language models (LLMs) have demonstrated strong performance on function-level code generation benchmarks, yet real-world software development increasingly demands class-level implementations that integrate multiple methods, attributes, and dependencies within authentic project contexts. This gap between benchmark performance and practical utility raises critical questions about LLMs{\textquoteright} readiness for production code assistance, particularly regarding their ability to generalize across familiar and novel codebases. We introduce a benchmark derived from real-world open-source repositories, comprising classes divided into seen and unseen partitions to evaluate generalization under practical conditions. We systematically examine how input specification completeness and retrieval-augmented generation affect class-level correctness across multiple state-of-the-art LLMs. Our evaluation reveals a substantial performance gap: while LLMs achieve 84{\textendash}89\% correctness on synthetic benchmarks, they attain only 25{\textendash}34\% on real-world class tasks, with minimal distinction between familiar and novel codebases. Comprehensive documentation provides marginal improvements (1{\textendash}3\%), whereas retrieval augmentation yields greater gains (4{\textendash}7\%) by supplying concrete implementation patterns. Error analysis identifies AttributeError, TypeError, and AssertionError as dominant failure modes, with distinct patterns between synthetic and real-world scenarios. These findings provide actionable insights for enhancing context modelling, documentation strategies, and retrieval integration in production code assistance tools. CCS Concepts: {\textbullet} Software and its engineering {\textrightarrow} Software libraries and repositories; Object oriented languages; {\textbullet} Computing methodologies {\textrightarrow} Natural language processing.},
+	author = {Rahman, Musfiqur and Khatoonabadi, SayedHassan and Shihab, Emad},
+	copyright = {Creative Commons Attribution 4.0 International},
+	doi = {10.48550/ARXIV.2510.26130},
+	keywords = {FOS: Computer and information sciences, Software Engineering (cs.SE), Artificial Intelligence (cs.AI), Machine Learning (cs.LG)},
+	language = {en},
+	note = {Version Number: 2},
+	publisher = {arXiv},
+	shorttitle = {Beyond {Synthetic} {Benchmarks}},
+	title = {Beyond {Synthetic} {Benchmarks}: {Evaluating} {LLM} {Performance} on {Real}-{World} {Class}-{Level} {Code} {Generation}},
+	url = {https://arxiv.org/abs/2510.26130},
+	urldate = {2026-05-17},
+	year = {2025},
+	bdsk-url-1 = {https://arxiv.org/abs/2510.26130},
+	bdsk-url-2 = {https://doi.org/10.48550/ARXIV.2510.26130}}
+
+@misc{lian_ase_2025,
+	abstract = {The increasing adoption of large language models (LLMs) in software engineering necessitates rigorous security evaluation of their generated code. However, existing benchmarks often lack relevance to real-world AI-assisted programming scenarios, making them inadequate for assessing the practical security risks associated with AI-generated code in production environments. To address this gap, we introduce A.S.E (AI Code Generation Security Evaluation), a repository-level evaluation benchmark designed to closely mirror real-world AI programming tasks, offering a comprehensive and reliable framework for assessing the security of AI-generated code. Our evaluation of leading LLMs on A.S.E reveals several key findings. In particular, current LLMs still struggle with secure coding. The complexity in repository-level scenarios presents challenges for LLMs that typically perform well on snippet-level tasks. Moreover, a larger reasoning budget does not necessarily lead to better code generation. These observations offer valuable insights into the current state of AI code generation and help developers identify the most suitable models for practical tasks. They also lay the groundwork for refining LLMs to generate secure and efficient code in real-world applications.},
+	author = {Lian, Keke and Wang, Bin and Zhang, Lei and Chen, Libo and Wang, Junjie and Zhao, Ziming and Yang, Yujiu and Lin, Miaoqian and Duan, Haotong and Zhao, Haoran and Liao, Shuang and Guo, Mingda and Quan, Jiazheng and Zhong, Yilu and He, Chenhao and Chen, Zichuan and Wu, Jie and Li, Haoling and Li, Zhaoxuan and Yu, Jiongchi and Li, Hui and Zhang, Dong},
+	doi = {10.48550/arXiv.2508.18106},
+	keywords = {Computer Science - Software Engineering, Computer Science - Artificial Intelligence},
+	language = {en},
+	month = sep,
+	note = {arXiv:2508.18106 [cs]},
+	publisher = {arXiv},
+	shorttitle = {A.{S}.{E}},
+	title = {A.{S}.{E}: {A} {Repository}-{Level} {Benchmark} for {Evaluating} {Security} in {AI}-{Generated} {Code}},
+	url = {http://arxiv.org/abs/2508.18106},
+	urldate = {2026-04-16},
+	year = {2025},
+	bdsk-url-1 = {http://arxiv.org/abs/2508.18106},
+	bdsk-url-2 = {https://doi.org/10.48550/arXiv.2508.18106}}
+
+@misc{ovi_benchmarking_2024,
+	abstract = {With the increasing adoption of AI-driven tools in software development, large language models (LLMs) have become essential for tasks like code generation, bug fixing, and optimization. Tools like ChatGPT, GitHub Copilot, and Codeium provide valuable assistance in solving programming challenges, yet their effectiveness remains underexplored. This paper presents a comparative study of ChatGPT, Codeium, and GitHub Copilot, evaluating their performance on LeetCode problems across varying difficulty levels and categories. Key metrics such as success rates, runtime efficiency, memory usage, and error-handling capabilities are assessed. GitHub Copilot showed superior performance on easier and medium tasks, while ChatGPT excelled in memory efficiency and debugging. Codeium, though promising, struggled with more complex problems. Despite their strengths, all tools faced challenges in handling harder problems. These insights provide a deeper understanding of each tool{\textquoteright}s capabilities and limitations, offering guidance for developers and researchers seeking to optimize AI integration in coding workflows.},
+	author = {Ovi, Md Sultanul Islam and Anjum, Nafisa and Bithe, Tasmina Haque and Rahman, Md Mahabubur and Smrity, Mst Shahnaj Akter},
+	doi = {10.48550/arXiv.2409.19922},
+	keywords = {Computer Science - Software Engineering},
+	language = {en},
+	month = sep,
+	note = {arXiv:2409.19922 [cs]},
+	publisher = {arXiv},
+	shorttitle = {Benchmarking {ChatGPT}, {Codeium}, and {GitHub} {Copilot}},
+	title = {Benchmarking {ChatGPT}, {Codeium}, and {GitHub} {Copilot}: {A} {Comparative} {Study} of {AI}-{Driven} {Programming} and {Debugging} {Assistants}},
+	url = {http://arxiv.org/abs/2409.19922},
+	urldate = {2026-04-06},
+	year = {2024},
+	bdsk-url-1 = {http://arxiv.org/abs/2409.19922},
+	bdsk-url-2 = {https://doi.org/10.48550/arXiv.2409.19922}}
+
+@inproceedings{corso_generating_2024,
+	abstract = {AI-based code assistants are promising tools that can facilitate and speed up code development. They exploit machine learning algorithms and natural language processing to interact with developers, suggesting code snippets (e.g., method implementations) that can be incorporated into projects. Recent studies empirically investigated the effectiveness of code assistants using simple exemplary problems (e.g., the re-implementation of well-known algorithms), which fail to capture the spectrum and nature of the tasks actually faced by developers.},
+	address = {Lisbon Portugal},
+	author = {Corso, Vincenzo and Mariani, Leonardo and Micucci, Daniela and Riganelli, Oliviero},
+	booktitle = {Proceedings of the 32nd {IEEE}/{ACM} {International} {Conference} on {Program} {Comprehension}},
+	doi = {10.1145/3643916.3644402},
+	isbn = {979-8-4007-0586-1},
+	language = {en},
+	month = apr,
+	pages = {13--23},
+	publisher = {ACM},
+	shorttitle = {Generating {Java} {Methods}},
+	title = {Generating {Java} {Methods}: {An} {Empirical} {Assessment} of {Four} {AI}-{Based} {Code} {Assistants}},
+	url = {https://dl.acm.org/doi/10.1145/3643916.3644402},
+	urldate = {2026-04-07},
+	year = {2024},
+	bdsk-url-1 = {https://dl.acm.org/doi/10.1145/3643916.3644402},
+	bdsk-url-2 = {https://doi.org/10.1145/3643916.3644402}}
